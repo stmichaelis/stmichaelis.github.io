@@ -1,5 +1,5 @@
 @media only screen and (max-width: 991px) {
-    p {
+    p, ul {
 	font-size: 14px;
     }
 
@@ -19,5 +19,9 @@
 }
 
 .shariff-button {
+    font-size: 14px;
+}
+
+.footnotes {
     font-size: 14px;
 }
