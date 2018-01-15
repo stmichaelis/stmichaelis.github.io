@@ -1,10 +1,6 @@
 @media only screen and (max-width: 991px) {
-    p, ul {
-	font-size: 14px;
-    }
-
-    .post-preview > .post-meta {
-	font-size: 14px;
+    p, ul, .post-preview > .post-meta {
+	font-size: 16px;
     }
 
     .shariff .mail {
@@ -15,6 +11,10 @@
 @media only screen and (min-width: 990px) {
     .shariff .whatsapp {
 	display: none;
+    }
+
+    .intro-header .site-heading h1 {
+	font-size: 50px;
     }
 }
 
