@@ -25,3 +25,15 @@
 .footnotes {
     font-size: 14px;
 }
+
+.footnote-ref a{
+    background-color: #C0C0C0;
+    min-width: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 1px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
