@@ -6,9 +6,19 @@
     <description>Recent content in IoTA on Stefan Michaelis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
+    <lastBuildDate>Mon, 22 Jan 2018 19:07:55 +0100</lastBuildDate>
     
 	<atom:link href="https://blog.stefan-michaelis.name/iota/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Der Feind in meinem Haus</title>
+      <link>https://blog.stefan-michaelis.name/iota/der-feind-in-meinem-haus/</link>
+      <pubDate>Mon, 22 Jan 2018 19:07:55 +0100</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/iota/der-feind-in-meinem-haus/</guid>
+      <description>Über seinen Internet-Provider zu schimpfen ist immer en vogue. Zu langsam, bringt nicht die vereinbarte Geschwindigkeit und überhaupt. Auch wenn schnelles Internet für uns ein Traum ist, zumindest stabil sollte es sein. Und das ist es nicht. Seit gefühlt schon ewig ist der DSL-Anschluss vom Verlust genau eben dieser Außenanbindung geprägt. Nicht immer, aber so oft, dass es nervt. Und ebenso scheinen die Störungen mehr zu werden, so dass teilweise minutenlang keine Internetverbindung zustande kommt.</description>
+    </item>
     
   </channel>
 </rss>
