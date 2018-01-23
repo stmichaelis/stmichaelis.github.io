@@ -8,7 +8,7 @@
     <language>de</language>
     <lastBuildDate>Mon, 22 Jan 2018 19:07:55 +0100</lastBuildDate>
     
-	<atom:link href="https://blog.stefan-michaelis.name/iota/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://blog.stefan-michaelis.name/iota/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,7 +17,103 @@
       <pubDate>Mon, 22 Jan 2018 19:07:55 +0100</pubDate>
       
       <guid>https://blog.stefan-michaelis.name/iota/der-feind-in-meinem-haus/</guid>
-      <description>Über seinen Internet-Provider zu schimpfen ist immer en vogue. Zu langsam, bringt nicht die vereinbarte Geschwindigkeit und überhaupt. Auch wenn schnelles Internet für uns ein Traum ist, zumindest stabil sollte es sein. Und das ist es nicht. Seit gefühlt schon ewig ist der DSL-Anschluss vom Verlust genau eben dieser Außenanbindung geprägt. Nicht immer, aber so oft, dass es nervt. Und ebenso scheinen die Störungen mehr zu werden, so dass teilweise minutenlang keine Internetverbindung zustande kommt.</description>
+      <description>&lt;p&gt;Über seinen Internet-Provider zu schimpfen ist immer en vogue. Zu
+langsam, bringt nicht die vereinbarte Geschwindigkeit und
+überhaupt. Auch wenn schnelles Internet für uns ein Traum ist,
+zumindest stabil sollte es sein. Und das ist es nicht. Seit gefühlt
+schon ewig ist der DSL-Anschluss vom Verlust genau eben dieser
+Außenanbindung geprägt. Nicht immer, aber so oft, dass es nervt. Und
+ebenso scheinen die Störungen mehr zu werden, so dass teilweise
+minutenlang keine Internetverbindung zustande kommt. Das Eventlog
+zeigt keine Auffälligkeiten, nur Ping-Pong aus Aufbau und Verlust der
+WAN-Verbindung.&lt;/p&gt;
+
+&lt;p&gt;Schnell ist das auf Provider und/oder den billigen Standardrouter
+geschoben. In diesem Fall Vodafone mit einer Easybox 804 (die in der
+Bedienung gar keinen so schlechten Eindruck macht, das Wichtigste ist da).&lt;/p&gt;
+
+&lt;p&gt;Bevor man allerdings direkt ein Ticket beim Provider aufmacht erst
+einmal ausschließen, dass der Nutzer zu dumm ist. Also:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Kabel in eine andere Buchse der TAE-Einheit gesteckt. Vielleicht
+sind die Kontakte korrodiert.&lt;/li&gt;
+&lt;li&gt;Nach Routerupdates suchen (keine vorhanden).&lt;/li&gt;
+&lt;li&gt;Router komplett zurücksetzen (natürlich vorher die Einstellungen
+sichern, insbesondere die WLAN-Passwörter).
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Dumm nur, wenn man sich beim letzteren für super organisiert hält, den
+Ordner mit den Unterlagen aus dem Schrank zieht und &amp;hellip; &lt;em&gt;nach&lt;/em&gt;
+Zurücksetzen feststellt, dass dort die Zugangsdaten nicht vorhanden
+sind. Also, jetzt gar kein Internet mehr und keine Möglichkeit dieses
+wieder in Betrieb zu nehmen. Sonntag Abend um 22.30 Uhr.&lt;/p&gt;
+
+&lt;p&gt;Aber der Provider hat eine kostenlose 24/7-Hotline. Die Frage nach dem
+Kundenpasswort löst zwar eher Fragezeichen bei mir im Kopf aus (ist
+bestimmt bei den Zugangsdaten), aber durch Beantwortung diverser
+anderer Fragen ist die Identität letztendlich geklärt. Problem
+geschildert und neue Zugangsdaten per SMS innerhalb der nächsten 15
+Minuten versprochen bekommen. Hat dann doch länger gedauert, aber am
+nächsten Morgen waren sie da. Schnell eingegeben und alles geht
+wieder. Über den Support lässt sich schon einmal nicht meckern. Die
+Zugangsdaten habe ich dann übrigens in einer Email gefunden. Allein
+aus Sicherheitsgründen hätte ich geschworen, die sind damals per
+Briefpost gekommen.&lt;/p&gt;
+
+&lt;p&gt;Am nächsten Abend die Ernüchterung, alles ist so stabil, oder eben
+nicht, wie vorher. Der Plan: Ein Ticket beim Provider wegen defekten
+Routers oder defekter Anbindung eröffnen lassen.&lt;/p&gt;
+
+&lt;p&gt;Und dann beim Stöbern einen
+&lt;a href=&#34;http://www.androidpolice.com/2018/01/14/google-home-max-appears-killing-wifi-networks/&#34;&gt;Bericht&lt;/a&gt;
+gefunden in dem über den &lt;em&gt;Google Home Max&lt;/em&gt; und das massive Aussenden
+von Multicastpaketen berichtet wird, die den Router zum Absturz
+bringen können. Und anscheinend sind auch andere Cast-fähige Geräte
+(Chromecast, Android-Smartphones) davon betroffen. Aus dem Gedächtnis
+hätten sich die Probleme auch ungefähr zu dem Zeitpunkt verschlimmert
+als der neueste Smartphone-Zuwachs ins Netz gekommen ist.&lt;/p&gt;
+
+&lt;p&gt;Also nachschauen. Wireshark anwerfen und tatsächlich, da sind sie, die
+gefürchteten mDNS-Pakete. Ca. 60% des gesamten Datenverkehrs. Und
+gemessen lediglich kabelgebunden an einem normalen PC.&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/pakettrace.png&#34; alt=&#34;Pakettrace&#34; class=&#34;img-responsive&#34;&gt;
+
+&lt;p&gt;Im zeitlichen Verlauf gut zu erkennen ist die Spitze direkt nach dem
+Einschalten des Smartphones für nur einige wenige Sekunden. Wer weiß, was
+noch alles über die Luftschnittstelle gegangen ist und schon gar nicht
+mehr weiter geleitet wurde. Eine Erklärung wäre dies auch, warum sich
+das Smartphone direkt nach dem Aufwecken sehr zäh in der Bedienung
+anfühlt. Wenn es doch erst einmal tausende Pakete versenden muss&amp;hellip;&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/paketgraph.png&#34; alt=&#34;Paketgraph&#34; class=&#34;img-responsive&#34;&gt;
+
+&lt;p&gt;Verursacher ist hier ein relativ altes Nexus 5 mit Android 6,
+Marshmallow. Die meisten Berichte konzentrieren sich auf Geräte mit
+Oreo, aber mindestens Nougat.&lt;/p&gt;
+
+&lt;p&gt;Als erste Gegenmaßnahme die Chromecast vom Netz getrennt und die
+Google Home-App, die für die Inbetriebnahme und Ansteuerung der
+Chromecast zuständig ist, auf allen Smartphones
+deinstalliert. Geholfen hat es nichts, die Pakete kommen trotzdem
+weiter angeflogen. Entweder die Funktion ist tief im System verankert
+oder die anderen Cast-fähigen Apps (Youtube&amp;hellip;) lösen das Problem auch
+aus.&lt;/p&gt;
+
+&lt;p&gt;Abhilfe schaffen soll ein &lt;a href=&#34;https://www.heise.de/newsticker/meldung/Bugfix-Google-behebt-Patzer-in-Chromecast-und-Google-Home-3946037.html&#34;&gt;Update der Google Play
+Dienste&lt;/a&gt;. Mal
+schauen, wann dieses überall eingetroffen ist. Den Fehler beheben soll
+Version
+&lt;a href=&#34;https://www.xda-developers.com/google-home-chromecast-connectivity-issues/&#34;&gt;11.9.74&lt;/a&gt;,
+aktuell ist auf den Telefonen aber noch 11.9.51.&lt;/p&gt;
+
+&lt;p&gt;Mal sehen, ob dies dann die Wurzel allen Übels war und sich die
+Situation bessert. Auf ein Routerupdate zu hoffen, dass besser mit
+dieser ungewollten Denial-of-Service-Attacke im eigenen Netz umgeht
+dürfte länger dauern.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
