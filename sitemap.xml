@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.stefan-michaelis.name/dodi/ihr-kaempft-gegen-nichts/</loc>
+    <lastmod>2018-01-31T19:32:23+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.stefan-michaelis.name/iota/der-feind-in-meinem-haus/</loc>
     <lastmod>2018-01-22T19:07:55+01:00</lastmod>
   </url>
@@ -14,6 +19,7 @@
   
   <url>
     <loc>https://blog.stefan-michaelis.name/dodi/</loc>
+    <lastmod>2018-01-31T19:32:23+01:00</lastmod>
   </url>
   
   <url>
@@ -23,7 +29,7 @@
   
   <url>
     <loc>https://blog.stefan-michaelis.name/</loc>
-    <lastmod>2018-01-22T19:07:55+01:00</lastmod>
+    <lastmod>2018-01-31T19:32:23+01:00</lastmod>
     <priority>0</priority>
   </url>
   
