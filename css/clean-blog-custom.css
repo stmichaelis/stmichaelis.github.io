@@ -18,6 +18,10 @@
     }
 }
 
+.intro-header {
+    margin-bottom: 10px;
+}
+
 .shariff-button {
     font-size: 14px;
 }
@@ -36,4 +40,13 @@
     text-decoration: none;
     color: white;
     font-size: 12px;
+}
+
+blockquote ol, blockquote p, blockquote ul {
+    margin-top: 0px;
+}
+
+.blockquote-footer {
+    padding: 0px;
+    margin-top: -10px;
 }
