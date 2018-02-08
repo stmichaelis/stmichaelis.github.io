@@ -6,10 +6,49 @@
     <description>Recent content in IoTA on Stefan Michaelis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Mon, 22 Jan 2018 19:07:55 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 07 Feb 2018 20:56:11 +0100</lastBuildDate>
     
         <atom:link href="https://blog.stefan-michaelis.name/iota/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Internet of Things Automation und das lernende Smart Home</title>
+      <link>https://blog.stefan-michaelis.name/iota/internet-of-things-automation/</link>
+      <pubDate>Wed, 07 Feb 2018 20:56:11 +0100</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/iota/internet-of-things-automation/</guid>
+      <description>&lt;div class=&#34;row&#34;&gt;
+     &lt;div class=&#34;col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1&#34;&gt;
+     	  &lt;img src=&#34;https://blog.stefan-michaelis.name/images/IntelligentHousePlain.png&#34; class=&#34;img-responsive&#34; /&gt;
+     &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Das Internet der Dinge ist überall, vor allem auch in der öffentlichen
+Wahrnehmung. Gartner stuft IoT in seinem Hype-Cycle vom August 2016
+kurz vor dem &lt;em&gt;Peak of inflated expectations&lt;/em&gt; ein. Die Ankunft im
+Mainstream wäre danach noch 5 bis 10 Jahre entfernt.  Aber was ist das
+Internet der Dinge wirklich? Im einfachsten Fall ist dies einfach ein
+Gerät mit Internetanschluss. Der Kühlschrank, die Kaffeemaschine?
+Wozu?  Sinn macht das Internet der Dinge eigentlich erst dann, wenn
+die Geräte intelligenter und Aktionen automatisiert werden. Eine
+gewisse Lernfähigkeit gehört dazu.  Eine Spielwiese für Ideen bietet
+dabei das Smart Home. Steckdosen und Licht per App schalten? Kein
+Problem. Das selbstlernende Haus? Sehen wir doch einmal.&lt;/p&gt;
+
+&lt;p&gt;Ziele für intelligente Systeme im Haus sind dabei:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Einsparung von Energie&lt;/li&gt;
+&lt;li&gt;Einsparung von Kosten&lt;/li&gt;
+&lt;li&gt;Erhöhung des Komforts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Die folgenden Beiträge beschreiben Schritt für Schritt Experimente und
+Konzepte, wie kleine Geräte ihren Nutzen durch Automatisierung und
+maschinelles Lernen erhöhen können.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Der Feind in meinem Haus</title>
