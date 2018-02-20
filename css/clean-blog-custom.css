@@ -1,3 +1,5 @@
+
+/* Fontgroessen fuer grosse und kleine Displays */
 @media only screen and (max-width: 991px) {
     p, ul, ol, .post-preview > .post-meta {
 	font-size: 16px;
@@ -26,6 +28,7 @@
     font-size: 14px;
 }
 
+/* Verweis auf Fussnoten und Groesse Fussnoten */
 .footnotes {
     font-size: 14px;
 }
@@ -42,6 +45,7 @@
     font-size: 12px;
 }
 
+/* Zitate besser in Text einpassen */
 blockquote ol, blockquote p, blockquote ul {
     margin-top: 0px;
 }
@@ -49,4 +53,13 @@ blockquote ol, blockquote p, blockquote ul {
 .blockquote-footer {
     padding: 0px;
     margin-top: -10px;
+}
+
+/* Unterstrichen Links in Listen, aber nicht im Header */
+li a {
+    text-decoration: underline;
+}
+
+.navbar-nav li a {
+    text-decoration: none;
 }

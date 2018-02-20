@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stefan Michaelis</title>
+    <title>Stefan Michaelis - Blog</title>
     <link>https://blog.stefan-michaelis.name/</link>
-    <description>Recent content on Stefan Michaelis</description>
+    <description>Recent content on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
     <lastBuildDate>Wed, 14 Feb 2018 19:41:22 +0100</lastBuildDate>
@@ -275,7 +275,8 @@ als der neueste Smartphone-Zuwachs ins Netz gekommen ist.&lt;/p&gt;
 gefürchteten mDNS-Pakete. Ca. 60% des gesamten Datenverkehrs. Und
 gemessen lediglich kabelgebunden an einem normalen PC.&lt;/p&gt;
 
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/pakettrace.png&#34; alt=&#34;Pakettrace&#34; class=&#34;img-responsive&#34;&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/pakettrace.png&#34; alt=&#34;/images/pakettrace.png&#34; class=&#34;img-responsive&#34;&gt;
+
 
 &lt;p&gt;Im zeitlichen Verlauf gut zu erkennen ist die Spitze direkt nach dem
 Einschalten des Smartphones für nur einige wenige Sekunden. Wer weiß, was
@@ -284,7 +285,8 @@ mehr weiter geleitet wurde. Eine Erklärung wäre dies auch, warum sich
 das Smartphone direkt nach dem Aufwecken sehr zäh in der Bedienung
 anfühlt. Wenn es doch erst einmal tausende Pakete versenden muss&amp;hellip;&lt;/p&gt;
 
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/paketgraph.png&#34; alt=&#34;Paketgraph&#34; class=&#34;img-responsive&#34;&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/paketgraph.png&#34; alt=&#34;/images/paketgraph.png&#34; class=&#34;img-responsive&#34;&gt;
+
 
 &lt;p&gt;Verursacher ist hier ein relativ altes Nexus 5 mit Android 6,
 Marshmallow. Die meisten Berichte konzentrieren sich auf Geräte mit
