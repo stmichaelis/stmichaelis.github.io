@@ -6,10 +6,58 @@
     <description>Recent content in IoTA on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Wed, 07 Feb 2018 20:56:11 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 21 Feb 2018 21:43:53 +0100</lastBuildDate>
     
         <atom:link href="https://blog.stefan-michaelis.name/iota/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Wo kommen die Daten her?</title>
+      <link>https://blog.stefan-michaelis.name/iota/verfuegbare-sensoren/</link>
+      <pubDate>Wed, 21 Feb 2018 21:43:53 +0100</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/iota/verfuegbare-sensoren/</guid>
+      <description>&lt;p&gt;Um ein Haus intelligent werden zu lassen müssen auch passende Daten
+vorliegen. Die Sensorik ist damit die Grundlage um überhaupt etwas
+lernen zu können. Die grundlegende Installation in unserem Haus
+basiert auf KNX. Dieses System vereint dezentral Komponenten aus
+Aktorik und Sensorik auf einem Bus. Grundlagen dazu sind
+bei &lt;a href=&#34;https://de.wikipedia.org/wiki/KNX-Standard&#34;&gt;Wikipedia&lt;/a&gt; zu finden,
+prinzipiell spielt der genaue Standard aber keine Rolle solange
+Sensordaten in verarbeitbarer Form verfügbar sind. Vorteile des
+Systems sind die Offenheit des Standards, der auch eine langfristige
+Verfügbarkeit garantiert, und die Robustheit der Gesamtinstallation
+durch den Verzicht auf einen zentralen Server. Als verbreiteten
+Industriestandard ist es kein Problem sowohl Installateure als auch
+neue Hardware dafür zu finden.&lt;/p&gt;
+
+&lt;p&gt;Die Installation in unserem Haus ist verhältnismäßig klein gehalten
+und bietet die grundlegenden Funktionen für die Schaltung von Licht
+und Regelung von Heizung und kontrollierter Wohnraumlüftung.&lt;/p&gt;
+
+&lt;p&gt;Die verfügbare Sensorik besteht aus:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;18 x Temperatursensoren (einer davon Außentemperatur)&lt;/li&gt;
+&lt;li&gt;4 x Feuchtesensoren&lt;/li&gt;
+&lt;li&gt;2 x CO²-Sensoren&lt;/li&gt;
+&lt;li&gt;3 x Helligkeitssensoren außen für die Himmelsrichtungen Ost/Süd/West&lt;/li&gt;
+&lt;li&gt;2 x Leistungsaufnahme für Waschmaschine und Trockner&lt;/li&gt;
+&lt;li&gt;6 x Präsenzdetektion&lt;/li&gt;
+&lt;li&gt;1 x Windgeschwindigkeit&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Grundsätzlich ist keiner dieser Sensoren notwendig. Die
+Fußbodenheizung ist über den hydraulischen Abgleich fest eingestellt
+und könnte über die Vorlauftemperatur regeln, die Lüftungsanlage läuft
+nach Zeitprogramm und die Lichtschalter schalten das Licht.&lt;/p&gt;
+
+&lt;p&gt;Die erste simple Automatisierung betreffen dann die Einzelraumregelung
+über die Temperatursensoren in jedem Raum und die automatische
+Schaltung von Licht in den Durchgangsbereichen und den Fluren und
+damit das Hello-World der Hausautomatisierung.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Internet of Things Automation und das lernende Smart Home</title>

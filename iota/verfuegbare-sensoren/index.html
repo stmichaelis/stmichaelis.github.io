@@ -74,14 +74,14 @@
 
     
     
-    <header class="intro-header" style="background-image: url('https://blog.stefan-michaelis.name//s/blackhole.jpg')">
-      
+    <header class="intro-header" style="background-image: url('https://blog.stefan-michaelis.name/img/home-bg.jpg')">
+    
       <div class="container" style="width: 100%; background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) )">
         <div class="row">
            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
              <div class="post-heading">
-               <h1>Wenn Bürokratien kollidieren...</h1>
-               <h2 class="subheading">...entstehen dann schwarze Löcher?</h2>
+               <h1>Wo kommen die Daten her?</h1>
+               <h2 class="subheading">Verfügbare Sensorik im Haus</h2>
              </div>
            </div>
         </div>
@@ -93,60 +93,54 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                  <p>Je größer eine Behörde oder ein Unternehmen um so größer die
-bürokratische Hürden auch bei einfachen Vorgängen. So scheint es
-zumindest oft. Und spannend wird das ganze, wenn zwei dieser Gruppen
-sich über einen Vorgang einigen müssen, der im schlimmsten Fall noch
-durch inkompatible Prozesse geregelt wird.</p>
+                  <p>Um ein Haus intelligent werden zu lassen müssen auch passende Daten
+vorliegen. Die Sensorik ist damit die Grundlage um überhaupt etwas
+lernen zu können. Die grundlegende Installation in unserem Haus
+basiert auf KNX. Dieses System vereint dezentral Komponenten aus
+Aktorik und Sensorik auf einem Bus. Grundlagen dazu sind
+bei <a href="https://de.wikipedia.org/wiki/KNX-Standard">Wikipedia</a> zu finden,
+prinzipiell spielt der genaue Standard aber keine Rolle solange
+Sensordaten in verarbeitbarer Form verfügbar sind. Vorteile des
+Systems sind die Offenheit des Standards, der auch eine langfristige
+Verfügbarkeit garantiert, und die Robustheit der Gesamtinstallation
+durch den Verzicht auf einen zentralen Server. Als verbreiteten
+Industriestandard ist es kein Problem sowohl Installateure als auch
+neue Hardware dafür zu finden.</p>
 
-<p>Natürlich haben Prozesse und festgelegte geregelte Abläufe nur das
-Beste im Sinn: Missbrauch vermeiden, klare Strukturen schaffen und
-dafür sorgen, dass gleiche Vorgänge reproduzierbar das gleiche
-Ergebnis schaffen. Vielleicht sogar schnell, da die Abläufe
-standardisiert sind. Aber was, wenn der Fall im Standard nicht
-vorgesehen ist, und wenn die Abweichungen auch noch so minimal sind?</p>
+<p>Die Installation in unserem Haus ist verhältnismäßig klein gehalten
+und bietet die grundlegenden Funktionen für die Schaltung von Licht
+und Regelung von Heizung und kontrollierter Wohnraumlüftung.</p>
 
-<p>Gerade wieder so einen Fall gehabt. Die Einladung von Gästen für
-Vorträge zu Fachthemen ist ein solcher Standardfall: Gast auswählen,
-ansprechen, Datum und Thema festlegen, bei der Planung unterstützen
-und anschließend Reisekosten erstatten.</p>
+<p>Die verfügbare Sensorik besteht aus:</p>
 
-<p>Der Standard sieht vor, dass die einladende Stelle A aber auf keinen
-Fall Kosten vor dem Vortrag erstattet (was passiert eigentlich, wenn
-der Gast krank wird? Muss er dann die Stornokosten seines Flugs selbst
-tragen?). Wie ginge das auch, schließlich darf nichts bezahlt werden
-für Dinge, die es noch gar nicht gegeben hat?! Vorkasse wie oft bei
-Privatverbrauchern? Undenkbar!</p>
+<ul>
+<li>18 x Temperatursensoren (einer davon Außentemperatur)</li>
+<li>4 x Feuchtesensoren</li>
+<li>2 x CO²-Sensoren</li>
+<li>3 x Helligkeitssensoren außen für die Himmelsrichtungen Ost/Süd/West</li>
+<li>2 x Leistungsaufnahme für Waschmaschine und Trockner</li>
+<li>6 x Präsenzdetektion</li>
+<li>1 x Windgeschwindigkeit</li>
+</ul>
 
-<p>Jetzt hat eingeladene Stelle B aber die Regelung, dass bei
-eingeladenen Besuchen und Kostenübernahme durch den Gastgeber auf
-keinen Fall eine Vorleistung durch Stelle B erbracht werden
-darf. Spätere Erstattungen sind nicht möglich.</p>
+<p>Grundsätzlich ist keiner dieser Sensoren notwendig. Die
+Fußbodenheizung ist über den hydraulischen Abgleich fest eingestellt
+und könnte über die Vorlauftemperatur regeln, die Lüftungsanlage läuft
+nach Zeitprogramm und die Lichtschalter schalten das Licht.</p>
 
-<p>Also ein mexikanisches Patt und leiden müssen die Fachabteilungen. Ich
-stelle mir das gerne wie zwei große sich umkreisende Galaxien vor, die
-langsam ineinander driften, kollidieren, und am Ende bleibt nichts übrig
-außer vielleicht einem schwarzen Loch.</p>
+<p>Die erste simple Automatisierung betreffen dann die Einzelraumregelung
+über die Temperatursensoren in jedem Raum und die automatische
+Schaltung von Licht in den Durchgangsbereichen und den Fluren und
+damit das Hello-World der Hausautomatisierung.</p>
 
-<p>Was benötigt solch ein Vorgang um ihn aufzulösen? Menschen. Einfach
-jemanden der die (faktische oder einfach mutige) Autorität hat
-Ausnahmeregelungen zuzulassen. Und ich bin immer wieder dankbar, wenn es
-diese Menschen gibt&hellip;</p>
-
-<p><span class="h5">Titelbild: NASA/CXC/M.Weiss <a href="https://www.nasa.gov/audience/forstudents/5-8/features/nasa-knows/what-is-a-black-hole-58.html">https://www.nasa.gov/audience/forstudents/5-8/features/nasa-knows/what-is-a-black-hole-58.html</a></span></p>
-
-		  <div class="shariff" data-title="Wenn Bürokratien kollidieren..." data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;,&quot;mail&quot;]" data-mail-url="mailto:"></div>
-		  <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 14.02.2018</p>
+		  <div class="shariff" data-title="Wo kommen die Daten her?" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;,&quot;mail&quot;]" data-mail-url="mailto:"></div>
+		  <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 21.02.2018</p>
 		  
 		  <ul class="pager">
 		    
-		    <li class="next">
-		      <a href="/iota/verfuegbare-sensoren/">Nächster &rarr;</a>
-		    </li>
-		    
 		    
 		    <li class="previous">
-		      <a href="/iota/internet-of-things-automation/">&larr; Vorheriger</a>
+		      <a href="/dodi/wenn-buerokratien-kollidieren/">&larr; Vorheriger</a>
 		    </li>
 		    
 		  </ul>
