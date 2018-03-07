@@ -6,10 +6,56 @@
     <description>Recent content on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Wed, 28 Feb 2018 19:55:33 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 07 Mar 2018 19:36:29 +0100</lastBuildDate>
     
         <atom:link href="https://blog.stefan-michaelis.name/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Und es wird Licht - Aber wo?</title>
+      <link>https://blog.stefan-michaelis.name/iota/tastfeldbeschriftung/</link>
+      <pubDate>Wed, 07 Mar 2018 19:36:29 +0100</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/iota/tastfeldbeschriftung/</guid>
+      <description>&lt;p&gt;Die Auswahl der Schalterserie im Haus ist eine Frage des persönlichen
+Geschmacks. Unabhängig von der Auswahl der konkreten Serie müssen aber
+gerade in komplizierten Installationen die Schalter auch entsprechend
+ihrer Funktion beschriftet werden. Bei den KNX-Tastern der Serie F50
+der Firma Jung kann dies bis zu acht verschiedene Funktionen in einem
+Schalter bedeuten.&lt;/p&gt;
+
+&lt;p&gt;Die Serie F50 besitzt zwischen den eigentlichen Tastern eine
+transparente Fläche aus Kunststoff hinter der die Symbole für die
+Funktionen angebracht werden können. Für die Erstellung der
+Beschriftung bietet der Hersteller eine eigene Webanwendung an:
+&lt;a href=&#34;http://lt.jung.de&#34;&gt;lt.jung.de&lt;/a&gt;. Bis auf kleinere Bugs funktioniert
+diese recht gut und bietet eine ordentliche Auswahl an Symbolen. Die
+fertige Beschriftung lässt sich als PDF für den Ausdruck
+herunterladen. Leider hat sich dann gezeigt, dass die Symbole nicht
+als Vektorgrafik im PDF integriert sind und daher deutlich sichtbare
+Pixel zeigen. Bei genügend großem Abstand zum Schalter fällt dies im
+Alltag vermutlich gar nicht auf, aber trotzdem:&lt;/p&gt;
+
+&lt;p&gt;Zurück ans Reißbrett und in Inkscape selbst gezeichnet. Neben
+Vektorgrafik hat dies auch erlaubt auf einfache Weise passende Symbole
+selbst zu erstellen. Ein Ausschnitt ist hier zu sehen:&lt;/p&gt;
+
+&lt;div class=&#34;row&#34;&gt;
+     &lt;div class=&#34;col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1&#34;&gt;
+     	  &lt;img src=&#34;https://blog.stefan-michaelis.name/images/Tastfelder_Beispiel.png&#34; class=&#34;img-responsive&#34; /&gt;
+     &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Wer Interesse daran hat findet hier die Vorlage zur eigenen Verfügung:
+&lt;a href=&#34;images/Tastfeldbeschriftung.svg&#34;&gt;Tastfeldbeschriftung&lt;/a&gt;. Die Datei beinhaltet zwei Layer, einen mit der fertigen
+Beschriftung (die Symbole dürften nicht für jeden Anwendungsfall geeignet sein,
+bzw. ausreichen) und den unteren Layer mit leeren Vorlagen für die
+zwei- und vierfach Tastfelder. Beim Druck ist zu beachten, dass in
+manchen Fällen der Treiber die Seite etwas skaliert. Ein Testausdruck
+auf Papier bevor es z.B. auf Folie geht wird empfohlen.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Morgenroutine</title>
