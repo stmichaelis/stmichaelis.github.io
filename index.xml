@@ -6,10 +6,123 @@
     <description>Recent content on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Wed, 21 Mar 2018 19:07:33 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 28 Mar 2018 19:29:21 +0100</lastBuildDate>
     
         <atom:link href="https://blog.stefan-michaelis.name/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kalibrierung und Grundeinstellung</title>
+      <link>https://blog.stefan-michaelis.name/iota/kalibrierung/</link>
+      <pubDate>Wed, 28 Mar 2018 19:29:21 +0100</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/iota/kalibrierung/</guid>
+      <description>
+
+&lt;p&gt;Alle Komponenten sind installiert, beschriftet und warten auf die
+Inbetriebnahme. Das Schöne am KNX-Bus ist der dezentrale
+Aufbau. Grundsätzlich bringen alle Komponenten ihre eigene rudimentäre
+Intelligenz mit und funktionieren auch ohne zentrale
+Steuereinheit. Insbesondere für Grundfunktionen wie Licht und Heizung
+ist dies essenziell da diese somit nicht von der Funktion einer
+zentralen Komponente abhängig sind. Für komplexere Regelungen, die
+aber wieder den Alltag nur netter machen, ist der Homeserver dann das
+nette Addon.&lt;/p&gt;
+
+&lt;h2 id=&#34;raumtemperatur&#34;&gt;Raumtemperatur&lt;/h2&gt;
+
+&lt;p&gt;Spätestens zum Winter muss die Heizung betriebsbereit sein. Zur
+Überwachung der Raumtemperaturen sind verschiedene Sensoren verfügbar:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Über die &lt;a href=&#34;https://www.jung.de/1987/produkte/technik/knx-system/knx-tastsensoren-f-50/&#34;&gt;Jung Tastsensoren der Serie F50
+Universal&lt;/a&gt;
+steht in jedem Raum ein Sensor am Lichtschalter zur Verfügung&lt;/li&gt;
+&lt;li&gt;Die Jung CO&lt;sub&gt;2&lt;/sub&gt;-Sensoren (Wohn- und Schlafzimmer) stellen ebenfalls die Temperatur
+bereit&lt;/li&gt;
+&lt;li&gt;In den Bädern sind kombiniert Feuchte-/Temperatursensoren der Elsner
+vom Typ TH-UP verbaut&lt;/li&gt;
+&lt;li&gt;Letztendlich noch ein einzelner Raumtemperatursensor MDT
+SCN-TS1UP.01 im Keller
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;hellip;und alle Sensoren zeigen (natürlich) etwas anderes an. Die
+absolut korrekte Temperaturerfassung ist dabei gar nicht entscheidend,
+sondern zur Einstellung der persönlichen Behaglichkeit müssen nur die
+Level zwischen den Sensoren vergleichbar sein.&lt;/p&gt;
+
+&lt;p&gt;Dementsprechend den Außenfühler der Wetterstation hereingeholt, neben
+jedem einzelnen Sensor platziert und nach einiger Wartezeit den Wert
+dieses Sensors mit den KNX-Sensoren verglichen.&lt;/p&gt;
+
+&lt;p&gt;Am weitesten entfernt waren dabei die Jung-Sensoren (bis zu ~1,5 K),
+gefolgt von den Elsner-Sensoren, während der MDT-Fühler identisch zur
+(nicht zwangsweise richtigen) Temperatur der Wetterstation war.&lt;/p&gt;
+
+&lt;p&gt;Auffällig war dabei aber, dass die gemessene Temperatur der Sensoren
+in den Jung-Tastern vom Betriebsmodus abhängig war. Dies bieten ein
+beleuchtetes Mittelfeld neben den eigentlichen Tastflächen. Und die
+Wärmeentwicklung scheint die Sensoren deutlich zu beeinflussen. Das
+lässt sich natürlich in den Einstellungen kompensieren, macht aber
+andere Einstellungen wie einen dunkleren Nachtmodus oder die
+Abschaltung am Tag nicht wirklich praktikabel.&lt;/p&gt;
+
+&lt;p&gt;Die Elsner-Sensoren weisen im Handbuch darauf hin, dass es durch die
+Wärmeentwicklung der Elektronik zur Beeinflussung der Messung kommt,
+dies aber intern kompensiert wird, die Messwerte allerdings
+dementsprechend erst nach einigen Minuten Laufzeit nach dem
+Einschalten gültig sind.&lt;/p&gt;
+
+&lt;p&gt;Hier müsste Jung noch einmal nachbessern. Die Unterschiede ließen sich
+zwar extern kompensieren, was aber ziemlich aufwändig ist.&lt;/p&gt;
+
+&lt;h2 id=&#34;rollläden&#34;&gt;Rollläden&lt;/h2&gt;
+
+&lt;p&gt;Einmal installiert funktionieren die Rollläden auch direkt auf
+Tastendruck. Um aber später nette Funktionen wie einen automatischen
+Sonnenschutz (nach dem Winter kommt der Sommer) nutzen zu können ist
+es hilfreich absolute Positionen anfahren zu können. Dazu müssen aber
+die Auf- und Abfahrzeiten dem Aktor bekannt gegeben werden. Also
+Stoppuhr herausgeholt und alle Rollläden einmal hoch und wieder
+herunter gefahren. In der Praxis waren die Verfahrzeiten nur gut 50 %
+der voreingestellten Zeiten, was auch Sinn ergibt, denn wer möchte
+schon vorher, dass der Rollläden schon in der Mitte stoppt weil er
+meint er wäre in der Endposition angekommen.&lt;/p&gt;
+
+&lt;p&gt;In der Anleitung des MDT-Aktors steht dabei noch die Randbemerkung:
+&amp;ldquo;Bei nicht so hochwertigen Motoren können sich die Auf- und
+Abfahrzeiten unterscheiden&amp;rdquo;. Bei uns liegt die Differenz bei immerhin
+2s. Dankeschön.&lt;/p&gt;
+
+&lt;h2 id=&#34;dimmer&#34;&gt;Dimmer&lt;/h2&gt;
+
+&lt;p&gt;Bei den Dimmern (zentrale Dimmer in klassischer
+Phasenan-/abschnittstechnik) gibt (sollte) es nicht viel
+einzustellen. Der Lasttyp gehört zumindest dazu.  Auffällig war aber
+immerhin auch bei den von uns installierten Lampen, dass ein Wechsel
+der Kennlinie vom Standard notwendig war. Erst die &amp;ldquo;Logarithmische
+Kennlinie&amp;rdquo; hat ein zufriedenstellendes optisch scheinbares lineares
+Dimmverhalten ergeben.&lt;/p&gt;
+
+&lt;p&gt;Die Grundeinstellung für den Einschaltwert liegt dabei noch im Bereich
+90 %-70 %. Nur so ist den heutigen LED-Flutlichtern (Warum müssen die
+immer so hell sein? Weil&amp;rsquo;s geht?) auf ein angenehmes Maß beizukommen.&lt;/p&gt;
+
+&lt;h2 id=&#34;schaltschwelle-präsenzmelder&#34;&gt;Schaltschwelle Präsenzmelder&lt;/h2&gt;
+
+&lt;p&gt;Letztendlich muss auch die Einschaltschwelle für die Präsenzmelder,
+die üblicherweise in den Fluren als Durchgangsbereichen installiert
+sind, eingestellt werden. Letztendlich ist es hier Geschmackssache ab
+wann dunkel zu dunkel ist. Sollten die Einstellbereiche nicht
+ausreichend lässt sich noch weiterhin über den Reflexionsfaktor der
+Umgebung eine weitere Abstimmungsmöglichkeit konfigurieren (MDT
+Präsenzmelder).&lt;/p&gt;
+
+&lt;p&gt;Sind alle diese Grundeinstellungen erfolgt steht der weiteren
+Automatisierung im Heim eigentlich nichts weiter im Wege.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Teflonbeschichtetes Kevlar</title>
