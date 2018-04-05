@@ -6,10 +6,133 @@
     <description>Recent content on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Wed, 28 Mar 2018 19:29:21 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 04 Apr 2018 19:53:18 +0100</lastBuildDate>
     
         <atom:link href="https://blog.stefan-michaelis.name/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Homeserver</title>
+      <link>https://blog.stefan-michaelis.name/iota/homeserver1/</link>
+      <pubDate>Wed, 04 Apr 2018 19:53:18 +0100</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/iota/homeserver1/</guid>
+      <description>&lt;p&gt;Das schöne an der Verkabelung mit KNX ist der dezentrale Ansatz und
+die Eigenintelligenz der Komponenten. Fällt eine Komponente aus läuft
+der Rest weiter. Je nach Komponente kann dies zwar unterschiedlich
+fatal sein (bei der Heizungssteuerung fällt direkt eine ganze Etage
+aus. Bei der Spannungsversorgung dann doch das gesamte System&amp;hellip;),
+aber wie oft das vorkommt muss sich im Laufe der Jahre zeigen.&lt;/p&gt;
+
+&lt;p&gt;Damit ist aber auch schon einmal sichergestellt, dass die
+Grundfunktionen zuverlässig da sind. Nur so richtig &lt;em&gt;intelligent&lt;/em&gt; sind die
+Komponenten dann wieder nicht. Also muss ein eigener Homeserver her,
+der später als Spielwiese (hoffentlich) für die spannenden Experimente
+dient.&lt;/p&gt;
+
+&lt;p&gt;Im Wohnzimmer sind dazu an einer Stelle Stromanschluss, Ethernetkabel
+und KNX-Leitung vorhanden. Hier wird der Server als zentrale
+Steuereinheit auf Basis des bekannte Raspberry Pi später montiert werden.&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_Gehaeuse_Vorderseite.jpg&#34; alt=&#34;Homeserver Vorderseite&#34; class=&#34;img-responsive&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Vorderseite des Homeserver-Gehäuses&lt;/div&gt;
+
+
+&lt;p&gt;Das Gehäuse wird dazu aus einfachem Sperrholz gefertigt und bekommt
+einen passenden Ausschnitt um das Touchdisplay zur Bedienung
+aufzunehmen.&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_Gehaeuse_Rueckseite.jpg&#34; alt=&#34;Homeserver Rückseite&#34; class=&#34;img-responsive&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Homeserver Rückseite&lt;/div&gt;
+
+
+&lt;p&gt;In der Rückseitenansicht sind die Viertelrundhölzer in den Ecken zu
+sehen die dem Gehäuse einen etwas &amp;ldquo;weicheren&amp;rdquo; Charme verleihen. Das
+Ganze wird verleimt, ggf. verspachtelt und geschliffen, und
+abschließend lackiert&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. Falls sich jemand wundert: Das Gehäuse ist
+recht dick (knapp 6 cm) geworden und der Ausschnitt für das Display
+asymmetrisch im Gehäuse. Optisch ließe sich durch eine kompaktere
+Anordnung der Komponenten sicher eine flachere Bauweise erreichen, so
+ist aber sichergestellt, dass alles später bequem in das Gehäuse
+passt. Insbesondere das Netzteil verschwindet letztendlich im Bereich
+rechts vom Display. Die Dicke erschließt sich beim Blick auf die gestackte
+Anordnung aller Komponenten.&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_Display_Rueckseite.jpg&#34; alt=&#34;Homeserver Display&#34; class=&#34;img-responsive&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Display mit Raspberry Pi und KNX-Ankopplung&lt;/div&gt;
+
+
+&lt;p&gt;Die Hardware besteht aus:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/hardware/raspberrypi/README.md&#34;&gt;Raspberry
+Pi&lt;/a&gt;
+(hier noch in der Version 2, die aktuelle Version 3 sollte aber
+mindestens genauso gut/besser funktionieren), ca. 35 €&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/hardware/display/README.md&#34;&gt;7-Zoll
+Touchdisplay&lt;/a&gt;,
+offizielles Display, ca. 70 €&lt;/li&gt;
+&lt;li&gt;Micro-USB-Netzteil 2,5A, ca. 10 €&lt;/li&gt;
+&lt;li&gt;Micro-SD-Karte 16 GB, ca. 10 €&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://busware.de/tiki-index.php?page=PIG_OW&#34;&gt;PIGATOR-HAT&lt;/a&gt; von
+Busware, ca. 45 € inkl. Befestigungsset. Hierbei handelt es sich um
+das Modul mit Echtzeituhr (RTC) und 1-Wire-Busanschluss. Für 10 € weniger
+gibt es das auch als Aufsteckmodul ohne weitere Funktion. Eine RTC
+ist hilfreich, ließe sich aber auch separat nachrüsten.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://shop.busware.de/product_info.php/cPath/1_32_33/products_id/105&#34;&gt;KNX-Pigator&lt;/a&gt;
+für die Busanbindung, ca. 40 €.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Die letzten beiden Komponenten dienen für den Zugriff auf den KNX-Bus
+und lassen sich über die passende Software auf dem Raspberry Pi auch
+als Router zur Programmierung der Komponenten einsetzen. Schön an
+dieser Lösung ist alle Komponenten passend zueinander und an einem
+Platz zu haben.&lt;/p&gt;
+
+&lt;p&gt;Da diese Komponenten alle rund um den Raspberry Pi herum entworfen
+sind passen sie übereinander, ergeben aber auch einen entsprechend
+dicken Aufbau. Die Stromversorgung wird am Display eingesteckt und
+über die roten/schwarzen Kabel der Raspberry Pi von dort aus
+betrieben.&lt;/p&gt;
+
+&lt;p&gt;Alternativ kann auch ein professioneller Router für die
+Elektroverteilung oder eine herkömmliche KNX-USB-Schnittstelle
+eingesetzt werden, was die Programmierung des KNX-Busses auch ohne
+verfügbaren Raspberry Pi ermöglicht.&lt;/p&gt;
+
+&lt;p&gt;Statt der Kombination Raspberry Pi + Display ist auch eine Variante
+mit Tablet denkbar, welches wiederum zur Steuerung auf eine
+Weboberfläche auf dem Raspberry zugreift.&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_Montiert.jpg&#34; alt=&#34;Homeserver montiert&#34; class=&#34;img-responsive&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Fertig an der Wand montierter Homeserver mit Raspbian-Linux&lt;/div&gt;
+
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_MontiertTotale.jpg&#34; alt=&#34;/images/Homeserver_MontiertTotale.jpg&#34; class=&#34;img-responsive&#34;&gt;
+
+
+&lt;p&gt;An der Wand montiert wirkt das gesamte Gehäuse allerdings bei weitem
+nicht so dick und klobig wie noch während der Anfertigung. Als Basis
+für die weitere Software dient ein herkömmliches Raspbian-Linux.&lt;/p&gt;
+
+&lt;p&gt;Das Grundsystem als Plattform läuft damit, im nächsten Schritt geht es darum
+den Zugriff auf den KNX-Bus zu ermöglichen und auch eine Steuerung zu
+implementieren.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;Notiz an mich: Lackieren ist gar nicht einfach und kein Selbstläufer. Tropfen, Nasen, Flecken, alles dabei. Für das nächste mal besser überlegen und testen wie das Ergebnis professioneller wird.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt; ↩&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Kalibrierung und Grundeinstellung</title>

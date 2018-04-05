@@ -98,6 +98,133 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
                              <div class="post-preview">
+                 <a href="https://blog.stefan-michaelis.name/iota/homeserver1/">
+                      <h2 class="post-title">Homeserver</h2>
+                      <h3 class="post-subtitle">Die Hardware</h3>
+                 </a>
+		 <p>Das schöne an der Verkabelung mit KNX ist der dezentrale Ansatz und
+die Eigenintelligenz der Komponenten. Fällt eine Komponente aus läuft
+der Rest weiter. Je nach Komponente kann dies zwar unterschiedlich
+fatal sein (bei der Heizungssteuerung fällt direkt eine ganze Etage
+aus. Bei der Spannungsversorgung dann doch das gesamte System&hellip;),
+aber wie oft das vorkommt muss sich im Laufe der Jahre zeigen.</p>
+
+<p>Damit ist aber auch schon einmal sichergestellt, dass die
+Grundfunktionen zuverlässig da sind. Nur so richtig <em>intelligent</em> sind die
+Komponenten dann wieder nicht. Also muss ein eigener Homeserver her,
+der später als Spielwiese (hoffentlich) für die spannenden Experimente
+dient.</p>
+
+<p>Im Wohnzimmer sind dazu an einer Stelle Stromanschluss, Ethernetkabel
+und KNX-Leitung vorhanden. Hier wird der Server als zentrale
+Steuereinheit auf Basis des bekannte Raspberry Pi später montiert werden.</p>
+
+<img src="/images/Homeserver_Gehaeuse_Vorderseite.jpg" alt="Homeserver Vorderseite" class="img-responsive">
+
+<div class="caption">Vorderseite des Homeserver-Gehäuses</div>
+
+
+<p>Das Gehäuse wird dazu aus einfachem Sperrholz gefertigt und bekommt
+einen passenden Ausschnitt um das Touchdisplay zur Bedienung
+aufzunehmen.</p>
+
+<img src="/images/Homeserver_Gehaeuse_Rueckseite.jpg" alt="Homeserver Rückseite" class="img-responsive">
+
+<div class="caption">Homeserver Rückseite</div>
+
+
+<p>In der Rückseitenansicht sind die Viertelrundhölzer in den Ecken zu
+sehen die dem Gehäuse einen etwas &ldquo;weicheren&rdquo; Charme verleihen. Das
+Ganze wird verleimt, ggf. verspachtelt und geschliffen, und
+abschließend lackiert<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>. Falls sich jemand wundert: Das Gehäuse ist
+recht dick (knapp 6 cm) geworden und der Ausschnitt für das Display
+asymmetrisch im Gehäuse. Optisch ließe sich durch eine kompaktere
+Anordnung der Komponenten sicher eine flachere Bauweise erreichen, so
+ist aber sichergestellt, dass alles später bequem in das Gehäuse
+passt. Insbesondere das Netzteil verschwindet letztendlich im Bereich
+rechts vom Display. Die Dicke erschließt sich beim Blick auf die gestackte
+Anordnung aller Komponenten.</p>
+
+<img src="/images/Homeserver_Display_Rueckseite.jpg" alt="Homeserver Display" class="img-responsive">
+
+<div class="caption">Display mit Raspberry Pi und KNX-Ankopplung</div>
+
+
+<p>Die Hardware besteht aus:</p>
+
+<ul>
+<li><a href="https://www.raspberrypi.org/documentation/hardware/raspberrypi/README.md">Raspberry
+Pi</a>
+(hier noch in der Version 2, die aktuelle Version 3 sollte aber
+mindestens genauso gut/besser funktionieren), ca. 35 €</li>
+<li><a href="https://www.raspberrypi.org/documentation/hardware/display/README.md">7-Zoll
+Touchdisplay</a>,
+offizielles Display, ca. 70 €</li>
+<li>Micro-USB-Netzteil 2,5A, ca. 10 €</li>
+<li>Micro-SD-Karte 16 GB, ca. 10 €</li>
+<li><a href="http://busware.de/tiki-index.php?page=PIG_OW">PIGATOR-HAT</a> von
+Busware, ca. 45 € inkl. Befestigungsset. Hierbei handelt es sich um
+das Modul mit Echtzeituhr (RTC) und 1-Wire-Busanschluss. Für 10 € weniger
+gibt es das auch als Aufsteckmodul ohne weitere Funktion. Eine RTC
+ist hilfreich, ließe sich aber auch separat nachrüsten.</li>
+<li><a href="http://shop.busware.de/product_info.php/cPath/1_32_33/products_id/105">KNX-Pigator</a>
+für die Busanbindung, ca. 40 €.</li>
+</ul>
+
+<p>Die letzten beiden Komponenten dienen für den Zugriff auf den KNX-Bus
+und lassen sich über die passende Software auf dem Raspberry Pi auch
+als Router zur Programmierung der Komponenten einsetzen. Schön an
+dieser Lösung ist alle Komponenten passend zueinander und an einem
+Platz zu haben.</p>
+
+<p>Da diese Komponenten alle rund um den Raspberry Pi herum entworfen
+sind passen sie übereinander, ergeben aber auch einen entsprechend
+dicken Aufbau. Die Stromversorgung wird am Display eingesteckt und
+über die roten/schwarzen Kabel der Raspberry Pi von dort aus
+betrieben.</p>
+
+<p>Alternativ kann auch ein professioneller Router für die
+Elektroverteilung oder eine herkömmliche KNX-USB-Schnittstelle
+eingesetzt werden, was die Programmierung des KNX-Busses auch ohne
+verfügbaren Raspberry Pi ermöglicht.</p>
+
+<p>Statt der Kombination Raspberry Pi + Display ist auch eine Variante
+mit Tablet denkbar, welches wiederum zur Steuerung auf eine
+Weboberfläche auf dem Raspberry zugreift.</p>
+
+<img src="/images/Homeserver_Montiert.jpg" alt="Homeserver montiert" class="img-responsive">
+
+<div class="caption">Fertig an der Wand montierter Homeserver mit Raspbian-Linux</div>
+
+
+<img src="/images/Homeserver_MontiertTotale.jpg" alt="/images/Homeserver_MontiertTotale.jpg" class="img-responsive">
+
+
+<p>An der Wand montiert wirkt das gesamte Gehäuse allerdings bei weitem
+nicht so dick und klobig wie noch während der Anfertigung. Als Basis
+für die weitere Software dient ein herkömmliches Raspbian-Linux.</p>
+
+<p>Das Grundsystem als Plattform läuft damit, im nächsten Schritt geht es darum
+den Zugriff auf den KNX-Bus zu ermöglichen und auch eine Steuerung zu
+implementieren.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">Notiz an mich: Lackieren ist gar nicht einfach und kein Selbstläufer. Tropfen, Nasen, Flecken, alles dabei. Für das nächste mal besser überlegen und testen wie das Ergebnis professioneller wird.
+ <a class="footnote-return" href="#fnref:1"> ↩</a></li>
+</ol>
+</div>
+
+		 <div class="shariff" data-title="Homeserver" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;,&quot;mail&quot;]"  data-mail-url="mailto:"></div>
+                 <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 04.04.2018
+                 </p>
+               </div>
+               <hr>
+
+          
+                             <div class="post-preview">
                  <a href="https://blog.stefan-michaelis.name/iota/kalibrierung/">
                       <h2 class="post-title">Kalibrierung und Grundeinstellung</h2>
                       <h3 class="post-subtitle">Damit alles auf demselben Stand ist</h3>
@@ -311,49 +438,6 @@ damit das Hello-World der Hausautomatisierung.</p>
 
 		 <div class="shariff" data-title="Wo kommen die Daten her?" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;,&quot;mail&quot;]"  data-mail-url="mailto:"></div>
                  <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 21.02.2018
-                 </p>
-               </div>
-               <hr>
-
-          
-                             <div class="post-preview">
-                 <a href="https://blog.stefan-michaelis.name/iota/internet-of-things-automation/">
-                      <h2 class="post-title">Internet of Things Automation und das lernende Smart Home</h2>
-                      <h3 class="post-subtitle"></h3>
-                 </a>
-		 <div class="row">
-     <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-     	  <img src="/images/IntelligentHousePlain.png" class="img-responsive" />
-     </div>
-</div>
-
-
-<p>Das Internet der Dinge ist überall, vor allem auch in der öffentlichen
-Wahrnehmung. Gartner stuft IoT in seinem Hype-Cycle vom August 2016
-kurz vor dem <em>Peak of inflated expectations</em> ein. Die Ankunft im
-Mainstream wäre danach noch 5 bis 10 Jahre entfernt.  Aber was ist das
-Internet der Dinge wirklich? Im einfachsten Fall ist dies einfach ein
-Gerät mit Internetanschluss. Der Kühlschrank, die Kaffeemaschine?
-Wozu?  Sinn macht das Internet der Dinge eigentlich erst dann, wenn
-die Geräte intelligenter und Aktionen automatisiert werden. Eine
-gewisse Lernfähigkeit gehört dazu.  Eine Spielwiese für Ideen bietet
-dabei das Smart Home. Steckdosen und Licht per App schalten? Kein
-Problem. Das selbstlernende Haus? Sehen wir doch einmal.</p>
-
-<p>Ziele für intelligente Systeme im Haus sind dabei:</p>
-
-<ul>
-<li>Einsparung von Energie</li>
-<li>Einsparung von Kosten</li>
-<li>Erhöhung des Komforts</li>
-</ul>
-
-<p>Die folgenden Beiträge beschreiben Schritt für Schritt Experimente und
-Konzepte, wie kleine Geräte ihren Nutzen durch Automatisierung und
-maschinelles Lernen erhöhen können.</p>
-
-		 <div class="shariff" data-title="Internet of Things Automation und das lernende Smart Home" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;,&quot;mail&quot;]"  data-mail-url="mailto:"></div>
-                 <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 07.02.2018
                  </p>
                </div>
                <hr>
