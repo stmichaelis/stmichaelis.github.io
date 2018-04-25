@@ -2,7 +2,6 @@
 <html lang="de">
 
 <head>
-	<meta name="generator" content="Hugo 0.32.1" />
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,9 +15,6 @@
 
     <title>Stefan Michaelis - Blog</title>
 
-    
-    <link href="https://blog.stefan-michaelis.name/index.xml" rel="alternate" type="application/rss+xml" title="Stefan Michaelis - Blog" />
-    <link href="https://blog.stefan-michaelis.name/index.xml" rel="feed" type="application/rss+xml" title="Stefan Michaelis - Blog" />
     
 
     
@@ -78,84 +74,95 @@
 
 
     
+    
     <header class="intro-header" style="background-image: url('https://blog.stefan-michaelis.name/img/home-bg.jpg')">
-     <div class="container" style="width: 100%; background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) )">
-       <div class="row">
-         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-           <div class="site-heading">
-             <h1>Stefan Michaelis - Blog</h1>
-             <hr class="small">
-             <span class="subheading">Internet of Things Automation, Analytics, das lernende Smart Home und der kurze Weg dahin</span>
+    
+      <div class="container" style="width: 100%; background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) )">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>Remote KDE Desktop mit KRFB</h1>
+               <h2 class="subheading">Verbindung und Ports absichern</h2>
+             </div>
            </div>
-         </div>
-       </div>
-     </div>
+        </div>
+      </div>
     </header>
 
     
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          
-                             <div class="post-preview">
-                 <a href="https://blog.stefan-michaelis.name/dodi/ihr-kaempft-gegen-nichts/">
-                      <h2 class="post-title">Ihr kämpft gegen Nichts</h2>
-                      <h3 class="post-subtitle">Strong Opinions - Weakly Held</h3>
-                 </a>
-		 <p>
-		   Mal wieder steht eine Entscheidung an. Alle Unterlagen sind vorbereitet, alle Optionen evaluiert und Fakten für alle Möglichkeiten gesichtet. Und was passiert dann? Nichts. Doch was lässt sich dagegen tun?
-Anstehende Entscheidungen, und selbst wenn es nur die Wahl zwischen zwei Optionen ist, bieten auch immer eine weitere Option, die normalerweise gar nicht explizit aufgeführt ist: Nichts zu tun.
-Dies kann selbst (oder gerade) dann passieren, wenn es wichtige Entscheidung sind oder diese durch eine Deadline terminiert sind.
-		 </p>
-		 
-		 
-		 <ul class="pager">
-		   <li class="next">
-		   <a href="/dodi/ihr-kaempft-gegen-nichts/">Weiterlesen…</a>
-		   </li>
-		 </ul>
-		 
-                 <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 31.01.2018 im Bereich  <a href="https://blog.stefan-michaelis.namedodi">DoDi </a>
-                 </p>
-               </div>
-               <hr>
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <p>Hin und wieder ist es nötig auf den Desktop eines entfernten, offen im
+Internet zu erreichenden, Rechner zuzugreifen. Ein Standardmethode ist
+dabei VNC, zu dem es eine Vielzahl an Implementierungen gibt. Soll der
+normale, bereits laufende, KDE-Desktop frei gegeben werden kann dies
+über die Anwendung <code>krfb</code> anstelle einer eigenen, neuen VNC-Sitzung
+erfolgen.</p>
 
-          
-                             <div class="post-preview">
-                 <a href="https://blog.stefan-michaelis.name/iota/der-feind-in-meinem-haus/">
-                      <h2 class="post-title">Der Feind in meinem Haus</h2>
-                      <h3 class="post-subtitle">Wenn die eigenen Geräte eine DoS-Attacke ausführen</h3>
-                 </a>
-		 <p>
-		   Über seinen Internet-Provider zu schimpfen ist immer en vogue. Zu langsam, bringt nicht die vereinbarte Geschwindigkeit und überhaupt. Auch wenn schnelles Internet für uns ein Traum ist, zumindest stabil sollte es sein. Und das ist es nicht. Seit gefühlt schon ewig ist der DSL-Anschluss vom Verlust genau eben dieser Außenanbindung geprägt. Nicht immer, aber so oft, dass es nervt. Und ebenso scheinen die Störungen mehr zu werden, so dass teilweise minutenlang keine Internetverbindung zustande kommt.
-		 </p>
-		 
-		 
-		 <ul class="pager">
-		   <li class="next">
-		   <a href="/iota/der-feind-in-meinem-haus/">Weiterlesen…</a>
-		   </li>
-		 </ul>
-		 
-                 <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 22.01.2018 im Bereich  <a href="https://blog.stefan-michaelis.nameiota">IoTA</a>
-                 </p>
-               </div>
-               <hr>
+<div class="row">
+     <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+     	  <img src="/images/krfb.png" class="img-responsive" />
+     </div>
+</div>
 
-          
-          
-	  <ul class="pager">
-	    
-            <li class="next">
-              <a href="/page/2/">Neuer &rarr;</a>
-            </li>
-	    
-	    
-          </ul>
+
+<p>Um den Zugriff, insbesondere den unbeaufsichtigten Zugriff,
+abzusichern gibt es dazu ein paar einfache Möglichkeiten:</p>
+
+<ol>
+<li>Sicheres Passwort wählen. Zufällig und lang.</li>
+<li>Standardport von 5900 auf einen anderen Port ändern. Diese Maßnahme
+alleine bringt nur wenig Sicherheit, sondern hilft nur den Scan auf
+offene VNC-Ports durch Standardskripte zu verhindern.</li>
+<li>Externen Zugriff auf den VNC-Port verhindern.</li>
+</ol>
+
+<p>Letzteres erzwingt dann den Zugriff auf die Desktopfreigabe durch eine
+sichere Umleitung wie einen ssh-Tunnel.</p>
+
+<p>Der Zugriff auf den Port kann per <code>iptables</code> gesperrt werden:</p>
+
+<pre><code>iptables -A INPUT -p tcp -i &lt;eth0&gt; --dport &lt;5912&gt; -j DROP
+</code></pre>
+
+<p>Werte in spitzen Klammern müssen an das eigene System angepasst
+werden, d.h. der Name des Netzwerkinterfaces und der Port unter dem
+<code>krfb</code> auf Anfragen horcht. Diese Regel ist nur bis zu einem Neustart
+des Systems gültig.</p>
+
+<p>Ein ssh-Tunnel wird dann auf dem Rechner, von dem aus auf die Freigabe
+zugegriffen werden soll, auf der Kommandozeile aufgebaut:</p>
+
+<pre><code>ssh -N -L 5900:&lt;remotehost&gt;:5912 &lt;remotehost&gt;
+</code></pre>
+
+<p><code>&lt;remotehost&gt;</code> ist die IP-Adresse des entfernten Rechners. Der Zugriff
+auf den Desktop, z.B. mit <code>krdc</code> als Client erfolgt dann über die
+Angabe von <code>localhost:5900</code>.</p>
+
+<p>Bei Nutzung mit den Standardeinstellungen von <code>krfb</code> für das
+Framebuffermodul zur Bilderstellung (xcb) und einem
+Multimonitorbetrieb war dabei das Bild des entfernten Rechners
+eingefroren. Abhilfe gebracht hat eine Umstellung auf <code>qt</code> für das
+Framebuffermodul.</p>
+
+		  <div class="shariff" data-title="Remote KDE Desktop mit KRFB" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;,&quot;mail&quot;]" data-mail-url="mailto:"></div>
+		  <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 25.04.2018</p>
+		  
+		  <ul class="pager">
+		    
+		    
+		    <li class="previous">
+		      <a href="/iota/homeserver1/">&larr; Vorheriger</a>
+		    </li>
+		    
+		  </ul>
+                </div>
+            </div>
         </div>
-      </div>
-      
-    </div>
+    </article>
 
    
     <footer>
@@ -163,15 +170,6 @@ Dies kann selbst (oder gerade) dann passieren, wenn es wichtige Entscheidung sin
           <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
               <ul class="list-inline text-center">
-		
-		<li>
-                  <a href="https://blog.stefan-michaelis.name/index.xml" type="application/rss+xml" target="_blank">
-                    <span class="fa-stack fa-lg">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                    </span>
-                  </a>
-		</li>
 		
 		<li>
                   <script language="Javascript" type="text/javascript">

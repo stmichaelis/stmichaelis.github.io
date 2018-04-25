@@ -6,10 +6,72 @@
     <description>Recent content in IoTA on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Wed, 04 Apr 2018 19:53:18 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 25 Apr 2018 19:45:31 +0200</lastBuildDate>
     
         <atom:link href="https://blog.stefan-michaelis.name/iota/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Remote KDE Desktop mit KRFB</title>
+      <link>https://blog.stefan-michaelis.name/iota/remote-kde-desktop-mit-krfb/</link>
+      <pubDate>Wed, 25 Apr 2018 19:45:31 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/iota/remote-kde-desktop-mit-krfb/</guid>
+      <description>&lt;p&gt;Hin und wieder ist es nötig auf den Desktop eines entfernten, offen im
+Internet zu erreichenden, Rechner zuzugreifen. Ein Standardmethode ist
+dabei VNC, zu dem es eine Vielzahl an Implementierungen gibt. Soll der
+normale, bereits laufende, KDE-Desktop frei gegeben werden kann dies
+über die Anwendung &lt;code&gt;krfb&lt;/code&gt; anstelle einer eigenen, neuen VNC-Sitzung
+erfolgen.&lt;/p&gt;
+
+&lt;div class=&#34;row&#34;&gt;
+     &lt;div class=&#34;col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1&#34;&gt;
+     	  &lt;img src=&#34;https://blog.stefan-michaelis.name/images/krfb.png&#34; class=&#34;img-responsive&#34; /&gt;
+     &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Um den Zugriff, insbesondere den unbeaufsichtigten Zugriff,
+abzusichern gibt es dazu ein paar einfache Möglichkeiten:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Sicheres Passwort wählen. Zufällig und lang.&lt;/li&gt;
+&lt;li&gt;Standardport von 5900 auf einen anderen Port ändern. Diese Maßnahme
+alleine bringt nur wenig Sicherheit, sondern hilft nur den Scan auf
+offene VNC-Ports durch Standardskripte zu verhindern.&lt;/li&gt;
+&lt;li&gt;Externen Zugriff auf den VNC-Port verhindern.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Letzteres erzwingt dann den Zugriff auf die Desktopfreigabe durch eine
+sichere Umleitung wie einen ssh-Tunnel.&lt;/p&gt;
+
+&lt;p&gt;Der Zugriff auf den Port kann per &lt;code&gt;iptables&lt;/code&gt; gesperrt werden:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;iptables -A INPUT -p tcp -i &amp;lt;eth0&amp;gt; --dport &amp;lt;5912&amp;gt; -j DROP
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Werte in spitzen Klammern müssen an das eigene System angepasst
+werden, d.h. der Name des Netzwerkinterfaces und der Port unter dem
+&lt;code&gt;krfb&lt;/code&gt; auf Anfragen horcht. Diese Regel ist nur bis zu einem Neustart
+des Systems gültig.&lt;/p&gt;
+
+&lt;p&gt;Ein ssh-Tunnel wird dann auf dem Rechner, von dem aus auf die Freigabe
+zugegriffen werden soll, auf der Kommandozeile aufgebaut:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ssh -N -L 5900:&amp;lt;remotehost&amp;gt;:5912 &amp;lt;remotehost&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;remotehost&amp;gt;&lt;/code&gt; ist die IP-Adresse des entfernten Rechners. Der Zugriff
+auf den Desktop, z.B. mit &lt;code&gt;krdc&lt;/code&gt; als Client erfolgt dann über die
+Angabe von &lt;code&gt;localhost:5900&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Bei Nutzung mit den Standardeinstellungen von &lt;code&gt;krfb&lt;/code&gt; für das
+Framebuffermodul zur Bilderstellung (xcb) und einem
+Multimonitorbetrieb war dabei das Bild des entfernten Rechners
+eingefroren. Abhilfe gebracht hat eine Umstellung auf &lt;code&gt;qt&lt;/code&gt; für das
+Framebuffermodul.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Homeserver</title>
