@@ -6,10 +6,256 @@
     <description>Recent content in IoTA on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Tue, 21 Aug 2018 19:37:45 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 08 Oct 2018 19:01:37 +0100</lastBuildDate>
     
         <atom:link href="https://blog.stefan-michaelis.name/iota/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Homeserver Teil 2</title>
+      <link>https://blog.stefan-michaelis.name/iota/homeserver2/</link>
+      <pubDate>Mon, 08 Oct 2018 19:01:37 +0100</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/iota/homeserver2/</guid>
+      <description>
+
+&lt;p&gt;Nachdem im vorherigen &lt;a href=&#34;https://blog.stefan-michaelis.name/iota/homeserver1/&#34;&gt;Beitrag zum Homeserver&lt;/a&gt;
+die Hardware kurz vorgestellt wurde geht es jetzt um die Installation
+der eigentlichen Steuerung. Voraussetzung ist ein lauffähiges &lt;a href=&#34;https://www.raspberrypi.org/downloads/raspbian/&#34;&gt;Raspbian&lt;/a&gt;
+auf dem Pi.&lt;/p&gt;
+
+&lt;h2 id=&#34;knx-dämon&#34;&gt;KNX-Dämon&lt;/h2&gt;
+
+&lt;p&gt;Standards, mehr oder weniger offen, für die Ansteuerung von
+Haustechnik gibt es viele. Bei uns kommt primär
+&lt;a href=&#34;https://de.wikipedia.org/wiki/KNX-Standard&#34;&gt;KNX&lt;/a&gt; zum Einsatz, welches den
+Vorteil hat ein offener Industriestandard zu sein und mit
+(hoffentlich) entsprechend langfristiger Unterstützung und
+herstellerunabhängiger Nutzbarkeit der Komponenten einhergeht. Kein
+Vendor-Lock-in mehr. Bislang scheint das für unser System auch
+hervorragend zu funktionieren.&lt;/p&gt;
+
+&lt;p&gt;Zur Ansteuerung der Komponenten benötigt es aber ein Gateway. Entweder
+eines der kommerziellen IP-Gateways oder wie hier über ein
+Hardwaremodul auf dem Raspberry Pi. Dieses benötigt allerdings noch
+einen Dämon zur Ansteuerung, der sowohl die Programmierung der
+Komponenten für ihre nativen Funktionen erlaubt als auch Zugriff für
+die Steuerzentrale für erweiterte Funktionen.&lt;/p&gt;
+
+&lt;p&gt;Dazu gibt es mit &lt;a href=&#34;https://github.com/knxd/knxd&#34;&gt;knxd&lt;/a&gt; eine freie
+Alternative, die sich auch problemlos auf dem Raspberry Pi einbinden
+lässt. Mit der zum aktuellen Zeitpunkt verfügbaren Version im
+Hauptentwicklungszweig, 0.14 (genau genommen der Commit
+&lt;code&gt;61a08e5fa5ce4cc6d47309bf80f9abc1fd792637&lt;/code&gt;, da sich Version 0.14 noch
+aktiv in der Entwicklung befand), gab es bislang keine Probleme, weder
+beim Programmieren der Geräte noch bei der Ansteuerung von Komponenten
+über den Homeserver.&lt;/p&gt;
+
+&lt;p&gt;Für den Raspberry Pi gibt es einen eigenen Abschnitt zur Konfiguration
+der Schnittstelle: &lt;a href=&#34;https://github.com/knxd/knxd#adding-a-tpuart-serial-interface-to-the-raspberry-pi&#34;&gt;https://github.com/knxd/knxd#adding-a-tpuart-serial-interface-to-the-raspberry-pi&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;automatisierung-mit-openhab&#34;&gt;Automatisierung mit OpenHAB&lt;/h2&gt;
+
+&lt;p&gt;Visualisierung und Ansteuerung der Komponenten läuft dann über das
+freie &lt;a href=&#34;http://www.openhab.org/&#34;&gt;OpenHAB-Projekt&lt;/a&gt;. Für KNX gibt es
+Alternativen, aber insbesondere durch die große Community, die Auswahl
+an Plugins und die Anbindung an unzählige weitere Standards (Jemand
+mit Tesla Modell S hier?) führt an Openhab kaum ein Weg vorbei.&lt;/p&gt;
+
+&lt;h3 id=&#34;docker-auf-dem-raspberry-pi&#34;&gt;Docker auf dem Raspberry Pi&lt;/h3&gt;
+
+&lt;p&gt;Die Installation von OpenHAB ist mehr oder weniger
+aufwändig. Glücklicherweise existieren verschiedene Optionen auch für
+den Raspberry. Eine davon ist openHABian als eigene Distribution, die
+Raspbian als OS auf der SD-Karte ersetzt. Eine Alternative ist
+die Nutzung von Docker.&lt;/p&gt;
+
+&lt;p&gt;Docker ist eine sogenannte Containerisierungs-Lösung, die einzelne
+Software bis hin zu ganzen Betriebssystemen kapselt und (mehr oder
+weniger) unabhängig vom eigentlichen System ausführbar
+macht. Hauptvorteil ist damit der schnelle Wechsel zwischen
+verschiedenen Versionen und im Fehlerfall die Rückkehr auf die letzte
+funktionierende Version ohne sich mit Abhängigkeiten von anderen
+Paketen beschäftigen zu müssen.&lt;/p&gt;
+
+&lt;p&gt;Die Installation von Docker auf dem Raspberry funktioniert reibungslos
+über die Angabe von &lt;code&gt;curl -sSL https://get.docker.com | sh&lt;/code&gt; auf der
+Kommandozeile, siehe den Artikel &lt;a href=&#34;https://www.raspberrypi.org/blog/docker-comes-to-raspberry-pi/&#34;&gt;Docker comes to Raspberry
+Pi&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Fertige Images gibt es öffentlich verfügbar über den Dockerhub unter
+(&lt;a href=&#34;https://hub.docker.com/r/openhab/openhab/&#34;&gt;https://hub.docker.com/r/openhab/openhab/&lt;/a&gt;). Eine mögliche Variante
+für den Raspberry wäre demnach&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;docker run &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        --name openhab &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        --net&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;host &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        --tty &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        -v /etc/localtime:/etc/localtime:ro &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        -v /etc/timezone:/etc/timezone:ro &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        -v openhab_addons:/openhab/addons &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        -v openhab_conf:/openhab/conf &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        -v openhab_userdata:/openhab/userdata &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        -d &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        --restart&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;always &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        openhab/openhab:2.3.0-armhf-debian&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Die Option &lt;code&gt;--restart=always&lt;/code&gt; sorgt dabei dafür, dass Openhab auch
+nach dem Reboot oder bei Abstürzen automatisch wieder gestartet wird.
+Die &lt;code&gt;-v openhab...&lt;/code&gt;-Optionen machen Ordner außerhalb des Images,
+d.h. vom Raspberry, innerhalb des laufenden Openhab-Containers
+verfügbar. Dies ist insbesondere dann hilfreich wenn die Daten nicht
+auf der SD-Karte des Raspberrys landen sollen, z.B. aus Backup-Gründen
+oder um die Lebenszeit der SD-Karte durch weniger Schreibzyklen zu
+erhöhen. Aus denselben Gründen kann das gesamte Docker-Root, in dem Images und
+Container liegen, beispielsweise auf ein NAS verlagert werden. Dem
+Thema widmet sich der nächste Abschnitt.&lt;/p&gt;
+
+&lt;p&gt;Um auch den Docker-Daemon bei jedem Boot wieder zu starten (denn auch
+nur dann starten die Container wieder automatisch) muss der Service
+aktiviert werden: &lt;code&gt;sudo systemctl enable docker&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;einbinden-eines-nas&#34;&gt;Einbinden eines NAS&lt;/h3&gt;
+
+&lt;p&gt;Die SD-Karte im Raspberry Pi ist (meist) klein und mit der Begrenzung
+an Schreibzyklen auch anfällig für Datenverlust (wer hebt bei
+regelmäßigen Vollbackups des mühselig angelegten Systems die
+Hand?). Eine Möglichkeit ist Verzeichnisse mit großen Datenmengen oder
+Dateien mit regelmäßigen Schreibzyklen auf ein Network Attached
+Storage zu verlegen.&lt;/p&gt;
+
+&lt;p&gt;Im Wesentlichen bedeutet das hier eine Verlegung des
+Docker-Datenverzeichnisses und der
+OpenHAB-Konfiguratinsverzeichnisse. Dazu ist jeweils ein Eintrag in
+der &lt;code&gt;/etc/fstab&lt;/code&gt;-Datei notwendig:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;//&amp;lt;nas-ip&amp;gt;/docker /docker cifs user=&amp;lt;nasuser&amp;gt;,password=&amp;lt;naspasswort&amp;gt;,uid=root,gid=root,sec=ntlmv2,file_mode=0644,dir_mode=0755,nounix,sfu 0 0
+//&amp;lt;nas-ip&amp;gt;/openhab /openhab cifs user=&amp;lt;nasuser&amp;gt;,password=&amp;lt;naspasswort&amp;gt;,uid=root,gid=root,sec=ntlmv2,file_mode=0700,dir_mode=0700,noperm,nounix 0 0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Zwingend notwendig sind natürlich die Angabe der korrekten IP-Adresse
+zum NAS, die Pfade zu den Ordnern im NAS und die Zugangsdaten eines
+dazu angelegten Users. Wer sein Passwort nicht in der fstab im
+Klartext ablegen möchte, kann dies auch in eine Credentials-Datei
+auslagern&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;Die übrigen Optionen waren für den Betrieb mit unserem NAS ebenfalls
+notwendig, z.B. um die Zugriffsrechte für Docker und den
+OpenHAB-Container passend zu setzen, bei der Einrichtung starten würde
+ich aber zunächst ohne und erst testen, ob der Zugriff auf das eigene
+NAS auch mit den Standardwerten direkt möglich ist.&lt;/p&gt;
+
+&lt;p&gt;Damit die Ordner nach einem Neustart des Raspberry Pi sicher verfügbar
+sind sollte in der Konfiguration dort per &lt;code&gt;sudo raspi-config&lt;/code&gt; die
+Option &lt;em&gt;Wait for network at boot&lt;/em&gt; aktiviert werden.&lt;/p&gt;
+
+&lt;p&gt;Um dem Docker-Daemon das neue Root für seine Daten bekannt zu geben
+ist diese in der Datei &lt;code&gt;/etc/docker/daemon.json&lt;/code&gt; zu konfigurieren:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;storage-driver&amp;quot;: &amp;quot;devicemapper&amp;quot;,
+  &amp;quot;data-root&amp;quot;: &amp;quot;/docker&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Der Storage-Driver legt fest, wie die Images und Container dort
+abgelegt werden. &lt;em&gt;Devicemapper&lt;/em&gt; wird dabei explizit nicht für eine
+Produktiveinsatz empfohlen, da dieses unter anderem Probleme der
+Freigabe gelöschten Speicherplatzes hat. Leider war dies die einzig
+funktionierende Alternative (ymmv&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;) und da nicht ständig neue
+Container angelegt und gelöscht werden spielt der Speicherbedarf
+bislang (und hoffentlich auch zukünftig) keine Rolle.&lt;/p&gt;
+
+&lt;h3 id=&#34;bedienoberfläche-habpanel&#34;&gt;Bedienoberfläche HABPanel&lt;/h3&gt;
+
+&lt;p&gt;Der letzte (und aufwändigste, bzw. nie endende) Schritt ist dann die
+Konfiguration von OpenHAB und der Nutzeroberfläche. Dazu existieren
+verschiedene Varianten, besonders passend für den Touchscreen des
+Raspberry Pi ist &lt;a href=&#34;https://docs.openhab.org/addons/uis/habpanel/readme.html&#34;&gt;HABPanel&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Zum Zugriff auf die Aktoren und Sensoren des KNX-Bus zu bekommen
+müssen diese zunächst in der jeweiligen Konfiguration definiert
+werden, siehe
+&lt;a href=&#34;https://www.openhab.org/addons/bindings/knx/&#34;&gt;KNX-Binding&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Den sogenannten Items können dann direkt im Browser den passenden
+Schaltflächen zugeordnet werden.&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/habpanel.png&#34; alt=&#34;Habpanel Startseite&#34; class=&#34;img-responsive&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Übersichtsseite in OpenHAB mit HABPanel als Oberfläche&lt;/div&gt;
+
+
+&lt;p&gt;Der Screenshot zeigt den Übersichtsbildschirm des Wandpanels. Neben
+den wichtigsten zentralen Messdaten wie Temperatur Außen/Wohnen,
+Feuchte und CO2-Gehalt wird per Wetterplugin auch die Wettervorhersage
+für die nächsten zwei Tagen angezeigt. Dazu kommt die Nachrüstung von
+seltener genutzter Funktionalität. So können per herkömmlichem Taster
+die Rollläden in Wohnzimmer und Küche nur gesamt verfahren werden, was
+für 90% der Fälle auch ausreicht. Mit dem Panel dagegen ist auch die
+Einzelsteuerung möglich.&lt;/p&gt;
+
+&lt;h3 id=&#34;display-auf-dem-wandpanel&#34;&gt;Display auf dem Wandpanel&lt;/h3&gt;
+
+&lt;p&gt;Die HABPanel-Oberfläche lässt sich auf jedem Gerät im lokalen Netzwerk
+anzeigen und nutzen. Gedacht ist sie allerdings für das Wandpanel aus
+dem Beitrag &lt;a href=&#34;https://blog.stefan-michaelis.name/iota/homeserver1/&#34;&gt;Homeserver - Die Hardware&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Die Anzeige übernehmen kann der Chromium-Browser per &lt;code&gt;DISPLAY=:0
+chromium-browser http://localhost:8080/habpanel/index.html --kiosk
+--incognito&lt;/code&gt;. Die Display-Anweisung ermöglicht den Start auch per
+&lt;code&gt;ssh&lt;/code&gt; aus der Ferne. Im Kiosk-Modus wird direkt im Vollbild gestartet
+ohne Statusleiste und Kontrollbuttons. Der Incognito-Mode letztendlich
+verhindert bei Abstürzen Fehlermeldungen beim Neustart und soll auch
+die Anzahl der Zugriffe auf die Festplatte (bzw. hier auch gerne
+einmal der Flashspeicher, der nicht unendlich viele Schreibzugriffe
+aushält) deutlich reduzieren&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:3&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:3&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;Üblicherweise stört der Mauszeiger noch während der Bedienung, aber
+mit dem Tool &lt;code&gt;unclutter&lt;/code&gt; kann dieser ausgeblendet werden. Sowohl
+Browser als auch &lt;code&gt;unclutter&lt;/code&gt; können im Autostart bei jedem Neustart
+des Raspberry aktiviert werden: &lt;code&gt;nano
+~/.config/lxsession/LXDE-pi/autostart&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@unclutter -idle 0
+@chromium-browser http://localhost:8080/habpanel/index.html --kiosk --incognito
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In der Standardeinstellung geht das Panel nach einigen Minuten in den
+Standby, wacht aber bei jedem Fingerdruck wieder darauf aus. Zu
+beachten ist lediglich, dass die Touch-Events auch im Schlafmodus an
+die Oberfläche weiter geleitet werden und damit unter Umständen
+Aktionen auslösen können. Zumindest auf der normalen Startseite
+sollten daher die aktiven (klickbaren) Flächen nicht zu groß sein und
+die Benutzer wissen, wo sie zur Aktivierung des Displays drücken dürfen.&lt;/p&gt;
+
+&lt;p&gt;Werden Änderungen an der HABPanel-Oberfläche vorgenommen lässt sich
+dies bequemer von einem PC aus erledigen. Im Browser im Wandpanel ist
+dann ein Refresh erforderlich, was im Kiosk-Modus gar nicht so einfach
+ist. Über &lt;code&gt;DISPLAY=:0 xdotool key ctrl+F5&lt;/code&gt; kann auch per ssh ein
+Refresh ausgelöst werden und dann ist auch das Wandpanel auf der neuesten
+Version der Nutzeroberfläche. Der Vorteil ist, dass neue Funktionen
+erst einmal begrenzt ausprobiert werden können bevor gleich der
+gesamte Haushalt mit den Neuerung konfrontiert wird.&lt;/p&gt;
+
+&lt;p&gt;Andere Möglichkeiten das Setup noch zu erweitern wären der Start von
+Chromium über &lt;code&gt;supervise&lt;/code&gt;, welches den Prozess permanent überwacht und
+bei Abstürzen neu startet oder ein Browser-Addon, welches nach einer
+gewissen Idle-Zeit wieder auf die Startseite zurückwechselt.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;&lt;a href=&#34;https://wiki.ubuntuusers.de/Samba_Client_cifs/#Optionen&#34;&gt;https://wiki.ubuntuusers.de/Samba_Client_cifs/#Optionen&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt; ↩&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;Your mileage may vary
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt; ↩&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;&lt;a href=&#34;https://productforums.google.com/forum/#!topic/chrome/wgKvdI7Ggj4&#34;&gt;https://productforums.google.com/forum/#!topic/chrome/wgKvdI7Ggj4&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:3&#34;&gt; ↩&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Der Feind im eigenen Haus - Die Rückkehr</title>
