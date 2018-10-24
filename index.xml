@@ -6,10 +6,210 @@
     <description>Recent content on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Mon, 08 Oct 2018 19:01:37 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 24 Oct 2018 19:55:27 +0200</lastBuildDate>
     
         <atom:link href="https://blog.stefan-michaelis.name/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hero und trotzdem Zero</title>
+      <link>https://blog.stefan-michaelis.name/dodi/hero-und-zero/</link>
+      <pubDate>Wed, 24 Oct 2018 19:55:27 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/dodi/hero-und-zero/</guid>
+      <description>
+
+&lt;p&gt;Wir alle bekommen zu viele Emails. Email wird auch gerne einmal
+totgesagt. Trotzdem ist dies (und vermutlich nicht nur für mich) immer
+noch eines der wichtigsten Kommunikationsmedien: Asynchron,
+zuverlässig und weiterhin breit verfügbar.&lt;/p&gt;
+
+&lt;p&gt;Schnell wird der Posteingang dann zur fremdbestimmten ToDo-Liste und
+wichtige Dinge gehen unter. Die Benachrichtigungen über neue Emails im
+Emailprogramm per Ton und Popup auszuschalten, um zumindest Störungen
+klein zu halten, ist dabei noch der erste Schritt.&lt;/p&gt;
+
+&lt;p&gt;Die Emailflut selbst wird dann per Filtern und Markieren beherrscht
+mit dem Ziel den Posteingang so klein wie möglich (ab zur Zero für den
+Hero&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;) zu bekommen. Dieser Blogpost beschreibt meine Strategien, die
+sich über die Jahre entwickelt haben, um das Wichtige vom Unwichtigen
+zu trennen.&lt;/p&gt;
+
+&lt;p&gt;Alle folgenden Beispiele sind per Mozilla Thunderbird umgesetzt,
+sollten sich aber mit den meisten Emailprogrammen ähnlich realisieren lassen.&lt;/p&gt;
+
+&lt;h2 id=&#34;mehr-durchblick&#34;&gt;Mehr Durchblick&lt;/h2&gt;
+
+&lt;p&gt;Da eine Email häufig nicht allein kommt, bietet es sich an, die
+&lt;em&gt;Thread-View&lt;/em&gt; einzuschalten. In der Emailübersichtsliste ist dies das erste
+Symbol noch vor dem Stern zum Markieren von Emails. Einmal aktiviert
+werden Emaildialoge in einer Baumansicht zusammen dargestellt. Die
+chronologische Reihenfolge des gesamten Posteingangs gilt dabei aber
+nicht mehr, was gerade zu Beginn ein wenig verwirrend sein kann.&lt;/p&gt;
+
+&lt;p&gt;Es fehlen aber dann noch die eigenen Emails, wenn man sich selbst mit
+am Dialog beteiligt. Einige gehen dazu über sich selbst in CC zu
+setzen, noch nützlicher finde ich die Einstellung eigene Antworten
+direkt im Ordner der beantworteten Email abzulegen. So bleiben die
+Dialoge direkt beisammen, was insbesondere beim Filtern wie im
+nächsten Abschnitt beschrieben nützlich ist. Die passende Einstellung
+dafür befindet sich im Abschnitt &lt;em&gt;Copies &amp;amp; Folders&lt;/em&gt; in den
+Einstellungen des jeweiligen Emailaccounts.&lt;/p&gt;
+
+&lt;h2 id=&#34;von-wichtigem-und-weniger-wichtigem&#34;&gt;Von Wichtigem und weniger Wichtigem&lt;/h2&gt;
+
+&lt;p&gt;Meine Filterliste besteht inzwischen aus über 30 verschiedenen Filtern,
+wobei sich die Konzepte überschneiden, Filterkriterien und Ziel aber
+jeweils anders sind:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Jedem sein eigenes Töpfchen:&lt;/strong&gt; Der einfachste Fall sind noch
+   Emails von Newslettern (wenn erwünscht), Rundmails an
+   Verteilerlisten usw. In der Regel können diese über Absender- oder
+   Empfängeradresse direkt in spezielle Ordner verschoben werden und
+   verschwinden aus dem Posteingang bis man sich explizit die Zeit
+   dafür nimmt.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Du weißt nicht worum es geht?&lt;/strong&gt;: Ich auch nicht. Recht radikal,
+   aber wirksam; Empfehlung auf einer Schulung durch das DLR: Emails
+   mit leerem Betreff direkt in den Papierkorb werfen.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bin ich gemeint?&lt;/strong&gt;: Email kennt nicht nur das &lt;em&gt;An-Feld&lt;/em&gt;. CC als
+   Kopie gibt es schließlich auch noch. Meist betrifft dies Emails, die mehr
+   zur Information gedacht sind als direkte Antworten erfordern. Also
+   weg damit aus dem Posteingang und in seinen speziellen Ordner.&lt;/p&gt;
+
+&lt;p&gt;Auch Anfragen unbekannter (Kriterium: nicht im Adressbuch, inkl. der
+   automatisch durch Beantworten von Emails gesammelten Adressen) oder
+   externer (fremde Domain) Absender erfordern häufig keine sofortige
+   Reaktion. Und Emails, bei denen die eigene Adresse gar nicht
+   vorkommt (Rundmails), für die aber kein eigener Ordner eingerichtet
+   wurde, bilden die letzte Kategorie.&lt;/p&gt;
+
+&lt;p&gt;Jeder dieser drei Arten bekommt einen eigenen Ordner, in den diese
+   Emails einsortiert werden: &lt;em&gt;1_CC, 2_Extern, 3_Indirekt&lt;/em&gt;.&lt;/p&gt;
+
+&lt;div class=&#34;row&#34;&gt;
+     &lt;div class=&#34;col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1&#34;&gt;
+     	  &lt;img src=&#34;https://blog.stefan-michaelis.name/images/email/ordner.png&#34; class=&#34;img-responsive&#34; /&gt;
+     &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Die Zahlen davor sorgen lediglich für die Reihenfolge der Ordner im
+   Thunderbird, da dieser die Ordner alphabetisch sortiert. Der vierte
+   Ordner &lt;em&gt;4_CFP&lt;/em&gt; ist noch ein Sonderfall, hier landen alle Emails mit
+   &lt;em&gt;Call for Paper&lt;/em&gt; im Betreff, da es sich hier um den Aufruf zur
+   Einreichung von Konferenzbeiträgen handelt; oft auf der Grenze
+   zwischen sinnvoll und Spam.&lt;/p&gt;
+
+&lt;p&gt;Die Erfahrung hat dann aber leider gezeigt, dass die Versuchung
+   (mangelnde Selbstbeherrschung) doch nur einmal kurz die Emails zu
+   lesen massiv steigt, wenn sich die Anzahl der ungelesenen Emails
+   auch in diesen Ordnern erhöht. Abhilfe geschaffen hat lediglich die
+   Emails nicht nur zu verschieben, sondern auch gleich als &lt;em&gt;Gelesen&lt;/em&gt;
+   zu markieren. Um dann doch wieder die neuen von den alten Emails
+   unterscheiden zu können helfen virtuelle Ordner im Thunderbird mit
+   gespeicherten Suchen:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sammelordner:&lt;/strong&gt; Im Thunderbird lassen sich ordnerübergreifende
+  Suchen speichern und damit als eigene Ordner in der Hierarchie
+  anlegen. Die Ordner &lt;em&gt;0_ToDo&lt;/em&gt; und &lt;em&gt;0_Ungelesen&lt;/em&gt; sind zwei solche
+  Ordner.&lt;/p&gt;
+
+&lt;p&gt;In Thunderbird können Nachrichten auf verschiedene Art markiert
+  (getagged) werden. Für ausgewählte Emails geht dies auch einfach als Shortcut
+  über die Zahlen 0 (Tags entfernen) bis 5.&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/email/todo-folder.png&#34; alt=&#34;Kriterien für den ToDo-Ordner&#34; class=&#34;img-responsive&#34;&gt;
+
+
+&lt;p&gt;Über die Tags &lt;em&gt;To Do&lt;/em&gt; und &lt;em&gt;Important&lt;/em&gt; sowie die Markierung per Stern
+  landen alle Emails, die eine Beantwortung erfordern oder Aufgaben
+  beinhalten, unabhängig vom Ablageort auch im Ordner &lt;em&gt;0_ToDo&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Der virtuelle Ordner &lt;em&gt;0_Ungelesen&lt;/em&gt; sammelt dagegen alle Emails die
+  noch nicht bearbeitet wurden. Da beim Filtern von CC- und ähnlichen
+  Emails diese als gelesen markiert werden um nicht in der
+  Ordnerübersicht aufzufallen, bekommen diese einfach das Tag
+  &lt;em&gt;Ungelesen&lt;/em&gt; und sind damit gesammelt doch wieder an einer Stelle zu
+  finden. Und da wird dann erst nachgeschaut, wenn Zeit dafür ist.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Verwirrung über alle Ordner hinweg:&lt;/strong&gt; Diese ganze Sortierei in
+  unzählige Ordner schafft zwar schön Platz in der Inbox und erlaubt
+  die Konzentration auf das Wesentliche. Schnell gehen aber auch
+  Zusammenhänge verloren. Mal ist man in CC, dann wieder nicht, und
+  schon sind die Konversationen auseinander gerissen.&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/email/threadvis.png&#34; alt=&#34;ThreadVis Addon&#34; class=&#34;img-responsive&#34;&gt;
+
+
+&lt;p&gt;Über das Addon &lt;a href=&#34;https://threadvis.github.io/&#34;&gt;ThreadVis&lt;/a&gt; werden
+  Emails einer Konversation wieder im Kontext sichtbar, egal wo sie
+  gelandet sind. Das Addon blendet zusammenhängende Emails als Graph
+  der Abhängigkeiten in der Ansicht jeder Email ein. Die aktuell
+  ausgewählte Email wird in der Grafik leicht größer dargestellt,
+  eigene Emails sind nicht ausgefüllte Kreise. Über die Abstände
+  zwischen den Punkten lässt sich grob der zeitliche Abstand zwischen
+  Emails abschätzen. Per Klick kann dann jede Email aufgerufen werden.&lt;/p&gt;
+
+&lt;h2 id=&#34;spam&#34;&gt;Spam&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Manuelle Spamlisten von Absendern:&lt;/strong&gt; Wer kennt sie nicht?
+   Unaufgeforderte Werbeemails, entweder von Absendern und Firmen von
+   denen man noch nie etwas gehört hat oder von Firmen, mit denen ein
+   winziger Kontakt bestanden hat und die das für die Legitimation
+   halten direkt einen Newsletter versenden zu dürfen. Die DSGVO hat
+   daran auch nur wenig geändert. Bei letzteren Firmen besteht noch
+   die geringe Chance, dass der &lt;em&gt;Abmelden&lt;/em&gt;-Link berücksichtigt wird,
+   aber bei den völlig unbekannten Absendern&amp;hellip; Wenn diese schon die
+   Anmeldung nicht korrekt durchführen, warum dann noch über das
+   Abmelden die Bestätigung geben, dass die verwendete Emailadresse
+   wirklich genutzt wird? Diese Emailabsender landen dann in der
+   manuell geführten Spamliste und werden wegsortiert, gerne einmal
+   auch für alle Emails der betreffenden Domain.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bildspam:&lt;/strong&gt; Spammails, die fast ausschließlich aus Bildern bestehen,
+   sind wieder ein zunehmendes Problem geworden. Textbasierte
+   Spamfilter funktionieren nicht und so geht einiges durch das
+   Raster. Ein Filter, der auf den typischen Merkmalen dieser Emails
+   basiert, schafft größtenteils Abhilfe, birgt aber je nach Art der
+   üblicherweise erwünschten Emails auch ein größeres Risiko von
+   Falsch-Positiven.&lt;/p&gt;
+
+&lt;div class=&#34;row&#34;&gt;
+     &lt;div class=&#34;col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1&#34;&gt;
+     	  &lt;img src=&#34;https://blog.stefan-michaelis.name/images/email/imagespam.png&#34; class=&#34;img-responsive&#34; /&gt;
+     &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Diesen Spammails gemeinsam zu sein scheint, dass der Content-Type
+   &lt;em&gt;multi-part/related&lt;/em&gt; beinhaltet. Im Thunderbird lässt sich für
+   dieses Headerfeld ein eigenes Filterkriterium anlegen. Ebenso
+   sollte der Absender nicht in den eigenen Adressbüchern stehen,
+   d.h. es hat noch keine Interaktion mit diesem gegeben. Und
+   letztendlich ist häufig im eigentlichen &lt;em&gt;An-Feld&lt;/em&gt; nicht die
+   wirkliche Zieladresse lesbar. Bei großen Firmen/Institutionen
+   bietet es sich auch an für Absender aus der eigenen Domain eine
+   Ausnahme zu definieren, siehe letztes Filterkriterium im Beispiel.&lt;/p&gt;
+
+&lt;h2 id=&#34;fazit&#34;&gt;Fazit&lt;/h2&gt;
+
+&lt;p&gt;Die alles liest sich recht kompliziert und auch wenn das Anlegen
+   und Pflegen der Filter Zeit gekostet hat, diese hat sich
+   letztendlich schon wieder einige Male rentiert. Sowohl real als
+   auch für das gute Gefühl Herr der Lage zu sein.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;Kalauer? Vielleicht. Und wer schafft schon wirklich 0 Emails in der Inbox?
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt; ↩&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Homeserver Teil 2</title>
