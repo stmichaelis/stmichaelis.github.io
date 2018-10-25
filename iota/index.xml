@@ -179,7 +179,7 @@ werden, siehe
 &lt;p&gt;Den sogenannten Items können dann direkt im Browser den passenden
 Schaltflächen zugeordnet werden.&lt;/p&gt;
 
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/habpanel.png&#34; alt=&#34;Habpanel Startseite&#34; class=&#34;img-responsive&#34;&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/habpanel.png&#34; alt=&#34;Habpanel Startseite&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 &lt;div class=&#34;caption&#34;&gt;Übersichtsseite in OpenHAB mit HABPanel als Oberfläche&lt;/div&gt;
 
@@ -308,7 +308,7 @@ installiert und erst einmal Daten gesammelt.&lt;/p&gt;
 &lt;p&gt;Die Auswertungen geben dem Gefühl der &amp;ldquo;ständigen&amp;rdquo; Ausfälle wenigstens
 ein konkretes Gesicht: Wie lange, wie oft?&lt;/p&gt;
 
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/ausfallzeitjeTag.png&#34; alt=&#34;Ausfallzeit je Tag&#34; class=&#34;img-responsive&#34;&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/ausfallzeitjeTag.png&#34; alt=&#34;Ausfallzeit je Tag&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 &lt;div class=&#34;caption&#34;&gt;Ausfallzeiten je Tag zeigen keine offensichtlichbegründbaren Besonderheiten&lt;/div&gt;
 
@@ -334,7 +334,7 @@ Vergleich geringen Ausfälle an Freitagen, das Wochenende ist
 (überraschenderweise) ebenfalls leicht weniger betroffen, weicht aber
 nicht allzu stark von den übrigen Wochentagen ab.&lt;/p&gt;
 
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/ausfallzeitjeStunde.png&#34; alt=&#34;Ausfallzeit je Stunde&#34; class=&#34;img-responsive&#34;&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/ausfallzeitjeStunde.png&#34; alt=&#34;Ausfallzeit je Stunde&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 &lt;div class=&#34;caption&#34;&gt;Die Ausfallzeiten je Stunde zeigen Häufungen im Abendbereich&lt;/div&gt;
 
@@ -348,7 +348,7 @@ nicht allzu stark von den übrigen Wochentagen ab.&lt;/p&gt;
 sich die meisten Ausfälle in den Abendstunden, was eine gewisse
 Abhängigkeit von der generellen Auslastung erahnen ließe.&lt;/p&gt;
 
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/ausfalldauerTag.png&#34; alt=&#34;Ausfalldauern je Tag&#34; class=&#34;img-responsive&#34;&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/ausfalldauerTag.png&#34; alt=&#34;Ausfalldauern je Tag&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 &lt;div class=&#34;caption&#34;&gt;Die Ausfalldauern je Tag zeigen nur bedingt Korrelationen mit dem Gesamtausfall&lt;/div&gt;
 
@@ -359,7 +359,7 @@ Abhängigkeit von der generellen Auslastung erahnen ließe.&lt;/p&gt;
     mutate&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;wday &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; wday&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;date&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; label &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; week_start &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
     ggplot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;mapping &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; aes&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;x &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; wday&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; y &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; n &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;
     geom_boxplot&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; labs&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;x &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Wochentag&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; y &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Dauer je Ausfall [Minuten]&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/ausfalldauerStunde.png&#34; alt=&#34;Ausfalldauern je Stunde&#34; class=&#34;img-responsive&#34;&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/ausfalldauerStunde.png&#34; alt=&#34;Ausfalldauern je Stunde&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 &lt;div class=&#34;caption&#34;&gt;Die Ausfalldauern je Stunde zeigen nur bedingt Korrelationen mit dem Gesamtausfall&lt;/div&gt;
 
@@ -570,7 +570,7 @@ ließen sich die Abbrüche nicht nachstellen.&lt;/p&gt;
 Datenverkehr nach einer wilden Ansammlung angestauter Datenverbindung
 aus. Ein einzelner Datenstrom konnte ebenso zum Ausfall führen.&lt;/p&gt;
 
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/quictrace.png&#34; alt=&#34;Wireshark Trace&#34; class=&#34;img-responsive&#34;&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/quictrace.png&#34; alt=&#34;Wireshark Trace&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 &lt;div class=&#34;caption&#34;&gt;Wireshark-Trace einer einzelnen QUIC-Verbindung mit maximaler Uploadrate&lt;/div&gt;
 
@@ -608,7 +608,7 @@ Experiment noch einmal wiederholt, in diesem Durchlauf dann mit
 privilegiertem Port für den Server (entsprechend als Root, schön öffentlich
 erreichbar im gesamten Internet, also bloß schnell mit dem Test sein).&lt;/p&gt;
 
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/netzwerkverlauf.png&#34; alt=&#34;Netzwerkverlauf&#34; class=&#34;img-responsive&#34;&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/netzwerkverlauf.png&#34; alt=&#34;Netzwerkverlauf&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 &lt;div class=&#34;caption&#34;&gt;Netzwerkverlauf/Durchsatz bis zum Verbindungsabbruch&lt;/div&gt;
 
@@ -726,7 +726,7 @@ dient.&lt;/p&gt;
 und KNX-Leitung vorhanden. Hier wird der Server als zentrale
 Steuereinheit auf Basis des bekannte Raspberry Pi später montiert werden.&lt;/p&gt;
 
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_Gehaeuse_Vorderseite.jpg&#34; alt=&#34;Homeserver Vorderseite&#34; class=&#34;img-responsive&#34;&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_Gehaeuse_Vorderseite.jpg&#34; alt=&#34;Homeserver Vorderseite&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 &lt;div class=&#34;caption&#34;&gt;Vorderseite des Homeserver-Gehäuses&lt;/div&gt;
 
@@ -735,7 +735,7 @@ Steuereinheit auf Basis des bekannte Raspberry Pi später montiert werden.&lt;/p
 einen passenden Ausschnitt um das Touchdisplay zur Bedienung
 aufzunehmen.&lt;/p&gt;
 
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_Gehaeuse_Rueckseite.jpg&#34; alt=&#34;Homeserver Rückseite&#34; class=&#34;img-responsive&#34;&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_Gehaeuse_Rueckseite.jpg&#34; alt=&#34;Homeserver Rückseite&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 &lt;div class=&#34;caption&#34;&gt;Homeserver Rückseite&lt;/div&gt;
 
@@ -752,7 +752,7 @@ passt. Insbesondere das Netzteil verschwindet letztendlich im Bereich
 rechts vom Display. Die Dicke erschließt sich beim Blick auf die gestackte
 Anordnung aller Komponenten.&lt;/p&gt;
 
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_Display_Rueckseite.jpg&#34; alt=&#34;Homeserver Display&#34; class=&#34;img-responsive&#34;&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_Display_Rueckseite.jpg&#34; alt=&#34;Homeserver Display&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 &lt;div class=&#34;caption&#34;&gt;Display mit Raspberry Pi und KNX-Ankopplung&lt;/div&gt;
 
@@ -799,12 +799,12 @@ verfügbaren Raspberry Pi ermöglicht.&lt;/p&gt;
 mit Tablet denkbar, welches wiederum zur Steuerung auf eine
 Weboberfläche auf dem Raspberry zugreift.&lt;/p&gt;
 
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_Montiert.jpg&#34; alt=&#34;Homeserver montiert&#34; class=&#34;img-responsive&#34;&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_Montiert.jpg&#34; alt=&#34;Homeserver montiert&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 &lt;div class=&#34;caption&#34;&gt;Fertig an der Wand montierter Homeserver mit Raspbian-Linux&lt;/div&gt;
 
 
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_MontiertTotale.jpg&#34; alt=&#34;/images/Homeserver_MontiertTotale.jpg&#34; class=&#34;img-responsive&#34;&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_MontiertTotale.jpg&#34; alt=&#34;/images/Homeserver_MontiertTotale.jpg&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 
 &lt;p&gt;An der Wand montiert wirkt das gesamte Gehäuse allerdings bei weitem
@@ -1140,7 +1140,7 @@ als der neueste Smartphone-Zuwachs ins Netz gekommen ist.&lt;/p&gt;
 gefürchteten mDNS-Pakete. Ca. 60% des gesamten Datenverkehrs. Und
 gemessen lediglich kabelgebunden an einem normalen PC.&lt;/p&gt;
 
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/pakettrace.png&#34; alt=&#34;/images/pakettrace.png&#34; class=&#34;img-responsive&#34;&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/pakettrace.png&#34; alt=&#34;/images/pakettrace.png&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 
 &lt;p&gt;Im zeitlichen Verlauf gut zu erkennen ist die Spitze direkt nach dem
@@ -1150,7 +1150,7 @@ mehr weiter geleitet wurde. Eine Erklärung wäre dies auch, warum sich
 das Smartphone direkt nach dem Aufwecken sehr zäh in der Bedienung
 anfühlt. Wenn es doch erst einmal tausende Pakete versenden muss&amp;hellip;&lt;/p&gt;
 
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/paketgraph.png&#34; alt=&#34;/images/paketgraph.png&#34; class=&#34;img-responsive&#34;&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/paketgraph.png&#34; alt=&#34;/images/paketgraph.png&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 
 &lt;p&gt;Verursacher ist hier ein relativ altes Nexus 5 mit Android 6,

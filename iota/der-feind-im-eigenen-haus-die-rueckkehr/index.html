@@ -24,7 +24,7 @@ immerhin ein (nicht ganz befriedigender) Workaround zu finden war.
 " />
 <meta name="twitter:title" content="Der Feind im eigenen Haus - Die Rückkehr" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="/images/switch_oil.jpg" />
+<meta name="twitter:image" content="https://blog.stefan-michaelis.name/images/switch_oil.jpg" />
 
 
     
@@ -154,7 +154,7 @@ installiert und erst einmal Daten gesammelt.</p>
 <p>Die Auswertungen geben dem Gefühl der &ldquo;ständigen&rdquo; Ausfälle wenigstens
 ein konkretes Gesicht: Wie lange, wie oft?</p>
 
-<img src="/images/ausfallzeitjeTag.png" alt="Ausfallzeit je Tag" class="img-responsive">
+<img src="/images/ausfallzeitjeTag.png" alt="Ausfallzeit je Tag" class="img-responsive center-block">
 
 <div class="caption">Ausfallzeiten je Tag zeigen keine offensichtlichbegründbaren Besonderheiten</div>
 
@@ -180,7 +180,7 @@ Vergleich geringen Ausfälle an Freitagen, das Wochenende ist
 (überraschenderweise) ebenfalls leicht weniger betroffen, weicht aber
 nicht allzu stark von den übrigen Wochentagen ab.</p>
 
-<img src="/images/ausfallzeitjeStunde.png" alt="Ausfallzeit je Stunde" class="img-responsive">
+<img src="/images/ausfallzeitjeStunde.png" alt="Ausfallzeit je Stunde" class="img-responsive center-block">
 
 <div class="caption">Die Ausfallzeiten je Stunde zeigen Häufungen im Abendbereich</div>
 
@@ -194,7 +194,7 @@ nicht allzu stark von den übrigen Wochentagen ab.</p>
 sich die meisten Ausfälle in den Abendstunden, was eine gewisse
 Abhängigkeit von der generellen Auslastung erahnen ließe.</p>
 
-<img src="/images/ausfalldauerTag.png" alt="Ausfalldauern je Tag" class="img-responsive">
+<img src="/images/ausfalldauerTag.png" alt="Ausfalldauern je Tag" class="img-responsive center-block">
 
 <div class="caption">Die Ausfalldauern je Tag zeigen nur bedingt Korrelationen mit dem Gesamtausfall</div>
 
@@ -205,7 +205,7 @@ Abhängigkeit von der generellen Auslastung erahnen ließe.</p>
     mutate<span class="p">(</span>wday <span class="o">=</span> wday<span class="p">(</span><span class="kp">date</span><span class="p">,</span> label <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> week_start <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">%&gt;%</span>
     ggplot<span class="p">(</span>mapping <span class="o">=</span> aes<span class="p">(</span>x <span class="o">=</span> wday<span class="p">,</span> y <span class="o">=</span> n <span class="o">*</span> <span class="m">0.5</span><span class="p">))</span> <span class="o">+</span>
     geom_boxplot<span class="p">()</span>  <span class="o">+</span> labs<span class="p">(</span>x <span class="o">=</span> <span class="s">&#34;Wochentag&#34;</span><span class="p">,</span> y <span class="o">=</span> <span class="s">&#34;Dauer je Ausfall [Minuten]&#34;</span><span class="p">)</span></code></pre></div>
-<img src="/images/ausfalldauerStunde.png" alt="Ausfalldauern je Stunde" class="img-responsive">
+<img src="/images/ausfalldauerStunde.png" alt="Ausfalldauern je Stunde" class="img-responsive center-block">
 
 <div class="caption">Die Ausfalldauern je Stunde zeigen nur bedingt Korrelationen mit dem Gesamtausfall</div>
 
@@ -416,7 +416,7 @@ ließen sich die Abbrüche nicht nachstellen.</p>
 Datenverkehr nach einer wilden Ansammlung angestauter Datenverbindung
 aus. Ein einzelner Datenstrom konnte ebenso zum Ausfall führen.</p>
 
-<img src="/images/quictrace.png" alt="Wireshark Trace" class="img-responsive">
+<img src="/images/quictrace.png" alt="Wireshark Trace" class="img-responsive center-block">
 
 <div class="caption">Wireshark-Trace einer einzelnen QUIC-Verbindung mit maximaler Uploadrate</div>
 
@@ -454,7 +454,7 @@ Experiment noch einmal wiederholt, in diesem Durchlauf dann mit
 privilegiertem Port für den Server (entsprechend als Root, schön öffentlich
 erreichbar im gesamten Internet, also bloß schnell mit dem Test sein).</p>
 
-<img src="/images/netzwerkverlauf.png" alt="Netzwerkverlauf" class="img-responsive">
+<img src="/images/netzwerkverlauf.png" alt="Netzwerkverlauf" class="img-responsive center-block">
 
 <div class="caption">Netzwerkverlauf/Durchsatz bis zum Verbindungsabbruch</div>
 
