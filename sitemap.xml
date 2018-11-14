@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.stefan-michaelis.name/iota/kreuzvalidierungsfail/</loc>
+    <lastmod>2018-11-14T19:54:01+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.stefan-michaelis.name/dodi/hero-und-zero/</loc>
     <lastmod>2018-10-24T19:55:27+02:00</lastmod>
   </url>
@@ -94,12 +99,12 @@
   
   <url>
     <loc>https://blog.stefan-michaelis.name/iota/</loc>
-    <lastmod>2018-10-08T19:01:37+01:00</lastmod>
+    <lastmod>2018-11-14T19:54:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.stefan-michaelis.name/</loc>
-    <lastmod>2018-10-24T19:55:27+02:00</lastmod>
+    <lastmod>2018-11-14T19:54:01+02:00</lastmod>
     <priority>0</priority>
   </url>
   

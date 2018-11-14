@@ -6,10 +6,205 @@
     <description>Recent content in IoTA on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Mon, 08 Oct 2018 19:01:37 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 14 Nov 2018 19:54:01 +0200</lastBuildDate>
     
         <atom:link href="https://blog.stefan-michaelis.name/iota/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kreuzvalidierungsfail</title>
+      <link>https://blog.stefan-michaelis.name/iota/kreuzvalidierungsfail/</link>
+      <pubDate>Wed, 14 Nov 2018 19:54:01 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/iota/kreuzvalidierungsfail/</guid>
+      <description>
+
+&lt;p&gt;Validierung der Prognosegüte von Modellen des maschinellen Lernens
+über hochgradige Kreuzvalidierung ist der Standard für zuverlässige
+Aussagen. Wie man sich damit leicht selbst auf das Glatteis führen
+kann, davon erzählt diese Geschichte.&lt;/p&gt;
+
+&lt;h2 id=&#34;hintergrund&#34;&gt;Hintergrund&lt;/h2&gt;
+
+&lt;h3 id=&#34;sommerschule-für-maschinelles-lernen-unter-ressourcenbeschränkung&#34;&gt;Sommerschule für maschinelles Lernen unter Ressourcenbeschränkung&lt;/h3&gt;
+
+&lt;p&gt;Der &lt;a href=&#34;https://sfb876.tu-dortmund.de&#34;&gt;Sonderforschungsbereich 876&lt;/a&gt; -
+Große Daten, Kleine Geräte, an der TU Dortmund führt regelmäßig
+Sommerschulen zum Thema &lt;em&gt;Maschinelles Lernen unter
+Ressourcenbeschränkung&lt;/em&gt; durch. Ganz zum Forschungsgebiet des
+Sonderforschungsbereichs passend beschäftigen sich die Sommerschulen
+damit, wie die Analyse großer Daten, insbesondere auch auf
+eingebetteten Systemen und im Verbund mit sehr stark beschränkten
+Rechenressourcen, gelingen kann. Jede Sommerschule versucht dabei
+neben den eigentlichen Kursen auch einen Hands-On-Teil dazu
+anzubieten. Auch die innerhalb kürzester Zeit ausverkaufte
+&lt;a href=&#34;https://sfb876.tu-dortmund.de/SummerSchool2017/index.html&#34;&gt;Sommerschule
+2017&lt;/a&gt; war
+dabei keine Ausnahme.&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/phynode/versuchsaufbau.jpg&#34; alt=&#34;Versuchsaufbau&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Versuchsaufbau aus mehreren PhyNode-Boxen&lt;/div&gt;
+
+
+&lt;p&gt;Das Szenario war dazu an ein Problem aus der Warenlogistik angelegt: Wie
+finde ich im Regal meine Box wieder? Im Versuchsaufbau wurden zwei
+kleine Wände aus Warencontainern aufgebaut, wobei jeder Container mit
+einem im Projekt &lt;a href=&#34;https://sfb876.tu-dortmund.de/SPP/sfb876-a4.html&#34;&gt;Ressourcen-effiziente und verteilte Plattformen zur
+integrativen
+Datenanalyse&lt;/a&gt;
+entwickelten PhyNode-Board versehen ist.&lt;/p&gt;
+
+&lt;h3 id=&#34;aufgabe&#34;&gt;Aufgabe&lt;/h3&gt;
+
+&lt;p&gt;Die &lt;a href=&#34;https://ieeexplore.ieee.org/document/7323355&#34;&gt;PhyNodes&lt;/a&gt; sind
+stark ressourcenbeschränkte, autonome und weitestgehend energieautarke
+eingebettete Systeme mit einer Anzahl verschiedener Sensoren.&lt;/p&gt;
+
+&lt;div class=&#34;row&#34;&gt;
+     &lt;div class=&#34;col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1&#34;&gt;
+     	  &lt;img src=&#34;https://blog.stefan-michaelis.name/images/phynode/phynode.jpg&#34; class=&#34;img-responsive&#34; /&gt;
+     &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Die Aufgabe der Sommerschule bestand darin, das Lernen von Positionen
+von Boxen mit angebrachten PhyNodes für mehr als 20 Positionen als
+Labels zu realisieren. Später sollten die Boards selbst durch die
+Software auf den Boards ihre eigenen Positionen im Regal vorhersagen
+können. Die Teilnehmer erhielten dazu Trainingsdaten mit der bekannten
+Position. Die Boards nahmen im Verlauf verschiedene Positionen ein,
+d.h. ID des Boards und Position stimmten nicht immer überein. Die
+Messreihen zwischen dem Umstecken werden im Folgenden als &amp;ldquo;Experiment&amp;rdquo;
+bezeichnet.&lt;/p&gt;
+
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
+&lt;p&gt;Verfügbare Features waren Zeit, Board ID, Temperatur, Luxwerte,
+Beschleunigungswerte X, Y, Z, RSSI zur Basistation, das Experiment und
+die Position als Label. Positionen bestanden aus zwei Ziffern mit der
+Bedeutung Spalte/Zeile, was für die Modellbildung aber keine Rolle
+spielte, da die Aufgabe zunächst als Klassifikationsproblem behandelt
+wurde.  In Summe standen nach den ersten Experimenten mehr als 330.000
+Messungen zur Verfügung.&lt;/p&gt;
+
+&lt;h2 id=&#34;modellierung&#34;&gt;Modellierung&lt;/h2&gt;
+
+&lt;p&gt;Um einen ersten Eindruck von der Schwierigkeit des Problems zu
+bekommen (These: Das geht gar nicht) bietet es sich an beispielsweise
+eine schnelle Analyse mit &lt;a href=&#34;https://rapidminer.com/&#34;&gt;RapidMiner&lt;/a&gt;
+auszuprobieren. Die Daten sind damit fix eingelesen und die
+wichtigsten Methoden mit ein paar Klicks verfügbar.&lt;/p&gt;
+
+&lt;p&gt;Der simple Ansatz ist dann: Daten einfach mit einem RandomForest mit
+Standardparametern (10 Bäume) gelernt, 10-fache Kreuzvalidierung und
+schauen, wo wir landen.&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/phynode/x-validation.png&#34; alt=&#34;X-Validation&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Ausschnitt des Vorgehens bei einer 10-fachen Kreuzvalidierung&lt;/div&gt;
+
+
+&lt;p&gt;Die Kreuzvalidierung, insbesondere in 10-facher Ausführung stellt
+dabei sicher, dass unter maximaler Ausnutzung der Trainingsdaten ein
+sicheres Bild über die zu erwartende Güte gewonnen wird. Die Daten
+werden dazu gleichmäßig in 10 Blöcke unterteilt, wobei in jedem
+Trainings-/Testlauf ein Block für das Testing zurückbehalten wird,
+während die übrigen 90 % zum Training des Verfahrens zur Verfügung stehen.&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/phynode/ConfusionMatrix_RF_Accuracy99.png&#34; alt=&#34;Confusion Matrix Random Forest&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Ausschnitt der Confusion Matrix unter Einsatz eines Random Forest&lt;/div&gt;
+
+
+&lt;p&gt;Für den Random Forest liefert diese Validierung dann auch eine
+Klassifikationsgüte von über 99 %. Ziel erreicht, perfekte
+Positionsvorhersage mit einfache Mitteln ist möglich, wir können nach
+Hause gehen. Schade um die Aufgabe, für eine Sommerschule war das dann
+wohl doch zu einfach. Naja, es blieb immerhin noch das Problem, das
+trainierte Modell auch auf die Ultra-Low-Power-Plattformen zu bringen.&lt;/p&gt;
+
+&lt;h2 id=&#34;das-problem&#34;&gt;Das Problem&lt;/h2&gt;
+
+&lt;p&gt;Mehr als 99 %, und das ohne Aufwand. Hinterlässt aber irgendwie doch
+einen leichten Beigeschmack. Vielleicht lohnt es sich doch einmal
+etwas näher hinter die Kulissen zu schauen. Zur einfachen
+Interpretierbarkeit zeigt die folgende Abbildung den Ausschnitt aus
+einem einfachen Regelmodell anstelle des Random Forest.&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/phynode/RuleModel.png&#34; alt=&#34;RuleModel&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Ausschnitt eines einfachen Regel-Modells&lt;/div&gt;
+
+
+&lt;p&gt;So einfach sieht das Modell aber eigentlich gar nicht aus. Im
+Gegenteil eher überkomplex und overfittet. Auffällig ist die
+Einbeziehung der Beschleunigungs-Werte (Acc_x &amp;hellip;). Welche Rolle
+sollten diese im statischen Fall, d.h. Boards bewegen sich nicht,
+spielen? Eigentlich sollte das Modell unwichtige Attribute selbst
+aussortieren.&lt;/p&gt;
+
+&lt;p&gt;Es scheint als ob die Beschleunigungs-Werte einen deutlichen Bezug zur
+Position &lt;em&gt;und&lt;/em&gt; zum Experiment haben, quasi wie ein Fingerabdruck.&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/phynode/Experiment_Vs_AccelZ_Vs_Board.png&#34; alt=&#34;Experiment Vs AccelZ Vs Board&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Plot von zwei Experimenten (Zeitachse) gegenüber Z-Beschleunigung gegenüber zwei Boards (ID, Farbe)&lt;/div&gt;
+
+
+&lt;p&gt;Der Plot zeigt beispielhaft den Z-Wert der Beschleunigungsmesser für
+zwei Boards (rot und blau) für zwei Experimente (entlang der Zeitachse
+mit kurzer Unterbrechung zum links und rechts). Die Werte sind im
+Mittel stabil, deutlich voneinander trennbar, und unterscheiden sich
+zwischen den Boards. Und nach dem Umstecken ändert sich der Z-Wert an
+der neuen Position. Was passiert hier? Sind die Sensoren so
+empfindlich, dass die Erdbeschleunigung unterschiedliche Höhen sichtbar
+macht?&lt;/p&gt;
+
+&lt;p&gt;Wohl eher nicht, eine viel ernüchternde Erklärung: Die Boards scheinen
+nach dem Umstecken immer leicht &lt;em&gt;schief&lt;/em&gt; in den Boxen zu landen, was
+die Unterschiede in den Beschleunigungswerten ausmacht und die
+eindeutige Identifikation eines Boards an einer bestimmten Position
+ermöglicht. Leider sind diese Werte nicht reproduzierbar, damit nur
+Rauschen und nicht für ein in der Realität anwendbares Modell
+geeignet. Sobald Daten eines Experiments für die Aufteilung der
+Kreuzvalidierung für ein Board sowohl im Trainings- als auch im
+Testdatensatz vorkommen erzeugen diese den Fingerabdruck dieses einen
+Boards. Eigentlich sollten aber die Messdaten unabhängig vom Board
+Rückschlüsse auf die Position erlauben. Die Beschleunigungssensoren
+codieren damit (fast eindeutig) das Label (Information Leakage).&lt;/p&gt;
+
+&lt;p&gt;Und die Situation wird noch schlimmer: In den Daten sind &lt;em&gt;9
+Experimente&lt;/em&gt; enthalten, d.h. 9 mal Umstecken der PhyNode-Boards an
+neue Positionen. In einer 10-fachen stratifizierten Kreuzvalidierung
+stecken damit &lt;em&gt;immer&lt;/em&gt; sowohl in Trainings- als auch Testdaten Anteile
+aus allen Experimenten.&lt;/p&gt;
+
+&lt;p&gt;Wird die Kreuzvalidierung dagegen auf Batchweise umgestellt mit dem
+Experiment als Attribut für den Train-/Testsplit sehen die Ergebnisse
+ganz anders aus. Jetzt wird immer jeweils ein vollständiges Experiment
+für den Test zurückgehalten während die anderen 8 Experimente dem
+Training dienen. Schon sind es nur noch 10 % Genauigkeit, siehe dazu
+wieder einen Ausschnitt der Konfusionsmatrix für einen Random Forest
+mit derselben Parametrisierung wie zuvor.&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/phynode/ConfusionMatrix_RF_Accuracy10.png&#34; alt=&#34;Confusion Matrix mit angepasster Validierung&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Confusion Matrix mit angepasster Validierung über vollständige Experimente&lt;/div&gt;
+
+
+&lt;p&gt;10 % bei mehr als 20 Labeln ist immer noch besser als raten, aber nicht
+beeindruckend. Immerhin ist damit zumindest die Basis für eine
+korrekte Validierung gelegt und der eigentliche Zyklus aus Modellwahl
+und Parametrisierung kann beginnen.&lt;/p&gt;
+
+&lt;p&gt;Was sich in dem Szenario dann letztendlich erreichen lässt haben die
+Kollegen anschließend in einer Publikation auf der &lt;a href=&#34;https://ieeexplore.ieee.org/abstract/document/8435922&#34;&gt;Smart SysTech
+2018&lt;/a&gt;
+gezeigt. Mit viel Mühe sind damit immerhin wieder Klassifikationsgüten
+von über 80 % möglich.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Homeserver Teil 2</title>
