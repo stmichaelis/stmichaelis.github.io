@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.stefan-michaelis.name/dodi/weg-ist-weg/</loc>
+    <lastmod>2019-02-20T19:58:06+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.stefan-michaelis.name/iota/kreuzvalidierungsfail/</loc>
     <lastmod>2018-11-14T19:54:01+02:00</lastmod>
   </url>
@@ -94,7 +99,7 @@
   
   <url>
     <loc>https://blog.stefan-michaelis.name/dodi/</loc>
-    <lastmod>2018-10-24T19:55:27+02:00</lastmod>
+    <lastmod>2019-02-20T19:58:06+01:00</lastmod>
   </url>
   
   <url>
@@ -104,7 +109,7 @@
   
   <url>
     <loc>https://blog.stefan-michaelis.name/</loc>
-    <lastmod>2018-11-14T19:54:01+02:00</lastmod>
+    <lastmod>2019-02-20T19:58:06+01:00</lastmod>
     <priority>0</priority>
   </url>
   
