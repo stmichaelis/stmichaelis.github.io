@@ -6,10 +6,71 @@
     <description>Recent content on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Wed, 20 Feb 2019 19:58:06 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jul 2019 19:44:21 +0200</lastBuildDate>
     
         <atom:link href="https://blog.stefan-michaelis.name/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Geocache Transposed - Teil 1 - Die Schatztruhe für unterwegs</title>
+      <link>https://blog.stefan-michaelis.name/iota/geocachet/1-die-story/</link>
+      <pubDate>Wed, 24 Jul 2019 19:44:21 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/iota/geocachet/1-die-story/</guid>
+      <description>&lt;p&gt;Vor langer Zeit sagte mir einmal jemand, dass der Computeringenieur ein schlechter
+Beruf ist - um Geschenke für Familie und Freunde zu erschaffen. Maler,
+sicher, diese können leicht ein Bild zeichnen und es
+verschenken. Musiker, ja, sie können zu einem Geburtstag eine schöne
+kleine Melodie spielen oder sogar eine ganze Hymne einem Freund
+widmen. Aber wer mag schon Überraschungen mit Computern und Software?
+Ich würde das auch so sehen, dass einige Optionen ein wenig geekig sein können,
+aber andere können für jeden geeignet sein.  Einer davon ist ein
+Geocache Transposed (GCT, Geocachet).&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Dieser Post (und die folgenden) sind die Neuauflage einer alten
+Serie von Mini-Postings. Ursprünglich auf Google+ und in Englisch
+gepostet sind diese jetzt nach dem Ende von G+ zu schade um für
+immer verschwunden zu sein. Die Umsetzung der Box liegt inzwischen
+viele Jahre zurück, die Idee dahinter ist aber zeitlos. Soweit
+möglich wurden Links auf ihre Gültigkeit geprüft und ggf. angepasst
+oder gelöscht.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Geocaching ist inzwischen ein bekanntes Hobby, das von billigeren und in
+Smartphones integrierten GPS-Geräten angetrieben wurde. Beim
+Geocaching werden die so genannten Caches an entfernten Orten
+ausgeblendet, während die Koordinaten öffentlich sind. Bei Verwendung
+eines GPS-Geräts muss der Cache gefunden und in den meisten Fällen
+Elemente im Cache ausgetauscht werden. Eine GCT-Box dreht dieses
+Konzept auf den Kopf.&lt;/p&gt;
+
+&lt;p&gt;Der transponierte Geocache ist der sich bewegende Cache. Wer denkt
+nicht gerne an die eigene Kindheit zurück, das Spiel als Piraten und
+die Jagd nach geheimen Schätzen. Diesmal trägst jeder die Schatzkiste
+mit sich herum und muss das Rätsel lösen um den richtigen Ort zu
+finden.  Die Box selbst ist verschlossen, darin befindet sich ein
+GPS-Empfänger und die Box öffnet sich nur, wenn sie an einem bestimmten Ort
+der Welt aktiviert wird. An der falschen Stelle zeigt das Feld einfach
+die Entfernung zum Ziel an, so dass erraten werden muss wohin die
+Reise gehen soll. Der Begriff Reverse Geocache dafür und das
+ursprüngliche Konzept wurde 2009 von Mikal Hart geprägt:
+&lt;a href=&#34;http://arduiniana.org/projects/the-reverse-geo-cache-puzzle/&#34;&gt;http://arduiniana.org/projects/the-reverse-geo-cache-puzzle/&lt;/a&gt; Er
+entwarf die Box als Geschenk für die Hochzeit seines Freundes und
+hat damit eine Lawine verschiedener Varianten davon ausgelöst.&lt;/p&gt;
+
+&lt;p&gt;Der Geocachet ist ein großartiges persönliches Geschenk,
+für Hochzeiten, Geburtstage oder Jubiläen. Der Prozess der Erstellung
+einer eigenen Box, der Auswahl des geheimen Ortes und der Beobachtung
+der Versuche, das Rätsel zu lösen, ist an sich schon ein wunderbare
+Sache. Und die Box ist wiederverwendbar, wenn ein neuer
+geheimer Ort programmiert wird. Nachdem ich die ursprünglichen Beiträge
+über die Geschichte des umgekehrten Geocache gelesen hatte, musste ich
+meine eigene Box erstellen. Die folgenden Beiträge beschreiben
+meinen Prozess; vielleicht werden sie auch als Inspiration für noch
+weitere Puzzleboxen dienen.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Weg ist weg - Sunk Costs</title>
