@@ -6,10 +6,123 @@
     <description>Recent content on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Wed, 24 Jul 2019 19:44:21 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jul 2019 19:59:43 +0200</lastBuildDate>
     
         <atom:link href="https://blog.stefan-michaelis.name/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Geocache Transposed - Teil 2 - Die Hardware</title>
+      <link>https://blog.stefan-michaelis.name/iota/geocachet/2-die-hardware/</link>
+      <pubDate>Wed, 31 Jul 2019 19:59:43 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/iota/geocachet/2-die-hardware/</guid>
+      <description>&lt;p&gt;Dies ist Teil 2 über den Bau eines Geocache Transposed (GCT),
+einer verschlossenen Box, die nur an einem geheimen Ort geöffnet
+wird. Der folgende Beitrag listet die für den Bau benötigten Teile
+auf.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Arduino:&lt;/strong&gt; &lt;a href=&#34;https://arduino.cc/&#34;&gt;https://arduino.cc/&lt;/a&gt; Das berühmte Arduino
+Open-Source-Mikrocontroller-Board bildet das Herzstück des Caches. Die
+Kosten für ein Standard-Entwicklungsboard liegen unter
+25,-€. Geschäfte, die das Board zur Verfügung stellen, sind hier zu
+finden: &lt;a href=&#34;https://store.arduino.cc/distributors&#34;&gt;https://store.arduino.cc/distributors&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Die meisten Firmen bieten auch die anderen elektronischen Bauteile an,
+die für den Geocache benötigt werden.  Die Website des
+Arduino-Projekts bietet viele Tutorials zum Anschließen von
+Geräten an den Controller. Der Arduino besteht aus einem ATMega328 mit
+32KByte Flash für Ihr Programm und 1KByte EEPROM zur Speicherung von
+Werten, was viel Platz für dieses Projekt bietet. Ich habe die
+vorherige Version namens &lt;em&gt;Duemilanove&lt;/em&gt; verwendet, während das aktuelle
+Board&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;em&gt;Uno&lt;/em&gt; heißt, aber beide sollten gut funktionieren.  Der
+Controller selbst wird in C++ programmiert, kompiliert und auf das
+Board über die IDE per USB hochgeladen. Das Board verfügt über mehrere
+Ein-/Ausgangspins und über Buchsen zum einfachen Einstecken der
+Kabel. Für die meisten Teile dieses Projekts ist kein Löten
+erforderlich.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;GPS-Empfänger:&lt;/strong&gt; Die Koordinaten der aktuellen Position der Box
+werden von einem GPS-Empfänger geliefert. Jeder Empfänger, der die
+Daten über eine serielle Verbindung sendet, sollte funktionieren. Für
+diese Box habe ich den GPS-Empfänger EM-406 SiRF III von USGlobalSat
+verwendet. Die Kosten liegen bei ca. 40,-€. Der Empfänger verfügt über
+eine integrierte Antenne und kann im Inneren der Box montiert werden,
+sofern die Wände nicht zu dick und nicht aus Metall sind.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;LCD:&lt;/strong&gt; Das LCD zeigt Statusinformationen und - was am wichtigsten
+ist - die Entfernung zum Zielort an. Ich benutzte ein serielles
+Display mit 16x2 Zeichen, weiß auf schwarz. Die Kosten betragen
+ca. 22,-€, verfügbar z.B. hier:
+&lt;a href=&#34;http://www.watterott.com/index.php?page=product&amp;amp;info=1336&#34;&gt;http://www.watterott.com/index.php?page=product&amp;amp;info=1336&lt;/a&gt; Ein Display
+mit parallelen Anschlüssen sollte ebenfalls verwendbar sein, da wir
+nicht so viele Anschlüsse des Arduino für die anderen Teile
+benötigen. Oft sind diese Displays billiger und es gibt Bibliotheken
+zur bequemen Ansteuerung.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Netzschalter:&lt;/strong&gt; Die Box sollte so viel Strom wie möglich sparen,
+insbesondere da die Lösung und das Öffnen Monate dauern kann. Mit
+einem Pololu Power Switch&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, siehe
+&lt;a href=&#34;http://www.pololu.com/catalog/product/750&#34;&gt;http://www.pololu.com/catalog/product/750&lt;/a&gt;, 6,-€, kann der Arduino mit
+einem Druckknopf eingeschaltet werden und der Arduino kann sich selbst
+wieder ausschalten. Zu beachten ist, dass es zwei Versionen dieses
+Netzschalters gibt, Standard-Spannung (SV) von 4,5V-20V und
+Kleinspannung (LV) von 2,5-7,0V. Da ich eine 9V-Batterie zur
+Stromversorgung der Box benutzte, kam die SV-Version zum Einsatz.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Servo:&lt;/strong&gt; Ein Servomotor wird benötigt, um die Box schließlich an der
+richtigen Stelle zu öffnen. Jeder Servo sollte es tun, da wir keine
+schweren Hebearbeiten durchführen müssen. Genutzt wurde ein
+Hitec HS-311 Servo, der bei einem lokalen Modellbauer für 8,-€
+gefunden wurde.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Power-Taste:&lt;/strong&gt; Zum Einschalten der Box kann fast jeder billige
+Druckknopf verwendet werden. Hier sollte es etwas Ausgefalleneres sein
+und so entschied ich mich schließlich für einen beleuchteten
+Edelstahlknopf. Mit 10,-€ leider nicht auf der billigen Seite:
+&lt;a href=&#34;https://www.conrad.de/de/p/tru-components-gq16f-10e-j-b-12v-vandalismusgeschuetzter-drucktaster-48-v-dc-2-a-1-x-aus-ein-ip65-tastend-1-st-701855.html&#34;&gt;https://www.conrad.de/de/p/tru-components-gq16f-10e-j-b-12v-vandalismusgeschuetzter-drucktaster-48-v-dc-2-a-1-x-aus-ein-ip65-tastend-1-st-701855.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Verschiedene elektronische Teile:&lt;/strong&gt; Für den Zusammenbau sind noch
+diverse andere Komponente wie Kabel nötig. Ich habe auch eine Buchse
+für den Anschluss einer externen Batterie installiert (Man weiß nie,
+wie lange die integrierte hält. Und ich will nicht in der Nähe sein,
+falls du Hunderte von Kilometern gefahren bist, nur um die Batterie
+leer vorzufinden). Diese Teile summierten sich auf ca. 15,-€.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Weiterer Kleinkram:&lt;/strong&gt; Neben den elektronischen Teilen kommt dann
+noch anderes Material, wie z.B. ein Vorhängeschloss, Scharniere oder
+Nieten hinzu. Für die Kalkulation berücksichtigen wir diese Dinge mit
+zusätzlichen 15,-€.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Die Box:&lt;/strong&gt; Zu guter Letzt wird die Box benötigt, in der alles
+aufbewahrt wird. Das war auch der Gegenstand, der mir die größten
+Kopfschmerzen bereitete. Die Box sollte groß genug sein, um viele
+Dinge zu verstauen, aber dennoch klein genug, um bequem mitgenommen zu
+werden. Bevorzugt wurde Holz, da es für die Ausschnitte einfach zu
+handhaben ist und auch ein dezentes Aussehen haben sollte. Es dauerte
+Stunden, bis ich viele Geschäfte nach einer passenden Box durchsucht
+hatte. Ich war fast kurz davor aufzugeben, als ich eine perfekte
+Schachtel auf meinem Schrank sah. Etwas staubig, aber
+perfekt. Abgeschätzt 30,-€ falls doch eine Kiste gekauft werden muss.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Summe der Kosten:&lt;/strong&gt; Insgesamt belaufen sich die Kosten auf mehr als
+170,-€&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:3&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:3&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;. Nicht wirklich ein Schnäppchen, aber die Erfahrung war jeden
+Euro wert.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;Anmerkung: Wie im ersten Post beschrieben basiert diese Artikelserie auf älteren Postings noch ursprünglich bei Google+.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt; ↩&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;Nicht mehr verfügbar, Alternativen sind aber verlinkt.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt; ↩&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;Inzwischen sollten 10%-20% mehr veranschlagt werden.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:3&#34;&gt; ↩&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Geocache Transposed - Teil 1 - Die Schatztruhe für unterwegs</title>
