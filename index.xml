@@ -6,10 +6,105 @@
     <description>Recent content on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Wed, 31 Jul 2019 19:59:43 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 07 Aug 2019 19:00:18 +0200</lastBuildDate>
     
         <atom:link href="https://blog.stefan-michaelis.name/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Geocache Transposed - Teil 3 - Der Zusammenbau</title>
+      <link>https://blog.stefan-michaelis.name/iota/geocachet/3-der-zusammenbau/</link>
+      <pubDate>Wed, 07 Aug 2019 19:00:18 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/iota/geocachet/3-der-zusammenbau/</guid>
+      <description>&lt;p&gt;Dies ist Teil 3 über den Bau eines Geocache Transposed (GCT),
+einer verschlossenen Box, die nur an einem geheimen Ort geöffnet
+wird. Der folgende Beitrag zeigt, wie die Hardwareteile
+zusammengefügt werden.&lt;/p&gt;
+
+&lt;p&gt;Der GCT benötigt mehrere Ausschnitte für das Display, den
+Netzschalter, den Backup-Stromanschluss und eine Abdeckung für den
+Schlüssel zum Öffnen der Box. Alle elektronischen Teile sollten im
+oberen Deckel aufbewahrt werden, daher ist eine Box mit ausreichend
+Platz im Deckel erforderlich. Die Box, die ich benutzt habe, hat 3 cm
+im Inneren des Deckels, was ausreicht, um alles hineinzustellen. Der
+Rest der Box steht dann zur Verfügung, um die versteckten
+Überraschungen zu lagern.&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/geocachet/KisteKomplettLoecher_Beschriftung.jpg&#34; alt=&#34;Box mit allen Ausschnitten&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Box mit allen Ausschnitten für Schlüsselfach, Einschalter, LCD und Notstrom&lt;/div&gt;
+
+
+&lt;p&gt;Die originale Puzzlebox benutzte einen von einem Servo angetriebenen
+Verschluss, um den Deckel geschlossen zu halten. Für meine Version
+habe ich mich entschieden, dieses Konzept ein wenig zu ändern: Die
+Sicherung der Box von innen macht Sie anfällig für Batterie- oder
+Programmierfehler. Im Original ermöglicht ein Backup-Stecker die
+Programmierung zu Umgehen und so das Öffnen der Box an beliebiger
+Stelle. Stattdessen habe ich die Box mit einem Vorhängeschloss
+verschlossen (je größer desto eindrucksvoller) und den Schlüssel in
+der oberen Abdeckung verstaut. So kann ich einen Ersatzschlüssel
+behalten, falls etwas schief geht. Der Servo entriegelt dann die
+Abdeckung im Inneren des Deckels und gibt den Schlüssel frei.&lt;/p&gt;
+
+&lt;p&gt;Nachdem die Öffnungen in die Abdeckung geschnitten wurden, werden
+die elektronischen Teile auf einer Platte montiert, die später die
+Abdeckung abdichtet und das LCD von oben sichtbar macht. Das folgende
+Bild zeigt das Layout auf der Platte.&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/geocachet/HardwareDeckel_Beschriftung.jpg&#34; alt=&#34;Hardware Innendeckel&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Aufbau der Hardware im Innendeckel&lt;/div&gt;
+
+
+&lt;p&gt;Das Verbinden der Teile ist nicht weiter schwierig. Als Stromquelle
+wurde eine 9V Blockbatterie verwendet. Die Batterie ist mit der
+Eingangsseite des Pololu-Leistungsschalters verlötet, die
+Ausgangsseite des Schalters mit dem Arduino verbunden. Zusätzlich ist
+der Druckknopf mit dem Netzschalter verbunden. Optional habe ich dem
+Netzschalter eine Steckdose parallel zur Stromversorgung
+hinzugefügt. Die Steckdose ist von außen zugänglich. Falls die interne
+Batterie leer ist, lässt sich eine neue einstecken und die Box ist
+wieder betriebsbereit. Dies ist besonders hilfreich, wenn die Box für
+eine neue Tour wiederverwendet wird, ohne die Batterie gegen eine neue
+zu tauschen.&lt;/p&gt;
+
+&lt;p&gt;Alle anderen Teile (LCD, Servo, GPS) sind mit den Datenleitungen an
+einen Ein-/Ausgangspin des Arduino angeschlossen, während die
+Stromversorgung über den 5V-Ausgang des Arduino-Boards erfolgt. Die
+Umwandlung von 9V-Eingang in 5V-Ausgang wird vom Arduino übernommen.
+In den meisten Fällen sollte es möglich sein, die Kabel direkt in das
+Entwicklungsboard einzustecken. Ausnahmen, bei denen gelötet werden
+muss, sind der Anschluss an den Netzschalter, der Anschluss an 5V oder
+die Verlängerung von Kabeln, z.B. des GPS-Gerätes. Welche Ausgangspins
+an die Geräte angeschlossen werden, spielt dabei keine Rolle. Diese
+müssen später in der Software konfiguriert werden.&lt;/p&gt;
+
+&lt;p&gt;Etwas schwieriger war die Gestaltung des Schlossmechanismus für den
+Schlüssel. Er sollte robust sein, um den Belastungen standzuhalten,
+aber dennoch nicht zu schwer für den Servo. Schließlich habe ich zwei
+Haken aus gebogenen Metallstreifen an der Schlüssellochabdeckung
+befestigt. Der Servo dreht einen zu einem Bogen gebogenen
+Metallstreifen, der in verriegelter Position in die Haken passt. Das
+obige Bild zeigt den Bogen in geöffneter Position, das folgende Bild
+die Haken an der Unterseite der Schlüssellochabdeckung.&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/geocachet/KisteDeckelInnen_Beschriftung.jpg&#34; alt=&#34;Befestigungsklammern Innendeckel&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Befestigungsklammern im Innendeckel zur Verriegelung&lt;/div&gt;
+
+
+&lt;p&gt;Das Scharnier der Schlüssellochabdeckung wird mit Nieten befestigt, um
+Schrauben zu vermeiden. Während die Box natürlich nicht sehr sicher
+sein muss, vermeide ich gerne den offensichtlichen Eindruck, dass die
+Box mit einem Schraubendreher geöffnet werden könnte.  Wenn alles auf
+dem Board befestigt ist, kann es am Deckel der Box befestigt werden
+und wir sind bereit. Ich habe dem Board ein USB-Kabel hinzugefügt, um
+den Arduino neu programmieren zu können, ohne den Deckel erneut
+öffnen zu müssen.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Geocache Transposed - Teil 2 - Die Hardware</title>

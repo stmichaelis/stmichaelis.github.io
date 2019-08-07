@@ -113,6 +113,105 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
                              <div class="post-preview">
+                 <a href="https://blog.stefan-michaelis.name/iota/geocachet/3-der-zusammenbau/">
+                      <h2 class="post-title">Geocache Transposed - Teil 3</h2>
+                      <h3 class="post-subtitle">Der Zusammenbau</h3>
+                 </a>
+		 <p>Dies ist Teil 3 über den Bau eines Geocache Transposed (GCT),
+einer verschlossenen Box, die nur an einem geheimen Ort geöffnet
+wird. Der folgende Beitrag zeigt, wie die Hardwareteile
+zusammengefügt werden.</p>
+
+<p>Der GCT benötigt mehrere Ausschnitte für das Display, den
+Netzschalter, den Backup-Stromanschluss und eine Abdeckung für den
+Schlüssel zum Öffnen der Box. Alle elektronischen Teile sollten im
+oberen Deckel aufbewahrt werden, daher ist eine Box mit ausreichend
+Platz im Deckel erforderlich. Die Box, die ich benutzt habe, hat 3 cm
+im Inneren des Deckels, was ausreicht, um alles hineinzustellen. Der
+Rest der Box steht dann zur Verfügung, um die versteckten
+Überraschungen zu lagern.</p>
+
+<img src="/images/geocachet/KisteKomplettLoecher_Beschriftung.jpg" alt="Box mit allen Ausschnitten" class="img-responsive center-block">
+
+<div class="caption">Box mit allen Ausschnitten für Schlüsselfach, Einschalter, LCD und Notstrom</div>
+
+
+<p>Die originale Puzzlebox benutzte einen von einem Servo angetriebenen
+Verschluss, um den Deckel geschlossen zu halten. Für meine Version
+habe ich mich entschieden, dieses Konzept ein wenig zu ändern: Die
+Sicherung der Box von innen macht Sie anfällig für Batterie- oder
+Programmierfehler. Im Original ermöglicht ein Backup-Stecker die
+Programmierung zu Umgehen und so das Öffnen der Box an beliebiger
+Stelle. Stattdessen habe ich die Box mit einem Vorhängeschloss
+verschlossen (je größer desto eindrucksvoller) und den Schlüssel in
+der oberen Abdeckung verstaut. So kann ich einen Ersatzschlüssel
+behalten, falls etwas schief geht. Der Servo entriegelt dann die
+Abdeckung im Inneren des Deckels und gibt den Schlüssel frei.</p>
+
+<p>Nachdem die Öffnungen in die Abdeckung geschnitten wurden, werden
+die elektronischen Teile auf einer Platte montiert, die später die
+Abdeckung abdichtet und das LCD von oben sichtbar macht. Das folgende
+Bild zeigt das Layout auf der Platte.</p>
+
+<img src="/images/geocachet/HardwareDeckel_Beschriftung.jpg" alt="Hardware Innendeckel" class="img-responsive center-block">
+
+<div class="caption">Aufbau der Hardware im Innendeckel</div>
+
+
+<p>Das Verbinden der Teile ist nicht weiter schwierig. Als Stromquelle
+wurde eine 9V Blockbatterie verwendet. Die Batterie ist mit der
+Eingangsseite des Pololu-Leistungsschalters verlötet, die
+Ausgangsseite des Schalters mit dem Arduino verbunden. Zusätzlich ist
+der Druckknopf mit dem Netzschalter verbunden. Optional habe ich dem
+Netzschalter eine Steckdose parallel zur Stromversorgung
+hinzugefügt. Die Steckdose ist von außen zugänglich. Falls die interne
+Batterie leer ist, lässt sich eine neue einstecken und die Box ist
+wieder betriebsbereit. Dies ist besonders hilfreich, wenn die Box für
+eine neue Tour wiederverwendet wird, ohne die Batterie gegen eine neue
+zu tauschen.</p>
+
+<p>Alle anderen Teile (LCD, Servo, GPS) sind mit den Datenleitungen an
+einen Ein-/Ausgangspin des Arduino angeschlossen, während die
+Stromversorgung über den 5V-Ausgang des Arduino-Boards erfolgt. Die
+Umwandlung von 9V-Eingang in 5V-Ausgang wird vom Arduino übernommen.
+In den meisten Fällen sollte es möglich sein, die Kabel direkt in das
+Entwicklungsboard einzustecken. Ausnahmen, bei denen gelötet werden
+muss, sind der Anschluss an den Netzschalter, der Anschluss an 5V oder
+die Verlängerung von Kabeln, z.B. des GPS-Gerätes. Welche Ausgangspins
+an die Geräte angeschlossen werden, spielt dabei keine Rolle. Diese
+müssen später in der Software konfiguriert werden.</p>
+
+<p>Etwas schwieriger war die Gestaltung des Schlossmechanismus für den
+Schlüssel. Er sollte robust sein, um den Belastungen standzuhalten,
+aber dennoch nicht zu schwer für den Servo. Schließlich habe ich zwei
+Haken aus gebogenen Metallstreifen an der Schlüssellochabdeckung
+befestigt. Der Servo dreht einen zu einem Bogen gebogenen
+Metallstreifen, der in verriegelter Position in die Haken passt. Das
+obige Bild zeigt den Bogen in geöffneter Position, das folgende Bild
+die Haken an der Unterseite der Schlüssellochabdeckung.</p>
+
+<img src="/images/geocachet/KisteDeckelInnen_Beschriftung.jpg" alt="Befestigungsklammern Innendeckel" class="img-responsive center-block">
+
+<div class="caption">Befestigungsklammern im Innendeckel zur Verriegelung</div>
+
+
+<p>Das Scharnier der Schlüssellochabdeckung wird mit Nieten befestigt, um
+Schrauben zu vermeiden. Während die Box natürlich nicht sehr sicher
+sein muss, vermeide ich gerne den offensichtlichen Eindruck, dass die
+Box mit einem Schraubendreher geöffnet werden könnte.  Wenn alles auf
+dem Board befestigt ist, kann es am Deckel der Box befestigt werden
+und wir sind bereit. Ich habe dem Board ein USB-Kabel hinzugefügt, um
+den Arduino neu programmieren zu können, ohne den Deckel erneut
+öffnen zu müssen.</p>
+
+		 <div class="shariff" data-title="Geocache Transposed - Teil 3" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;mail&quot;]"  data-mail-url="mailto:"></div>
+                 <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 07.08.2019
+                 </p>
+               </div>
+               <hr>
+
+          
+                             <div class="post-preview">
                  <a href="https://blog.stefan-michaelis.name/iota/geocachet/2-die-hardware/">
                       <h2 class="post-title">Geocache Transposed - Teil 2</h2>
                       <h3 class="post-subtitle">Die Hardware</h3>
@@ -488,256 +587,6 @@ von über 80 % möglich.</p>
 
 		 <div class="shariff" data-title="Kreuzvalidierungsfail" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;mail&quot;]"  data-mail-url="mailto:"></div>
                  <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 14.11.2018
-                 </p>
-               </div>
-               <hr>
-
-          
-                             <div class="post-preview">
-                 <a href="https://blog.stefan-michaelis.name/iota/homeserver2/">
-                      <h2 class="post-title">Homeserver Teil 2</h2>
-                      <h3 class="post-subtitle">Die Software - Von KNX bis OpenHAB</h3>
-                 </a>
-		 
-
-<p>Nachdem im vorherigen <a href="https://blog.stefan-michaelis.name/iota/homeserver1/">Beitrag zum Homeserver</a>
-die Hardware kurz vorgestellt wurde geht es jetzt um die Installation
-der eigentlichen Steuerung. Voraussetzung ist ein lauffähiges <a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian</a>
-auf dem Pi.</p>
-
-<h2 id="knx-dämon">KNX-Dämon</h2>
-
-<p>Standards, mehr oder weniger offen, für die Ansteuerung von
-Haustechnik gibt es viele. Bei uns kommt primär
-<a href="https://de.wikipedia.org/wiki/KNX-Standard">KNX</a> zum Einsatz, welches den
-Vorteil hat ein offener Industriestandard zu sein und mit
-(hoffentlich) entsprechend langfristiger Unterstützung und
-herstellerunabhängiger Nutzbarkeit der Komponenten einhergeht. Kein
-Vendor-Lock-in mehr. Bislang scheint das für unser System auch
-hervorragend zu funktionieren.</p>
-
-<p>Zur Ansteuerung der Komponenten benötigt es aber ein Gateway. Entweder
-eines der kommerziellen IP-Gateways oder wie hier über ein
-Hardwaremodul auf dem Raspberry Pi. Dieses benötigt allerdings noch
-einen Dämon zur Ansteuerung, der sowohl die Programmierung der
-Komponenten für ihre nativen Funktionen erlaubt als auch Zugriff für
-die Steuerzentrale für erweiterte Funktionen.</p>
-
-<p>Dazu gibt es mit <a href="https://github.com/knxd/knxd">knxd</a> eine freie
-Alternative, die sich auch problemlos auf dem Raspberry Pi einbinden
-lässt. Mit der zum aktuellen Zeitpunkt verfügbaren Version im
-Hauptentwicklungszweig, 0.14 (genau genommen der Commit
-<code>61a08e5fa5ce4cc6d47309bf80f9abc1fd792637</code>, da sich Version 0.14 noch
-aktiv in der Entwicklung befand), gab es bislang keine Probleme, weder
-beim Programmieren der Geräte noch bei der Ansteuerung von Komponenten
-über den Homeserver.</p>
-
-<p>Für den Raspberry Pi gibt es einen eigenen Abschnitt zur Konfiguration
-der Schnittstelle: <a href="https://github.com/knxd/knxd#adding-a-tpuart-serial-interface-to-the-raspberry-pi">https://github.com/knxd/knxd#adding-a-tpuart-serial-interface-to-the-raspberry-pi</a></p>
-
-<h2 id="automatisierung-mit-openhab">Automatisierung mit OpenHAB</h2>
-
-<p>Visualisierung und Ansteuerung der Komponenten läuft dann über das
-freie <a href="http://www.openhab.org/">OpenHAB-Projekt</a>. Für KNX gibt es
-Alternativen, aber insbesondere durch die große Community, die Auswahl
-an Plugins und die Anbindung an unzählige weitere Standards (Jemand
-mit Tesla Modell S hier?) führt an Openhab kaum ein Weg vorbei.</p>
-
-<h3 id="docker-auf-dem-raspberry-pi">Docker auf dem Raspberry Pi</h3>
-
-<p>Die Installation von OpenHAB ist mehr oder weniger
-aufwändig. Glücklicherweise existieren verschiedene Optionen auch für
-den Raspberry. Eine davon ist openHABian als eigene Distribution, die
-Raspbian als OS auf der SD-Karte ersetzt. Eine Alternative ist
-die Nutzung von Docker.</p>
-
-<p>Docker ist eine sogenannte Containerisierungs-Lösung, die einzelne
-Software bis hin zu ganzen Betriebssystemen kapselt und (mehr oder
-weniger) unabhängig vom eigentlichen System ausführbar
-macht. Hauptvorteil ist damit der schnelle Wechsel zwischen
-verschiedenen Versionen und im Fehlerfall die Rückkehr auf die letzte
-funktionierende Version ohne sich mit Abhängigkeiten von anderen
-Paketen beschäftigen zu müssen.</p>
-
-<p>Die Installation von Docker auf dem Raspberry funktioniert reibungslos
-über die Angabe von <code>curl -sSL https://get.docker.com | sh</code> auf der
-Kommandozeile, siehe den Artikel <a href="https://www.raspberrypi.org/blog/docker-comes-to-raspberry-pi/">Docker comes to Raspberry
-Pi</a>.</p>
-
-<p>Fertige Images gibt es öffentlich verfügbar über den Dockerhub unter
-(<a href="https://hub.docker.com/r/openhab/openhab/">https://hub.docker.com/r/openhab/openhab/</a>). Eine mögliche Variante
-für den Raspberry wäre demnach</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker run <span class="se">\
-</span><span class="se"></span>        --name openhab <span class="se">\
-</span><span class="se"></span>        --net<span class="o">=</span>host <span class="se">\
-</span><span class="se"></span>        --tty <span class="se">\
-</span><span class="se"></span>        -v /etc/localtime:/etc/localtime:ro <span class="se">\
-</span><span class="se"></span>        -v /etc/timezone:/etc/timezone:ro <span class="se">\
-</span><span class="se"></span>        -v openhab_addons:/openhab/addons <span class="se">\
-</span><span class="se"></span>        -v openhab_conf:/openhab/conf <span class="se">\
-</span><span class="se"></span>        -v openhab_userdata:/openhab/userdata <span class="se">\
-</span><span class="se"></span>        -d <span class="se">\
-</span><span class="se"></span>        --restart<span class="o">=</span>always <span class="se">\
-</span><span class="se"></span>        openhab/openhab:2.3.0-armhf-debian</code></pre></div>
-<p>Die Option <code>--restart=always</code> sorgt dabei dafür, dass Openhab auch
-nach dem Reboot oder bei Abstürzen automatisch wieder gestartet wird.
-Die <code>-v openhab...</code>-Optionen machen Ordner außerhalb des Images,
-d.h. vom Raspberry, innerhalb des laufenden Openhab-Containers
-verfügbar. Dies ist insbesondere dann hilfreich wenn die Daten nicht
-auf der SD-Karte des Raspberrys landen sollen, z.B. aus Backup-Gründen
-oder um die Lebenszeit der SD-Karte durch weniger Schreibzyklen zu
-erhöhen. Aus denselben Gründen kann das gesamte Docker-Root, in dem Images und
-Container liegen, beispielsweise auf ein NAS verlagert werden. Dem
-Thema widmet sich der nächste Abschnitt.</p>
-
-<p>Um auch den Docker-Daemon bei jedem Boot wieder zu starten (denn auch
-nur dann starten die Container wieder automatisch) muss der Service
-aktiviert werden: <code>sudo systemctl enable docker</code></p>
-
-<h3 id="einbinden-eines-nas">Einbinden eines NAS</h3>
-
-<p>Die SD-Karte im Raspberry Pi ist (meist) klein und mit der Begrenzung
-an Schreibzyklen auch anfällig für Datenverlust (wer hebt bei
-regelmäßigen Vollbackups des mühselig angelegten Systems die
-Hand?). Eine Möglichkeit ist Verzeichnisse mit großen Datenmengen oder
-Dateien mit regelmäßigen Schreibzyklen auf ein Network Attached
-Storage zu verlegen.</p>
-
-<p>Im Wesentlichen bedeutet das hier eine Verlegung des
-Docker-Datenverzeichnisses und der
-OpenHAB-Konfiguratinsverzeichnisse. Dazu ist jeweils ein Eintrag in
-der <code>/etc/fstab</code>-Datei notwendig:</p>
-
-<pre><code>//&lt;nas-ip&gt;/docker /docker cifs user=&lt;nasuser&gt;,password=&lt;naspasswort&gt;,uid=root,gid=root,sec=ntlmv2,file_mode=0644,dir_mode=0755,nounix,sfu 0 0
-//&lt;nas-ip&gt;/openhab /openhab cifs user=&lt;nasuser&gt;,password=&lt;naspasswort&gt;,uid=root,gid=root,sec=ntlmv2,file_mode=0700,dir_mode=0700,noperm,nounix 0 0
-</code></pre>
-
-<p>Zwingend notwendig sind natürlich die Angabe der korrekten IP-Adresse
-zum NAS, die Pfade zu den Ordnern im NAS und die Zugangsdaten eines
-dazu angelegten Users. Wer sein Passwort nicht in der fstab im
-Klartext ablegen möchte, kann dies auch in eine Credentials-Datei
-auslagern<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>.</p>
-
-<p>Die übrigen Optionen waren für den Betrieb mit unserem NAS ebenfalls
-notwendig, z.B. um die Zugriffsrechte für Docker und den
-OpenHAB-Container passend zu setzen, bei der Einrichtung starten würde
-ich aber zunächst ohne und erst testen, ob der Zugriff auf das eigene
-NAS auch mit den Standardwerten direkt möglich ist.</p>
-
-<p>Damit die Ordner nach einem Neustart des Raspberry Pi sicher verfügbar
-sind sollte in der Konfiguration dort per <code>sudo raspi-config</code> die
-Option <em>Wait for network at boot</em> aktiviert werden.</p>
-
-<p>Um dem Docker-Daemon das neue Root für seine Daten bekannt zu geben
-ist diese in der Datei <code>/etc/docker/daemon.json</code> zu konfigurieren:</p>
-
-<pre><code>{
-  &quot;storage-driver&quot;: &quot;devicemapper&quot;,
-  &quot;data-root&quot;: &quot;/docker&quot;
-}
-</code></pre>
-
-<p>Der Storage-Driver legt fest, wie die Images und Container dort
-abgelegt werden. <em>Devicemapper</em> wird dabei explizit nicht für eine
-Produktiveinsatz empfohlen, da dieses unter anderem Probleme der
-Freigabe gelöschten Speicherplatzes hat. Leider war dies die einzig
-funktionierende Alternative (ymmv<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>) und da nicht ständig neue
-Container angelegt und gelöscht werden spielt der Speicherbedarf
-bislang (und hoffentlich auch zukünftig) keine Rolle.</p>
-
-<h3 id="bedienoberfläche-habpanel">Bedienoberfläche HABPanel</h3>
-
-<p>Der letzte (und aufwändigste, bzw. nie endende) Schritt ist dann die
-Konfiguration von OpenHAB und der Nutzeroberfläche. Dazu existieren
-verschiedene Varianten, besonders passend für den Touchscreen des
-Raspberry Pi ist <a href="https://docs.openhab.org/addons/uis/habpanel/readme.html">HABPanel</a>.</p>
-
-<p>Zum Zugriff auf die Aktoren und Sensoren des KNX-Bus zu bekommen
-müssen diese zunächst in der jeweiligen Konfiguration definiert
-werden, siehe
-<a href="https://www.openhab.org/addons/bindings/knx/">KNX-Binding</a>.</p>
-
-<p>Den sogenannten Items können dann direkt im Browser den passenden
-Schaltflächen zugeordnet werden.</p>
-
-<img src="/images/habpanel.png" alt="Habpanel Startseite" class="img-responsive center-block">
-
-<div class="caption">Übersichtsseite in OpenHAB mit HABPanel als Oberfläche</div>
-
-
-<p>Der Screenshot zeigt den Übersichtsbildschirm des Wandpanels. Neben
-den wichtigsten zentralen Messdaten wie Temperatur Außen/Wohnen,
-Feuchte und CO2-Gehalt wird per Wetterplugin auch die Wettervorhersage
-für die nächsten zwei Tagen angezeigt. Dazu kommt die Nachrüstung von
-seltener genutzter Funktionalität. So können per herkömmlichem Taster
-die Rollläden in Wohnzimmer und Küche nur gesamt verfahren werden, was
-für 90% der Fälle auch ausreicht. Mit dem Panel dagegen ist auch die
-Einzelsteuerung möglich.</p>
-
-<h3 id="display-auf-dem-wandpanel">Display auf dem Wandpanel</h3>
-
-<p>Die HABPanel-Oberfläche lässt sich auf jedem Gerät im lokalen Netzwerk
-anzeigen und nutzen. Gedacht ist sie allerdings für das Wandpanel aus
-dem Beitrag <a href="https://blog.stefan-michaelis.name/iota/homeserver1/">Homeserver - Die Hardware</a>.</p>
-
-<p>Die Anzeige übernehmen kann der Chromium-Browser per <code>DISPLAY=:0
-chromium-browser http://localhost:8080/habpanel/index.html --kiosk
---incognito</code>. Die Display-Anweisung ermöglicht den Start auch per
-<code>ssh</code> aus der Ferne. Im Kiosk-Modus wird direkt im Vollbild gestartet
-ohne Statusleiste und Kontrollbuttons. Der Incognito-Mode letztendlich
-verhindert bei Abstürzen Fehlermeldungen beim Neustart und soll auch
-die Anzahl der Zugriffe auf die Festplatte (bzw. hier auch gerne
-einmal der Flashspeicher, der nicht unendlich viele Schreibzugriffe
-aushält) deutlich reduzieren<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup>.</p>
-
-<p>Üblicherweise stört der Mauszeiger noch während der Bedienung, aber
-mit dem Tool <code>unclutter</code> kann dieser ausgeblendet werden. Sowohl
-Browser als auch <code>unclutter</code> können im Autostart bei jedem Neustart
-des Raspberry aktiviert werden: <code>nano
-~/.config/lxsession/LXDE-pi/autostart</code></p>
-
-<pre><code>@unclutter -idle 0
-@chromium-browser http://localhost:8080/habpanel/index.html --kiosk --incognito
-
-</code></pre>
-
-<p>In der Standardeinstellung geht das Panel nach einigen Minuten in den
-Standby, wacht aber bei jedem Fingerdruck wieder darauf aus. Zu
-beachten ist lediglich, dass die Touch-Events auch im Schlafmodus an
-die Oberfläche weiter geleitet werden und damit unter Umständen
-Aktionen auslösen können. Zumindest auf der normalen Startseite
-sollten daher die aktiven (klickbaren) Flächen nicht zu groß sein und
-die Benutzer wissen, wo sie zur Aktivierung des Displays drücken dürfen.</p>
-
-<p>Werden Änderungen an der HABPanel-Oberfläche vorgenommen lässt sich
-dies bequemer von einem PC aus erledigen. Im Browser im Wandpanel ist
-dann ein Refresh erforderlich, was im Kiosk-Modus gar nicht so einfach
-ist. Über <code>DISPLAY=:0 xdotool key ctrl+F5</code> kann auch per ssh ein
-Refresh ausgelöst werden und dann ist auch das Wandpanel auf der neuesten
-Version der Nutzeroberfläche. Der Vorteil ist, dass neue Funktionen
-erst einmal begrenzt ausprobiert werden können bevor gleich der
-gesamte Haushalt mit den Neuerung konfrontiert wird.</p>
-
-<p>Andere Möglichkeiten das Setup noch zu erweitern wären der Start von
-Chromium über <code>supervise</code>, welches den Prozess permanent überwacht und
-bei Abstürzen neu startet oder ein Browser-Addon, welches nach einer
-gewissen Idle-Zeit wieder auf die Startseite zurückwechselt.</p>
-<div class="footnotes">
-
-<hr />
-
-<ol>
-<li id="fn:1"><a href="https://wiki.ubuntuusers.de/Samba_Client_cifs/#Optionen">https://wiki.ubuntuusers.de/Samba_Client_cifs/#Optionen</a>
- <a class="footnote-return" href="#fnref:1"> ↩</a></li>
-<li id="fn:2">Your mileage may vary
- <a class="footnote-return" href="#fnref:2"> ↩</a></li>
-<li id="fn:3"><a href="https://productforums.google.com/forum/#!topic/chrome/wgKvdI7Ggj4">https://productforums.google.com/forum/#!topic/chrome/wgKvdI7Ggj4</a>
- <a class="footnote-return" href="#fnref:3"> ↩</a></li>
-</ol>
-</div>
-
-		 <div class="shariff" data-title="Homeserver Teil 2" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;mail&quot;]"  data-mail-url="mailto:"></div>
-                 <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 08.10.2018
                  </p>
                </div>
                <hr>
