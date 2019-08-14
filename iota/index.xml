@@ -6,10 +6,94 @@
     <description>Recent content in IoTA on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Wed, 07 Aug 2019 19:00:18 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 14 Aug 2019 19:00:45 +0200</lastBuildDate>
     
         <atom:link href="https://blog.stefan-michaelis.name/iota/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Geocache Transposed - Teil 4 - Die Software</title>
+      <link>https://blog.stefan-michaelis.name/iota/geocachet/4-die-software/</link>
+      <pubDate>Wed, 14 Aug 2019 19:00:45 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/iota/geocachet/4-die-software/</guid>
+      <description>
+
+&lt;p&gt;Dies ist Teil 4 über den Bau eines Geocache Transposed (GCT), einer
+verschlossenen Box, die nur an einem geheimen Ort geöffnet wird. Der
+folgende Beitrag zeigt, wie die Software, die das
+Arduino-Mikrocontroller-Board steuert, konfiguriert wird. Teil 1 der
+Serie ist hier zu finden: &lt;a href=&#34;https://blog.stefan-michaelis.name/iota/geocachet/1-die-story/&#34;&gt;GCT Teil 1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Die Software ist unter der CC BY-NC-SA 3.0 Lizenz auf Github
+veröffentlicht: &lt;a href=&#34;https://github.com/stmichaelis/geocachet&#34;&gt;https://github.com/stmichaelis/geocachet&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;zusätzliche-bibliotheken&#34;&gt;Zusätzliche Bibliotheken&lt;/h2&gt;
+
+&lt;p&gt;Der Quellcode benötigt mehrere
+Bibliotheken, die in der Arduino-Entwicklungsumgebung installiert
+werden müssen, die alle vom ursprünglichen Erfinder der Idee des umgedrehten
+Geocaches bereitgestellt werden:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Serielle Kommunikation: &lt;a href=&#34;http://arduiniana.org/libraries/newsoftserial/&#34;&gt;http://arduiniana.org/libraries/newsoftserial/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GPS-Decoder: &lt;a href=&#34;http://arduiniana.org/libraries/tinygps/&#34;&gt;http://arduiniana.org/libraries/tinygps/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Streaming zur einfachen Anzeige von LCD-Meldungen:
+&lt;a href=&#34;http://arduiniana.org/libraries/streaming/&#34;&gt;http://arduiniana.org/libraries/streaming/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;konfiguration&#34;&gt;Konfiguration&lt;/h2&gt;
+
+&lt;p&gt;Die Software ist komplett lauffähig&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, dennoch müssen natürlich
+mindestens die
+Standorte konfiguriert und überprüft werden, ob die Pin-Einstellungen zur
+Verkabelung passen.&lt;/p&gt;
+
+&lt;p&gt;Einstellungen, die angepasst werden &lt;em&gt;müssen&lt;/em&gt;,
+sind im Quellcode mit TODO gekennzeichnet.  Das Float-Array
+&lt;strong&gt;target_latlon&lt;/strong&gt; nimmt Koordinatenpaare für die Reihenfolge der Ziele,
+die erreicht werden müssen, um die Box zu öffnen. Die ursprüngliche
+Box verwendete nur ein einziges Ziel; die Verwendung von mehr
+als einem erinnert aber eher an die klassische Schnitzeljagd.&lt;/p&gt;
+
+&lt;p&gt;Das Array &lt;strong&gt;target_dev&lt;/strong&gt; liefert eine maximale Abweichung in Metern um
+jede Zielposition herum. Wenn die Box innerhalb des Kreises um das
+Ziel mit diesem Wert als maximale Abweichung aktiviert ist, gilt die
+Position als erreicht. Ich habe mich dazu entschieden, verschiedene
+Abweichungen für jedes Ziel konfigurieren zu können, da einige Ziele
+eine punktgenaue Landung erfordern sollen, während andere durch eine
+entspannte Positionierung leichter erreichbar sind. Die Größe dieses
+Arrays muss natürlich der Anzahl der Ziele entsprechen. Ist die nicht
+der Fall wird beim Einschalten der Box eine Warnung ausgegeben.&lt;/p&gt;
+
+&lt;p&gt;Zu beachten ist, dass das GPS an sich eine gewisse Ungenauigkeit
+aufweist und die hier eingestellte Abweichung 10m nicht unterschreiten
+sollte. Die Konstante &lt;strong&gt;MAX_TRIES&lt;/strong&gt; begrenzt die Anzahl der
+Aktivierungen. Wenn diese Zahl erreicht wird, bleibt die Box
+gesperrt. Die Begrenzung erhöht die Spannung (künstliche Verknappung
+erhöht den Wert) und verhindert übermäßige Versuche, die auch noch die
+Batterie entladen.&lt;/p&gt;
+
+&lt;p&gt;Die nächsten Konstanten definieren die Pins für Verbindungen zu den
+Geräten, die Adressen zum Speichern der Anzahl der verwendeten
+Versuche und einige Geokonstanten.  &lt;strong&gt;HOME_LAT&lt;/strong&gt; und &lt;strong&gt;HOME_LON&lt;/strong&gt;
+markieren schließlich eine geheime Rückstellposition. Wenn an dieser
+Stelle aktiviert, öffnet sich die Box für einige Sekunden, so dass
+genügend Zeit bleibt, den Schlüssel hineinzulegen. Dann schließt diese
+sich wieder und setzt alle Zähler auf Null zurück. Diese Koordinaten
+sollten auf eine Stelle gesetzt werden, an der die Box durch den
+Beschenkten sehr unwahrscheinlich aktiviert wird.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;Das war sie zumindest einmal. Mit den neuen Versionen der genutzten Bibliotheken anscheinend nicht mehr. Aber ein Arbeitskollege hat eine aktualisierte Version der Software erstellt: &lt;a href=&#34;http://www.thomas-liebig.eu/wordpress/building-a-geo-cache-transposed-gct/&#34;&gt;http://www.thomas-liebig.eu/wordpress/building-a-geo-cache-transposed-gct/&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt; ↩&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Geocache Transposed - Teil 3 - Der Zusammenbau</title>

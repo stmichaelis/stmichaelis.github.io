@@ -113,6 +113,94 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
                              <div class="post-preview">
+                 <a href="https://blog.stefan-michaelis.name/iota/geocachet/4-die-software/">
+                      <h2 class="post-title">Geocache Transposed - Teil 4</h2>
+                      <h3 class="post-subtitle">Die Software</h3>
+                 </a>
+		 
+
+<p>Dies ist Teil 4 über den Bau eines Geocache Transposed (GCT), einer
+verschlossenen Box, die nur an einem geheimen Ort geöffnet wird. Der
+folgende Beitrag zeigt, wie die Software, die das
+Arduino-Mikrocontroller-Board steuert, konfiguriert wird. Teil 1 der
+Serie ist hier zu finden: <a href="https://blog.stefan-michaelis.name/iota/geocachet/1-die-story/">GCT Teil 1</a></p>
+
+<p>Die Software ist unter der CC BY-NC-SA 3.0 Lizenz auf Github
+veröffentlicht: <a href="https://github.com/stmichaelis/geocachet">https://github.com/stmichaelis/geocachet</a></p>
+
+<h2 id="zusätzliche-bibliotheken">Zusätzliche Bibliotheken</h2>
+
+<p>Der Quellcode benötigt mehrere
+Bibliotheken, die in der Arduino-Entwicklungsumgebung installiert
+werden müssen, die alle vom ursprünglichen Erfinder der Idee des umgedrehten
+Geocaches bereitgestellt werden:</p>
+
+<ul>
+<li>Serielle Kommunikation: <a href="http://arduiniana.org/libraries/newsoftserial/">http://arduiniana.org/libraries/newsoftserial/</a></li>
+<li>GPS-Decoder: <a href="http://arduiniana.org/libraries/tinygps/">http://arduiniana.org/libraries/tinygps/</a></li>
+<li>Streaming zur einfachen Anzeige von LCD-Meldungen:
+<a href="http://arduiniana.org/libraries/streaming/">http://arduiniana.org/libraries/streaming/</a></li>
+</ul>
+
+<h2 id="konfiguration">Konfiguration</h2>
+
+<p>Die Software ist komplett lauffähig<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>, dennoch müssen natürlich
+mindestens die
+Standorte konfiguriert und überprüft werden, ob die Pin-Einstellungen zur
+Verkabelung passen.</p>
+
+<p>Einstellungen, die angepasst werden <em>müssen</em>,
+sind im Quellcode mit TODO gekennzeichnet.  Das Float-Array
+<strong>target_latlon</strong> nimmt Koordinatenpaare für die Reihenfolge der Ziele,
+die erreicht werden müssen, um die Box zu öffnen. Die ursprüngliche
+Box verwendete nur ein einziges Ziel; die Verwendung von mehr
+als einem erinnert aber eher an die klassische Schnitzeljagd.</p>
+
+<p>Das Array <strong>target_dev</strong> liefert eine maximale Abweichung in Metern um
+jede Zielposition herum. Wenn die Box innerhalb des Kreises um das
+Ziel mit diesem Wert als maximale Abweichung aktiviert ist, gilt die
+Position als erreicht. Ich habe mich dazu entschieden, verschiedene
+Abweichungen für jedes Ziel konfigurieren zu können, da einige Ziele
+eine punktgenaue Landung erfordern sollen, während andere durch eine
+entspannte Positionierung leichter erreichbar sind. Die Größe dieses
+Arrays muss natürlich der Anzahl der Ziele entsprechen. Ist die nicht
+der Fall wird beim Einschalten der Box eine Warnung ausgegeben.</p>
+
+<p>Zu beachten ist, dass das GPS an sich eine gewisse Ungenauigkeit
+aufweist und die hier eingestellte Abweichung 10m nicht unterschreiten
+sollte. Die Konstante <strong>MAX_TRIES</strong> begrenzt die Anzahl der
+Aktivierungen. Wenn diese Zahl erreicht wird, bleibt die Box
+gesperrt. Die Begrenzung erhöht die Spannung (künstliche Verknappung
+erhöht den Wert) und verhindert übermäßige Versuche, die auch noch die
+Batterie entladen.</p>
+
+<p>Die nächsten Konstanten definieren die Pins für Verbindungen zu den
+Geräten, die Adressen zum Speichern der Anzahl der verwendeten
+Versuche und einige Geokonstanten.  <strong>HOME_LAT</strong> und <strong>HOME_LON</strong>
+markieren schließlich eine geheime Rückstellposition. Wenn an dieser
+Stelle aktiviert, öffnet sich die Box für einige Sekunden, so dass
+genügend Zeit bleibt, den Schlüssel hineinzulegen. Dann schließt diese
+sich wieder und setzt alle Zähler auf Null zurück. Diese Koordinaten
+sollten auf eine Stelle gesetzt werden, an der die Box durch den
+Beschenkten sehr unwahrscheinlich aktiviert wird.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">Das war sie zumindest einmal. Mit den neuen Versionen der genutzten Bibliotheken anscheinend nicht mehr. Aber ein Arbeitskollege hat eine aktualisierte Version der Software erstellt: <a href="http://www.thomas-liebig.eu/wordpress/building-a-geo-cache-transposed-gct/">http://www.thomas-liebig.eu/wordpress/building-a-geo-cache-transposed-gct/</a>
+ <a class="footnote-return" href="#fnref:1"> ↩</a></li>
+</ol>
+</div>
+
+		 <div class="shariff" data-title="Geocache Transposed - Teil 4" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;mail&quot;]"  data-mail-url="mailto:"></div>
+                 <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 14.08.2019
+                 </p>
+               </div>
+               <hr>
+
+          
+                             <div class="post-preview">
                  <a href="https://blog.stefan-michaelis.name/iota/geocachet/3-der-zusammenbau/">
                       <h2 class="post-title">Geocache Transposed - Teil 3</h2>
                       <h3 class="post-subtitle">Der Zusammenbau</h3>
@@ -388,205 +476,6 @@ weitere Puzzleboxen dienen.</p>
 
 		 <div class="shariff" data-title="Geocache Transposed - Teil 1" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;mail&quot;]"  data-mail-url="mailto:"></div>
                  <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 24.07.2019
-                 </p>
-               </div>
-               <hr>
-
-          
-                             <div class="post-preview">
-                 <a href="https://blog.stefan-michaelis.name/iota/kreuzvalidierungsfail/">
-                      <h2 class="post-title">Kreuzvalidierungsfail</h2>
-                      <h3 class="post-subtitle">Prinzipiell alles richtig gemacht - oder eben doch nicht</h3>
-                 </a>
-		 
-
-<p>Validierung der Prognosegüte von Modellen des maschinellen Lernens
-über hochgradige Kreuzvalidierung ist der Standard für zuverlässige
-Aussagen. Wie man sich damit leicht selbst auf das Glatteis führen
-kann, davon erzählt diese Geschichte.</p>
-
-<h2 id="hintergrund">Hintergrund</h2>
-
-<h3 id="sommerschule-für-maschinelles-lernen-unter-ressourcenbeschränkung">Sommerschule für maschinelles Lernen unter Ressourcenbeschränkung</h3>
-
-<p>Der <a href="https://sfb876.tu-dortmund.de">Sonderforschungsbereich 876</a> -
-Große Daten, Kleine Geräte, an der TU Dortmund führt regelmäßig
-Sommerschulen zum Thema <em>Maschinelles Lernen unter
-Ressourcenbeschränkung</em> durch. Ganz zum Forschungsgebiet des
-Sonderforschungsbereichs passend beschäftigen sich die Sommerschulen
-damit, wie die Analyse großer Daten, insbesondere auch auf
-eingebetteten Systemen und im Verbund mit sehr stark beschränkten
-Rechenressourcen, gelingen kann. Jede Sommerschule versucht dabei
-neben den eigentlichen Kursen auch einen Hands-On-Teil dazu
-anzubieten. Auch die innerhalb kürzester Zeit ausverkaufte
-<a href="https://sfb876.tu-dortmund.de/SummerSchool2017/index.html">Sommerschule
-2017</a> war
-dabei keine Ausnahme.</p>
-
-<img src="/images/phynode/versuchsaufbau.jpg" alt="Versuchsaufbau" class="img-responsive center-block">
-
-<div class="caption">Versuchsaufbau aus mehreren PhyNode-Boxen</div>
-
-
-<p>Das Szenario war dazu an ein Problem aus der Warenlogistik angelegt: Wie
-finde ich im Regal meine Box wieder? Im Versuchsaufbau wurden zwei
-kleine Wände aus Warencontainern aufgebaut, wobei jeder Container mit
-einem im Projekt <a href="https://sfb876.tu-dortmund.de/SPP/sfb876-a4.html">Ressourcen-effiziente und verteilte Plattformen zur
-integrativen
-Datenanalyse</a>
-entwickelten PhyNode-Board versehen ist.</p>
-
-<h3 id="aufgabe">Aufgabe</h3>
-
-<p>Die <a href="https://ieeexplore.ieee.org/document/7323355">PhyNodes</a> sind
-stark ressourcenbeschränkte, autonome und weitestgehend energieautarke
-eingebettete Systeme mit einer Anzahl verschiedener Sensoren.</p>
-
-<div class="row">
-     <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-     	  <img src="/images/phynode/phynode.jpg" class="img-responsive" />
-     </div>
-</div>
-
-
-<p>Die Aufgabe der Sommerschule bestand darin, das Lernen von Positionen
-von Boxen mit angebrachten PhyNodes für mehr als 20 Positionen als
-Labels zu realisieren. Später sollten die Boards selbst durch die
-Software auf den Boards ihre eigenen Positionen im Regal vorhersagen
-können. Die Teilnehmer erhielten dazu Trainingsdaten mit der bekannten
-Position. Die Boards nahmen im Verlauf verschiedene Positionen ein,
-d.h. ID des Boards und Position stimmten nicht immer überein. Die
-Messreihen zwischen dem Umstecken werden im Folgenden als &ldquo;Experiment&rdquo;
-bezeichnet.</p>
-
-<h2 id="features">Features</h2>
-
-<p>Verfügbare Features waren Zeit, Board ID, Temperatur, Luxwerte,
-Beschleunigungswerte X, Y, Z, RSSI zur Basistation, das Experiment und
-die Position als Label. Positionen bestanden aus zwei Ziffern mit der
-Bedeutung Spalte/Zeile, was für die Modellbildung aber keine Rolle
-spielte, da die Aufgabe zunächst als Klassifikationsproblem behandelt
-wurde.  In Summe standen nach den ersten Experimenten mehr als 330.000
-Messungen zur Verfügung.</p>
-
-<h2 id="modellierung">Modellierung</h2>
-
-<p>Um einen ersten Eindruck von der Schwierigkeit des Problems zu
-bekommen (These: Das geht gar nicht) bietet es sich an beispielsweise
-eine schnelle Analyse mit <a href="https://rapidminer.com/">RapidMiner</a>
-auszuprobieren. Die Daten sind damit fix eingelesen und die
-wichtigsten Methoden mit ein paar Klicks verfügbar.</p>
-
-<p>Der simple Ansatz ist dann: Daten einfach mit einem RandomForest mit
-Standardparametern (10 Bäume) gelernt, 10-fache Kreuzvalidierung und
-schauen, wo wir landen.</p>
-
-<img src="/images/phynode/x-validation.png" alt="X-Validation" class="img-responsive center-block">
-
-<div class="caption">Ausschnitt des Vorgehens bei einer 10-fachen Kreuzvalidierung</div>
-
-
-<p>Die Kreuzvalidierung, insbesondere in 10-facher Ausführung stellt
-dabei sicher, dass unter maximaler Ausnutzung der Trainingsdaten ein
-sicheres Bild über die zu erwartende Güte gewonnen wird. Die Daten
-werden dazu gleichmäßig in 10 Blöcke unterteilt, wobei in jedem
-Trainings-/Testlauf ein Block für das Testing zurückbehalten wird,
-während die übrigen 90 % zum Training des Verfahrens zur Verfügung stehen.</p>
-
-<img src="/images/phynode/ConfusionMatrix_RF_Accuracy99.png" alt="Confusion Matrix Random Forest" class="img-responsive center-block">
-
-<div class="caption">Ausschnitt der Confusion Matrix unter Einsatz eines Random Forest</div>
-
-
-<p>Für den Random Forest liefert diese Validierung dann auch eine
-Klassifikationsgüte von über 99 %. Ziel erreicht, perfekte
-Positionsvorhersage mit einfache Mitteln ist möglich, wir können nach
-Hause gehen. Schade um die Aufgabe, für eine Sommerschule war das dann
-wohl doch zu einfach. Naja, es blieb immerhin noch das Problem, das
-trainierte Modell auch auf die Ultra-Low-Power-Plattformen zu bringen.</p>
-
-<h2 id="das-problem">Das Problem</h2>
-
-<p>Mehr als 99 %, und das ohne Aufwand. Hinterlässt aber irgendwie doch
-einen leichten Beigeschmack. Vielleicht lohnt es sich doch einmal
-etwas näher hinter die Kulissen zu schauen. Zur einfachen
-Interpretierbarkeit zeigt die folgende Abbildung den Ausschnitt aus
-einem einfachen Regelmodell anstelle des Random Forest.</p>
-
-<img src="/images/phynode/RuleModel.png" alt="RuleModel" class="img-responsive center-block">
-
-<div class="caption">Ausschnitt eines einfachen Regel-Modells</div>
-
-
-<p>So einfach sieht das Modell aber eigentlich gar nicht aus. Im
-Gegenteil eher überkomplex und overfittet. Auffällig ist die
-Einbeziehung der Beschleunigungs-Werte (Acc_x &hellip;). Welche Rolle
-sollten diese im statischen Fall, d.h. Boards bewegen sich nicht,
-spielen? Eigentlich sollte das Modell unwichtige Attribute selbst
-aussortieren.</p>
-
-<p>Es scheint als ob die Beschleunigungs-Werte einen deutlichen Bezug zur
-Position <em>und</em> zum Experiment haben, quasi wie ein Fingerabdruck.</p>
-
-<img src="/images/phynode/Experiment_Vs_AccelZ_Vs_Board.png" alt="Experiment Vs AccelZ Vs Board" class="img-responsive center-block">
-
-<div class="caption">Plot von zwei Experimenten (Zeitachse) gegenüber Z-Beschleunigung gegenüber zwei Boards (ID, Farbe)</div>
-
-
-<p>Der Plot zeigt beispielhaft den Z-Wert der Beschleunigungsmesser für
-zwei Boards (rot und blau) für zwei Experimente (entlang der Zeitachse
-mit kurzer Unterbrechung zum links und rechts). Die Werte sind im
-Mittel stabil, deutlich voneinander trennbar, und unterscheiden sich
-zwischen den Boards. Und nach dem Umstecken ändert sich der Z-Wert an
-der neuen Position. Was passiert hier? Sind die Sensoren so
-empfindlich, dass die Erdbeschleunigung unterschiedliche Höhen sichtbar
-macht?</p>
-
-<p>Wohl eher nicht, eine viel ernüchternde Erklärung: Die Boards scheinen
-nach dem Umstecken immer leicht <em>schief</em> in den Boxen zu landen, was
-die Unterschiede in den Beschleunigungswerten ausmacht und die
-eindeutige Identifikation eines Boards an einer bestimmten Position
-ermöglicht. Leider sind diese Werte nicht reproduzierbar, damit nur
-Rauschen und nicht für ein in der Realität anwendbares Modell
-geeignet. Sobald Daten eines Experiments für die Aufteilung der
-Kreuzvalidierung für ein Board sowohl im Trainings- als auch im
-Testdatensatz vorkommen erzeugen diese den Fingerabdruck dieses einen
-Boards. Eigentlich sollten aber die Messdaten unabhängig vom Board
-Rückschlüsse auf die Position erlauben. Die Beschleunigungssensoren
-codieren damit (fast eindeutig) das Label (Information Leakage).</p>
-
-<p>Und die Situation wird noch schlimmer: In den Daten sind <em>9
-Experimente</em> enthalten, d.h. 9 mal Umstecken der PhyNode-Boards an
-neue Positionen. In einer 10-fachen stratifizierten Kreuzvalidierung
-stecken damit <em>immer</em> sowohl in Trainings- als auch Testdaten Anteile
-aus allen Experimenten.</p>
-
-<p>Wird die Kreuzvalidierung dagegen auf Batchweise umgestellt mit dem
-Experiment als Attribut für den Train-/Testsplit sehen die Ergebnisse
-ganz anders aus. Jetzt wird immer jeweils ein vollständiges Experiment
-für den Test zurückgehalten während die anderen 8 Experimente dem
-Training dienen. Schon sind es nur noch 10 % Genauigkeit, siehe dazu
-wieder einen Ausschnitt der Konfusionsmatrix für einen Random Forest
-mit derselben Parametrisierung wie zuvor.</p>
-
-<img src="/images/phynode/ConfusionMatrix_RF_Accuracy10.png" alt="Confusion Matrix mit angepasster Validierung" class="img-responsive center-block">
-
-<div class="caption">Confusion Matrix mit angepasster Validierung über vollständige Experimente</div>
-
-
-<p>10 % bei mehr als 20 Labeln ist immer noch besser als raten, aber nicht
-beeindruckend. Immerhin ist damit zumindest die Basis für eine
-korrekte Validierung gelegt und der eigentliche Zyklus aus Modellwahl
-und Parametrisierung kann beginnen.</p>
-
-<p>Was sich in dem Szenario dann letztendlich erreichen lässt haben die
-Kollegen anschließend in einer Publikation auf der <a href="https://ieeexplore.ieee.org/abstract/document/8435922">Smart SysTech
-2018</a>
-gezeigt. Mit viel Mühe sind damit immerhin wieder Klassifikationsgüten
-von über 80 % möglich.</p>
-
-		 <div class="shariff" data-title="Kreuzvalidierungsfail" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;mail&quot;]"  data-mail-url="mailto:"></div>
-                 <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 14.11.2018
                  </p>
                </div>
                <hr>
