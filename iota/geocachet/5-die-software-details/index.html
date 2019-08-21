@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Die Software, Details. Dies ist Teil 5 über den Bau eines Geocache Transposed (GCT), einer verschlossenen Box, die nur an einem geheimen Ort geöffnet wird. Der folgende Beitrag zeigt ein paar Details zum Ablauf der Software auf dem Mikrocontroller. Teil 1 der Serie ist hier zu finden: GCT Teil 1
+Ein Arduino-Programm besteht typischerweise aus zwei Hauptteilen: dem Setup, das einmal beim Einschalten aufgerufen wird, und der Schleife, die wiederholend bis zum Ausschalten aufgerufen wird.">
+    
+    <meta name="author" content="Stefan Michaelis">
+
+    <meta name="twitter:site" content="@stmichaelis">
+<meta name="twitter:creator" content="@stmichaelis">
+
+<meta property="og:description" content="Die Software, Details. Dies ist Teil 5 über den Bau eines Geocache Transposed (GCT), einer verschlossenen Box, die nur an einem geheimen Ort geöffnet wird. Der folgende Beitrag zeigt ein paar Details zum Ablauf der Software auf dem Mikrocontroller. Teil 1 der Serie ist hier zu finden: GCT Teil 1
+Ein Arduino-Programm besteht typischerweise aus zwei Hauptteilen: dem Setup, das einmal beim Einschalten aufgerufen wird, und der Schleife, die wiederholend bis zum Ausschalten aufgerufen wird." />
+<meta property="og:title" content="Geocache Transposed - Teil 5" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:image" content="https://blog.stefan-michaelis.name/images/geocachet/NahaufnahmeDisplayGPS.jpg" />
+<meta property="og:url" content="https://blog.stefan-michaelis.name/iota/geocachet/5-die-software-details/" />
+
+
+    
+    <title> Geocache Transposed - Teil 5 - Stefan Michaelis </title>
+
+    
+
+    
+    <link href="https://blog.stefan-michaelis.name/css/bootstrap.min.css" rel="stylesheet">
+    
+
+    
+    <link href="https://blog.stefan-michaelis.name/css/clean-blog.min.css" rel="stylesheet">
+    <link href="https://blog.stefan-michaelis.name/css/shariff.min.css" rel="stylesheet">
+    <link href="https://blog.stefan-michaelis.name/css/clean-blog-custom.css" rel="stylesheet">
+    <link href="https://blog.stefan-michaelis.name/css/syntax.css" rel="stylesheet">
+
+    
+    
+    <link href="https://blog.stefan-michaelis.name/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://blog.stefan-michaelis.name/css/fonts.css" rel="stylesheet">
+    
+
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+		<a class="navbar-brand" href="//www.stefan-michaelis.name" style="font-family: 'Reenie Beanie';font-size:1.6em;">Stefan Michaelis</a>
+            </div>
+
+            
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <ul class="nav navbar-nav navbar-right">
+    <li>
+      <a href="https://blog.stefan-michaelis.name">Blog</a>
+    </li>
+    <li>
+      <a href="//www.stefan-michaelis.name/technology/de">Projekte</a>
+    </li>
+
+    <li>
+      <a href="//www.stefan-michaelis.name/contact/de" rel="nofollow">Kontakt</a>
+    </li>
+  </ul>
+</div>
+
+
+        </div>
+        
+    </nav>
+
+
+    
+    
+    <header class="intro-header" style="background-image: url('https://blog.stefan-michaelis.name//images/geocachet/NahaufnahmeDisplayGPS.jpg')">
+      
+      <div class="container" style="width: 100%; background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) )">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>Geocache Transposed - Teil 5</h1>
+               <h2 class="subheading">Die Software, Details</h2>
+             </div>
+           </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  
+
+<p>Dies ist Teil 5 über den Bau eines Geocache Transposed (GCT), einer
+verschlossenen Box, die nur an einem geheimen Ort geöffnet wird. Der
+folgende Beitrag zeigt ein paar Details zum Ablauf der Software auf
+dem Mikrocontroller. Teil 1 der
+Serie ist hier zu finden: <a href="https://blog.stefan-michaelis.name/iota/geocachet/1-die-story/">GCT Teil 1</a></p>
+
+<p>Ein Arduino-Programm besteht typischerweise aus zwei Hauptteilen: dem
+Setup, das einmal beim Einschalten aufgerufen wird, und der Schleife,
+die wiederholend bis zum Ausschalten aufgerufen wird.</p>
+
+<div class="row">
+     <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+     	  <img src="/images/geocachet/Software_Flow.png" class="img-responsive" />
+     </div>
+</div>
+
+
+<h2 id="setup">Setup</h2>
+
+<p>Die Initialisierung ist denkbar einfach: Den korrekten
+Modus aller Ausgabepins einstellen, die dedizierte serielle
+Verbindung aktivieren (zum Senden von Debug-Meldungen an einen angeschlossenen
+PC) und die seriellen Softwareverbindungen zum LCD und GPS-Gerät. Das
+LCD wird nach dem Herstellen der Verbindung zurück gesetzt.</p>
+
+<h2 id="schleife">Schleife</h2>
+
+<p>Das Verhalten der Box ist in verschiedenen Phasen organisiert, die
+jeweils durch einen Wert in der aktuellen Phasenvariablen
+gesteuert werden. Die Switch-Anweisung in der Loop-Methode ruft die
+aktuelle Phase auf. Falls etwas schief geht, schaltet eine
+if-Anweisung am Ende der Schleifen die Box nach zehn Minuten ab.</p>
+
+<p><strong>INIT Phase:</strong> Die erste Phase gibt eine Willkommensmeldung auf dem
+LCD-Bildschirm aus, die Anzahl der Versuche und die Nummer des
+aktuellen Ziels. Die Nachricht kann an eine eigene Version angepasst
+und an <em>lcdSerial</em> gesendet werden. Der Zähler der Versuche wird
+bereits hier erhöht, so dass, wenn die Box ausgeschaltet wird oder das
+GPS kein Signal findet, der Versuch trotzdem gezählt wird. Wenn die
+Anzahl der maximalen Versuche bereits überschritten ist, zeigt das
+Feld eine Meldung an und die Box schaltet sich aus.</p>
+
+<p><strong>SEARCHGPS:</strong> In dieser Phase wird versucht, einen gültigen GPS-Fix
+zu erhalten. Wird nach 3 Minuten kein Signal gefunden, z.B. wenn die
+Box im Haus aktiviert wird, schaltet diese sich aus, um Strom zu sparen
+(Phase <strong>NO_GPS</strong>).</p>
+
+<p><strong>EVALPOS:</strong> Wenn ein Koordinatenpaar vom GPS-Gerät geliefert wurde,
+wird zunächst die Entfernung zu den geheimen Heimatkoordinaten
+berechnet. Befindet sich die Box in der Nähe dieser Koordinaten,
+öffnet sich das Schlüsselfach für einige Sekunden, bevor es wieder
+geschlossen und alle Zähler zurückgesetzt werden. Die Box ist nun
+bereit, um das Abenteuer wieder zu starten.  Andernfalls wird der
+Abstand gegen die aktuellen Sollkoordinaten und die angegebene
+maximale Abweichung um diese Koordinaten geprüft. Alle
+Entfernungsberechnungen werden mit der Haversin-Formel
+(<a href="https://en.wikipedia.org/wiki/Haversine_formula">https://en.wikipedia.org/wiki/Haversine_formula</a>) durchgeführt, die
+auch bei kleinen Entfernungen eine gute Genauigkeit gewährleistet.</p>
+
+<p>Wenn die aktuelle Position nicht dem aktuellen Ziel entspricht, wird
+die Entfernung dahin ausgegeben und die Box schaltet sich aus.  Wenn
+die richtige Position gefunden wurde, wird dies angezeigt, und daran
+anschließend die Entfernung zum nächsten Ziel, die Anzahl der
+verbleibenden Versuche und eine Abschaltungsmeldung. Wenn es das
+letzte Ziel der Sequenz war, wird die Box geöffnet.</p>
+
+<p><strong>UNLOCK:</strong> Endlich geschafft. Die Box öffnet sich nach
+einigen Sekunden und ermöglicht den Zugang zum Schlüssel des
+Vorhängeschlosses.</p>
+
+		  <div class="shariff" data-title="Geocache Transposed - Teil 5" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;mail&quot;]" data-mail-url="mailto:"></div>
+		  <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 21.08.2019</p>
+		  
+		  <ul class="pager">
+		    
+		    
+		    <li class="previous">
+		      <a href="/iota/geocachet/4-die-software/">&larr; Vorheriger</a>
+		    </li>
+		    
+		  </ul>
+                </div>
+            </div>
+        </div>
+    </article>
+
+   
+    <footer>
+      <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <ul class="list-inline text-center">
+		
+		<li>
+                  <script language="Javascript" type="text/javascript">
+		    <!--
+			document.write('<a href="mai');
+			document.write('lto');
+			document.write(':&#105;&#110;&#102;&#111;');
+			document.write('@');
+			document.write('&#115;&#116;&#101;&#102;&#97;&#110;&#45;&#109;&#105;&#99;&#104;&#97;&#101;&#108;&#105;&#115;&#46;&#110;&#97;&#109;&#101;">');
+			
+</script>
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <script language="Javascript" type="text/javascript">
+		    <!--
+			document.write('<\/a>');
+			
+		    </script>		
+		</li>
+		<li>
+                  <a href="https://www.xing.com/profile/Stefan_Michaelis5">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-xing fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+		</li>
+		<li>
+                  <a href="https://de.linkedin.com/in/stefanmichaelis">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+		</li>
+		<li>
+                  <a href="https://twitter.com/stmichaelis">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+		</li>
+		<li>
+                  <a href="https://github.com/stmichaelis">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+		</li>
+              </ul>
+	      <p class="copyright text-muted"><a href="//www.stefan-michaelis.name/contact/de" rel="nofollow">Impressum</a>
+		<a href="//www.stefan-michaelis.name/contact/de#privacy" rel="nofollow">Datenschutz</a>
+	      </p>
+            </div>
+          </div>
+	</div>
+    </footer>
+
+    
+    
+    
+    
+    <script src="https://blog.stefan-michaelis.name/js/jquery.min.js"></script>
+
+    
+    
+    
+    <script src="https://blog.stefan-michaelis.name/js/bootstrap.min.js"></script>
+
+    
+    <script src="https://blog.stefan-michaelis.name/js/clean-blog.js"></script>
+    <script src="https://blog.stefan-michaelis.name/js/shariff.min.js"></script>
+
+    
+
+</body>
+
+</html>
+

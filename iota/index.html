@@ -113,6 +113,90 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
                              <div class="post-preview">
+                 <a href="https://blog.stefan-michaelis.name/iota/geocachet/5-die-software-details/">
+                      <h2 class="post-title">Geocache Transposed - Teil 5</h2>
+                      <h3 class="post-subtitle">Die Software, Details</h3>
+                 </a>
+		 
+
+<p>Dies ist Teil 5 über den Bau eines Geocache Transposed (GCT), einer
+verschlossenen Box, die nur an einem geheimen Ort geöffnet wird. Der
+folgende Beitrag zeigt ein paar Details zum Ablauf der Software auf
+dem Mikrocontroller. Teil 1 der
+Serie ist hier zu finden: <a href="https://blog.stefan-michaelis.name/iota/geocachet/1-die-story/">GCT Teil 1</a></p>
+
+<p>Ein Arduino-Programm besteht typischerweise aus zwei Hauptteilen: dem
+Setup, das einmal beim Einschalten aufgerufen wird, und der Schleife,
+die wiederholend bis zum Ausschalten aufgerufen wird.</p>
+
+<div class="row">
+     <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+     	  <img src="/images/geocachet/Software_Flow.png" class="img-responsive" />
+     </div>
+</div>
+
+
+<h2 id="setup">Setup</h2>
+
+<p>Die Initialisierung ist denkbar einfach: Den korrekten
+Modus aller Ausgabepins einstellen, die dedizierte serielle
+Verbindung aktivieren (zum Senden von Debug-Meldungen an einen angeschlossenen
+PC) und die seriellen Softwareverbindungen zum LCD und GPS-Gerät. Das
+LCD wird nach dem Herstellen der Verbindung zurück gesetzt.</p>
+
+<h2 id="schleife">Schleife</h2>
+
+<p>Das Verhalten der Box ist in verschiedenen Phasen organisiert, die
+jeweils durch einen Wert in der aktuellen Phasenvariablen
+gesteuert werden. Die Switch-Anweisung in der Loop-Methode ruft die
+aktuelle Phase auf. Falls etwas schief geht, schaltet eine
+if-Anweisung am Ende der Schleifen die Box nach zehn Minuten ab.</p>
+
+<p><strong>INIT Phase:</strong> Die erste Phase gibt eine Willkommensmeldung auf dem
+LCD-Bildschirm aus, die Anzahl der Versuche und die Nummer des
+aktuellen Ziels. Die Nachricht kann an eine eigene Version angepasst
+und an <em>lcdSerial</em> gesendet werden. Der Zähler der Versuche wird
+bereits hier erhöht, so dass, wenn die Box ausgeschaltet wird oder das
+GPS kein Signal findet, der Versuch trotzdem gezählt wird. Wenn die
+Anzahl der maximalen Versuche bereits überschritten ist, zeigt das
+Feld eine Meldung an und die Box schaltet sich aus.</p>
+
+<p><strong>SEARCHGPS:</strong> In dieser Phase wird versucht, einen gültigen GPS-Fix
+zu erhalten. Wird nach 3 Minuten kein Signal gefunden, z.B. wenn die
+Box im Haus aktiviert wird, schaltet diese sich aus, um Strom zu sparen
+(Phase <strong>NO_GPS</strong>).</p>
+
+<p><strong>EVALPOS:</strong> Wenn ein Koordinatenpaar vom GPS-Gerät geliefert wurde,
+wird zunächst die Entfernung zu den geheimen Heimatkoordinaten
+berechnet. Befindet sich die Box in der Nähe dieser Koordinaten,
+öffnet sich das Schlüsselfach für einige Sekunden, bevor es wieder
+geschlossen und alle Zähler zurückgesetzt werden. Die Box ist nun
+bereit, um das Abenteuer wieder zu starten.  Andernfalls wird der
+Abstand gegen die aktuellen Sollkoordinaten und die angegebene
+maximale Abweichung um diese Koordinaten geprüft. Alle
+Entfernungsberechnungen werden mit der Haversin-Formel
+(<a href="https://en.wikipedia.org/wiki/Haversine_formula">https://en.wikipedia.org/wiki/Haversine_formula</a>) durchgeführt, die
+auch bei kleinen Entfernungen eine gute Genauigkeit gewährleistet.</p>
+
+<p>Wenn die aktuelle Position nicht dem aktuellen Ziel entspricht, wird
+die Entfernung dahin ausgegeben und die Box schaltet sich aus.  Wenn
+die richtige Position gefunden wurde, wird dies angezeigt, und daran
+anschließend die Entfernung zum nächsten Ziel, die Anzahl der
+verbleibenden Versuche und eine Abschaltungsmeldung. Wenn es das
+letzte Ziel der Sequenz war, wird die Box geöffnet.</p>
+
+<p><strong>UNLOCK:</strong> Endlich geschafft. Die Box öffnet sich nach
+einigen Sekunden und ermöglicht den Zugang zum Schlüssel des
+Vorhängeschlosses.</p>
+
+		 <div class="shariff" data-title="Geocache Transposed - Teil 5" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;mail&quot;]"  data-mail-url="mailto:"></div>
+                 <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 21.08.2019
+                 </p>
+               </div>
+               <hr>
+
+          
+                             <div class="post-preview">
                  <a href="https://blog.stefan-michaelis.name/iota/geocachet/4-die-software/">
                       <h2 class="post-title">Geocache Transposed - Teil 4</h2>
                       <h3 class="post-subtitle">Die Software</h3>
@@ -411,71 +495,6 @@ Euro wert.</p>
 
 		 <div class="shariff" data-title="Geocache Transposed - Teil 2" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;mail&quot;]"  data-mail-url="mailto:"></div>
                  <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 31.07.2019
-                 </p>
-               </div>
-               <hr>
-
-          
-                             <div class="post-preview">
-                 <a href="https://blog.stefan-michaelis.name/iota/geocachet/1-die-story/">
-                      <h2 class="post-title">Geocache Transposed - Teil 1</h2>
-                      <h3 class="post-subtitle">Die Schatztruhe für unterwegs</h3>
-                 </a>
-		 <p>Vor langer Zeit sagte mir einmal jemand, dass der Computeringenieur ein schlechter
-Beruf ist - um Geschenke für Familie und Freunde zu erschaffen. Maler,
-sicher, diese können leicht ein Bild zeichnen und es
-verschenken. Musiker, ja, sie können zu einem Geburtstag eine schöne
-kleine Melodie spielen oder sogar eine ganze Hymne einem Freund
-widmen. Aber wer mag schon Überraschungen mit Computern und Software?
-Ich würde das auch so sehen, dass einige Optionen ein wenig geekig sein können,
-aber andere können für jeden geeignet sein.  Einer davon ist ein
-Geocache Transposed (GCT, Geocachet).</p>
-
-<blockquote>
-<p>Dieser Post (und die folgenden) sind die Neuauflage einer alten
-Serie von Mini-Postings. Ursprünglich auf Google+ und in Englisch
-gepostet sind diese jetzt nach dem Ende von G+ zu schade um für
-immer verschwunden zu sein. Die Umsetzung der Box liegt inzwischen
-viele Jahre zurück, die Idee dahinter ist aber zeitlos. Soweit
-möglich wurden Links auf ihre Gültigkeit geprüft und ggf. angepasst
-oder gelöscht.</p>
-</blockquote>
-
-<p>Geocaching ist inzwischen ein bekanntes Hobby, das von billigeren und in
-Smartphones integrierten GPS-Geräten angetrieben wurde. Beim
-Geocaching werden die so genannten Caches an entfernten Orten
-ausgeblendet, während die Koordinaten öffentlich sind. Bei Verwendung
-eines GPS-Geräts muss der Cache gefunden und in den meisten Fällen
-Elemente im Cache ausgetauscht werden. Eine GCT-Box dreht dieses
-Konzept auf den Kopf.</p>
-
-<p>Der transponierte Geocache ist der sich bewegende Cache. Wer denkt
-nicht gerne an die eigene Kindheit zurück, das Spiel als Piraten und
-die Jagd nach geheimen Schätzen. Diesmal trägst jeder die Schatzkiste
-mit sich herum und muss das Rätsel lösen um den richtigen Ort zu
-finden.  Die Box selbst ist verschlossen, darin befindet sich ein
-GPS-Empfänger und die Box öffnet sich nur, wenn sie an einem bestimmten Ort
-der Welt aktiviert wird. An der falschen Stelle zeigt das Feld einfach
-die Entfernung zum Ziel an, so dass erraten werden muss wohin die
-Reise gehen soll. Der Begriff Reverse Geocache dafür und das
-ursprüngliche Konzept wurde 2009 von Mikal Hart geprägt:
-<a href="http://arduiniana.org/projects/the-reverse-geo-cache-puzzle/">http://arduiniana.org/projects/the-reverse-geo-cache-puzzle/</a> Er
-entwarf die Box als Geschenk für die Hochzeit seines Freundes und
-hat damit eine Lawine verschiedener Varianten davon ausgelöst.</p>
-
-<p>Der Geocachet ist ein großartiges persönliches Geschenk,
-für Hochzeiten, Geburtstage oder Jubiläen. Der Prozess der Erstellung
-einer eigenen Box, der Auswahl des geheimen Ortes und der Beobachtung
-der Versuche, das Rätsel zu lösen, ist an sich schon ein wunderbare
-Sache. Und die Box ist wiederverwendbar, wenn ein neuer
-geheimer Ort programmiert wird. Nachdem ich die ursprünglichen Beiträge
-über die Geschichte des umgekehrten Geocache gelesen hatte, musste ich
-meine eigene Box erstellen. Die folgenden Beiträge beschreiben
-meinen Prozess; vielleicht werden sie auch als Inspiration für noch
-weitere Puzzleboxen dienen.</p>
-
-		 <div class="shariff" data-title="Geocache Transposed - Teil 1" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;mail&quot;]"  data-mail-url="mailto:"></div>
-                 <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 24.07.2019
                  </p>
                </div>
                <hr>

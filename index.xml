@@ -6,10 +6,90 @@
     <description>Recent content on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Wed, 14 Aug 2019 19:00:45 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 21 Aug 2019 19:01:24 +0200</lastBuildDate>
     
         <atom:link href="https://blog.stefan-michaelis.name/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Geocache Transposed - Teil 5 - Die Software, Details</title>
+      <link>https://blog.stefan-michaelis.name/iota/geocachet/5-die-software-details/</link>
+      <pubDate>Wed, 21 Aug 2019 19:01:24 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/iota/geocachet/5-die-software-details/</guid>
+      <description>
+
+&lt;p&gt;Dies ist Teil 5 über den Bau eines Geocache Transposed (GCT), einer
+verschlossenen Box, die nur an einem geheimen Ort geöffnet wird. Der
+folgende Beitrag zeigt ein paar Details zum Ablauf der Software auf
+dem Mikrocontroller. Teil 1 der
+Serie ist hier zu finden: &lt;a href=&#34;https://blog.stefan-michaelis.name/iota/geocachet/1-die-story/&#34;&gt;GCT Teil 1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ein Arduino-Programm besteht typischerweise aus zwei Hauptteilen: dem
+Setup, das einmal beim Einschalten aufgerufen wird, und der Schleife,
+die wiederholend bis zum Ausschalten aufgerufen wird.&lt;/p&gt;
+
+&lt;div class=&#34;row&#34;&gt;
+     &lt;div class=&#34;col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1&#34;&gt;
+     	  &lt;img src=&#34;https://blog.stefan-michaelis.name/images/geocachet/Software_Flow.png&#34; class=&#34;img-responsive&#34; /&gt;
+     &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+
+&lt;p&gt;Die Initialisierung ist denkbar einfach: Den korrekten
+Modus aller Ausgabepins einstellen, die dedizierte serielle
+Verbindung aktivieren (zum Senden von Debug-Meldungen an einen angeschlossenen
+PC) und die seriellen Softwareverbindungen zum LCD und GPS-Gerät. Das
+LCD wird nach dem Herstellen der Verbindung zurück gesetzt.&lt;/p&gt;
+
+&lt;h2 id=&#34;schleife&#34;&gt;Schleife&lt;/h2&gt;
+
+&lt;p&gt;Das Verhalten der Box ist in verschiedenen Phasen organisiert, die
+jeweils durch einen Wert in der aktuellen Phasenvariablen
+gesteuert werden. Die Switch-Anweisung in der Loop-Methode ruft die
+aktuelle Phase auf. Falls etwas schief geht, schaltet eine
+if-Anweisung am Ende der Schleifen die Box nach zehn Minuten ab.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;INIT Phase:&lt;/strong&gt; Die erste Phase gibt eine Willkommensmeldung auf dem
+LCD-Bildschirm aus, die Anzahl der Versuche und die Nummer des
+aktuellen Ziels. Die Nachricht kann an eine eigene Version angepasst
+und an &lt;em&gt;lcdSerial&lt;/em&gt; gesendet werden. Der Zähler der Versuche wird
+bereits hier erhöht, so dass, wenn die Box ausgeschaltet wird oder das
+GPS kein Signal findet, der Versuch trotzdem gezählt wird. Wenn die
+Anzahl der maximalen Versuche bereits überschritten ist, zeigt das
+Feld eine Meldung an und die Box schaltet sich aus.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SEARCHGPS:&lt;/strong&gt; In dieser Phase wird versucht, einen gültigen GPS-Fix
+zu erhalten. Wird nach 3 Minuten kein Signal gefunden, z.B. wenn die
+Box im Haus aktiviert wird, schaltet diese sich aus, um Strom zu sparen
+(Phase &lt;strong&gt;NO_GPS&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;EVALPOS:&lt;/strong&gt; Wenn ein Koordinatenpaar vom GPS-Gerät geliefert wurde,
+wird zunächst die Entfernung zu den geheimen Heimatkoordinaten
+berechnet. Befindet sich die Box in der Nähe dieser Koordinaten,
+öffnet sich das Schlüsselfach für einige Sekunden, bevor es wieder
+geschlossen und alle Zähler zurückgesetzt werden. Die Box ist nun
+bereit, um das Abenteuer wieder zu starten.  Andernfalls wird der
+Abstand gegen die aktuellen Sollkoordinaten und die angegebene
+maximale Abweichung um diese Koordinaten geprüft. Alle
+Entfernungsberechnungen werden mit der Haversin-Formel
+(&lt;a href=&#34;https://en.wikipedia.org/wiki/Haversine_formula&#34;&gt;https://en.wikipedia.org/wiki/Haversine_formula&lt;/a&gt;) durchgeführt, die
+auch bei kleinen Entfernungen eine gute Genauigkeit gewährleistet.&lt;/p&gt;
+
+&lt;p&gt;Wenn die aktuelle Position nicht dem aktuellen Ziel entspricht, wird
+die Entfernung dahin ausgegeben und die Box schaltet sich aus.  Wenn
+die richtige Position gefunden wurde, wird dies angezeigt, und daran
+anschließend die Entfernung zum nächsten Ziel, die Anzahl der
+verbleibenden Versuche und eine Abschaltungsmeldung. Wenn es das
+letzte Ziel der Sequenz war, wird die Box geöffnet.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UNLOCK:&lt;/strong&gt; Endlich geschafft. Die Box öffnet sich nach
+einigen Sekunden und ermöglicht den Zugang zum Schlüssel des
+Vorhängeschlosses.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Geocache Transposed - Teil 4 - Die Software</title>
