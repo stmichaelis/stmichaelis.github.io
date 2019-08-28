@@ -6,10 +6,77 @@
     <description>Recent content in IoTA on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Wed, 21 Aug 2019 19:01:24 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 28 Aug 2019 19:01:24 +0200</lastBuildDate>
     
         <atom:link href="https://blog.stefan-michaelis.name/iota/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Geocache Transposed - Teil 6 - Die Software, noch mehr Details</title>
+      <link>https://blog.stefan-michaelis.name/iota/geocachet/6-die-software-details2/</link>
+      <pubDate>Wed, 28 Aug 2019 19:01:24 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/iota/geocachet/6-die-software-details2/</guid>
+      <description>&lt;p&gt;Dies ist Teil 6 über den Bau eines Geocache Transposed (GCT), einer
+verschlossenen Box, die nur an einem geheimen Ort geöffnet wird. Der
+folgende Beitrag beschreibt noch weitere Details wie den Testmodus bei
+der Implementierung der Software. Teil 1 der
+Serie ist hier zu finden: &lt;a href=&#34;https://blog.stefan-michaelis.name/iota/geocachet/1-die-story/&#34;&gt;GCT Teil 1&lt;/a&gt;&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/geocachet/NahaufnahmeDisplayGPS.jpg&#34; alt=&#34;Displayanzeige Suche GPS-Signal&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Suche GPS-Signal...&lt;/div&gt;
+
+
+&lt;p&gt;Für die Freigabe der Software auf
+&lt;a href=&#34;https://github.com/stmichaelis/geocachet&#34;&gt;Github&lt;/a&gt; habe ich mich
+entschieden, alle Nachrichten, die über lcdSerial auf dem
+LCD-Bildschirm gedruckt wurden, auf &lt;em&gt;Deutsch&lt;/em&gt; zu lassen. Der Grund
+dafür ist: Ich hatte wirklich Probleme damit, Umlaute (ä, ü, ö)
+korrekt anzuzeigen. Es hat mich einige Zeit gekostet, zu bemerken,
+dass der Treiberchip für das LCD in zwei Versionen existiert:
+Europäisch und asiatisch. Während der asiatische Chip zumindest einige
+Zeichen zur Verfügung stellt, die wie deutsche Kleinbuchstaben
+aussehen, konnte ich keinen Weg finden, die Software mit der richtigen
+Kodierung zu speichern, um sie auch richtig anzuzeigen. Am Ende sende ich
+das korrekte Byte Brute Force an die LCD, z.B. über
+lcdSerial.print(225, BYTE);&lt;/p&gt;
+
+&lt;p&gt;Um das Testen des gesamten Setups zu erleichtern, z.B. um das Ver- und
+Entriegeln zu ermöglichen, habe ich der Software einen GPS-Testmodus
+hinzugefügt. Dies überspringt das Lesen von realen Koordinaten aus dem
+GPS, sondern liest vielmehr Koordinaten aus dem
+test_latlons-Array. Wird die Definition &lt;strong&gt;GPS_Testing&lt;/strong&gt;
+zu Beginn der Software einkommentiert, wird dieser Testmodus aktiviert. Ein
+Koordinatenpaar wird zufällig aus der Testliste ausgewählt und für
+die Entfernungsberechnung genutzt. Ich empfehle, dafür nicht
+mehr als drei Ziele im Zielarray zu verwenden, da es bei höheren
+Werten unwahrscheinlich ist, die aktuelle Zielposition zufällig aus
+dem Testarray auszuwählen. Natürlich sollten die Koordinaten des
+Zielarrays in das test_latlons-Array aufgenommen werden, da ansonsten
+niemals ein Ziel erreicht wird.&lt;/p&gt;
+
+&lt;p&gt;Bei jeder Aktivierung speichert die Box die Koordinaten der aktuellen
+Position im EEPROM. Die Idee war, dass man später die Koordinaten
+abrufen und die Reise auf einer Karte nachvollziehen kann. Aus
+Datenschutzgründen sollte der Beschenkte darüber allerdings informiert
+sein. Die erfassten Koordinaten werden über den internen seriellen
+Anschluss an einen PC in der Phase &lt;strong&gt;SEND_COORDS&lt;/strong&gt; gesendet. Diese
+Phase wird nach dem Abschalten aktiviert und somit nur erreicht, wenn
+das Arduino-Board ohne Netzschalter direkt an eine Stromquelle
+angeschlossen ist, z.B. beim Anschluss an den PC über USB. Damit
+lassen sich die Koordinaten in der Konsole der
+Arduino-Entwicklungsumgebung ansehen.&lt;/p&gt;
+
+&lt;p&gt;Schließlich ermöglicht die Box das Zurücksetzen aller Zähler über
+einen speziellen Reset-Befehl. Nachdem die gespeicherten Koordinaten
+an den PC gesendet wurden, hört die Box auf eingehende Zeichen auf dem
+seriellen Gerät. Wenn die Zeichenkette &lt;em&gt;reset&lt;/em&gt; gefunden wurde, werden
+alle Zähler auf 0 gesetzt. Um diesen Befehl an die Box zu senden,
+muss die Konsole in der Arduino IDE geöffnet sein und &lt;em&gt;reset&lt;/em&gt; gefolgt
+von der Entertaste eingegeben werden.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Geocache Transposed - Teil 5 - Die Software, Details</title>

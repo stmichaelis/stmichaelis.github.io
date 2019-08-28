@@ -113,6 +113,77 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
                              <div class="post-preview">
+                 <a href="https://blog.stefan-michaelis.name/iota/geocachet/6-die-software-details2/">
+                      <h2 class="post-title">Geocache Transposed - Teil 6</h2>
+                      <h3 class="post-subtitle">Die Software, noch mehr Details</h3>
+                 </a>
+		 <p>Dies ist Teil 6 über den Bau eines Geocache Transposed (GCT), einer
+verschlossenen Box, die nur an einem geheimen Ort geöffnet wird. Der
+folgende Beitrag beschreibt noch weitere Details wie den Testmodus bei
+der Implementierung der Software. Teil 1 der
+Serie ist hier zu finden: <a href="https://blog.stefan-michaelis.name/iota/geocachet/1-die-story/">GCT Teil 1</a></p>
+
+<img src="/images/geocachet/NahaufnahmeDisplayGPS.jpg" alt="Displayanzeige Suche GPS-Signal" class="img-responsive center-block">
+
+<div class="caption">Suche GPS-Signal...</div>
+
+
+<p>Für die Freigabe der Software auf
+<a href="https://github.com/stmichaelis/geocachet">Github</a> habe ich mich
+entschieden, alle Nachrichten, die über lcdSerial auf dem
+LCD-Bildschirm gedruckt wurden, auf <em>Deutsch</em> zu lassen. Der Grund
+dafür ist: Ich hatte wirklich Probleme damit, Umlaute (ä, ü, ö)
+korrekt anzuzeigen. Es hat mich einige Zeit gekostet, zu bemerken,
+dass der Treiberchip für das LCD in zwei Versionen existiert:
+Europäisch und asiatisch. Während der asiatische Chip zumindest einige
+Zeichen zur Verfügung stellt, die wie deutsche Kleinbuchstaben
+aussehen, konnte ich keinen Weg finden, die Software mit der richtigen
+Kodierung zu speichern, um sie auch richtig anzuzeigen. Am Ende sende ich
+das korrekte Byte Brute Force an die LCD, z.B. über
+lcdSerial.print(225, BYTE);</p>
+
+<p>Um das Testen des gesamten Setups zu erleichtern, z.B. um das Ver- und
+Entriegeln zu ermöglichen, habe ich der Software einen GPS-Testmodus
+hinzugefügt. Dies überspringt das Lesen von realen Koordinaten aus dem
+GPS, sondern liest vielmehr Koordinaten aus dem
+test_latlons-Array. Wird die Definition <strong>GPS_Testing</strong>
+zu Beginn der Software einkommentiert, wird dieser Testmodus aktiviert. Ein
+Koordinatenpaar wird zufällig aus der Testliste ausgewählt und für
+die Entfernungsberechnung genutzt. Ich empfehle, dafür nicht
+mehr als drei Ziele im Zielarray zu verwenden, da es bei höheren
+Werten unwahrscheinlich ist, die aktuelle Zielposition zufällig aus
+dem Testarray auszuwählen. Natürlich sollten die Koordinaten des
+Zielarrays in das test_latlons-Array aufgenommen werden, da ansonsten
+niemals ein Ziel erreicht wird.</p>
+
+<p>Bei jeder Aktivierung speichert die Box die Koordinaten der aktuellen
+Position im EEPROM. Die Idee war, dass man später die Koordinaten
+abrufen und die Reise auf einer Karte nachvollziehen kann. Aus
+Datenschutzgründen sollte der Beschenkte darüber allerdings informiert
+sein. Die erfassten Koordinaten werden über den internen seriellen
+Anschluss an einen PC in der Phase <strong>SEND_COORDS</strong> gesendet. Diese
+Phase wird nach dem Abschalten aktiviert und somit nur erreicht, wenn
+das Arduino-Board ohne Netzschalter direkt an eine Stromquelle
+angeschlossen ist, z.B. beim Anschluss an den PC über USB. Damit
+lassen sich die Koordinaten in der Konsole der
+Arduino-Entwicklungsumgebung ansehen.</p>
+
+<p>Schließlich ermöglicht die Box das Zurücksetzen aller Zähler über
+einen speziellen Reset-Befehl. Nachdem die gespeicherten Koordinaten
+an den PC gesendet wurden, hört die Box auf eingehende Zeichen auf dem
+seriellen Gerät. Wenn die Zeichenkette <em>reset</em> gefunden wurde, werden
+alle Zähler auf 0 gesetzt. Um diesen Befehl an die Box zu senden,
+muss die Konsole in der Arduino IDE geöffnet sein und <em>reset</em> gefolgt
+von der Entertaste eingegeben werden.</p>
+
+		 <div class="shariff" data-title="Geocache Transposed - Teil 6" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;mail&quot;]"  data-mail-url="mailto:"></div>
+                 <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 28.08.2019
+                 </p>
+               </div>
+               <hr>
+
+          
+                             <div class="post-preview">
                  <a href="https://blog.stefan-michaelis.name/iota/geocachet/5-die-software-details/">
                       <h2 class="post-title">Geocache Transposed - Teil 5</h2>
                       <h3 class="post-subtitle">Die Software, Details</h3>
@@ -378,123 +449,6 @@ den Arduino neu programmieren zu können, ohne den Deckel erneut
 
 		 <div class="shariff" data-title="Geocache Transposed - Teil 3" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;mail&quot;]"  data-mail-url="mailto:"></div>
                  <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 07.08.2019
-                 </p>
-               </div>
-               <hr>
-
-          
-                             <div class="post-preview">
-                 <a href="https://blog.stefan-michaelis.name/iota/geocachet/2-die-hardware/">
-                      <h2 class="post-title">Geocache Transposed - Teil 2</h2>
-                      <h3 class="post-subtitle">Die Hardware</h3>
-                 </a>
-		 <p>Dies ist Teil 2 über den Bau eines Geocache Transposed (GCT),
-einer verschlossenen Box, die nur an einem geheimen Ort geöffnet
-wird. Der folgende Beitrag listet die für den Bau benötigten Teile
-auf.</p>
-
-<p><strong>Arduino:</strong> <a href="https://arduino.cc/">https://arduino.cc/</a> Das berühmte Arduino
-Open-Source-Mikrocontroller-Board bildet das Herzstück des Caches. Die
-Kosten für ein Standard-Entwicklungsboard liegen unter
-25,-€. Geschäfte, die das Board zur Verfügung stellen, sind hier zu
-finden: <a href="https://store.arduino.cc/distributors">https://store.arduino.cc/distributors</a></p>
-
-<p>Die meisten Firmen bieten auch die anderen elektronischen Bauteile an,
-die für den Geocache benötigt werden.  Die Website des
-Arduino-Projekts bietet viele Tutorials zum Anschließen von
-Geräten an den Controller. Der Arduino besteht aus einem ATMega328 mit
-32KByte Flash für Ihr Programm und 1KByte EEPROM zur Speicherung von
-Werten, was viel Platz für dieses Projekt bietet. Ich habe die
-vorherige Version namens <em>Duemilanove</em> verwendet, während das aktuelle
-Board<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup> <em>Uno</em> heißt, aber beide sollten gut funktionieren.  Der
-Controller selbst wird in C++ programmiert, kompiliert und auf das
-Board über die IDE per USB hochgeladen. Das Board verfügt über mehrere
-Ein-/Ausgangspins und über Buchsen zum einfachen Einstecken der
-Kabel. Für die meisten Teile dieses Projekts ist kein Löten
-erforderlich.</p>
-
-<p><strong>GPS-Empfänger:</strong> Die Koordinaten der aktuellen Position der Box
-werden von einem GPS-Empfänger geliefert. Jeder Empfänger, der die
-Daten über eine serielle Verbindung sendet, sollte funktionieren. Für
-diese Box habe ich den GPS-Empfänger EM-406 SiRF III von USGlobalSat
-verwendet. Die Kosten liegen bei ca. 40,-€. Der Empfänger verfügt über
-eine integrierte Antenne und kann im Inneren der Box montiert werden,
-sofern die Wände nicht zu dick und nicht aus Metall sind.</p>
-
-<p><strong>LCD:</strong> Das LCD zeigt Statusinformationen und - was am wichtigsten
-ist - die Entfernung zum Zielort an. Ich benutzte ein serielles
-Display mit 16x2 Zeichen, weiß auf schwarz. Die Kosten betragen
-ca. 22,-€, verfügbar z.B. hier:
-<a href="http://www.watterott.com/index.php?page=product&amp;info=1336">http://www.watterott.com/index.php?page=product&amp;info=1336</a> Ein Display
-mit parallelen Anschlüssen sollte ebenfalls verwendbar sein, da wir
-nicht so viele Anschlüsse des Arduino für die anderen Teile
-benötigen. Oft sind diese Displays billiger und es gibt Bibliotheken
-zur bequemen Ansteuerung.</p>
-
-<p><strong>Netzschalter:</strong> Die Box sollte so viel Strom wie möglich sparen,
-insbesondere da die Lösung und das Öffnen Monate dauern kann. Mit
-einem Pololu Power Switch<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>, siehe
-<a href="http://www.pololu.com/catalog/product/750">http://www.pololu.com/catalog/product/750</a>, 6,-€, kann der Arduino mit
-einem Druckknopf eingeschaltet werden und der Arduino kann sich selbst
-wieder ausschalten. Zu beachten ist, dass es zwei Versionen dieses
-Netzschalters gibt, Standard-Spannung (SV) von 4,5V-20V und
-Kleinspannung (LV) von 2,5-7,0V. Da ich eine 9V-Batterie zur
-Stromversorgung der Box benutzte, kam die SV-Version zum Einsatz.</p>
-
-<p><strong>Servo:</strong> Ein Servomotor wird benötigt, um die Box schließlich an der
-richtigen Stelle zu öffnen. Jeder Servo sollte es tun, da wir keine
-schweren Hebearbeiten durchführen müssen. Genutzt wurde ein
-Hitec HS-311 Servo, der bei einem lokalen Modellbauer für 8,-€
-gefunden wurde.</p>
-
-<p><strong>Power-Taste:</strong> Zum Einschalten der Box kann fast jeder billige
-Druckknopf verwendet werden. Hier sollte es etwas Ausgefalleneres sein
-und so entschied ich mich schließlich für einen beleuchteten
-Edelstahlknopf. Mit 10,-€ leider nicht auf der billigen Seite:
-<a href="https://www.conrad.de/de/p/tru-components-gq16f-10e-j-b-12v-vandalismusgeschuetzter-drucktaster-48-v-dc-2-a-1-x-aus-ein-ip65-tastend-1-st-701855.html">https://www.conrad.de/de/p/tru-components-gq16f-10e-j-b-12v-vandalismusgeschuetzter-drucktaster-48-v-dc-2-a-1-x-aus-ein-ip65-tastend-1-st-701855.html</a></p>
-
-<p><strong>Verschiedene elektronische Teile:</strong> Für den Zusammenbau sind noch
-diverse andere Komponente wie Kabel nötig. Ich habe auch eine Buchse
-für den Anschluss einer externen Batterie installiert (Man weiß nie,
-wie lange die integrierte hält. Und ich will nicht in der Nähe sein,
-falls du Hunderte von Kilometern gefahren bist, nur um die Batterie
-leer vorzufinden). Diese Teile summierten sich auf ca. 15,-€.</p>
-
-<p><strong>Weiterer Kleinkram:</strong> Neben den elektronischen Teilen kommt dann
-noch anderes Material, wie z.B. ein Vorhängeschloss, Scharniere oder
-Nieten hinzu. Für die Kalkulation berücksichtigen wir diese Dinge mit
-zusätzlichen 15,-€.</p>
-
-<p><strong>Die Box:</strong> Zu guter Letzt wird die Box benötigt, in der alles
-aufbewahrt wird. Das war auch der Gegenstand, der mir die größten
-Kopfschmerzen bereitete. Die Box sollte groß genug sein, um viele
-Dinge zu verstauen, aber dennoch klein genug, um bequem mitgenommen zu
-werden. Bevorzugt wurde Holz, da es für die Ausschnitte einfach zu
-handhaben ist und auch ein dezentes Aussehen haben sollte. Es dauerte
-Stunden, bis ich viele Geschäfte nach einer passenden Box durchsucht
-hatte. Ich war fast kurz davor aufzugeben, als ich eine perfekte
-Schachtel auf meinem Schrank sah. Etwas staubig, aber
-perfekt. Abgeschätzt 30,-€ falls doch eine Kiste gekauft werden muss.</p>
-
-<p><strong>Summe der Kosten:</strong> Insgesamt belaufen sich die Kosten auf mehr als
-170,-€<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup>. Nicht wirklich ein Schnäppchen, aber die Erfahrung war jeden
-Euro wert.</p>
-<div class="footnotes">
-
-<hr />
-
-<ol>
-<li id="fn:1">Anmerkung: Wie im ersten Post beschrieben basiert diese Artikelserie auf älteren Postings noch ursprünglich bei Google+.
- <a class="footnote-return" href="#fnref:1"> ↩</a></li>
-<li id="fn:2">Nicht mehr verfügbar, Alternativen sind aber verlinkt.
- <a class="footnote-return" href="#fnref:2"> ↩</a></li>
-<li id="fn:3">Inzwischen sollten 10%-20% mehr veranschlagt werden.
- <a class="footnote-return" href="#fnref:3"> ↩</a></li>
-</ol>
-</div>
-
-		 <div class="shariff" data-title="Geocache Transposed - Teil 2" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;mail&quot;]"  data-mail-url="mailto:"></div>
-                 <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 31.07.2019
                  </p>
                </div>
                <hr>

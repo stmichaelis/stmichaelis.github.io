@@ -7,24 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <meta name="description" content="Die Software, Details. Dies ist Teil 5 über den Bau eines Geocache Transposed (GCT), einer verschlossenen Box, die nur an einem geheimen Ort geöffnet wird. Der folgende Beitrag zeigt ein paar Details zum Ablauf der Software auf dem Mikrocontroller. Teil 1 der Serie ist hier zu finden: GCT Teil 1
-Ein Arduino-Programm besteht typischerweise aus zwei Hauptteilen: dem Setup, das einmal beim Einschalten aufgerufen wird, und der Schleife, die wiederholend bis zum Ausschalten aufgerufen wird.">
+    <meta name="description" content="Die Software, noch mehr Details. Dies ist Teil 6 über den Bau eines Geocache Transposed (GCT), einer verschlossenen Box, die nur an einem geheimen Ort geöffnet wird. Der folgende Beitrag beschreibt noch weitere Details wie den Testmodus bei der Implementierung der Software. Teil 1 der Serie ist hier zu finden: GCT Teil 1
+Suche GPS-Signal... Für die Freigabe der Software auf Github habe ich mich entschieden, alle Nachrichten, die über lcdSerial auf dem LCD-Bildschirm gedruckt wurden, auf Deutsch zu lassen.">
     
     <meta name="author" content="Stefan Michaelis">
 
     <meta name="twitter:site" content="@stmichaelis">
 <meta name="twitter:creator" content="@stmichaelis">
 
-<meta property="og:description" content="Die Software, Details. Dies ist Teil 5 über den Bau eines Geocache Transposed (GCT), einer verschlossenen Box, die nur an einem geheimen Ort geöffnet wird. Der folgende Beitrag zeigt ein paar Details zum Ablauf der Software auf dem Mikrocontroller. Teil 1 der Serie ist hier zu finden: GCT Teil 1
-Ein Arduino-Programm besteht typischerweise aus zwei Hauptteilen: dem Setup, das einmal beim Einschalten aufgerufen wird, und der Schleife, die wiederholend bis zum Ausschalten aufgerufen wird." />
-<meta property="og:title" content="Geocache Transposed - Teil 5" />
+<meta property="og:description" content="Die Software, noch mehr Details. Dies ist Teil 6 über den Bau eines Geocache Transposed (GCT), einer verschlossenen Box, die nur an einem geheimen Ort geöffnet wird. Der folgende Beitrag beschreibt noch weitere Details wie den Testmodus bei der Implementierung der Software. Teil 1 der Serie ist hier zu finden: GCT Teil 1
+Suche GPS-Signal... Für die Freigabe der Software auf Github habe ich mich entschieden, alle Nachrichten, die über lcdSerial auf dem LCD-Bildschirm gedruckt wurden, auf Deutsch zu lassen." />
+<meta property="og:title" content="Geocache Transposed - Teil 6" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="og:image" content="https://blog.stefan-michaelis.name/images/geocachet/NahaufnahmeDisplayGPS.jpg" />
-<meta property="og:url" content="https://blog.stefan-michaelis.name/iota/geocachet/5-die-software-details/" />
+<meta property="og:url" content="https://blog.stefan-michaelis.name/iota/geocachet/6-die-software-details2/" />
 
 
     
-    <title> Geocache Transposed - Teil 5 - Stefan Michaelis </title>
+    <title> Geocache Transposed - Teil 6 - Stefan Michaelis </title>
 
     
 
@@ -92,8 +92,8 @@ Ein Arduino-Programm besteht typischerweise aus zwei Hauptteilen: dem Setup, das
         <div class="row">
            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
              <div class="post-heading">
-               <h1>Geocache Transposed - Teil 5</h1>
-               <h2 class="subheading">Die Software, Details</h2>
+               <h1>Geocache Transposed - Teil 6</h1>
+               <h2 class="subheading">Die Software, noch mehr Details</h2>
              </div>
            </div>
         </div>
@@ -105,90 +105,73 @@ Ein Arduino-Programm besteht typischerweise aus zwei Hauptteilen: dem Setup, das
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                  
-
-<p>Dies ist Teil 5 über den Bau eines Geocache Transposed (GCT), einer
+                  <p>Dies ist Teil 6 über den Bau eines Geocache Transposed (GCT), einer
 verschlossenen Box, die nur an einem geheimen Ort geöffnet wird. Der
-folgende Beitrag zeigt ein paar Details zum Ablauf der Software auf
-dem Mikrocontroller. Teil 1 der
+folgende Beitrag beschreibt noch weitere Details wie den Testmodus bei
+der Implementierung der Software. Teil 1 der
 Serie ist hier zu finden: <a href="https://blog.stefan-michaelis.name/iota/geocachet/1-die-story/">GCT Teil 1</a></p>
 
-<p>Ein Arduino-Programm besteht typischerweise aus zwei Hauptteilen: dem
-Setup, das einmal beim Einschalten aufgerufen wird, und der Schleife,
-die wiederholend bis zum Ausschalten aufgerufen wird.</p>
+<img src="/images/geocachet/NahaufnahmeDisplayGPS.jpg" alt="Displayanzeige Suche GPS-Signal" class="img-responsive center-block">
 
-<div class="row">
-     <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-     	  <img src="/images/geocachet/Software_Flow.png" class="img-responsive" />
-     </div>
-</div>
+<div class="caption">Suche GPS-Signal...</div>
 
 
-<h2 id="setup">Setup</h2>
+<p>Für die Freigabe der Software auf
+<a href="https://github.com/stmichaelis/geocachet">Github</a> habe ich mich
+entschieden, alle Nachrichten, die über lcdSerial auf dem
+LCD-Bildschirm gedruckt wurden, auf <em>Deutsch</em> zu lassen. Der Grund
+dafür ist: Ich hatte wirklich Probleme damit, Umlaute (ä, ü, ö)
+korrekt anzuzeigen. Es hat mich einige Zeit gekostet, zu bemerken,
+dass der Treiberchip für das LCD in zwei Versionen existiert:
+Europäisch und asiatisch. Während der asiatische Chip zumindest einige
+Zeichen zur Verfügung stellt, die wie deutsche Kleinbuchstaben
+aussehen, konnte ich keinen Weg finden, die Software mit der richtigen
+Kodierung zu speichern, um sie auch richtig anzuzeigen. Am Ende sende ich
+das korrekte Byte Brute Force an die LCD, z.B. über
+lcdSerial.print(225, BYTE);</p>
 
-<p>Die Initialisierung ist denkbar einfach: Den korrekten
-Modus aller Ausgabepins einstellen, die dedizierte serielle
-Verbindung aktivieren (zum Senden von Debug-Meldungen an einen angeschlossenen
-PC) und die seriellen Softwareverbindungen zum LCD und GPS-Gerät. Das
-LCD wird nach dem Herstellen der Verbindung zurück gesetzt.</p>
+<p>Um das Testen des gesamten Setups zu erleichtern, z.B. um das Ver- und
+Entriegeln zu ermöglichen, habe ich der Software einen GPS-Testmodus
+hinzugefügt. Dies überspringt das Lesen von realen Koordinaten aus dem
+GPS, sondern liest vielmehr Koordinaten aus dem
+test_latlons-Array. Wird die Definition <strong>GPS_Testing</strong>
+zu Beginn der Software einkommentiert, wird dieser Testmodus aktiviert. Ein
+Koordinatenpaar wird zufällig aus der Testliste ausgewählt und für
+die Entfernungsberechnung genutzt. Ich empfehle, dafür nicht
+mehr als drei Ziele im Zielarray zu verwenden, da es bei höheren
+Werten unwahrscheinlich ist, die aktuelle Zielposition zufällig aus
+dem Testarray auszuwählen. Natürlich sollten die Koordinaten des
+Zielarrays in das test_latlons-Array aufgenommen werden, da ansonsten
+niemals ein Ziel erreicht wird.</p>
 
-<h2 id="schleife">Schleife</h2>
+<p>Bei jeder Aktivierung speichert die Box die Koordinaten der aktuellen
+Position im EEPROM. Die Idee war, dass man später die Koordinaten
+abrufen und die Reise auf einer Karte nachvollziehen kann. Aus
+Datenschutzgründen sollte der Beschenkte darüber allerdings informiert
+sein. Die erfassten Koordinaten werden über den internen seriellen
+Anschluss an einen PC in der Phase <strong>SEND_COORDS</strong> gesendet. Diese
+Phase wird nach dem Abschalten aktiviert und somit nur erreicht, wenn
+das Arduino-Board ohne Netzschalter direkt an eine Stromquelle
+angeschlossen ist, z.B. beim Anschluss an den PC über USB. Damit
+lassen sich die Koordinaten in der Konsole der
+Arduino-Entwicklungsumgebung ansehen.</p>
 
-<p>Das Verhalten der Box ist in verschiedenen Phasen organisiert, die
-jeweils durch einen Wert in der aktuellen Phasenvariablen
-gesteuert werden. Die Switch-Anweisung in der Loop-Methode ruft die
-aktuelle Phase auf. Falls etwas schief geht, schaltet eine
-if-Anweisung am Ende der Schleifen die Box nach zehn Minuten ab.</p>
+<p>Schließlich ermöglicht die Box das Zurücksetzen aller Zähler über
+einen speziellen Reset-Befehl. Nachdem die gespeicherten Koordinaten
+an den PC gesendet wurden, hört die Box auf eingehende Zeichen auf dem
+seriellen Gerät. Wenn die Zeichenkette <em>reset</em> gefunden wurde, werden
+alle Zähler auf 0 gesetzt. Um diesen Befehl an die Box zu senden,
+muss die Konsole in der Arduino IDE geöffnet sein und <em>reset</em> gefolgt
+von der Entertaste eingegeben werden.</p>
 
-<p><strong>INIT Phase:</strong> Die erste Phase gibt eine Willkommensmeldung auf dem
-LCD-Bildschirm aus, die Anzahl der Versuche und die Nummer des
-aktuellen Ziels. Die Nachricht kann an eine eigene Version angepasst
-und an <em>lcdSerial</em> gesendet werden. Der Zähler der Versuche wird
-bereits hier erhöht, so dass, wenn die Box ausgeschaltet wird oder das
-GPS kein Signal findet, der Versuch trotzdem gezählt wird. Wenn die
-Anzahl der maximalen Versuche bereits überschritten ist, zeigt das
-Feld eine Meldung an und die Box schaltet sich aus.</p>
-
-<p><strong>SEARCHGPS:</strong> In dieser Phase wird versucht, einen gültigen GPS-Fix
-zu erhalten. Wird nach 3 Minuten kein Signal gefunden, z.B. wenn die
-Box im Haus aktiviert wird, schaltet diese sich aus, um Strom zu sparen
-(Phase <strong>NO_GPS</strong>).</p>
-
-<p><strong>EVALPOS:</strong> Wenn ein Koordinatenpaar vom GPS-Gerät geliefert wurde,
-wird zunächst die Entfernung zu den geheimen Heimatkoordinaten
-berechnet. Befindet sich die Box in der Nähe dieser Koordinaten,
-öffnet sich das Schlüsselfach für einige Sekunden, bevor es wieder
-geschlossen und alle Zähler zurückgesetzt werden. Die Box ist nun
-bereit, um das Abenteuer wieder zu starten.  Andernfalls wird der
-Abstand gegen die aktuellen Sollkoordinaten und die angegebene
-maximale Abweichung um diese Koordinaten geprüft. Alle
-Entfernungsberechnungen werden mit der Haversin-Formel
-(<a href="https://en.wikipedia.org/wiki/Haversine_formula">https://en.wikipedia.org/wiki/Haversine_formula</a>) durchgeführt, die
-auch bei kleinen Entfernungen eine gute Genauigkeit gewährleistet.</p>
-
-<p>Wenn die aktuelle Position nicht dem aktuellen Ziel entspricht, wird
-die Entfernung dahin ausgegeben und die Box schaltet sich aus.  Wenn
-die richtige Position gefunden wurde, wird dies angezeigt, und daran
-anschließend die Entfernung zum nächsten Ziel, die Anzahl der
-verbleibenden Versuche und eine Abschaltungsmeldung. Wenn es das
-letzte Ziel der Sequenz war, wird die Box geöffnet.</p>
-
-<p><strong>UNLOCK:</strong> Endlich geschafft. Die Box öffnet sich nach
-einigen Sekunden und ermöglicht den Zugang zum Schlüssel des
-Vorhängeschlosses.</p>
-
-		  <div class="shariff" data-title="Geocache Transposed - Teil 5" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;mail&quot;]" data-mail-url="mailto:"></div>
-		  <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 21.08.2019</p>
+		  <div class="shariff" data-title="Geocache Transposed - Teil 6" data-theme="white" data-services="[&quot;whatsapp&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;mail&quot;]" data-mail-url="mailto:"></div>
+		  <p class="post-meta"><a href="http://www.stefan-michaelis.name">Stefan Michaelis</a> am 28.08.2019</p>
 		  
 		  <ul class="pager">
 		    
-		    <li class="next">
-		      <a href="/iota/geocachet/6-die-software-details2/">Nächster &rarr;</a>
-		    </li>
-		    
 		    
 		    <li class="previous">
-		      <a href="/iota/geocachet/4-die-software/">&larr; Vorheriger</a>
+		      <a href="/iota/geocachet/5-die-software-details/">&larr; Vorheriger</a>
 		    </li>
 		    
 		  </ul>
