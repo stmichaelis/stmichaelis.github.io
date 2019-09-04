@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.stefan-michaelis.name/iota/geocachet/7-ausblick/</loc>
+    <lastmod>2019-09-04T19:01:24+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.stefan-michaelis.name/iota/geocachet/6-die-software-details2/</loc>
     <lastmod>2019-08-28T19:01:24+02:00</lastmod>
   </url>
@@ -134,12 +139,12 @@
   
   <url>
     <loc>https://blog.stefan-michaelis.name/iota/</loc>
-    <lastmod>2019-08-28T19:01:24+02:00</lastmod>
+    <lastmod>2019-09-04T19:01:24+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.stefan-michaelis.name/</loc>
-    <lastmod>2019-08-28T19:01:24+02:00</lastmod>
+    <lastmod>2019-09-04T19:01:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   

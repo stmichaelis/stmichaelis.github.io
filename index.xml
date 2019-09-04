@@ -6,10 +6,95 @@
     <description>Recent content on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Wed, 28 Aug 2019 19:01:24 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 04 Sep 2019 19:01:24 +0200</lastBuildDate>
     
         <atom:link href="https://blog.stefan-michaelis.name/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Geocache Transposed - Teil 7 - Ausblick</title>
+      <link>https://blog.stefan-michaelis.name/iota/geocachet/7-ausblick/</link>
+      <pubDate>Wed, 04 Sep 2019 19:01:24 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/iota/geocachet/7-ausblick/</guid>
+      <description>&lt;p&gt;Dies ist Teil 7 und der letzte Teil über den Bau eines Geocache
+Transposed (GCT), einer verschlossenen Box, die nur an einem geheimen
+Ort geöffnet wird. Der folgende Beitrag zeigt die fertige Kiste und
+ein paar Rückblicke auf die Bauphase. Teil 1 der Serie ist hier zu
+finden: &lt;a href=&#34;https://blog.stefan-michaelis.name/iota/geocachet/1-die-story/&#34;&gt;GCT Teil 1&lt;/a&gt;&lt;/p&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/geocachet/KisteFertig.jpg&#34; alt=&#34;Bild der fertigen GCT-Box&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Was für eine lange, seltsame Reise...&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Unterschätzt werden sollte nicht, wie &lt;em&gt;robust&lt;/em&gt; der
+Verriegelungsmechanismus sein muss. Natürlich wird kein Safe
+gebaut, aber zumindest sollte er einen starken Zug überstehen. Es
+soll so etwas wie neugierige Schwiegermütter geben, die nicht
+verstehen, dass die Box verschlossen und nicht einfach so geöffnet
+werden kann.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Bei der Auswahl der Zielorte sollten alle erreichbar sein, ohne
+dass ein Flugzeug genommen werden muss. Man stelle sich sonst den
+folgenden Dialog beim Sicherheitspesonal vor, die beim
+Durchleuchten die gesamte Elektronik gesehen haben: &lt;kbd&gt;Ist das ihre
+Kiste?&lt;/kbd&gt; &lt;code&gt;Ja.&lt;/code&gt; &lt;kbd&gt;Machen sie mal auf.&lt;/kbd&gt; &lt;code&gt;Kann ich nicht.&lt;/code&gt; &lt;kbd&gt;Was ist denn da
+drin?&lt;/kbd&gt; &lt;code&gt;Weiß ich nicht...&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;GPS funktioniert in Innenräumen nicht. Ich dachte, das wäre
+bekannt, zusätzlich wird &amp;ldquo;Suche nach GPS-Signal&amp;rdquo; angezeigt, was deutlich
+macht, dass man die Box nach draußen bringen sollte. Ich lag
+falsch.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ich empfehle dringend, die Möglichkeit eine externe
+Backup-Batterie zu nutzen in die Box einzubauen. Die
+Sekundärbatterie sollte direkt zusammen mit der Box mitgegeben
+werden. Mehrere Kilometer zu reisen, um festzustellen, dass die
+interne Batterie leer ist, ist vielleicht nicht so lustig.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Erstaunlich schwierig scheint es zu sein, von einer
+Entfernungsangabe auf mögliche Orte zu schließen. Kennt jemand eine
+Software, die Kreise um eine Position ziehen kann? Google Earth
+kann dies wohl in der kommerziellen Version. Was ist aus dem guten
+alten Kartenmaterial und einem Zirkel geworden?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Der Pololu Power Switch schaltet nicht nur den Arduino &lt;em&gt;ein&lt;/em&gt;,
+sondern auch durch einen zweiten Druck auf den Druckknopf
+wieder &lt;em&gt;aus&lt;/em&gt;. Lustig, die Gesichter über einen vergeudeten Versuch zu sehen.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Die Reise sollte kurz und unterhaltsam gehalten werden. Orte mit
+einer Bedeutung für den Beschenkten sind dabei besonders
+schön. Einige zusätzliche Hinweise helfen auch. Das Konzept, das
+nächste Ziel triangulieren zu müssen, auch spannend zu halten, lebt von einer
+schönen Auswahl an Zielen.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Die Ideen für die Erweiterung der Box sind endlos: Nicht nur die
+Anzahl der Versuche begrenzen, sondern auch die Zeit (sollte
+über GPS abrufbar sein). Senden von SMS/Tweets über ein
+GSM-Modul. Die Möglichkeit, weitere Rätsel einzubauen, z.B. über
+eine Tastatur in der Box. Bilderkennung vor Ort über eine Kamera,
+usw.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Abschließend muss ich sagen, dass der Bau dieser Box eine großartige
+persönliche Erfahrung war, die ich wirklich empfehlen kann. Es dauerte
+etwa 3 Monate (ein paar Abende und Wochenenden), bis ich das Projekt
+vom Entwurf bis zur Fertigstellung abgeschlossen hatte.  Meine Box ist
+natürlich weder die einzige noch die erste. Es finden sich viele
+weitere Varianten im Internet:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Das erste Original: &lt;a href=&#34;http://arduiniana.org/projects/the-reverse-geo-cache-puzzle/&#34;&gt;http://arduiniana.org/projects/the-reverse-geo-cache-puzzle/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mini-Version: &lt;a href=&#34;http://www.jave.de/blog2/?p=71&#34;&gt;http://www.jave.de/blog2/?p=71&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Die frust-romantische Box: &lt;a href=&#34;http://newbrightidea.com/2010/01/15/the-frustromantic-box-part-1-intro/&#34;&gt;http://newbrightidea.com/2010/01/15/the-frustromantic-box-part-1-intro/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Die Deluxe-Box, inklusive Kamera:
+&lt;a href=&#34;http://imakeprojects.com/Projects/deluxe-reverse-geocache/&#34;&gt;http://imakeprojects.com/Projects/deluxe-reverse-geocache/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Eine Adaption der hier gezeigten Box durch Thomas Liebig: &lt;a href=&#34;http://www.thomas-liebig.eu/wordpress/building-a-geo-cache-transposed-gct/&#34;&gt;http://www.thomas-liebig.eu/wordpress/building-a-geo-cache-transposed-gct/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Geocache Transposed - Teil 6 - Die Software, noch mehr Details</title>
