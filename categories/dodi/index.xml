@@ -1,21 +1,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stefan Michaelis - Blog</title>
-    <link>https://blog.stefan-michaelis.name/categories/dodi/</link>
+    <link>https://www.stefan-michaelis.name/categories/dodi/</link>
     <description>Recent content on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
     <lastBuildDate>Wed, 20 Feb 2019 19:58:06 +0100</lastBuildDate>
     
-        <atom:link href="https://blog.stefan-michaelis.name/categories/dodi/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.stefan-michaelis.name/categories/dodi/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Weg ist weg - Sunk Costs</title>
-      <link>https://blog.stefan-michaelis.name/blog/dodi/weg-ist-weg/</link>
+      <link>https://www.stefan-michaelis.name/blog/dodi/weg-ist-weg/</link>
       <pubDate>Wed, 20 Feb 2019 19:58:06 +0100</pubDate>
       
-      <guid>https://blog.stefan-michaelis.name/blog/dodi/weg-ist-weg/</guid>
+      <guid>https://www.stefan-michaelis.name/blog/dodi/weg-ist-weg/</guid>
       <description>&lt;p&gt;Bei jedem eingeführten Produkt und auch bei jedem etablierten Prozess
 stellt sich irgendwann die Frage: Soll ich durch etwas Neues ersetzen?
 In manchen Fällen ist es einfach. Dann, wenn die Maschine bereits
@@ -64,10 +64,10 @@ machen möchte.&lt;/p&gt;
     
     <item>
       <title>Hero und trotzdem Zero - Herrscher über die Emailflut</title>
-      <link>https://blog.stefan-michaelis.name/blog/dodi/hero-und-zero/</link>
+      <link>https://www.stefan-michaelis.name/blog/dodi/hero-und-zero/</link>
       <pubDate>Wed, 24 Oct 2018 19:55:27 +0200</pubDate>
       
-      <guid>https://blog.stefan-michaelis.name/blog/dodi/hero-und-zero/</guid>
+      <guid>https://www.stefan-michaelis.name/blog/dodi/hero-und-zero/</guid>
       <description>&lt;p&gt;Wir alle bekommen zu viele Emails. Email wird auch gerne einmal
 totgesagt. Trotzdem ist dies (und vermutlich nicht nur für mich) immer
 noch eines der wichtigsten Kommunikationsmedien: Asynchron,
@@ -125,7 +125,7 @@ wurde, bilden die letzte Kategorie.&lt;/p&gt;
 Emails einsortiert werden: &lt;em&gt;1_CC, 2_Extern, 3_Indirekt&lt;/em&gt;.&lt;/p&gt;
 &lt;div class=&#34;row&#34;&gt;
      &lt;div class=&#34;col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1&#34;&gt;
-     	  &lt;img src=&#34;https://blog.stefan-michaelis.name/images/email/ordner.png&#34; class=&#34;img-responsive&#34; /&gt;
+     	  &lt;img src=&#34;https://www.stefan-michaelis.name/images/email/ordner.png&#34; class=&#34;img-responsive&#34; /&gt;
      &lt;/div&gt;
 &lt;/div&gt;
 
@@ -150,7 +150,7 @@ Ordner.&lt;/p&gt;
 &lt;p&gt;In Thunderbird können Nachrichten auf verschiedene Art markiert
 (getagged) werden. Für ausgewählte Emails geht dies auch einfach als Shortcut
 über die Zahlen 0 (Tags entfernen) bis 5.&lt;/p&gt;
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/email/todo-folder.png&#34; alt=&#34;Kriterien für den ToDo-Ordner&#34; class=&#34;img-responsive center-block&#34;&gt;
+&lt;img src=&#34;https://www.stefan-michaelis.name/images/email/todo-folder.png&#34; alt=&#34;Kriterien für den ToDo-Ordner&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 &lt;p&gt;Über die Tags &lt;em&gt;To Do&lt;/em&gt; und &lt;em&gt;Important&lt;/em&gt; sowie die Markierung per Stern
 landen alle Emails, die eine Beantwortung erfordern oder Aufgaben
@@ -166,7 +166,7 @@ unzählige Ordner schafft zwar schön Platz in der Inbox und erlaubt
 die Konzentration auf das Wesentliche. Schnell gehen aber auch
 Zusammenhänge verloren. Mal ist man in CC, dann wieder nicht, und
 schon sind die Konversationen auseinander gerissen.&lt;/p&gt;
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/email/threadvis.png&#34; alt=&#34;ThreadVis Addon&#34; class=&#34;img-responsive center-block&#34;&gt;
+&lt;img src=&#34;https://www.stefan-michaelis.name/images/email/threadvis.png&#34; alt=&#34;ThreadVis Addon&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 &lt;p&gt;Über das Addon &lt;a href=&#34;https://threadvis.github.io/&#34;&gt;ThreadVis&lt;/a&gt; werden
 Emails einer Konversation wieder im Kontext sichtbar, egal wo sie
@@ -199,7 +199,7 @@ basiert, schafft größtenteils Abhilfe, birgt aber je nach Art der
 Falsch-Positiven.&lt;/p&gt;
 &lt;div class=&#34;row&#34;&gt;
      &lt;div class=&#34;col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1&#34;&gt;
-     	  &lt;img src=&#34;https://blog.stefan-michaelis.name/images/email/imagespam.png&#34; class=&#34;img-responsive&#34; /&gt;
+     	  &lt;img src=&#34;https://www.stefan-michaelis.name/images/email/imagespam.png&#34; class=&#34;img-responsive&#34; /&gt;
      &lt;/div&gt;
 &lt;/div&gt;
 
@@ -230,10 +230,10 @@ auch für das gute Gefühl Herr der Lage zu sein.&lt;/p&gt;
     
     <item>
       <title>Oversearched - Man kann sich auch kaputt suchen</title>
-      <link>https://blog.stefan-michaelis.name/blog/dodi/overengineered/</link>
+      <link>https://www.stefan-michaelis.name/blog/dodi/overengineered/</link>
       <pubDate>Wed, 02 May 2018 19:22:29 +0100</pubDate>
       
-      <guid>https://blog.stefan-michaelis.name/blog/dodi/overengineered/</guid>
+      <guid>https://www.stefan-michaelis.name/blog/dodi/overengineered/</guid>
       <description>&lt;p&gt;Die schöne große Welt des Internets: Jede Information ist jederzeit in
 Sekundenbruchteilen verfügbar. Dummerweise hat dies gerne auch den
 Effekt die Suche nie enden zu lassen.&lt;/p&gt;
@@ -254,10 +254,10 @@ unter nicht das beste Schnäppchen gemacht zu haben.&lt;/p&gt;
     
     <item>
       <title>Teflonbeschichtetes Kevlar - Hieb- und schussfest, der Rest tropft einfach ab</title>
-      <link>https://blog.stefan-michaelis.name/blog/dodi/teflonbeschichtetes-kevlar/</link>
+      <link>https://www.stefan-michaelis.name/blog/dodi/teflonbeschichtetes-kevlar/</link>
       <pubDate>Wed, 21 Mar 2018 19:07:33 +0100</pubDate>
       
-      <guid>https://blog.stefan-michaelis.name/blog/dodi/teflonbeschichtetes-kevlar/</guid>
+      <guid>https://www.stefan-michaelis.name/blog/dodi/teflonbeschichtetes-kevlar/</guid>
       <description>&lt;p&gt;Da sind sie wieder, die kleinen Aufreger im Alltag: Im Straßenverkehr
 geschnitten worden, an der Kasse die langsame Schlange erwischt und
 überhaupt haben heute alle denen ich begegne miese Laune.&lt;/p&gt;
@@ -309,10 +309,10 @@ und damit auch in der Regel das Ergebnis.&lt;/p&gt;
     
     <item>
       <title>Be a First - Wie ist es der Erste zu sein?</title>
-      <link>https://blog.stefan-michaelis.name/blog/dodi/be-a-first/</link>
+      <link>https://www.stefan-michaelis.name/blog/dodi/be-a-first/</link>
       <pubDate>Wed, 14 Mar 2018 19:55:44 +0100</pubDate>
       
-      <guid>https://blog.stefan-michaelis.name/blog/dodi/be-a-first/</guid>
+      <guid>https://www.stefan-michaelis.name/blog/dodi/be-a-first/</guid>
       <description>&lt;p&gt;Der Erste zu sein, was bedeutet das? Sieger, Gewinner, der Beste? Was
 ist mit kleinen Dingen?&lt;/p&gt;
 &lt;p&gt;Der Erste zu sein muss auch nicht für den eigenen Erfolg sein. Wie
@@ -331,10 +331,10 @@ wiederholen. Vielleicht wird daraus sogar eine Angewohnheit&amp;hellip;&lt;/p&gt
     
     <item>
       <title>Morgenroutine - für einen guten Start in den Tag?</title>
-      <link>https://blog.stefan-michaelis.name/blog/dodi/morgenroutine/</link>
+      <link>https://www.stefan-michaelis.name/blog/dodi/morgenroutine/</link>
       <pubDate>Wed, 28 Feb 2018 19:55:33 +0100</pubDate>
       
-      <guid>https://blog.stefan-michaelis.name/blog/dodi/morgenroutine/</guid>
+      <guid>https://www.stefan-michaelis.name/blog/dodi/morgenroutine/</guid>
       <description>&lt;p&gt;Morgenroutinen sind notwendige Voraussetzung um erfolgreich zu sein -
 so scheint es zumindest. Rituale, entspannter Start, optimale
 Vorbereitung. Erst einmal meditieren, dann ein grüner Tee, eine Runde
@@ -384,10 +384,10 @@ für den nächsten Morgen vor. Versprochen.&lt;/p&gt;</description>
     
     <item>
       <title>Wenn Bürokratien kollidieren... - ...entstehen dann schwarze Löcher?</title>
-      <link>https://blog.stefan-michaelis.name/blog/dodi/wenn-buerokratien-kollidieren/</link>
+      <link>https://www.stefan-michaelis.name/blog/dodi/wenn-buerokratien-kollidieren/</link>
       <pubDate>Wed, 14 Feb 2018 19:41:22 +0100</pubDate>
       
-      <guid>https://blog.stefan-michaelis.name/blog/dodi/wenn-buerokratien-kollidieren/</guid>
+      <guid>https://www.stefan-michaelis.name/blog/dodi/wenn-buerokratien-kollidieren/</guid>
       <description>&lt;p&gt;Je größer eine Behörde oder ein Unternehmen um so größer die
 bürokratische Hürden auch bei einfachen Vorgängen. So scheint es
 zumindest oft. Und spannend wird das ganze, wenn zwei dieser Gruppen
@@ -427,10 +427,10 @@ diese Menschen gibt&amp;hellip;&lt;/p&gt;
     
     <item>
       <title>Ihr kämpft gegen Nichts - Strong Opinions - Weakly Held</title>
-      <link>https://blog.stefan-michaelis.name/blog/dodi/ihr-kaempft-gegen-nichts/</link>
+      <link>https://www.stefan-michaelis.name/blog/dodi/ihr-kaempft-gegen-nichts/</link>
       <pubDate>Wed, 31 Jan 2018 19:32:23 +0100</pubDate>
       
-      <guid>https://blog.stefan-michaelis.name/blog/dodi/ihr-kaempft-gegen-nichts/</guid>
+      <guid>https://www.stefan-michaelis.name/blog/dodi/ihr-kaempft-gegen-nichts/</guid>
       <description>&lt;p&gt;Mal wieder steht eine Entscheidung an. Alle Unterlagen sind
 vorbereitet, alle Optionen evaluiert und Fakten für alle Möglichkeiten
 gesichtet. Und was passiert dann? Nichts. Doch was lässt sich dagegen

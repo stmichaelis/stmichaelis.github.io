@@ -1,30 +1,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stefan Michaelis on Stefan Michaelis - Blog</title>
-    <link>https://blog.stefan-michaelis.name/</link>
+    <link>https://www.stefan-michaelis.name/</link>
     <description>Recent content in Stefan Michaelis on Stefan Michaelis - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
     <lastBuildDate>Wed, 04 Sep 2019 19:01:24 +0200</lastBuildDate>
     
-        <atom:link href="https://blog.stefan-michaelis.name/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.stefan-michaelis.name/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Stefan Michaelis - Blog - Internet of Things Automation, Analytics, das lernende Smart Home und der kurze Weg dahin</title>
-      <link>https://blog.stefan-michaelis.name/blog/</link>
+      <link>https://www.stefan-michaelis.name/blog/</link>
       <pubDate>Wed, 04 Sep 2019 19:01:24 +0200</pubDate>
       
-      <guid>https://blog.stefan-michaelis.name/blog/</guid>
+      <guid>https://www.stefan-michaelis.name/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Forschung und Innovation - Vorbereitung für Morgen</title>
-      <link>https://blog.stefan-michaelis.name/projects/</link>
+      <link>https://www.stefan-michaelis.name/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.stefan-michaelis.name/projects/</guid>
+      <guid>https://www.stefan-michaelis.name/projects/</guid>
       <description>&lt;p&gt;Forschung und die sich daraus ergebenden Innovationen sind für mich
 schon immer sehr wichtig gewesen. Meine Spezialgebiete liegen dabei in
 den Bereichen &lt;strong&gt;Kommunikationsnetze&lt;/strong&gt;, insbesondere
@@ -83,14 +83,14 @@ Gelegenheiten realisieren, von Geburtstagen bis Hochzeiten, hat der
 Beschenkte sein Schatz doch immer dabei.&lt;/p&gt;
 &lt;div class=&#34;row&#34;&gt;
      &lt;div class=&#34;col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1&#34;&gt;
-     	  &lt;img src=&#34;https://blog.stefan-michaelis.name/images/geocachetransposed.jpg&#34; class=&#34;img-responsive&#34; /&gt;
+     	  &lt;img src=&#34;https://www.stefan-michaelis.name/images/geocachetransposed.jpg&#34; class=&#34;img-responsive&#34; /&gt;
      &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;p&gt;In der Box verstecken sich GPS zur Positionsbestimmung und ein Arduino
 zur Ansteuerung. Wird die Box aktiviert zeigt sie lediglich die
 Distanz zum Ziel, an dem sie sich öffnen wird. Die vollständige
-Bauanleitung ist hier im &lt;a href=&#34;https://blog.stefan-michaelis.name/blog/iota/geocachet/1-die-story/&#34;&gt;Blog&lt;/a&gt; zu
+Bauanleitung ist hier im &lt;a href=&#34;https://www.stefan-michaelis.name/blog/iota/geocachet/1-die-story/&#34;&gt;Blog&lt;/a&gt; zu
 finden, der Quellcode OpenSource auf
 &lt;a href=&#34;https://github.com/stmichaelis/geocachet&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;polar-timer&#34;&gt;Polar Timer&lt;/h2&gt;
@@ -103,7 +103,7 @@ der jeweiligen Timer erlauben die regelmäßige Einteilung in Arbeits-
 und Pausenintervalle.&lt;/p&gt;
 &lt;div class=&#34;row&#34;&gt;
      &lt;div class=&#34;col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1&#34;&gt;
-     	  &lt;img src=&#34;https://blog.stefan-michaelis.name/images/pomotimer.png&#34; class=&#34;img-responsive&#34; /&gt;
+     	  &lt;img src=&#34;https://www.stefan-michaelis.name/images/pomotimer.png&#34; class=&#34;img-responsive&#34; /&gt;
      &lt;/div&gt;
 &lt;/div&gt;
 
@@ -124,10 +124,10 @@ als statische Webseite generiert mit &lt;a href=&#34;https://gohugo.io/&#34;&gt;
     
     <item>
       <title>Hintergrund - Details zum Hintergrundbild im Header</title>
-      <link>https://blog.stefan-michaelis.name/background/</link>
+      <link>https://www.stefan-michaelis.name/background/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.stefan-michaelis.name/background/</guid>
+      <guid>https://www.stefan-michaelis.name/background/</guid>
       <description>&lt;p&gt;Das Hintergrundbild in der Kopfzeile wird zufällig beim Aufruf der
 Webseite ausgewählt. Der aktuelle Header zeigt:&lt;/p&gt;
 &lt;div class=&#34;backgroundtext&#34; style=&#34;display:none;&#34;&gt;
@@ -443,13 +443,13 @@ Webseite ausgewählt. Der aktuelle Header zeigt:&lt;/p&gt;
     
     <item>
       <title>Impressum - </title>
-      <link>https://blog.stefan-michaelis.name/contact/</link>
+      <link>https://www.stefan-michaelis.name/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.stefan-michaelis.name/contact/</guid>
+      <guid>https://www.stefan-michaelis.name/contact/</guid>
       <description>&lt;div class=&#34;col-lg-3 col-md-6&#34; style=&#34;margin-top: 30px;&#34;&gt;
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/stefan-michaelis.jpg&#34; alt=&#34;Dr. Stefan Michaelis&#34; style=&#34;border-radius: 15px;&#34;&gt;
-&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Gecko_klein.png&#34; alt=&#34;Gecko&#34; style=&#34;margin-top: -60px;&#34;&gt; 
+&lt;img src=&#34;https://www.stefan-michaelis.name/images/stefan-michaelis.jpg&#34; alt=&#34;Dr. Stefan Michaelis&#34; style=&#34;border-radius: 15px;&#34;&gt;
+&lt;img src=&#34;https://www.stefan-michaelis.name/images/Gecko_klein.png&#34; alt=&#34;Gecko&#34; style=&#34;margin-top: -60px;&#34;&gt; 
 &lt;/div&gt;
 &lt;p&gt;Diese Homepage dient rein privaten Zwecken und entstand einfach aus
 Spaß am Experimentieren.&lt;/p&gt;
