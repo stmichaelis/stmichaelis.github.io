@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Prinzipiell alles richtig gemacht - oder eben doch nicht. Validierung der Prognosegüte von Modellen des maschinellen Lernens über hochgradige Kreuzvalidierung ist der Standard für zuverlässige Aussagen. Wie man sich damit leicht selbst auf das Glatteis führen kann, davon erzählt diese Geschichte.
+Hintergrund Sommerschule für maschinelles Lernen unter Ressourcenbeschränkung Der Sonderforschungsbereich 876 - Große Daten, Kleine Geräte, an der TU Dortmund führt regelmäßig Sommerschulen zum Thema Maschinelles Lernen unter Ressourcenbeschränkung durch. Ganz zum Forschungsgebiet des Sonderforschungsbereichs passend beschäftigen sich die Sommerschulen damit, wie die Analyse großer Daten, insbesondere auch auf eingebetteten Systemen und im Verbund mit sehr stark beschränkten Rechenressourcen, gelingen kann.">
+    
+    <meta name="author" content="Stefan Michaelis">
+
+    <meta name="twitter:site" content="@stmichaelis">
+<meta name="twitter:creator" content="@stmichaelis">
+
+<meta property="og:description" content="Prinzipiell alles richtig gemacht - oder eben doch nicht. Validierung der Prognosegüte von Modellen des maschinellen Lernens über hochgradige Kreuzvalidierung ist der Standard für zuverlässige Aussagen. Wie man sich damit leicht selbst auf das Glatteis führen kann, davon erzählt diese Geschichte.
+Hintergrund Sommerschule für maschinelles Lernen unter Ressourcenbeschränkung Der Sonderforschungsbereich 876 - Große Daten, Kleine Geräte, an der TU Dortmund führt regelmäßig Sommerschulen zum Thema Maschinelles Lernen unter Ressourcenbeschränkung durch. Ganz zum Forschungsgebiet des Sonderforschungsbereichs passend beschäftigen sich die Sommerschulen damit, wie die Analyse großer Daten, insbesondere auch auf eingebetteten Systemen und im Verbund mit sehr stark beschränkten Rechenressourcen, gelingen kann." />
+<meta property="og:title" content="Kreuzvalidierungsfail" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:image" content="https://blog.stefan-michaelis.name/images/phynode/versuchsaufbau.jpg" />
+<meta property="og:url" content="https://blog.stefan-michaelis.name/blog/iota/kreuzvalidierungsfail/" />
+
+
+    
+    <title> Kreuzvalidierungsfail - Stefan Michaelis </title>
+
+    
+
+    
+    <link href="https://blog.stefan-michaelis.name/css/bootstrap.min.css" rel="stylesheet">
+    
+
+    
+    <link href="https://blog.stefan-michaelis.name/css/clean-blog.min.css" rel="stylesheet">
+    <link href="https://blog.stefan-michaelis.name/css/shariff.min.css" rel="stylesheet">
+    <link href="https://blog.stefan-michaelis.name/css/clean-blog-custom.css" rel="stylesheet">
+    <link href="https://blog.stefan-michaelis.name/css/syntax.css" rel="stylesheet">
+
+    
+    
+    <link href="https://blog.stefan-michaelis.name/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://blog.stefan-michaelis.name/css/fonts.css" rel="stylesheet">
+    
+
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+		<a class="navbar-brand" href="//www.stefan-michaelis.name" style="font-family: 'Reenie Beanie';font-size:1.6em;">Stefan Michaelis</a>
+            </div>
+
+            
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <ul class="nav navbar-nav navbar-right">
+    <li>
+      <a href="/blog/">Blog</a>
+    </li>
+    <li>
+      <a href="/projects/">Projekte</a>
+    </li>
+    <li>
+      <a href="/background/">Hintergrund</a>
+    </li>
+    <li>
+      <a href="/contact/" rel="nofollow">Kontakt</a>
+    </li>
+  </ul>
+</div>
+
+
+        </div>
+        
+    </nav>
+
+
+    
+    <header id="pageheader" class="intro-header">
+     <div class="container" style="width: 100%; background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) )">
+       <div class="row">
+         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+           <div class="site-heading">
+             <h1>Kreuzvalidierungsfail</h1>
+             <hr class="small">
+             <span class="subheading">Prinzipiell alles richtig gemacht - oder eben doch nicht</span>
+           </div>
+         </div>
+       </div>
+     </div>
+    </header>
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+	      
+<p>Validierung der Prognosegüte von Modellen des maschinellen Lernens
+über hochgradige Kreuzvalidierung ist der Standard für zuverlässige
+Aussagen. Wie man sich damit leicht selbst auf das Glatteis führen
+kann, davon erzählt diese Geschichte.</p>
+<h2 id="hintergrund">Hintergrund</h2>
+<h3 id="sommerschule-für-maschinelles-lernen-unter-ressourcenbeschränkung">Sommerschule für maschinelles Lernen unter Ressourcenbeschränkung</h3>
+<p>Der <a href="https://sfb876.tu-dortmund.de">Sonderforschungsbereich 876</a> -
+Große Daten, Kleine Geräte, an der TU Dortmund führt regelmäßig
+Sommerschulen zum Thema <em>Maschinelles Lernen unter
+Ressourcenbeschränkung</em> durch. Ganz zum Forschungsgebiet des
+Sonderforschungsbereichs passend beschäftigen sich die Sommerschulen
+damit, wie die Analyse großer Daten, insbesondere auch auf
+eingebetteten Systemen und im Verbund mit sehr stark beschränkten
+Rechenressourcen, gelingen kann. Jede Sommerschule versucht dabei
+neben den eigentlichen Kursen auch einen Hands-On-Teil dazu
+anzubieten. Auch die innerhalb kürzester Zeit ausverkaufte
+<a href="https://sfb876.tu-dortmund.de/SummerSchool2017/index.html">Sommerschule
+2017</a> war
+dabei keine Ausnahme.</p>
+<img src="/images/phynode/versuchsaufbau.jpg" alt="Versuchsaufbau" class="img-responsive center-block">
+
+<div class="caption">Versuchsaufbau aus mehreren PhyNode-Boxen</div>
+
+<p>Das Szenario war dazu an ein Problem aus der Warenlogistik angelegt: Wie
+finde ich im Regal meine Box wieder? Im Versuchsaufbau wurden zwei
+kleine Wände aus Warencontainern aufgebaut, wobei jeder Container mit
+einem im Projekt <a href="https://sfb876.tu-dortmund.de/SPP/sfb876-a4.html">Ressourcen-effiziente und verteilte Plattformen zur
+integrativen
+Datenanalyse</a>
+entwickelten PhyNode-Board versehen ist.</p>
+<h3 id="aufgabe">Aufgabe</h3>
+<p>Die <a href="https://ieeexplore.ieee.org/document/7323355">PhyNodes</a> sind
+stark ressourcenbeschränkte, autonome und weitestgehend energieautarke
+eingebettete Systeme mit einer Anzahl verschiedener Sensoren.</p>
+<div class="row">
+     <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+     	  <img src="/images/phynode/phynode.jpg" class="img-responsive" />
+     </div>
+</div>
+
+<p>Die Aufgabe der Sommerschule bestand darin, das Lernen von Positionen
+von Boxen mit angebrachten PhyNodes für mehr als 20 Positionen als
+Labels zu realisieren. Später sollten die Boards selbst durch die
+Software auf den Boards ihre eigenen Positionen im Regal vorhersagen
+können. Die Teilnehmer erhielten dazu Trainingsdaten mit der bekannten
+Position. Die Boards nahmen im Verlauf verschiedene Positionen ein,
+d.h. ID des Boards und Position stimmten nicht immer überein. Die
+Messreihen zwischen dem Umstecken werden im Folgenden als &ldquo;Experiment&rdquo;
+bezeichnet.</p>
+<h2 id="features">Features</h2>
+<p>Verfügbare Features waren Zeit, Board ID, Temperatur, Luxwerte,
+Beschleunigungswerte X, Y, Z, RSSI zur Basistation, das Experiment und
+die Position als Label. Positionen bestanden aus zwei Ziffern mit der
+Bedeutung Spalte/Zeile, was für die Modellbildung aber keine Rolle
+spielte, da die Aufgabe zunächst als Klassifikationsproblem behandelt
+wurde.  In Summe standen nach den ersten Experimenten mehr als 330.000
+Messungen zur Verfügung.</p>
+<h2 id="modellierung">Modellierung</h2>
+<p>Um einen ersten Eindruck von der Schwierigkeit des Problems zu
+bekommen (These: Das geht gar nicht) bietet es sich an beispielsweise
+eine schnelle Analyse mit <a href="https://rapidminer.com/">RapidMiner</a>
+auszuprobieren. Die Daten sind damit fix eingelesen und die
+wichtigsten Methoden mit ein paar Klicks verfügbar.</p>
+<p>Der simple Ansatz ist dann: Daten einfach mit einem RandomForest mit
+Standardparametern (10 Bäume) gelernt, 10-fache Kreuzvalidierung und
+schauen, wo wir landen.</p>
+<img src="/images/phynode/x-validation.png" alt="X-Validation" class="img-responsive center-block">
+
+<div class="caption">Ausschnitt des Vorgehens bei einer 10-fachen Kreuzvalidierung</div>
+
+<p>Die Kreuzvalidierung, insbesondere in 10-facher Ausführung stellt
+dabei sicher, dass unter maximaler Ausnutzung der Trainingsdaten ein
+sicheres Bild über die zu erwartende Güte gewonnen wird. Die Daten
+werden dazu gleichmäßig in 10 Blöcke unterteilt, wobei in jedem
+Trainings-/Testlauf ein Block für das Testing zurückbehalten wird,
+während die übrigen 90 % zum Training des Verfahrens zur Verfügung stehen.</p>
+<img src="/images/phynode/ConfusionMatrix_RF_Accuracy99.png" alt="Confusion Matrix Random Forest" class="img-responsive center-block">
+
+<div class="caption">Ausschnitt der Confusion Matrix unter Einsatz eines Random Forest</div>
+
+<p>Für den Random Forest liefert diese Validierung dann auch eine
+Klassifikationsgüte von über 99 %. Ziel erreicht, perfekte
+Positionsvorhersage mit einfache Mitteln ist möglich, wir können nach
+Hause gehen. Schade um die Aufgabe, für eine Sommerschule war das dann
+wohl doch zu einfach. Naja, es blieb immerhin noch das Problem, das
+trainierte Modell auch auf die Ultra-Low-Power-Plattformen zu bringen.</p>
+<h2 id="das-problem">Das Problem</h2>
+<p>Mehr als 99 %, und das ohne Aufwand. Hinterlässt aber irgendwie doch
+einen leichten Beigeschmack. Vielleicht lohnt es sich doch einmal
+etwas näher hinter die Kulissen zu schauen. Zur einfachen
+Interpretierbarkeit zeigt die folgende Abbildung den Ausschnitt aus
+einem einfachen Regelmodell anstelle des Random Forest.</p>
+<img src="/images/phynode/RuleModel.png" alt="RuleModel" class="img-responsive center-block">
+
+<div class="caption">Ausschnitt eines einfachen Regel-Modells</div>
+
+<p>So einfach sieht das Modell aber eigentlich gar nicht aus. Im
+Gegenteil eher überkomplex und overfittet. Auffällig ist die
+Einbeziehung der Beschleunigungs-Werte (Acc_x &hellip;). Welche Rolle
+sollten diese im statischen Fall, d.h. Boards bewegen sich nicht,
+spielen? Eigentlich sollte das Modell unwichtige Attribute selbst
+aussortieren.</p>
+<p>Es scheint als ob die Beschleunigungs-Werte einen deutlichen Bezug zur
+Position <em>und</em> zum Experiment haben, quasi wie ein Fingerabdruck.</p>
+<img src="/images/phynode/Experiment_Vs_AccelZ_Vs_Board.png" alt="Experiment Vs AccelZ Vs Board" class="img-responsive center-block">
+
+<div class="caption">Plot von zwei Experimenten (Zeitachse) gegenüber Z-Beschleunigung gegenüber zwei Boards (ID, Farbe)</div>
+
+<p>Der Plot zeigt beispielhaft den Z-Wert der Beschleunigungsmesser für
+zwei Boards (rot und blau) für zwei Experimente (entlang der Zeitachse
+mit kurzer Unterbrechung zum links und rechts). Die Werte sind im
+Mittel stabil, deutlich voneinander trennbar, und unterscheiden sich
+zwischen den Boards. Und nach dem Umstecken ändert sich der Z-Wert an
+der neuen Position. Was passiert hier? Sind die Sensoren so
+empfindlich, dass die Erdbeschleunigung unterschiedliche Höhen sichtbar
+macht?</p>
+<p>Wohl eher nicht, eine viel ernüchternde Erklärung: Die Boards scheinen
+nach dem Umstecken immer leicht <em>schief</em> in den Boxen zu landen, was
+die Unterschiede in den Beschleunigungswerten ausmacht und die
+eindeutige Identifikation eines Boards an einer bestimmten Position
+ermöglicht. Leider sind diese Werte nicht reproduzierbar, damit nur
+Rauschen und nicht für ein in der Realität anwendbares Modell
+geeignet. Sobald Daten eines Experiments für die Aufteilung der
+Kreuzvalidierung für ein Board sowohl im Trainings- als auch im
+Testdatensatz vorkommen erzeugen diese den Fingerabdruck dieses einen
+Boards. Eigentlich sollten aber die Messdaten unabhängig vom Board
+Rückschlüsse auf die Position erlauben. Die Beschleunigungssensoren
+codieren damit (fast eindeutig) das Label (Information Leakage).</p>
+<p>Und die Situation wird noch schlimmer: In den Daten sind <em>9
+Experimente</em> enthalten, d.h. 9 mal Umstecken der PhyNode-Boards an
+neue Positionen. In einer 10-fachen stratifizierten Kreuzvalidierung
+stecken damit <em>immer</em> sowohl in Trainings- als auch Testdaten Anteile
+aus allen Experimenten.</p>
+<p>Wird die Kreuzvalidierung dagegen auf Batchweise umgestellt mit dem
+Experiment als Attribut für den Train-/Testsplit sehen die Ergebnisse
+ganz anders aus. Jetzt wird immer jeweils ein vollständiges Experiment
+für den Test zurückgehalten während die anderen 8 Experimente dem
+Training dienen. Schon sind es nur noch 10 % Genauigkeit, siehe dazu
+wieder einen Ausschnitt der Konfusionsmatrix für einen Random Forest
+mit derselben Parametrisierung wie zuvor.</p>
+<img src="/images/phynode/ConfusionMatrix_RF_Accuracy10.png" alt="Confusion Matrix mit angepasster Validierung" class="img-responsive center-block">
+
+<div class="caption">Confusion Matrix mit angepasster Validierung über vollständige Experimente</div>
+
+<p>10 % bei mehr als 20 Labeln ist immer noch besser als raten, aber nicht
+beeindruckend. Immerhin ist damit zumindest die Basis für eine
+korrekte Validierung gelegt und der eigentliche Zyklus aus Modellwahl
+und Parametrisierung kann beginnen.</p>
+<p>Was sich in dem Szenario dann letztendlich erreichen lässt haben die
+Kollegen anschließend in einer Publikation auf der <a href="https://ieeexplore.ieee.org/abstract/document/8435922">Smart SysTech
+2018</a>
+gezeigt. Mit viel Mühe sind damit immerhin wieder Klassifikationsgüten
+von über 80 % möglich.</p>
+
+
+        </div>
+      </div>
+    </div>
+
+   
+    <footer>
+      <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <ul class="list-inline text-center">
+		
+		<li>
+                  <script language="Javascript" type="text/javascript">
+		    <!--
+			document.write('<a href="mai');
+			document.write('lto');
+			document.write(':&#105;&#110;&#102;&#111;');
+			document.write('@');
+			document.write('&#115;&#116;&#101;&#102;&#97;&#110;&#45;&#109;&#105;&#99;&#104;&#97;&#101;&#108;&#105;&#115;&#46;&#110;&#97;&#109;&#101;">');
+			
+</script>
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <script language="Javascript" type="text/javascript">
+		    <!--
+			document.write('<\/a>');
+			
+		    </script>		
+		</li>
+		<li>
+                  <a href="https://www.xing.com/profile/Stefan_Michaelis5">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-xing fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+		</li>
+		<li>
+                  <a href="https://de.linkedin.com/in/stefanmichaelis">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+		</li>
+		<li>
+                  <a href="https://twitter.com/stmichaelis">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+		</li>
+		<li>
+                  <a href="https://github.com/stmichaelis">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+		</li>
+              </ul>
+	      <p class="copyright text-muted"><a href="/contact/" rel="nofollow">Impressum</a>
+		<a href="/contact/#datenschutz" rel="nofollow">Datenschutz</a>
+	      </p>
+            </div>
+          </div>
+	</div>
+    </footer>
+
+    
+    
+    
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/clean-blog.js"></script>
+    <script src="/js/shariff.min.js"></script>
+
+    
+
+    <script language="javascript">
+      $(document).ready(function() {
+	  var backgroundImage = [
+	      "Amrum_Duenen.jpg",
+	      "Amrum_Leuchtturm.jpg",
+	      "Amrum_Sonnenuntergang.jpg",
+	      "Australien_Bogen.jpg",
+	      "Australien_Felsen.jpg",
+	      "Australien_Kaenguruhs.jpg",
+	      "Australien_Kueste.jpg",
+	      "Australien_Landschaft.jpg",
+	      "Australien_Landschaft2.jpg",
+	      "Australien_Melbourne.jpg",
+	      "Australien_Muschel.jpg",
+	      "Australien_Sonnenuntergang2.jpg",
+	      "Australien_Wasserfall.jpg",
+	      "Australien_Wineglass.jpg",
+	      "Australien_Wineglass2.jpg",
+	      "Bayern_Nebel.jpg",
+	      "Bayern_Sonnenaufgang.jpg",
+	      "Bayern_Sonnenaufgang2.jpg",
+	      "Dortmund_Westfalenpark.jpg",
+	      "Dortmund_Zechenrad.jpg",
+	      "Fuerteventura_Autowrack.jpg",
+	      "Fuerteventura_Landschaft.jpg",
+	      "Fuerteventura_Landschaft2.jpg",
+	      "Fuerteventura_Landschaft3.jpg",
+	      "Fuerteventura_Papageienblume.jpg",
+	      "Hamburg.jpg",
+	      "Holland_Segeln.jpg",
+	      "Holland_Segeln2.jpg",
+	      "Koeln_Dom.jpg",
+	      "Malediven_Dhoni.jpg",
+	      "Malediven_Insel.jpg",
+	      "Malediven_Insel2.jpg",
+	      "Malediven_Koralle.jpg",
+	      "Malediven_Sonnenuntergang.jpg",
+	      "Malediven_Unterwasser.jpg",
+	      "Malediven_Wasserflugzeug.jpg",
+	      "Malediven_Wolken.jpg",
+	      "Mallorca_Kueste.jpg",
+	      "Mallorca_Palma.jpg",
+	      "Mallorca_Pfau.jpg",
+	      "Mallorca_Pflanze.jpg",
+	      "Mallorca_Tropfsteinhoehle.jpg",
+	      "Moselschleife.jpg",
+	      "Tuerkei_Festung.jpg",
+	      "Tuerkei_Hoehle.jpg",
+	      "Tuerkei_Theater.jpg",
+	      "Tuerkei_Wasserfall.jpg",
+	  ]
+	  var urlParams = new URLSearchParams(window.location.search);
+	  var backgroundId = urlParams.get('b');
+	  if (!urlParams.has('b')) {
+	      backgroundId = Math.floor(Math.random() * backgroundImage.length);
+	  }
+	  
+	  $('.navbar-nav li a').each(function() {
+	      $(this).attr("href", $(this).attr("href")+"?b="+backgroundId);
+	  })
+	  
+	  var backgroundImageURL = "/images/background/"+backgroundImage[backgroundId]
+	  $("#pageheader").css("background-image", "url("+backgroundImageURL+")");
+	  
+	  var backgroundText = $(".backgroundtext");
+	  if (backgroundText.length > 0) {
+	      $(".backgroundtext").eq(backgroundId).css("display", "");
+	  }
+      })
+    </script>
+</body>
+
+</html>
+

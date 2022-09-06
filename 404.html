@@ -30,9 +30,6 @@
     <title>Stefan Michaelis - Blog</title>
 
     
-    <link href="https://blog.stefan-michaelis.name/index.xml" rel="alternate" type="application/rss+xml" title="Stefan Michaelis - Blog" />
-    <link href="https://blog.stefan-michaelis.name/index.xml" rel="feed" type="application/rss+xml" title="Stefan Michaelis - Blog" />
-    
 
     
     <link href="https://blog.stefan-michaelis.name/css/bootstrap.min.css" rel="stylesheet">
@@ -72,14 +69,16 @@
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
   <ul class="nav navbar-nav navbar-right">
     <li>
-      <a href="https://blog.stefan-michaelis.name">Blog</a>
+      <a href="/blog/">Blog</a>
     </li>
     <li>
-      <a href="//www.stefan-michaelis.name/technology/de">Projekte</a>
+      <a href="/projects/">Projekte</a>
     </li>
-
     <li>
-      <a href="//www.stefan-michaelis.name/contact/de" rel="nofollow">Kontakt</a>
+      <a href="/background/">Hintergrund</a>
+    </li>
+    <li>
+      <a href="/contact/" rel="nofollow">Kontakt</a>
     </li>
   </ul>
 </div>
@@ -109,7 +108,7 @@
     <div class="container">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-preview">
-          <p class="post-meta"><a href="">Index</a>
+          <p class="post-meta"><a href="https://blog.stefan-michaelis.name/404.html">Index</a>
             <br />
           </p>
         </div>
@@ -127,15 +126,6 @@
           <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
               <ul class="list-inline text-center">
-		
-		<li>
-                  <a href="https://blog.stefan-michaelis.name/index.xml" type="application/rss+xml" target="_blank">
-                    <span class="fa-stack fa-lg">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                    </span>
-                  </a>
-		</li>
 		
 		<li>
                   <script language="Javascript" type="text/javascript">
@@ -190,8 +180,8 @@
                   </a>
 		</li>
               </ul>
-	      <p class="copyright text-muted"><a href="//www.stefan-michaelis.name/contact/de" rel="nofollow">Impressum</a>
-		<a href="//www.stefan-michaelis.name/contact/de#privacy" rel="nofollow">Datenschutz</a>
+	      <p class="copyright text-muted"><a href="/contact/" rel="nofollow">Impressum</a>
+		<a href="/contact/#datenschutz" rel="nofollow">Datenschutz</a>
 	      </p>
             </div>
           </div>
@@ -202,19 +192,89 @@
     
     
     
-    <script src="https://blog.stefan-michaelis.name/js/jquery.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
 
     
     
     
-    <script src="https://blog.stefan-michaelis.name/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
     
-    <script src="https://blog.stefan-michaelis.name/js/clean-blog.js"></script>
-    <script src="https://blog.stefan-michaelis.name/js/shariff.min.js"></script>
+    <script src="/js/clean-blog.js"></script>
+    <script src="/js/shariff.min.js"></script>
 
     
 
+    <script language="javascript">
+      $(document).ready(function() {
+	  var backgroundImage = [
+	      "Amrum_Duenen.jpg",
+	      "Amrum_Leuchtturm.jpg",
+	      "Amrum_Sonnenuntergang.jpg",
+	      "Australien_Bogen.jpg",
+	      "Australien_Felsen.jpg",
+	      "Australien_Kaenguruhs.jpg",
+	      "Australien_Kueste.jpg",
+	      "Australien_Landschaft.jpg",
+	      "Australien_Landschaft2.jpg",
+	      "Australien_Melbourne.jpg",
+	      "Australien_Muschel.jpg",
+	      "Australien_Sonnenuntergang2.jpg",
+	      "Australien_Wasserfall.jpg",
+	      "Australien_Wineglass.jpg",
+	      "Australien_Wineglass2.jpg",
+	      "Bayern_Nebel.jpg",
+	      "Bayern_Sonnenaufgang.jpg",
+	      "Bayern_Sonnenaufgang2.jpg",
+	      "Dortmund_Westfalenpark.jpg",
+	      "Dortmund_Zechenrad.jpg",
+	      "Fuerteventura_Autowrack.jpg",
+	      "Fuerteventura_Landschaft.jpg",
+	      "Fuerteventura_Landschaft2.jpg",
+	      "Fuerteventura_Landschaft3.jpg",
+	      "Fuerteventura_Papageienblume.jpg",
+	      "Hamburg.jpg",
+	      "Holland_Segeln.jpg",
+	      "Holland_Segeln2.jpg",
+	      "Koeln_Dom.jpg",
+	      "Malediven_Dhoni.jpg",
+	      "Malediven_Insel.jpg",
+	      "Malediven_Insel2.jpg",
+	      "Malediven_Koralle.jpg",
+	      "Malediven_Sonnenuntergang.jpg",
+	      "Malediven_Unterwasser.jpg",
+	      "Malediven_Wasserflugzeug.jpg",
+	      "Malediven_Wolken.jpg",
+	      "Mallorca_Kueste.jpg",
+	      "Mallorca_Palma.jpg",
+	      "Mallorca_Pfau.jpg",
+	      "Mallorca_Pflanze.jpg",
+	      "Mallorca_Tropfsteinhoehle.jpg",
+	      "Moselschleife.jpg",
+	      "Tuerkei_Festung.jpg",
+	      "Tuerkei_Hoehle.jpg",
+	      "Tuerkei_Theater.jpg",
+	      "Tuerkei_Wasserfall.jpg",
+	  ]
+	  var urlParams = new URLSearchParams(window.location.search);
+	  var backgroundId = urlParams.get('b');
+	  if (!urlParams.has('b')) {
+	      backgroundId = Math.floor(Math.random() * backgroundImage.length);
+	  }
+	  
+	  $('.navbar-nav li a').each(function() {
+	      $(this).attr("href", $(this).attr("href")+"?b="+backgroundId);
+	  })
+	  
+	  var backgroundImageURL = "/images/background/"+backgroundImage[backgroundId]
+	  $("#pageheader").css("background-image", "url("+backgroundImageURL+")");
+	  
+	  var backgroundText = $(".backgroundtext");
+	  if (backgroundText.length > 0) {
+	      $(".backgroundtext").eq(backgroundId).css("display", "");
+	  }
+      })
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,1713 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stefan Michaelis - Blog</title>
+    <link>https://blog.stefan-michaelis.name/categories/iota/</link>
+    <description>Recent content on Stefan Michaelis - Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de</language>
+    <lastBuildDate>Wed, 04 Sep 2019 19:01:24 +0200</lastBuildDate>
+    
+        <atom:link href="https://blog.stefan-michaelis.name/categories/iota/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Geocache Transposed - Teil 7 - Ausblick</title>
+      <link>https://blog.stefan-michaelis.name/blog/iota/geocachet/7-ausblick/</link>
+      <pubDate>Wed, 04 Sep 2019 19:01:24 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/blog/iota/geocachet/7-ausblick/</guid>
+      <description>&lt;p&gt;Dies ist Teil 7 und der letzte Teil über den Bau eines Geocache
+Transposed (GCT), einer verschlossenen Box, die nur an einem geheimen
+Ort geöffnet wird. Der folgende Beitrag zeigt die fertige Kiste und
+ein paar Rückblicke auf die Bauphase. Teil 1 der Serie ist hier zu
+finden: &lt;a href=&#34;https://blog.stefan-michaelis.name/blog/iota/geocachet/1-die-story/&#34;&gt;GCT Teil 1&lt;/a&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/geocachet/KisteFertig.jpg&#34; alt=&#34;Bild der fertigen GCT-Box&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Was für eine lange, seltsame Reise...&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Unterschätzt werden sollte nicht, wie &lt;em&gt;robust&lt;/em&gt; der
+Verriegelungsmechanismus sein muss. Natürlich wird kein Safe
+gebaut, aber zumindest sollte er einen starken Zug überstehen. Es
+soll so etwas wie neugierige Schwiegermütter geben, die nicht
+verstehen, dass die Box verschlossen und nicht einfach so geöffnet
+werden kann.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bei der Auswahl der Zielorte sollten alle erreichbar sein, ohne
+dass ein Flugzeug genommen werden muss. Man stelle sich sonst den
+folgenden Dialog beim Sicherheitspesonal vor, die beim
+Durchleuchten die gesamte Elektronik gesehen haben: &lt;kbd&gt;Ist das ihre
+Kiste?&lt;/kbd&gt; &lt;code&gt;Ja.&lt;/code&gt; &lt;kbd&gt;Machen sie mal auf.&lt;/kbd&gt; &lt;code&gt;Kann ich nicht.&lt;/code&gt; &lt;kbd&gt;Was ist denn da
+drin?&lt;/kbd&gt; &lt;code&gt;Weiß ich nicht...&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GPS funktioniert in Innenräumen nicht. Ich dachte, das wäre
+bekannt, zusätzlich wird &amp;ldquo;Suche nach GPS-Signal&amp;rdquo; angezeigt, was deutlich
+macht, dass man die Box nach draußen bringen sollte. Ich lag
+falsch.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ich empfehle dringend, die Möglichkeit eine externe
+Backup-Batterie zu nutzen in die Box einzubauen. Die
+Sekundärbatterie sollte direkt zusammen mit der Box mitgegeben
+werden. Mehrere Kilometer zu reisen, um festzustellen, dass die
+interne Batterie leer ist, ist vielleicht nicht so lustig.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Erstaunlich schwierig scheint es zu sein, von einer
+Entfernungsangabe auf mögliche Orte zu schließen. Kennt jemand eine
+Software, die Kreise um eine Position ziehen kann? Google Earth
+kann dies wohl in der kommerziellen Version. Was ist aus dem guten
+alten Kartenmaterial und einem Zirkel geworden?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Der Pololu Power Switch schaltet nicht nur den Arduino &lt;em&gt;ein&lt;/em&gt;,
+sondern auch durch einen zweiten Druck auf den Druckknopf
+wieder &lt;em&gt;aus&lt;/em&gt;. Lustig, die Gesichter über einen vergeudeten Versuch zu sehen.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Die Reise sollte kurz und unterhaltsam gehalten werden. Orte mit
+einer Bedeutung für den Beschenkten sind dabei besonders
+schön. Einige zusätzliche Hinweise helfen auch. Das Konzept, das
+nächste Ziel triangulieren zu müssen, auch spannend zu halten, lebt von einer
+schönen Auswahl an Zielen.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Die Ideen für die Erweiterung der Box sind endlos: Nicht nur die
+Anzahl der Versuche begrenzen, sondern auch die Zeit (sollte
+über GPS abrufbar sein). Senden von SMS/Tweets über ein
+GSM-Modul. Die Möglichkeit, weitere Rätsel einzubauen, z.B. über
+eine Tastatur in der Box. Bilderkennung vor Ort über eine Kamera,
+usw.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Abschließend muss ich sagen, dass der Bau dieser Box eine großartige
+persönliche Erfahrung war, die ich wirklich empfehlen kann. Es dauerte
+etwa 3 Monate (ein paar Abende und Wochenenden), bis ich das Projekt
+vom Entwurf bis zur Fertigstellung abgeschlossen hatte.  Meine Box ist
+natürlich weder die einzige noch die erste. Es finden sich viele
+weitere Varianten im Internet:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Das erste Original: &lt;a href=&#34;http://arduiniana.org/projects/the-reverse-geo-cache-puzzle/&#34;&gt;http://arduiniana.org/projects/the-reverse-geo-cache-puzzle/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mini-Version: &lt;a href=&#34;http://www.jave.de/blog2/?p=71&#34;&gt;http://www.jave.de/blog2/?p=71&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Die frust-romantische Box: &lt;a href=&#34;http://newbrightidea.com/2010/01/15/the-frustromantic-box-part-1-intro/&#34;&gt;http://newbrightidea.com/2010/01/15/the-frustromantic-box-part-1-intro/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Die Deluxe-Box, inklusive Kamera:
+&lt;a href=&#34;http://imakeprojects.com/Projects/deluxe-reverse-geocache/&#34;&gt;http://imakeprojects.com/Projects/deluxe-reverse-geocache/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Eine Adaption der hier gezeigten Box durch Thomas Liebig: &lt;a href=&#34;http://www.thomas-liebig.eu/wordpress/building-a-geo-cache-transposed-gct/&#34;&gt;http://www.thomas-liebig.eu/wordpress/building-a-geo-cache-transposed-gct/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Geocache Transposed - Teil 6 - Die Software, noch mehr Details</title>
+      <link>https://blog.stefan-michaelis.name/blog/iota/geocachet/6-die-software-details2/</link>
+      <pubDate>Wed, 28 Aug 2019 19:01:24 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/blog/iota/geocachet/6-die-software-details2/</guid>
+      <description>&lt;p&gt;Dies ist Teil 6 über den Bau eines Geocache Transposed (GCT), einer
+verschlossenen Box, die nur an einem geheimen Ort geöffnet wird. Der
+folgende Beitrag beschreibt noch weitere Details wie den Testmodus bei
+der Implementierung der Software. Teil 1 der
+Serie ist hier zu finden: &lt;a href=&#34;https://blog.stefan-michaelis.name/blog/iota/geocachet/1-die-story/&#34;&gt;GCT Teil 1&lt;/a&gt;&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/geocachet/NahaufnahmeDisplayGPS.jpg&#34; alt=&#34;Displayanzeige Suche GPS-Signal&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Suche GPS-Signal...&lt;/div&gt;
+
+&lt;p&gt;Für die Freigabe der Software auf
+&lt;a href=&#34;https://github.com/stmichaelis/geocachet&#34;&gt;Github&lt;/a&gt; habe ich mich
+entschieden, alle Nachrichten, die über lcdSerial auf dem
+LCD-Bildschirm gedruckt wurden, auf &lt;em&gt;Deutsch&lt;/em&gt; zu lassen. Der Grund
+dafür ist: Ich hatte wirklich Probleme damit, Umlaute (ä, ü, ö)
+korrekt anzuzeigen. Es hat mich einige Zeit gekostet, zu bemerken,
+dass der Treiberchip für das LCD in zwei Versionen existiert:
+Europäisch und asiatisch. Während der asiatische Chip zumindest einige
+Zeichen zur Verfügung stellt, die wie deutsche Kleinbuchstaben
+aussehen, konnte ich keinen Weg finden, die Software mit der richtigen
+Kodierung zu speichern, um sie auch richtig anzuzeigen. Am Ende sende ich
+das korrekte Byte Brute Force an die LCD, z.B. über
+lcdSerial.print(225, BYTE);&lt;/p&gt;
+&lt;p&gt;Um das Testen des gesamten Setups zu erleichtern, z.B. um das Ver- und
+Entriegeln zu ermöglichen, habe ich der Software einen GPS-Testmodus
+hinzugefügt. Dies überspringt das Lesen von realen Koordinaten aus dem
+GPS, sondern liest vielmehr Koordinaten aus dem
+test_latlons-Array. Wird die Definition &lt;strong&gt;GPS_Testing&lt;/strong&gt;
+zu Beginn der Software einkommentiert, wird dieser Testmodus aktiviert. Ein
+Koordinatenpaar wird zufällig aus der Testliste ausgewählt und für
+die Entfernungsberechnung genutzt. Ich empfehle, dafür nicht
+mehr als drei Ziele im Zielarray zu verwenden, da es bei höheren
+Werten unwahrscheinlich ist, die aktuelle Zielposition zufällig aus
+dem Testarray auszuwählen. Natürlich sollten die Koordinaten des
+Zielarrays in das test_latlons-Array aufgenommen werden, da ansonsten
+niemals ein Ziel erreicht wird.&lt;/p&gt;
+&lt;p&gt;Bei jeder Aktivierung speichert die Box die Koordinaten der aktuellen
+Position im EEPROM. Die Idee war, dass man später die Koordinaten
+abrufen und die Reise auf einer Karte nachvollziehen kann. Aus
+Datenschutzgründen sollte der Beschenkte darüber allerdings informiert
+sein. Die erfassten Koordinaten werden über den internen seriellen
+Anschluss an einen PC in der Phase &lt;strong&gt;SEND_COORDS&lt;/strong&gt; gesendet. Diese
+Phase wird nach dem Abschalten aktiviert und somit nur erreicht, wenn
+das Arduino-Board ohne Netzschalter direkt an eine Stromquelle
+angeschlossen ist, z.B. beim Anschluss an den PC über USB. Damit
+lassen sich die Koordinaten in der Konsole der
+Arduino-Entwicklungsumgebung ansehen.&lt;/p&gt;
+&lt;p&gt;Schließlich ermöglicht die Box das Zurücksetzen aller Zähler über
+einen speziellen Reset-Befehl. Nachdem die gespeicherten Koordinaten
+an den PC gesendet wurden, hört die Box auf eingehende Zeichen auf dem
+seriellen Gerät. Wenn die Zeichenkette &lt;em&gt;reset&lt;/em&gt; gefunden wurde, werden
+alle Zähler auf 0 gesetzt. Um diesen Befehl an die Box zu senden,
+muss die Konsole in der Arduino IDE geöffnet sein und &lt;em&gt;reset&lt;/em&gt; gefolgt
+von der Entertaste eingegeben werden.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Geocache Transposed - Teil 5 - Die Software, Details</title>
+      <link>https://blog.stefan-michaelis.name/blog/iota/geocachet/5-die-software-details/</link>
+      <pubDate>Wed, 21 Aug 2019 19:01:24 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/blog/iota/geocachet/5-die-software-details/</guid>
+      <description>&lt;p&gt;Dies ist Teil 5 über den Bau eines Geocache Transposed (GCT), einer
+verschlossenen Box, die nur an einem geheimen Ort geöffnet wird. Der
+folgende Beitrag zeigt ein paar Details zum Ablauf der Software auf
+dem Mikrocontroller. Teil 1 der
+Serie ist hier zu finden: &lt;a href=&#34;https://blog.stefan-michaelis.name/blog/iota/geocachet/1-die-story/&#34;&gt;GCT Teil 1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ein Arduino-Programm besteht typischerweise aus zwei Hauptteilen: dem
+Setup, das einmal beim Einschalten aufgerufen wird, und der Schleife,
+die wiederholend bis zum Ausschalten aufgerufen wird.&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+     &lt;div class=&#34;col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1&#34;&gt;
+     	  &lt;img src=&#34;https://blog.stefan-michaelis.name/images/geocachet/Software_Flow.png&#34; class=&#34;img-responsive&#34; /&gt;
+     &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;p&gt;Die Initialisierung ist denkbar einfach: Den korrekten
+Modus aller Ausgabepins einstellen, die dedizierte serielle
+Verbindung aktivieren (zum Senden von Debug-Meldungen an einen angeschlossenen
+PC) und die seriellen Softwareverbindungen zum LCD und GPS-Gerät. Das
+LCD wird nach dem Herstellen der Verbindung zurück gesetzt.&lt;/p&gt;
+&lt;h2 id=&#34;schleife&#34;&gt;Schleife&lt;/h2&gt;
+&lt;p&gt;Das Verhalten der Box ist in verschiedenen Phasen organisiert, die
+jeweils durch einen Wert in der aktuellen Phasenvariablen
+gesteuert werden. Die Switch-Anweisung in der Loop-Methode ruft die
+aktuelle Phase auf. Falls etwas schief geht, schaltet eine
+if-Anweisung am Ende der Schleifen die Box nach zehn Minuten ab.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;INIT Phase:&lt;/strong&gt; Die erste Phase gibt eine Willkommensmeldung auf dem
+LCD-Bildschirm aus, die Anzahl der Versuche und die Nummer des
+aktuellen Ziels. Die Nachricht kann an eine eigene Version angepasst
+und an &lt;em&gt;lcdSerial&lt;/em&gt; gesendet werden. Der Zähler der Versuche wird
+bereits hier erhöht, so dass, wenn die Box ausgeschaltet wird oder das
+GPS kein Signal findet, der Versuch trotzdem gezählt wird. Wenn die
+Anzahl der maximalen Versuche bereits überschritten ist, zeigt das
+Feld eine Meldung an und die Box schaltet sich aus.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SEARCHGPS:&lt;/strong&gt; In dieser Phase wird versucht, einen gültigen GPS-Fix
+zu erhalten. Wird nach 3 Minuten kein Signal gefunden, z.B. wenn die
+Box im Haus aktiviert wird, schaltet diese sich aus, um Strom zu sparen
+(Phase &lt;strong&gt;NO_GPS&lt;/strong&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;EVALPOS:&lt;/strong&gt; Wenn ein Koordinatenpaar vom GPS-Gerät geliefert wurde,
+wird zunächst die Entfernung zu den geheimen Heimatkoordinaten
+berechnet. Befindet sich die Box in der Nähe dieser Koordinaten,
+öffnet sich das Schlüsselfach für einige Sekunden, bevor es wieder
+geschlossen und alle Zähler zurückgesetzt werden. Die Box ist nun
+bereit, um das Abenteuer wieder zu starten.  Andernfalls wird der
+Abstand gegen die aktuellen Sollkoordinaten und die angegebene
+maximale Abweichung um diese Koordinaten geprüft. Alle
+Entfernungsberechnungen werden mit der Haversin-Formel
+(&lt;a href=&#34;https://en.wikipedia.org/wiki/Haversine_formula&#34;&gt;https://en.wikipedia.org/wiki/Haversine_formula&lt;/a&gt;) durchgeführt, die
+auch bei kleinen Entfernungen eine gute Genauigkeit gewährleistet.&lt;/p&gt;
+&lt;p&gt;Wenn die aktuelle Position nicht dem aktuellen Ziel entspricht, wird
+die Entfernung dahin ausgegeben und die Box schaltet sich aus.  Wenn
+die richtige Position gefunden wurde, wird dies angezeigt, und daran
+anschließend die Entfernung zum nächsten Ziel, die Anzahl der
+verbleibenden Versuche und eine Abschaltungsmeldung. Wenn es das
+letzte Ziel der Sequenz war, wird die Box geöffnet.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UNLOCK:&lt;/strong&gt; Endlich geschafft. Die Box öffnet sich nach
+einigen Sekunden und ermöglicht den Zugang zum Schlüssel des
+Vorhängeschlosses.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Geocache Transposed - Teil 4 - Die Software</title>
+      <link>https://blog.stefan-michaelis.name/blog/iota/geocachet/4-die-software/</link>
+      <pubDate>Wed, 14 Aug 2019 19:00:45 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/blog/iota/geocachet/4-die-software/</guid>
+      <description>&lt;p&gt;Dies ist Teil 4 über den Bau eines Geocache Transposed (GCT), einer
+verschlossenen Box, die nur an einem geheimen Ort geöffnet wird. Der
+folgende Beitrag zeigt, wie die Software, die das
+Arduino-Mikrocontroller-Board steuert, konfiguriert wird. Teil 1 der
+Serie ist hier zu finden: &lt;a href=&#34;https://blog.stefan-michaelis.name/blog/iota/geocachet/1-die-story/&#34;&gt;GCT Teil 1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Die Software ist unter der CC BY-NC-SA 3.0 Lizenz auf Github
+veröffentlicht: &lt;a href=&#34;https://github.com/stmichaelis/geocachet&#34;&gt;https://github.com/stmichaelis/geocachet&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;zusätzliche-bibliotheken&#34;&gt;Zusätzliche Bibliotheken&lt;/h2&gt;
+&lt;p&gt;Der Quellcode benötigt mehrere
+Bibliotheken, die in der Arduino-Entwicklungsumgebung installiert
+werden müssen, die alle vom ursprünglichen Erfinder der Idee des umgedrehten
+Geocaches bereitgestellt werden:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Serielle Kommunikation: &lt;a href=&#34;http://arduiniana.org/libraries/newsoftserial/&#34;&gt;http://arduiniana.org/libraries/newsoftserial/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GPS-Decoder: &lt;a href=&#34;http://arduiniana.org/libraries/tinygps/&#34;&gt;http://arduiniana.org/libraries/tinygps/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Streaming zur einfachen Anzeige von LCD-Meldungen:
+&lt;a href=&#34;http://arduiniana.org/libraries/streaming/&#34;&gt;http://arduiniana.org/libraries/streaming/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;konfiguration&#34;&gt;Konfiguration&lt;/h2&gt;
+&lt;p&gt;Die Software ist komplett lauffähig&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, dennoch müssen natürlich
+mindestens die
+Standorte konfiguriert und überprüft werden, ob die Pin-Einstellungen zur
+Verkabelung passen.&lt;/p&gt;
+&lt;p&gt;Einstellungen, die angepasst werden &lt;em&gt;müssen&lt;/em&gt;,
+sind im Quellcode mit TODO gekennzeichnet.  Das Float-Array
+&lt;strong&gt;target_latlon&lt;/strong&gt; nimmt Koordinatenpaare für die Reihenfolge der Ziele,
+die erreicht werden müssen, um die Box zu öffnen. Die ursprüngliche
+Box verwendete nur ein einziges Ziel; die Verwendung von mehr
+als einem erinnert aber eher an die klassische Schnitzeljagd.&lt;/p&gt;
+&lt;p&gt;Das Array &lt;strong&gt;target_dev&lt;/strong&gt; liefert eine maximale Abweichung in Metern um
+jede Zielposition herum. Wenn die Box innerhalb des Kreises um das
+Ziel mit diesem Wert als maximale Abweichung aktiviert ist, gilt die
+Position als erreicht. Ich habe mich dazu entschieden, verschiedene
+Abweichungen für jedes Ziel konfigurieren zu können, da einige Ziele
+eine punktgenaue Landung erfordern sollen, während andere durch eine
+entspannte Positionierung leichter erreichbar sind. Die Größe dieses
+Arrays muss natürlich der Anzahl der Ziele entsprechen. Ist die nicht
+der Fall wird beim Einschalten der Box eine Warnung ausgegeben.&lt;/p&gt;
+&lt;p&gt;Zu beachten ist, dass das GPS an sich eine gewisse Ungenauigkeit
+aufweist und die hier eingestellte Abweichung 10m nicht unterschreiten
+sollte. Die Konstante &lt;strong&gt;MAX_TRIES&lt;/strong&gt; begrenzt die Anzahl der
+Aktivierungen. Wenn diese Zahl erreicht wird, bleibt die Box
+gesperrt. Die Begrenzung erhöht die Spannung (künstliche Verknappung
+erhöht den Wert) und verhindert übermäßige Versuche, die auch noch die
+Batterie entladen.&lt;/p&gt;
+&lt;p&gt;Die nächsten Konstanten definieren die Pins für Verbindungen zu den
+Geräten, die Adressen zum Speichern der Anzahl der verwendeten
+Versuche und einige Geokonstanten.  &lt;strong&gt;HOME_LAT&lt;/strong&gt; und &lt;strong&gt;HOME_LON&lt;/strong&gt;
+markieren schließlich eine geheime Rückstellposition. Wenn an dieser
+Stelle aktiviert, öffnet sich die Box für einige Sekunden, so dass
+genügend Zeit bleibt, den Schlüssel hineinzulegen. Dann schließt diese
+sich wieder und setzt alle Zähler auf Null zurück. Diese Koordinaten
+sollten auf eine Stelle gesetzt werden, an der die Box durch den
+Beschenkten sehr unwahrscheinlich aktiviert wird.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;Das war sie zumindest einmal. Mit den neuen Versionen der genutzten Bibliotheken anscheinend nicht mehr. Aber ein Arbeitskollege hat eine aktualisierte Version der Software erstellt: &lt;a href=&#34;http://www.thomas-liebig.eu/wordpress/building-a-geo-cache-transposed-gct/&#34;&gt;http://www.thomas-liebig.eu/wordpress/building-a-geo-cache-transposed-gct/&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Geocache Transposed - Teil 3 - Der Zusammenbau</title>
+      <link>https://blog.stefan-michaelis.name/blog/iota/geocachet/3-der-zusammenbau/</link>
+      <pubDate>Wed, 07 Aug 2019 19:00:18 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/blog/iota/geocachet/3-der-zusammenbau/</guid>
+      <description>&lt;p&gt;Dies ist Teil 3 über den Bau eines Geocache Transposed (GCT),
+einer verschlossenen Box, die nur an einem geheimen Ort geöffnet
+wird. Der folgende Beitrag zeigt, wie die Hardwareteile
+zusammengefügt werden.&lt;/p&gt;
+&lt;p&gt;Der GCT benötigt mehrere Ausschnitte für das Display, den
+Netzschalter, den Backup-Stromanschluss und eine Abdeckung für den
+Schlüssel zum Öffnen der Box. Alle elektronischen Teile sollten im
+oberen Deckel aufbewahrt werden, daher ist eine Box mit ausreichend
+Platz im Deckel erforderlich. Die Box, die ich benutzt habe, hat 3 cm
+im Inneren des Deckels, was ausreicht, um alles hineinzustellen. Der
+Rest der Box steht dann zur Verfügung, um die versteckten
+Überraschungen zu lagern.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/geocachet/KisteKomplettLoecher_Beschriftung.jpg&#34; alt=&#34;Box mit allen Ausschnitten&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Box mit allen Ausschnitten für Schlüsselfach, Einschalter, LCD und Notstrom&lt;/div&gt;
+
+&lt;p&gt;Die originale Puzzlebox benutzte einen von einem Servo angetriebenen
+Verschluss, um den Deckel geschlossen zu halten. Für meine Version
+habe ich mich entschieden, dieses Konzept ein wenig zu ändern: Die
+Sicherung der Box von innen macht Sie anfällig für Batterie- oder
+Programmierfehler. Im Original ermöglicht ein Backup-Stecker die
+Programmierung zu Umgehen und so das Öffnen der Box an beliebiger
+Stelle. Stattdessen habe ich die Box mit einem Vorhängeschloss
+verschlossen (je größer desto eindrucksvoller) und den Schlüssel in
+der oberen Abdeckung verstaut. So kann ich einen Ersatzschlüssel
+behalten, falls etwas schief geht. Der Servo entriegelt dann die
+Abdeckung im Inneren des Deckels und gibt den Schlüssel frei.&lt;/p&gt;
+&lt;p&gt;Nachdem die Öffnungen in die Abdeckung geschnitten wurden, werden
+die elektronischen Teile auf einer Platte montiert, die später die
+Abdeckung abdichtet und das LCD von oben sichtbar macht. Das folgende
+Bild zeigt das Layout auf der Platte.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/geocachet/HardwareDeckel_Beschriftung.jpg&#34; alt=&#34;Hardware Innendeckel&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Aufbau der Hardware im Innendeckel&lt;/div&gt;
+
+&lt;p&gt;Das Verbinden der Teile ist nicht weiter schwierig. Als Stromquelle
+wurde eine 9V Blockbatterie verwendet. Die Batterie ist mit der
+Eingangsseite des Pololu-Leistungsschalters verlötet, die
+Ausgangsseite des Schalters mit dem Arduino verbunden. Zusätzlich ist
+der Druckknopf mit dem Netzschalter verbunden. Optional habe ich dem
+Netzschalter eine Steckdose parallel zur Stromversorgung
+hinzugefügt. Die Steckdose ist von außen zugänglich. Falls die interne
+Batterie leer ist, lässt sich eine neue einstecken und die Box ist
+wieder betriebsbereit. Dies ist besonders hilfreich, wenn die Box für
+eine neue Tour wiederverwendet wird, ohne die Batterie gegen eine neue
+zu tauschen.&lt;/p&gt;
+&lt;p&gt;Alle anderen Teile (LCD, Servo, GPS) sind mit den Datenleitungen an
+einen Ein-/Ausgangspin des Arduino angeschlossen, während die
+Stromversorgung über den 5V-Ausgang des Arduino-Boards erfolgt. Die
+Umwandlung von 9V-Eingang in 5V-Ausgang wird vom Arduino übernommen.
+In den meisten Fällen sollte es möglich sein, die Kabel direkt in das
+Entwicklungsboard einzustecken. Ausnahmen, bei denen gelötet werden
+muss, sind der Anschluss an den Netzschalter, der Anschluss an 5V oder
+die Verlängerung von Kabeln, z.B. des GPS-Gerätes. Welche Ausgangspins
+an die Geräte angeschlossen werden, spielt dabei keine Rolle. Diese
+müssen später in der Software konfiguriert werden.&lt;/p&gt;
+&lt;p&gt;Etwas schwieriger war die Gestaltung des Schlossmechanismus für den
+Schlüssel. Er sollte robust sein, um den Belastungen standzuhalten,
+aber dennoch nicht zu schwer für den Servo. Schließlich habe ich zwei
+Haken aus gebogenen Metallstreifen an der Schlüssellochabdeckung
+befestigt. Der Servo dreht einen zu einem Bogen gebogenen
+Metallstreifen, der in verriegelter Position in die Haken passt. Das
+obige Bild zeigt den Bogen in geöffneter Position, das folgende Bild
+die Haken an der Unterseite der Schlüssellochabdeckung.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/geocachet/KisteDeckelInnen_Beschriftung.jpg&#34; alt=&#34;Befestigungsklammern Innendeckel&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Befestigungsklammern im Innendeckel zur Verriegelung&lt;/div&gt;
+
+&lt;p&gt;Das Scharnier der Schlüssellochabdeckung wird mit Nieten befestigt, um
+Schrauben zu vermeiden. Während die Box natürlich nicht sehr sicher
+sein muss, vermeide ich gerne den offensichtlichen Eindruck, dass die
+Box mit einem Schraubendreher geöffnet werden könnte.  Wenn alles auf
+dem Board befestigt ist, kann es am Deckel der Box befestigt werden
+und wir sind bereit. Ich habe dem Board ein USB-Kabel hinzugefügt, um
+den Arduino neu programmieren zu können, ohne den Deckel erneut
+öffnen zu müssen.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Geocache Transposed - Teil 2 - Die Hardware</title>
+      <link>https://blog.stefan-michaelis.name/blog/iota/geocachet/2-die-hardware/</link>
+      <pubDate>Wed, 31 Jul 2019 19:59:43 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/blog/iota/geocachet/2-die-hardware/</guid>
+      <description>&lt;p&gt;Dies ist Teil 2 über den Bau eines Geocache Transposed (GCT),
+einer verschlossenen Box, die nur an einem geheimen Ort geöffnet
+wird. Der folgende Beitrag listet die für den Bau benötigten Teile
+auf.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Arduino:&lt;/strong&gt; &lt;a href=&#34;https://arduino.cc/&#34;&gt;https://arduino.cc/&lt;/a&gt; Das berühmte Arduino
+Open-Source-Mikrocontroller-Board bildet das Herzstück des Caches. Die
+Kosten für ein Standard-Entwicklungsboard liegen unter
+25,-€. Geschäfte, die das Board zur Verfügung stellen, sind hier zu
+finden: &lt;a href=&#34;https://store.arduino.cc/distributors&#34;&gt;https://store.arduino.cc/distributors&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Die meisten Firmen bieten auch die anderen elektronischen Bauteile an,
+die für den Geocache benötigt werden.  Die Website des
+Arduino-Projekts bietet viele Tutorials zum Anschließen von
+Geräten an den Controller. Der Arduino besteht aus einem ATMega328 mit
+32KByte Flash für Ihr Programm und 1KByte EEPROM zur Speicherung von
+Werten, was viel Platz für dieses Projekt bietet. Ich habe die
+vorherige Version namens &lt;em&gt;Duemilanove&lt;/em&gt; verwendet, während das aktuelle
+Board&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;em&gt;Uno&lt;/em&gt; heißt, aber beide sollten gut funktionieren.  Der
+Controller selbst wird in C++ programmiert, kompiliert und auf das
+Board über die IDE per USB hochgeladen. Das Board verfügt über mehrere
+Ein-/Ausgangspins und über Buchsen zum einfachen Einstecken der
+Kabel. Für die meisten Teile dieses Projekts ist kein Löten
+erforderlich.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GPS-Empfänger:&lt;/strong&gt; Die Koordinaten der aktuellen Position der Box
+werden von einem GPS-Empfänger geliefert. Jeder Empfänger, der die
+Daten über eine serielle Verbindung sendet, sollte funktionieren. Für
+diese Box habe ich den GPS-Empfänger EM-406 SiRF III von USGlobalSat
+verwendet. Die Kosten liegen bei ca. 40,-€. Der Empfänger verfügt über
+eine integrierte Antenne und kann im Inneren der Box montiert werden,
+sofern die Wände nicht zu dick und nicht aus Metall sind.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LCD:&lt;/strong&gt; Das LCD zeigt Statusinformationen und - was am wichtigsten
+ist - die Entfernung zum Zielort an. Ich benutzte ein serielles
+Display mit 16x2 Zeichen, weiß auf schwarz. Die Kosten betragen
+ca. 22,-€, verfügbar z.B. hier:
+&lt;a href=&#34;http://www.watterott.com/index.php?page=product&amp;amp;info=1336&#34;&gt;http://www.watterott.com/index.php?page=product&amp;amp;info=1336&lt;/a&gt; Ein Display
+mit parallelen Anschlüssen sollte ebenfalls verwendbar sein, da wir
+nicht so viele Anschlüsse des Arduino für die anderen Teile
+benötigen. Oft sind diese Displays billiger und es gibt Bibliotheken
+zur bequemen Ansteuerung.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Netzschalter:&lt;/strong&gt; Die Box sollte so viel Strom wie möglich sparen,
+insbesondere da die Lösung und das Öffnen Monate dauern kann. Mit
+einem Pololu Power Switch&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, siehe
+&lt;a href=&#34;http://www.pololu.com/catalog/product/750&#34;&gt;http://www.pololu.com/catalog/product/750&lt;/a&gt;, 6,-€, kann der Arduino mit
+einem Druckknopf eingeschaltet werden und der Arduino kann sich selbst
+wieder ausschalten. Zu beachten ist, dass es zwei Versionen dieses
+Netzschalters gibt, Standard-Spannung (SV) von 4,5V-20V und
+Kleinspannung (LV) von 2,5-7,0V. Da ich eine 9V-Batterie zur
+Stromversorgung der Box benutzte, kam die SV-Version zum Einsatz.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Servo:&lt;/strong&gt; Ein Servomotor wird benötigt, um die Box schließlich an der
+richtigen Stelle zu öffnen. Jeder Servo sollte es tun, da wir keine
+schweren Hebearbeiten durchführen müssen. Genutzt wurde ein
+Hitec HS-311 Servo, der bei einem lokalen Modellbauer für 8,-€
+gefunden wurde.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Power-Taste:&lt;/strong&gt; Zum Einschalten der Box kann fast jeder billige
+Druckknopf verwendet werden. Hier sollte es etwas Ausgefalleneres sein
+und so entschied ich mich schließlich für einen beleuchteten
+Edelstahlknopf. Mit 10,-€ leider nicht auf der billigen Seite:
+&lt;a href=&#34;https://www.conrad.de/de/p/tru-components-gq16f-10e-j-b-12v-vandalismusgeschuetzter-drucktaster-48-v-dc-2-a-1-x-aus-ein-ip65-tastend-1-st-701855.html&#34;&gt;https://www.conrad.de/de/p/tru-components-gq16f-10e-j-b-12v-vandalismusgeschuetzter-drucktaster-48-v-dc-2-a-1-x-aus-ein-ip65-tastend-1-st-701855.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Verschiedene elektronische Teile:&lt;/strong&gt; Für den Zusammenbau sind noch
+diverse andere Komponente wie Kabel nötig. Ich habe auch eine Buchse
+für den Anschluss einer externen Batterie installiert (Man weiß nie,
+wie lange die integrierte hält. Und ich will nicht in der Nähe sein,
+falls du Hunderte von Kilometern gefahren bist, nur um die Batterie
+leer vorzufinden). Diese Teile summierten sich auf ca. 15,-€.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Weiterer Kleinkram:&lt;/strong&gt; Neben den elektronischen Teilen kommt dann
+noch anderes Material, wie z.B. ein Vorhängeschloss, Scharniere oder
+Nieten hinzu. Für die Kalkulation berücksichtigen wir diese Dinge mit
+zusätzlichen 15,-€.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Die Box:&lt;/strong&gt; Zu guter Letzt wird die Box benötigt, in der alles
+aufbewahrt wird. Das war auch der Gegenstand, der mir die größten
+Kopfschmerzen bereitete. Die Box sollte groß genug sein, um viele
+Dinge zu verstauen, aber dennoch klein genug, um bequem mitgenommen zu
+werden. Bevorzugt wurde Holz, da es für die Ausschnitte einfach zu
+handhaben ist und auch ein dezentes Aussehen haben sollte. Es dauerte
+Stunden, bis ich viele Geschäfte nach einer passenden Box durchsucht
+hatte. Ich war fast kurz davor aufzugeben, als ich eine perfekte
+Schachtel auf meinem Schrank sah. Etwas staubig, aber
+perfekt. Abgeschätzt 30,-€ falls doch eine Kiste gekauft werden muss.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Summe der Kosten:&lt;/strong&gt; Insgesamt belaufen sich die Kosten auf mehr als
+170,-€&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;. Nicht wirklich ein Schnäppchen, aber die Erfahrung war jeden
+Euro wert.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;Anmerkung: Wie im ersten Post beschrieben basiert diese Artikelserie auf älteren Postings noch ursprünglich bei Google+.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;Nicht mehr verfügbar, Alternativen sind aber verlinkt.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;Inzwischen sollten 10%-20% mehr veranschlagt werden.&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Geocache Transposed - Teil 1 - Die Schatztruhe für unterwegs</title>
+      <link>https://blog.stefan-michaelis.name/blog/iota/geocachet/1-die-story/</link>
+      <pubDate>Wed, 24 Jul 2019 19:44:21 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/blog/iota/geocachet/1-die-story/</guid>
+      <description>&lt;p&gt;Vor langer Zeit sagte mir einmal jemand, dass der Computeringenieur ein schlechter
+Beruf ist - um Geschenke für Familie und Freunde zu erschaffen. Maler,
+sicher, diese können leicht ein Bild zeichnen und es
+verschenken. Musiker, ja, sie können zu einem Geburtstag eine schöne
+kleine Melodie spielen oder sogar eine ganze Hymne einem Freund
+widmen. Aber wer mag schon Überraschungen mit Computern und Software?
+Ich würde das auch so sehen, dass einige Optionen ein wenig geekig sein können,
+aber andere können für jeden geeignet sein.  Einer davon ist ein
+Geocache Transposed (GCT, Geocachet).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dieser Post (und die folgenden) sind die Neuauflage einer alten
+Serie von Mini-Postings. Ursprünglich auf Google+ und in Englisch
+gepostet sind diese jetzt nach dem Ende von G+ zu schade um für
+immer verschwunden zu sein. Die Umsetzung der Box liegt inzwischen
+viele Jahre zurück, die Idee dahinter ist aber zeitlos. Soweit
+möglich wurden Links auf ihre Gültigkeit geprüft und ggf. angepasst
+oder gelöscht.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Geocaching ist inzwischen ein bekanntes Hobby, das von billigeren und in
+Smartphones integrierten GPS-Geräten angetrieben wurde. Beim
+Geocaching werden die so genannten Caches an entfernten Orten
+ausgeblendet, während die Koordinaten öffentlich sind. Bei Verwendung
+eines GPS-Geräts muss der Cache gefunden und in den meisten Fällen
+Elemente im Cache ausgetauscht werden. Eine GCT-Box dreht dieses
+Konzept auf den Kopf.&lt;/p&gt;
+&lt;p&gt;Der transponierte Geocache ist der sich bewegende Cache. Wer denkt
+nicht gerne an die eigene Kindheit zurück, das Spiel als Piraten und
+die Jagd nach geheimen Schätzen. Diesmal trägst jeder die Schatzkiste
+mit sich herum und muss das Rätsel lösen um den richtigen Ort zu
+finden.  Die Box selbst ist verschlossen, darin befindet sich ein
+GPS-Empfänger und die Box öffnet sich nur, wenn sie an einem bestimmten Ort
+der Welt aktiviert wird. An der falschen Stelle zeigt das Feld einfach
+die Entfernung zum Ziel an, so dass erraten werden muss wohin die
+Reise gehen soll. Der Begriff Reverse Geocache dafür und das
+ursprüngliche Konzept wurde 2009 von Mikal Hart geprägt:
+&lt;a href=&#34;http://arduiniana.org/projects/the-reverse-geo-cache-puzzle/&#34;&gt;http://arduiniana.org/projects/the-reverse-geo-cache-puzzle/&lt;/a&gt; Er
+entwarf die Box als Geschenk für die Hochzeit seines Freundes und
+hat damit eine Lawine verschiedener Varianten davon ausgelöst.&lt;/p&gt;
+&lt;p&gt;Der Geocachet ist ein großartiges persönliches Geschenk,
+für Hochzeiten, Geburtstage oder Jubiläen. Der Prozess der Erstellung
+einer eigenen Box, der Auswahl des geheimen Ortes und der Beobachtung
+der Versuche, das Rätsel zu lösen, ist an sich schon ein wunderbare
+Sache. Und die Box ist wiederverwendbar, wenn ein neuer
+geheimer Ort programmiert wird. Nachdem ich die ursprünglichen Beiträge
+über die Geschichte des umgekehrten Geocache gelesen hatte, musste ich
+meine eigene Box erstellen. Die folgenden Beiträge beschreiben
+meinen Prozess; vielleicht werden sie auch als Inspiration für noch
+weitere Puzzleboxen dienen.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kreuzvalidierungsfail - Prinzipiell alles richtig gemacht - oder eben doch nicht</title>
+      <link>https://blog.stefan-michaelis.name/blog/iota/kreuzvalidierungsfail/</link>
+      <pubDate>Wed, 14 Nov 2018 19:54:01 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/blog/iota/kreuzvalidierungsfail/</guid>
+      <description>&lt;p&gt;Validierung der Prognosegüte von Modellen des maschinellen Lernens
+über hochgradige Kreuzvalidierung ist der Standard für zuverlässige
+Aussagen. Wie man sich damit leicht selbst auf das Glatteis führen
+kann, davon erzählt diese Geschichte.&lt;/p&gt;
+&lt;h2 id=&#34;hintergrund&#34;&gt;Hintergrund&lt;/h2&gt;
+&lt;h3 id=&#34;sommerschule-für-maschinelles-lernen-unter-ressourcenbeschränkung&#34;&gt;Sommerschule für maschinelles Lernen unter Ressourcenbeschränkung&lt;/h3&gt;
+&lt;p&gt;Der &lt;a href=&#34;https://sfb876.tu-dortmund.de&#34;&gt;Sonderforschungsbereich 876&lt;/a&gt; -
+Große Daten, Kleine Geräte, an der TU Dortmund führt regelmäßig
+Sommerschulen zum Thema &lt;em&gt;Maschinelles Lernen unter
+Ressourcenbeschränkung&lt;/em&gt; durch. Ganz zum Forschungsgebiet des
+Sonderforschungsbereichs passend beschäftigen sich die Sommerschulen
+damit, wie die Analyse großer Daten, insbesondere auch auf
+eingebetteten Systemen und im Verbund mit sehr stark beschränkten
+Rechenressourcen, gelingen kann. Jede Sommerschule versucht dabei
+neben den eigentlichen Kursen auch einen Hands-On-Teil dazu
+anzubieten. Auch die innerhalb kürzester Zeit ausverkaufte
+&lt;a href=&#34;https://sfb876.tu-dortmund.de/SummerSchool2017/index.html&#34;&gt;Sommerschule
+2017&lt;/a&gt; war
+dabei keine Ausnahme.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/phynode/versuchsaufbau.jpg&#34; alt=&#34;Versuchsaufbau&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Versuchsaufbau aus mehreren PhyNode-Boxen&lt;/div&gt;
+
+&lt;p&gt;Das Szenario war dazu an ein Problem aus der Warenlogistik angelegt: Wie
+finde ich im Regal meine Box wieder? Im Versuchsaufbau wurden zwei
+kleine Wände aus Warencontainern aufgebaut, wobei jeder Container mit
+einem im Projekt &lt;a href=&#34;https://sfb876.tu-dortmund.de/SPP/sfb876-a4.html&#34;&gt;Ressourcen-effiziente und verteilte Plattformen zur
+integrativen
+Datenanalyse&lt;/a&gt;
+entwickelten PhyNode-Board versehen ist.&lt;/p&gt;
+&lt;h3 id=&#34;aufgabe&#34;&gt;Aufgabe&lt;/h3&gt;
+&lt;p&gt;Die &lt;a href=&#34;https://ieeexplore.ieee.org/document/7323355&#34;&gt;PhyNodes&lt;/a&gt; sind
+stark ressourcenbeschränkte, autonome und weitestgehend energieautarke
+eingebettete Systeme mit einer Anzahl verschiedener Sensoren.&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+     &lt;div class=&#34;col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1&#34;&gt;
+     	  &lt;img src=&#34;https://blog.stefan-michaelis.name/images/phynode/phynode.jpg&#34; class=&#34;img-responsive&#34; /&gt;
+     &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Die Aufgabe der Sommerschule bestand darin, das Lernen von Positionen
+von Boxen mit angebrachten PhyNodes für mehr als 20 Positionen als
+Labels zu realisieren. Später sollten die Boards selbst durch die
+Software auf den Boards ihre eigenen Positionen im Regal vorhersagen
+können. Die Teilnehmer erhielten dazu Trainingsdaten mit der bekannten
+Position. Die Boards nahmen im Verlauf verschiedene Positionen ein,
+d.h. ID des Boards und Position stimmten nicht immer überein. Die
+Messreihen zwischen dem Umstecken werden im Folgenden als &amp;ldquo;Experiment&amp;rdquo;
+bezeichnet.&lt;/p&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;p&gt;Verfügbare Features waren Zeit, Board ID, Temperatur, Luxwerte,
+Beschleunigungswerte X, Y, Z, RSSI zur Basistation, das Experiment und
+die Position als Label. Positionen bestanden aus zwei Ziffern mit der
+Bedeutung Spalte/Zeile, was für die Modellbildung aber keine Rolle
+spielte, da die Aufgabe zunächst als Klassifikationsproblem behandelt
+wurde.  In Summe standen nach den ersten Experimenten mehr als 330.000
+Messungen zur Verfügung.&lt;/p&gt;
+&lt;h2 id=&#34;modellierung&#34;&gt;Modellierung&lt;/h2&gt;
+&lt;p&gt;Um einen ersten Eindruck von der Schwierigkeit des Problems zu
+bekommen (These: Das geht gar nicht) bietet es sich an beispielsweise
+eine schnelle Analyse mit &lt;a href=&#34;https://rapidminer.com/&#34;&gt;RapidMiner&lt;/a&gt;
+auszuprobieren. Die Daten sind damit fix eingelesen und die
+wichtigsten Methoden mit ein paar Klicks verfügbar.&lt;/p&gt;
+&lt;p&gt;Der simple Ansatz ist dann: Daten einfach mit einem RandomForest mit
+Standardparametern (10 Bäume) gelernt, 10-fache Kreuzvalidierung und
+schauen, wo wir landen.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/phynode/x-validation.png&#34; alt=&#34;X-Validation&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Ausschnitt des Vorgehens bei einer 10-fachen Kreuzvalidierung&lt;/div&gt;
+
+&lt;p&gt;Die Kreuzvalidierung, insbesondere in 10-facher Ausführung stellt
+dabei sicher, dass unter maximaler Ausnutzung der Trainingsdaten ein
+sicheres Bild über die zu erwartende Güte gewonnen wird. Die Daten
+werden dazu gleichmäßig in 10 Blöcke unterteilt, wobei in jedem
+Trainings-/Testlauf ein Block für das Testing zurückbehalten wird,
+während die übrigen 90 % zum Training des Verfahrens zur Verfügung stehen.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/phynode/ConfusionMatrix_RF_Accuracy99.png&#34; alt=&#34;Confusion Matrix Random Forest&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Ausschnitt der Confusion Matrix unter Einsatz eines Random Forest&lt;/div&gt;
+
+&lt;p&gt;Für den Random Forest liefert diese Validierung dann auch eine
+Klassifikationsgüte von über 99 %. Ziel erreicht, perfekte
+Positionsvorhersage mit einfache Mitteln ist möglich, wir können nach
+Hause gehen. Schade um die Aufgabe, für eine Sommerschule war das dann
+wohl doch zu einfach. Naja, es blieb immerhin noch das Problem, das
+trainierte Modell auch auf die Ultra-Low-Power-Plattformen zu bringen.&lt;/p&gt;
+&lt;h2 id=&#34;das-problem&#34;&gt;Das Problem&lt;/h2&gt;
+&lt;p&gt;Mehr als 99 %, und das ohne Aufwand. Hinterlässt aber irgendwie doch
+einen leichten Beigeschmack. Vielleicht lohnt es sich doch einmal
+etwas näher hinter die Kulissen zu schauen. Zur einfachen
+Interpretierbarkeit zeigt die folgende Abbildung den Ausschnitt aus
+einem einfachen Regelmodell anstelle des Random Forest.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/phynode/RuleModel.png&#34; alt=&#34;RuleModel&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Ausschnitt eines einfachen Regel-Modells&lt;/div&gt;
+
+&lt;p&gt;So einfach sieht das Modell aber eigentlich gar nicht aus. Im
+Gegenteil eher überkomplex und overfittet. Auffällig ist die
+Einbeziehung der Beschleunigungs-Werte (Acc_x &amp;hellip;). Welche Rolle
+sollten diese im statischen Fall, d.h. Boards bewegen sich nicht,
+spielen? Eigentlich sollte das Modell unwichtige Attribute selbst
+aussortieren.&lt;/p&gt;
+&lt;p&gt;Es scheint als ob die Beschleunigungs-Werte einen deutlichen Bezug zur
+Position &lt;em&gt;und&lt;/em&gt; zum Experiment haben, quasi wie ein Fingerabdruck.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/phynode/Experiment_Vs_AccelZ_Vs_Board.png&#34; alt=&#34;Experiment Vs AccelZ Vs Board&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Plot von zwei Experimenten (Zeitachse) gegenüber Z-Beschleunigung gegenüber zwei Boards (ID, Farbe)&lt;/div&gt;
+
+&lt;p&gt;Der Plot zeigt beispielhaft den Z-Wert der Beschleunigungsmesser für
+zwei Boards (rot und blau) für zwei Experimente (entlang der Zeitachse
+mit kurzer Unterbrechung zum links und rechts). Die Werte sind im
+Mittel stabil, deutlich voneinander trennbar, und unterscheiden sich
+zwischen den Boards. Und nach dem Umstecken ändert sich der Z-Wert an
+der neuen Position. Was passiert hier? Sind die Sensoren so
+empfindlich, dass die Erdbeschleunigung unterschiedliche Höhen sichtbar
+macht?&lt;/p&gt;
+&lt;p&gt;Wohl eher nicht, eine viel ernüchternde Erklärung: Die Boards scheinen
+nach dem Umstecken immer leicht &lt;em&gt;schief&lt;/em&gt; in den Boxen zu landen, was
+die Unterschiede in den Beschleunigungswerten ausmacht und die
+eindeutige Identifikation eines Boards an einer bestimmten Position
+ermöglicht. Leider sind diese Werte nicht reproduzierbar, damit nur
+Rauschen und nicht für ein in der Realität anwendbares Modell
+geeignet. Sobald Daten eines Experiments für die Aufteilung der
+Kreuzvalidierung für ein Board sowohl im Trainings- als auch im
+Testdatensatz vorkommen erzeugen diese den Fingerabdruck dieses einen
+Boards. Eigentlich sollten aber die Messdaten unabhängig vom Board
+Rückschlüsse auf die Position erlauben. Die Beschleunigungssensoren
+codieren damit (fast eindeutig) das Label (Information Leakage).&lt;/p&gt;
+&lt;p&gt;Und die Situation wird noch schlimmer: In den Daten sind &lt;em&gt;9
+Experimente&lt;/em&gt; enthalten, d.h. 9 mal Umstecken der PhyNode-Boards an
+neue Positionen. In einer 10-fachen stratifizierten Kreuzvalidierung
+stecken damit &lt;em&gt;immer&lt;/em&gt; sowohl in Trainings- als auch Testdaten Anteile
+aus allen Experimenten.&lt;/p&gt;
+&lt;p&gt;Wird die Kreuzvalidierung dagegen auf Batchweise umgestellt mit dem
+Experiment als Attribut für den Train-/Testsplit sehen die Ergebnisse
+ganz anders aus. Jetzt wird immer jeweils ein vollständiges Experiment
+für den Test zurückgehalten während die anderen 8 Experimente dem
+Training dienen. Schon sind es nur noch 10 % Genauigkeit, siehe dazu
+wieder einen Ausschnitt der Konfusionsmatrix für einen Random Forest
+mit derselben Parametrisierung wie zuvor.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/phynode/ConfusionMatrix_RF_Accuracy10.png&#34; alt=&#34;Confusion Matrix mit angepasster Validierung&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Confusion Matrix mit angepasster Validierung über vollständige Experimente&lt;/div&gt;
+
+&lt;p&gt;10 % bei mehr als 20 Labeln ist immer noch besser als raten, aber nicht
+beeindruckend. Immerhin ist damit zumindest die Basis für eine
+korrekte Validierung gelegt und der eigentliche Zyklus aus Modellwahl
+und Parametrisierung kann beginnen.&lt;/p&gt;
+&lt;p&gt;Was sich in dem Szenario dann letztendlich erreichen lässt haben die
+Kollegen anschließend in einer Publikation auf der &lt;a href=&#34;https://ieeexplore.ieee.org/abstract/document/8435922&#34;&gt;Smart SysTech
+2018&lt;/a&gt;
+gezeigt. Mit viel Mühe sind damit immerhin wieder Klassifikationsgüten
+von über 80 % möglich.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Homeserver Teil 2 - Die Software - Von KNX bis OpenHAB</title>
+      <link>https://blog.stefan-michaelis.name/blog/iota/homeserver2/</link>
+      <pubDate>Mon, 08 Oct 2018 19:01:37 +0100</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/blog/iota/homeserver2/</guid>
+      <description>&lt;p&gt;Nachdem im vorherigen &lt;a href=&#34;https://blog.stefan-michaelis.name/blog/iota/homeserver1/&#34;&gt;Beitrag zum Homeserver&lt;/a&gt;
+die Hardware kurz vorgestellt wurde geht es jetzt um die Installation
+der eigentlichen Steuerung. Voraussetzung ist ein lauffähiges &lt;a href=&#34;https://www.raspberrypi.org/downloads/raspbian/&#34;&gt;Raspbian&lt;/a&gt;
+auf dem Pi.&lt;/p&gt;
+&lt;h2 id=&#34;knx-dämon&#34;&gt;KNX-Dämon&lt;/h2&gt;
+&lt;p&gt;Standards, mehr oder weniger offen, für die Ansteuerung von
+Haustechnik gibt es viele. Bei uns kommt primär
+&lt;a href=&#34;https://de.wikipedia.org/wiki/KNX-Standard&#34;&gt;KNX&lt;/a&gt; zum Einsatz, welches den
+Vorteil hat ein offener Industriestandard zu sein und mit
+(hoffentlich) entsprechend langfristiger Unterstützung und
+herstellerunabhängiger Nutzbarkeit der Komponenten einhergeht. Kein
+Vendor-Lock-in mehr. Bislang scheint das für unser System auch
+hervorragend zu funktionieren.&lt;/p&gt;
+&lt;p&gt;Zur Ansteuerung der Komponenten benötigt es aber ein Gateway. Entweder
+eines der kommerziellen IP-Gateways oder wie hier über ein
+Hardwaremodul auf dem Raspberry Pi. Dieses benötigt allerdings noch
+einen Dämon zur Ansteuerung, der sowohl die Programmierung der
+Komponenten für ihre nativen Funktionen erlaubt als auch Zugriff für
+die Steuerzentrale für erweiterte Funktionen.&lt;/p&gt;
+&lt;p&gt;Dazu gibt es mit &lt;a href=&#34;https://github.com/knxd/knxd&#34;&gt;knxd&lt;/a&gt; eine freie
+Alternative, die sich auch problemlos auf dem Raspberry Pi einbinden
+lässt. Mit der zum aktuellen Zeitpunkt verfügbaren Version im
+Hauptentwicklungszweig, 0.14 (genau genommen der Commit
+&lt;code&gt;61a08e5fa5ce4cc6d47309bf80f9abc1fd792637&lt;/code&gt;, da sich Version 0.14 noch
+aktiv in der Entwicklung befand), gab es bislang keine Probleme, weder
+beim Programmieren der Geräte noch bei der Ansteuerung von Komponenten
+über den Homeserver.&lt;/p&gt;
+&lt;p&gt;Für den Raspberry Pi gibt es einen eigenen Abschnitt zur Konfiguration
+der Schnittstelle: &lt;a href=&#34;https://github.com/knxd/knxd#adding-a-tpuart-serial-interface-to-the-raspberry-pi&#34;&gt;https://github.com/knxd/knxd#adding-a-tpuart-serial-interface-to-the-raspberry-pi&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;automatisierung-mit-openhab&#34;&gt;Automatisierung mit OpenHAB&lt;/h2&gt;
+&lt;p&gt;Visualisierung und Ansteuerung der Komponenten läuft dann über das
+freie &lt;a href=&#34;http://www.openhab.org/&#34;&gt;OpenHAB-Projekt&lt;/a&gt;. Für KNX gibt es
+Alternativen, aber insbesondere durch die große Community, die Auswahl
+an Plugins und die Anbindung an unzählige weitere Standards (Jemand
+mit Tesla Modell S hier?) führt an Openhab kaum ein Weg vorbei.&lt;/p&gt;
+&lt;h3 id=&#34;docker-auf-dem-raspberry-pi&#34;&gt;Docker auf dem Raspberry Pi&lt;/h3&gt;
+&lt;p&gt;Die Installation von OpenHAB ist mehr oder weniger
+aufwändig. Glücklicherweise existieren verschiedene Optionen auch für
+den Raspberry. Eine davon ist openHABian als eigene Distribution, die
+Raspbian als OS auf der SD-Karte ersetzt. Eine Alternative ist
+die Nutzung von Docker.&lt;/p&gt;
+&lt;p&gt;Docker ist eine sogenannte Containerisierungs-Lösung, die einzelne
+Software bis hin zu ganzen Betriebssystemen kapselt und (mehr oder
+weniger) unabhängig vom eigentlichen System ausführbar
+macht. Hauptvorteil ist damit der schnelle Wechsel zwischen
+verschiedenen Versionen und im Fehlerfall die Rückkehr auf die letzte
+funktionierende Version ohne sich mit Abhängigkeiten von anderen
+Paketen beschäftigen zu müssen.&lt;/p&gt;
+&lt;p&gt;Die Installation von Docker auf dem Raspberry funktioniert reibungslos
+über die Angabe von &lt;code&gt;curl -sSL https://get.docker.com | sh&lt;/code&gt; auf der
+Kommandozeile, siehe den Artikel &lt;a href=&#34;https://www.raspberrypi.org/blog/docker-comes-to-raspberry-pi/&#34;&gt;Docker comes to Raspberry
+Pi&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Fertige Images gibt es öffentlich verfügbar über den Dockerhub unter
+(&lt;a href=&#34;https://hub.docker.com/r/openhab/openhab/)&#34;&gt;https://hub.docker.com/r/openhab/openhab/)&lt;/a&gt;. Eine mögliche Variante
+für den Raspberry wäre demnach&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        --name openhab &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        --net&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;host &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        --tty &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        -v /etc/localtime:/etc/localtime:ro &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        -v /etc/timezone:/etc/timezone:ro &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        -v openhab_addons:/openhab/addons &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        -v openhab_conf:/openhab/conf &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        -v openhab_userdata:/openhab/userdata &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        -d &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        --restart&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;always &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;        openhab/openhab:2.3.0-armhf-debian
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Die Option &lt;code&gt;--restart=always&lt;/code&gt; sorgt dabei dafür, dass Openhab auch
+nach dem Reboot oder bei Abstürzen automatisch wieder gestartet wird.
+Die &lt;code&gt;-v openhab...&lt;/code&gt;-Optionen machen Ordner außerhalb des Images,
+d.h. vom Raspberry, innerhalb des laufenden Openhab-Containers
+verfügbar. Dies ist insbesondere dann hilfreich wenn die Daten nicht
+auf der SD-Karte des Raspberrys landen sollen, z.B. aus Backup-Gründen
+oder um die Lebenszeit der SD-Karte durch weniger Schreibzyklen zu
+erhöhen. Aus denselben Gründen kann das gesamte Docker-Root, in dem Images und
+Container liegen, beispielsweise auf ein NAS verlagert werden. Dem
+Thema widmet sich der nächste Abschnitt.&lt;/p&gt;
+&lt;p&gt;Um auch den Docker-Daemon bei jedem Boot wieder zu starten (denn auch
+nur dann starten die Container wieder automatisch) muss der Service
+aktiviert werden: &lt;code&gt;sudo systemctl enable docker&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;einbinden-eines-nas&#34;&gt;Einbinden eines NAS&lt;/h3&gt;
+&lt;p&gt;Die SD-Karte im Raspberry Pi ist (meist) klein und mit der Begrenzung
+an Schreibzyklen auch anfällig für Datenverlust (wer hebt bei
+regelmäßigen Vollbackups des mühselig angelegten Systems die
+Hand?). Eine Möglichkeit ist Verzeichnisse mit großen Datenmengen oder
+Dateien mit regelmäßigen Schreibzyklen auf ein Network Attached
+Storage zu verlegen.&lt;/p&gt;
+&lt;p&gt;Im Wesentlichen bedeutet das hier eine Verlegung des
+Docker-Datenverzeichnisses und der
+OpenHAB-Konfiguratinsverzeichnisse. Dazu ist jeweils ein Eintrag in
+der &lt;code&gt;/etc/fstab&lt;/code&gt;-Datei notwendig:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;//&amp;lt;nas-ip&amp;gt;/docker /docker cifs user=&amp;lt;nasuser&amp;gt;,password=&amp;lt;naspasswort&amp;gt;,uid=root,gid=root,sec=ntlmv2,file_mode=0644,dir_mode=0755,nounix,sfu 0 0
+//&amp;lt;nas-ip&amp;gt;/openhab /openhab cifs user=&amp;lt;nasuser&amp;gt;,password=&amp;lt;naspasswort&amp;gt;,uid=root,gid=root,sec=ntlmv2,file_mode=0700,dir_mode=0700,noperm,nounix 0 0
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Zwingend notwendig sind natürlich die Angabe der korrekten IP-Adresse
+zum NAS, die Pfade zu den Ordnern im NAS und die Zugangsdaten eines
+dazu angelegten Users. Wer sein Passwort nicht in der fstab im
+Klartext ablegen möchte, kann dies auch in eine Credentials-Datei
+auslagern&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;Die übrigen Optionen waren für den Betrieb mit unserem NAS ebenfalls
+notwendig, z.B. um die Zugriffsrechte für Docker und den
+OpenHAB-Container passend zu setzen, bei der Einrichtung starten würde
+ich aber zunächst ohne und erst testen, ob der Zugriff auf das eigene
+NAS auch mit den Standardwerten direkt möglich ist.&lt;/p&gt;
+&lt;p&gt;Damit die Ordner nach einem Neustart des Raspberry Pi sicher verfügbar
+sind sollte in der Konfiguration dort per &lt;code&gt;sudo raspi-config&lt;/code&gt; die
+Option &lt;em&gt;Wait for network at boot&lt;/em&gt; aktiviert werden.&lt;/p&gt;
+&lt;p&gt;Um dem Docker-Daemon das neue Root für seine Daten bekannt zu geben
+ist diese in der Datei &lt;code&gt;/etc/docker/daemon.json&lt;/code&gt; zu konfigurieren:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{
+  &amp;#34;storage-driver&amp;#34;: &amp;#34;devicemapper&amp;#34;,
+  &amp;#34;data-root&amp;#34;: &amp;#34;/docker&amp;#34;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Der Storage-Driver legt fest, wie die Images und Container dort
+abgelegt werden. &lt;em&gt;Devicemapper&lt;/em&gt; wird dabei explizit nicht für eine
+Produktiveinsatz empfohlen, da dieses unter anderem Probleme der
+Freigabe gelöschten Speicherplatzes hat. Leider war dies die einzig
+funktionierende Alternative (ymmv&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;) und da nicht ständig neue
+Container angelegt und gelöscht werden spielt der Speicherbedarf
+bislang (und hoffentlich auch zukünftig) keine Rolle.&lt;/p&gt;
+&lt;h3 id=&#34;bedienoberfläche-habpanel&#34;&gt;Bedienoberfläche HABPanel&lt;/h3&gt;
+&lt;p&gt;Der letzte (und aufwändigste, bzw. nie endende) Schritt ist dann die
+Konfiguration von OpenHAB und der Nutzeroberfläche. Dazu existieren
+verschiedene Varianten, besonders passend für den Touchscreen des
+Raspberry Pi ist &lt;a href=&#34;https://docs.openhab.org/addons/uis/habpanel/readme.html&#34;&gt;HABPanel&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Zum Zugriff auf die Aktoren und Sensoren des KNX-Bus zu bekommen
+müssen diese zunächst in der jeweiligen Konfiguration definiert
+werden, siehe
+&lt;a href=&#34;https://www.openhab.org/addons/bindings/knx/&#34;&gt;KNX-Binding&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Den sogenannten Items können dann direkt im Browser den passenden
+Schaltflächen zugeordnet werden.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/habpanel.png&#34; alt=&#34;Habpanel Startseite&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Übersichtsseite in OpenHAB mit HABPanel als Oberfläche&lt;/div&gt;
+
+&lt;p&gt;Der Screenshot zeigt den Übersichtsbildschirm des Wandpanels. Neben
+den wichtigsten zentralen Messdaten wie Temperatur Außen/Wohnen,
+Feuchte und CO2-Gehalt wird per Wetterplugin auch die Wettervorhersage
+für die nächsten zwei Tagen angezeigt. Dazu kommt die Nachrüstung von
+seltener genutzter Funktionalität. So können per herkömmlichem Taster
+die Rollläden in Wohnzimmer und Küche nur gesamt verfahren werden, was
+für 90% der Fälle auch ausreicht. Mit dem Panel dagegen ist auch die
+Einzelsteuerung möglich.&lt;/p&gt;
+&lt;h3 id=&#34;display-auf-dem-wandpanel&#34;&gt;Display auf dem Wandpanel&lt;/h3&gt;
+&lt;p&gt;Die HABPanel-Oberfläche lässt sich auf jedem Gerät im lokalen Netzwerk
+anzeigen und nutzen. Gedacht ist sie allerdings für das Wandpanel aus
+dem Beitrag &lt;a href=&#34;https://blog.stefan-michaelis.name/blog/iota/homeserver1/&#34;&gt;Homeserver - Die Hardware&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Die Anzeige übernehmen kann der Chromium-Browser per &lt;code&gt;DISPLAY=:0 chromium-browser http://localhost:8080/habpanel/index.html --kiosk --incognito&lt;/code&gt;. Die Display-Anweisung ermöglicht den Start auch per
+&lt;code&gt;ssh&lt;/code&gt; aus der Ferne. Im Kiosk-Modus wird direkt im Vollbild gestartet
+ohne Statusleiste und Kontrollbuttons. Der Incognito-Mode letztendlich
+verhindert bei Abstürzen Fehlermeldungen beim Neustart und soll auch
+die Anzahl der Zugriffe auf die Festplatte (bzw. hier auch gerne
+einmal der Flashspeicher, der nicht unendlich viele Schreibzugriffe
+aushält) deutlich reduzieren&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;Üblicherweise stört der Mauszeiger noch während der Bedienung, aber
+mit dem Tool &lt;code&gt;unclutter&lt;/code&gt; kann dieser ausgeblendet werden. Sowohl
+Browser als auch &lt;code&gt;unclutter&lt;/code&gt; können im Autostart bei jedem Neustart
+des Raspberry aktiviert werden: &lt;code&gt;nano ~/.config/lxsession/LXDE-pi/autostart&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;@unclutter -idle 0
+@chromium-browser http://localhost:8080/habpanel/index.html --kiosk --incognito
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In der Standardeinstellung geht das Panel nach einigen Minuten in den
+Standby, wacht aber bei jedem Fingerdruck wieder darauf aus. Zu
+beachten ist lediglich, dass die Touch-Events auch im Schlafmodus an
+die Oberfläche weiter geleitet werden und damit unter Umständen
+Aktionen auslösen können. Zumindest auf der normalen Startseite
+sollten daher die aktiven (klickbaren) Flächen nicht zu groß sein und
+die Benutzer wissen, wo sie zur Aktivierung des Displays drücken dürfen.&lt;/p&gt;
+&lt;p&gt;Werden Änderungen an der HABPanel-Oberfläche vorgenommen lässt sich
+dies bequemer von einem PC aus erledigen. Im Browser im Wandpanel ist
+dann ein Refresh erforderlich, was im Kiosk-Modus gar nicht so einfach
+ist. Über &lt;code&gt;DISPLAY=:0 xdotool key ctrl+F5&lt;/code&gt; kann auch per ssh ein
+Refresh ausgelöst werden und dann ist auch das Wandpanel auf der neuesten
+Version der Nutzeroberfläche. Der Vorteil ist, dass neue Funktionen
+erst einmal begrenzt ausprobiert werden können bevor gleich der
+gesamte Haushalt mit den Neuerung konfrontiert wird.&lt;/p&gt;
+&lt;p&gt;Andere Möglichkeiten das Setup noch zu erweitern wären der Start von
+Chromium über &lt;code&gt;supervise&lt;/code&gt;, welches den Prozess permanent überwacht und
+bei Abstürzen neu startet oder ein Browser-Addon, welches nach einer
+gewissen Idle-Zeit wieder auf die Startseite zurückwechselt.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://wiki.ubuntuusers.de/Samba_Client_cifs/#Optionen&#34;&gt;https://wiki.ubuntuusers.de/Samba_Client_cifs/#Optionen&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;Your mileage may vary&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://productforums.google.com/forum/#!topic/chrome/wgKvdI7Ggj4&#34;&gt;https://productforums.google.com/forum/#!topic/chrome/wgKvdI7Ggj4&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Der Feind im eigenen Haus - Die Rückkehr - Instabiles Internet: Analysen, Spekulationen und unbefriedigende Ergebnisse</title>
+      <link>https://blog.stefan-michaelis.name/blog/iota/der-feind-im-eigenen-haus-die-rueckkehr/</link>
+      <pubDate>Tue, 21 Aug 2018 19:37:45 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/blog/iota/der-feind-im-eigenen-haus-die-rueckkehr/</guid>
+      <description>&lt;p&gt;Jetzt ist es hier einige Zeit recht ruhig gewesen, woran lag das? Nun,
+zu Einem gab es viel zu tun (wann gibt es das nicht?) und zu Anderem
+war da immer noch diese lästige Problem der instabilen
+Internetverbindung, was doch immer irgendwie im Hinterkopf schwebt
+(genaus wie die Klagen zuhause, dass Internet wäre ständig weg). Die
+Analysen und Spekulationen haben entsprechend Zeit gekostet bis
+immerhin ein (nicht ganz befriedigender) Workaround zu finden war.&lt;/p&gt;
+&lt;h2 id=&#34;was-bisher-geschah&#34;&gt;Was bisher geschah&lt;/h2&gt;
+&lt;p&gt;In
+&lt;a href=&#34;https://blog.stefan-michaelis.name/blog/iota/der-feind-in-meinem-haus/&#34;&gt;Der Feind in meinem Haus&lt;/a&gt; ging
+es das erste Mal um Probleme mit dem Internet. Damals brach unregelmäßig
+die Verbindung vom Router zum WAN ab, Ursache unklar. Erste
+Vermutungen brachten einen mDNS-Storm verursacht durch
+Google-castfähige Geräte ins Spiel, was ungefähr auch zu diesem
+Zeitpunkt durch die Presse ging. Das mDNS-Problem war real, die
+(alleinige) Ursache war es aber nicht. Also weitersuchen und
+letztendlich bliebe nur eine Störungsmeldung beim Provider.&lt;/p&gt;
+&lt;h2 id=&#34;ursachensuche&#34;&gt;Ursachensuche&lt;/h2&gt;
+&lt;p&gt;Um dem Provider nicht unpräzise mitteilen zu müssen: &lt;em&gt;Internet fällt
+aus.&lt;/em&gt; Wann, wie oft? &lt;em&gt;Weiß nicht, gefühlt immer dann wenn man es
+braucht.&lt;/em&gt; war der erste Schritt überhaupt einmal mitzuloggen, wann es
+überhaupt zu Problemen kommt. Vielleicht zeigen sich da schon
+Regelmäßigkeiten. Als schnell ein Skript erstellt, das eine externe
+Webseite aufruft, auf dem Raspberry, der sowieso 24/7 läuft,
+installiert und erst einmal Daten gesammelt.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; true&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;dt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;date +%Y%m%d_%H%M%S&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    wget -q --tries&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; --timeout&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; --spider http://&amp;lt;seite_des_vertrauens.com&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; -eq &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$dt&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;:Online&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$dt&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;:Offline&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    sleep &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Die Auswertungen geben dem Gefühl der &amp;ldquo;ständigen&amp;rdquo; Ausfälle wenigstens
+ein konkretes Gesicht: Wie lange, wie oft?&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/ausfallzeitjeTag.png&#34; alt=&#34;Ausfallzeit je Tag&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Ausfallzeiten je Tag zeigen keine offensichtlichbegründbaren Besonderheiten&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tidyverse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lubridate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;du&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;read_delim&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;dsluptime.log&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;delim&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;:&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                 &lt;span class=&#34;n&#34;&gt;col_names&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Time&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Status&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                 &lt;span class=&#34;n&#34;&gt;col_types&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;cols&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                     &lt;span class=&#34;n&#34;&gt;Time&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;col_datetime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%Y%m%d_%H%M%S&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                     &lt;span class=&#34;n&#34;&gt;Status&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;col_factor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;levels&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Offline&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Online&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                 &lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;du&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Status&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;  &lt;span class=&#34;s&#34;&gt;&amp;#34;Offline&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;group_by&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;day&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;wday&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;label&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;week_start&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;day&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;ggplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mapping&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;aes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;day&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;geom_col&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;labs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Wochentag&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Summe Ausfallzeit [Minuten]&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Die Summe der Ausfallzeiten je Tag ist zwar nicht gleichverteilt, aber
+richtig interpretierbar sieht es auch nicht aus. Auffällig sind die im
+Vergleich geringen Ausfälle an Freitagen, das Wochenende ist
+(überraschenderweise) ebenfalls leicht weniger betroffen, weicht aber
+nicht allzu stark von den übrigen Wochentagen ab.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/ausfallzeitjeStunde.png&#34; alt=&#34;Ausfallzeit je Stunde&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Die Ausfallzeiten je Stunde zeigen Häufungen im Abendbereich&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;du&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Status&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;  &lt;span class=&#34;s&#34;&gt;&amp;#34;Offline&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;group_by&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;day&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;hour&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;day&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;ggplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mapping&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;aes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;day&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;geom_col&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;labs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Stunde&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Summe Ausfallzeit [Minuten]&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Bei der Betrachtung der Ausfallzeiten gestaffelt nach Stunden zeigen
+sich die meisten Ausfälle in den Abendstunden, was eine gewisse
+Abhängigkeit von der generellen Auslastung erahnen ließe.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/ausfalldauerTag.png&#34; alt=&#34;Ausfalldauern je Tag&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Die Ausfalldauern je Tag zeigen nur bedingt Korrelationen mit dem Gesamtausfall&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;du&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Status&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;  &lt;span class=&#34;s&#34;&gt;&amp;#34;Offline&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;group_by&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;date&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;as_date&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;date&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;mutate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;wday&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;wday&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;date&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;label&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;week_start&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;ggplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mapping&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;aes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wday&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;geom_boxplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;labs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Wochentag&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Dauer je Ausfall [Minuten]&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://blog.stefan-michaelis.name/images/ausfalldauerStunde.png&#34; alt=&#34;Ausfalldauern je Stunde&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Die Ausfalldauern je Stunde zeigen nur bedingt Korrelationen mit dem Gesamtausfall&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;du&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Status&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;  &lt;span class=&#34;s&#34;&gt;&amp;#34;Offline&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;group_by&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hour&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;hour&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;group_by&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;date&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;as_date&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hour&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;ggplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mapping&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;aes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;factor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hour&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;geom_boxplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;labs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Stunde&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Dauer je Ausfall [Minuten]&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Die Boxplots der Ausfälle aufgeteilt jeweils nach Tagen und Stunden
+(Summe innerhalb jedes einzelnen Tags, jeder einzelnen Stunde an jedem
+Tag; d.h. zwei Ausfälle innerhalb derselben Stunde werden
+zusammengefasst) sollen einen möglichen Zusammenhang zwischen den
+Tagen/Stunden mit insgesamt einer hohen Ausfallzeit und der Dauer
+innerhalb dieser Stunde zeigen. Bestätigt hat sich das nicht. Hohe
+Werte für die Gesamtsumme (z.B. in den Abendstunden) ergeben sich nur
+durch mehr Ausfälle an mehreren Tagen. Insgesamt zeigt sich aber eine
+hohe Varianz wie schlimm/lang ein Ausfall sein kann.&lt;/p&gt;
+&lt;h2 id=&#34;lösungsversuche&#34;&gt;Lösungsversuche&lt;/h2&gt;
+&lt;p&gt;Damit scheint dann aber fast klar: Der Provider ist schuld und der Knoten
+überbucht. In den Abendstunden häufen sich die Ausfälle, wenn alle
+anderen auch Datenverkehr erzeugen. Also wird nichts anderes übrig
+bleiben als ein Supporticket zu öffnen und eine Lösung zu suchen,
+hmpf. So der Plan. Bis wir in Urlaub gefahren sind. Das Ticket ist aus
+Trägheit noch nicht eröffnet, schließlich funktioniert der
+Internetzugang irgendwie ja doch immer mal wieder, und Lust auf
+Gespräche mit der Hotline besteht auch nicht.&lt;/p&gt;
+&lt;p&gt;Und im Urlaub? Nur ein einziger kurzer Miniausfall, was auch alle möglichen
+Ursachen haben kann. Sollte das Problem doch bei uns im Haus liegen?
+Während des Urlaubs war WLAN komplett deaktiviert, Internetverkehr nur
+durch das Skript zum Verbindungsstatus und Kleinigkeiten wie hin und wieder
+mal ein NTP-Synchronisation.&lt;/p&gt;
+&lt;h3 id=&#34;wlan-jetzt-woanders&#34;&gt;WLAN jetzt woanders&lt;/h3&gt;
+&lt;p&gt;Die Easybox 804 wird in Foren gerne für ihr WLAN kritisiert. Falls
+dort das Problem läge, ließe sich das mit anderer Hardware
+lösen. Gefallen ist die Wahl auf einen
+&lt;a href=&#34;https://www.ubnt.com/unifi/unifi-ap-ac-lite/&#34;&gt;Ubiquit Unifi Accesspoint AC AP Lite&lt;/a&gt;,
+der in Bewertungen als recht konfigurierbar und stabil gilt, aber für kleine
+Setups eine recht umständliche zu nutzende Konfigurationssoftware
+besitzt. Die Reichweite der Easybox war zwar in Ordnung, aber ein
+zweiter Accesspoint sollte eh die Abdeckung verbessern.&lt;/p&gt;
+&lt;p&gt;Angeschafft, konfiguriert, WLAN an der Easybox abgeschaltet, und
+geholfen hat es nichts.&lt;/p&gt;
+&lt;p&gt;Bis zu dem Zeitpunkt als während des Ausräumens der Waschmaschine
+wieder der Ruf kam: &amp;ldquo;Kein Internet!&amp;rdquo;. Ein zufälliger Blick auf den
+Switch zeigte zwei wild blinkende LEDs, merkwürdig. Gehören tun sie zum
+neuen Access Point und dem Router. Da war wohl gerade ziemlich Last
+auf der Verbindung und über den Router sollte eben nur Datenverkehr
+ins Internet gehen. Im Wohnzimmer zeigt die beste Gattin der Welt zum
+Beweis des fehlenden Internets auf ihr Huawei P10. Auch andere Geräte
+im Haus haben kein Netz und der Router selbst loggt wieder seine
+WAN-Disconnects. Die Bitte, das P10 auszuschalten zeigt zunächst keine
+Wirkung (wie auch, Android-Smartphones sind ja nicht wirklich aus wenn
+der Bildschirm aus ist, sondern treiben wer weiß was im Hintergrund)
+und erst das echte Herunterfahren bringt die LEDs zum Schweigen,
+bzw. Dauerleuchten. Internet ist prompt auch wieder da&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;logging-voraus&#34;&gt;Logging voraus&lt;/h3&gt;
+&lt;p&gt;Da wäre als ein Kandidat als mögliche Ursache für die
+Verbindungsabbrüche vorhanden, aber was macht das Smartphone da
+überhaupt? Wird der Router überlastet wie potenziell bei den
+mDNS-Broadcasts (wobei der ein wenig Datenverkehr schon aushalten
+sollte).&lt;/p&gt;
+&lt;p&gt;Jetzt hat sich die Anschaffung eines Smart-Switches doch noch
+gelohnt. Den Port zum Festnetz-PC als Monitoringport konfiguriert und
+Wireshark mitlaufen lassen um zu sehen, wie viel Datenverkehr wohin
+überhaupt vorkommt.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Aufzeichnung nur für einen Client (hier das Smartphone)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# und Beschränkung auf 50 MByte-Dateien&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dumpcap -i eth0 - -b filesize:50000 -f &lt;span class=&#34;s2&#34;&gt;&amp;#34;host &amp;lt;clientip&amp;gt;&amp;#34;&lt;/span&gt; -w trace.pcap
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Und in der Tat zeigt das Log gleich mehrere Datenverbindungen zu
+unterschiedlichen IP-Adressen und volle Auslastung im Upload und auch
+nicht wenig im Download, allerdings nicht an der
+Maximalgeschwindigkeit. Immerhin besitzen wir hier eine ultraschnelle
+Breitbandanbindung mit &lt;em&gt;bis zu&lt;/em&gt; 16 MBit/s im Down- und 1 MBit/s im
+Upstream. Und ich habe mal gedacht, wir würden im Ruhrgebiet, einer
+der dichtbesiedelsten Region Deutschlands, und nicht auf dem Land leben.&lt;/p&gt;
+&lt;p&gt;Im P10 selbst lässt sich zusätzlich auch für WLAN mit immerhin
+stündlicher Auflösung der Datenverbrauch von Apps anzeigen. Sortiert
+nach Datenvolumen zeigen sich die üblichen Verdächtigen: Google Fotos,
+Google-Backup-Transferdienst, K9-Mail, WhatsApp, PlayStore, HiCare,
+Wetterdatenservice, Instagram. Im Wireshark-Trace lässt sich dies über
+Reverse-Lookup der IP-Adressen zumindest teilweise nachvollziehen,
+jeglicher auffälliger Traffic würde darin aber vermutlich
+untergehen.&lt;/p&gt;
+&lt;h3 id=&#34;energiesparen&#34;&gt;Energiesparen&lt;/h3&gt;
+&lt;p&gt;Aber warum stürmen die Apps nahezu gleichzeitig auf das WLAN los?
+Eines der Feature (manche bezeichnen es aber auch als Bug) ist das
+aggressive Energiesparen im angepassten Android von Huawei. Kein
+Wunder, wenn die Prozesse beschränkt werden, schlafen liegen und dann
+gesammelt bei jeder sich bietenden Gelegenheit in den Wettbewerb der
+schnellsten Aktualisierung treten. Nur lässt sich daran etwas ändern
+und verschwinden die Verbindungsabbrüche, wenn sich die
+Datenverbindungen zeitlich entzerren lassen?&lt;/p&gt;
+&lt;p&gt;In
+der
+&lt;a href=&#34;https://consumer.huawei.com/de/support/how-to/detail-troubleshooting/?resourceId=898690&#34;&gt;Huawei FAQ&lt;/a&gt; gibt
+es sogar einen eigenen Unterpunkt, der sich mit dem Wechsel auf WLAN
+beschäftigt, was auch der Fall wäre wenn das Gerät aus dem Standby
+erwacht. Zitat:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Nach der Verbindung mit einem WLAN-Netzwerk oder beim Umschalten
+zwischen einer WLAN- und einer mobilen Datenverbindung, warten Sie
+etwa 30 Sekunden, bevor Sie Apps verwenden, und überprüfen Sie dann,
+ob die Internet-Geschwindigkeit normal ist.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Strom sparen (versuchen) bis zum letzten Tropfen, aber die User
+Experience so weit vernachlässigen, dass es eines eigenen FAQ-Eintrags
+bedarf, ts. Das lässt sich technisch auch anders lösen.&lt;/p&gt;
+&lt;p&gt;Ein Versuch dies zu entzerren war die Energiespareinstellungen für die
+intensivsten Apps, insbesondere Fotos, zu deaktivieren und analog den
+unbeschränkten Datenzugriff, auch im Hintergrund, zu aktivieren. Wo
+diese Einstellungen liegen lohnt gar nicht zu dokumentieren, das
+ändert sich anscheinend öfter, denn fast alle Beiträge mit
+Beschreibungen, wo diese zu finden wären, waren schon veraltet. Für
+nicht ganz so wichtige Apps wurde der Datenzugriff gleich ganz
+verboten&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Aber es lässt sich schon erahnen: Gebracht hat es nichts. Über
+Maßnahmen wie Löschen des Caches oder Einstellungen in den Apps müssen
+wir auch nicht weiter reden. Irgendwann einmal hatte Google Fotos auch
+die Einstellung nur beim Laden zu sichern. Gone with the wind&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;bufferbloat&#34;&gt;Bufferbloat&lt;/h3&gt;
+&lt;p&gt;Eigentlich ist das Internet auf Fairness aufgebaut. TCP-Verbindungen
+sollten sich schön die verfügbare Bandbreite aufteilen, so dass für
+jeden etwas bleibt. Klar, insbesondere im schmalen Uplink bleibt dann
+nicht mehr viel übrig, aber ganz ausgehungert sollte keine Verbindung sein. Bis
+die Recherchen rund um die Verbindungsabbrüche auf die Seite
+über &lt;a href=&#34;https://www.bufferbloat.net/projects/&#34;&gt;Bufferbloat&lt;/a&gt; geführt
+haben. Bufferbloat? Aber Speedtests waren doch alle in Ordnung? Nach
+Schwierigkeiten als der Anschluss noch neu war haben sich die
+Speedtests diverser Webseiten fast auf dem Maximum des Anschlusses
+eingependelt.&lt;/p&gt;
+&lt;p&gt;Aber Bufferbloat ist anders. Ist der Puffer bei einem der
+Geräte auf der Wegstrecke, und bei DSL ist dies üblicherweise der Router, zu groß,
+funktionieren die Ausgleichsmechanismen nicht mehr. Einzelne Pakete
+oder langsamere Datenverbindungen stecken dann im Puffer fest, die
+Latenzen schießen in die Höhe. Mittels einem kontinuierlichen Ping
+während eines Speedtests oder Tests
+wie &lt;a href=&#34;https://fast.com/de&#34;&gt;fast.com&lt;/a&gt; von Netflix lässt sich das Problem
+relativ leicht nachvollziehen: Steigt die Latenz während einer
+ausgelasteten Verbindung an gibt es vermutlich ein Bufferbloat-Problem
+und letztendlich leidet auch hier die Nutzererfahrung. Und siehe da:
+Insbesondere im Uplink steigt die Latenz um den Faktor 10. Ist die
+Easybox die Ursache? Danach sieht es aus, müsste aber im Tausch mit
+anderen Geräten verifiziert werden. Vielleicht bekommt man eben doch
+nur das, was man bezahlt.&lt;/p&gt;
+&lt;p&gt;Aber, wir erinnern uns: Es sind nicht nur einzelne Verbindungen und
+Endgeräte, die den Kürzeren ziehen, auch die gesamte WAN-Verbindung
+fällt regelmäßig aus.&lt;/p&gt;
+&lt;h3 id=&#34;workaround-drosseln&#34;&gt;Workaround: Drosseln&lt;/h3&gt;
+&lt;p&gt;So nicht zu erklären sind eben diese Abbrüche. Um eine Überlastung des
+Routers auszuschließen bleibt nur noch die Möglichkeit den
+Datenverkehr unter die Maximalgeschwindigkeit zu drosseln. Der Unifi
+Access Point bietet die Möglichkeit dies für gesamte SSIDs und sogar
+einzelne Clients zu tun. Hurra! Dann wird das P10 eben
+gebremst. Funktioniert aber nicht, hmpf. Scheint ein Problem in der
+aktuellen Firmware zu sein. Laut Ubiquiti-Foren kommt es öfter
+vor, dass Funktionen in der einen Firmware funktionieren und der
+nächsten wieder nicht. Auf Abhilfe zu warten ist nicht zielführend,
+also wieder auf den Smart Switch zurückgegriffen und den ganzen Port
+gedrosselt. Sicherheitshalber auf 10 MBit/s im Down- und 800 KBit/s im
+Uplink, was noch genügend Reserven zur Maximalrate lässt, aber gerade
+für Smartphones beim Browsen nicht allzu sehr auffällt. Dumm nur, dass
+damit auch alle anderen WLAN-Geräte betroffen sind, die vielleicht
+gerne doch in voller Geschwindigkeit im Heimnetz unterwegs gewesen
+wären.&lt;/p&gt;
+&lt;p&gt;Aber siehe da, seit der Drosselung &lt;strong&gt;kein einziger&lt;/strong&gt;
+WAN-Verbindungsabbruch mehr. Natürlich besteht das Problem der im
+Endgerät lokal verstopften Leitung oder von Bufferbloat generell immer
+noch, allerdings in deutlich abgeschwächter Form und der Eindruck
+&lt;em&gt;Internet weg&lt;/em&gt; entsteht gar nicht mehr. Damit lässt sich, zumindest
+temporär, leben.&lt;/p&gt;
+&lt;h2 id=&#34;das-ende&#34;&gt;Das Ende&lt;/h2&gt;
+&lt;p&gt;Die eigentliche Ursache ist aber immer noch unklar und doch ein Fall
+für eine Störungsmeldung an den Provider. Überlastung, nur weil der
+Link voll ausgenutzt wird, dürfte auch im Consumergerät kein Problem
+sein. Mit üblichen Speedtests, auch mehrerer Datenströme parallel,
+ließen sich die Abbrüche nicht nachstellen.&lt;/p&gt;
+&lt;p&gt;Aber nicht zu jedem Ausfall der externen Internetanbindung sah der
+Datenverkehr nach einer wilden Ansammlung angestauter Datenverbindung
+aus. Ein einzelner Datenstrom konnte ebenso zum Ausfall führen.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/quictrace.png&#34; alt=&#34;Wireshark Trace&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Wireshark-Trace einer einzelnen QUIC-Verbindung mit maximaler Uploadrate&lt;/div&gt;
+
+&lt;p&gt;QUIC (alias GQUIC), was ist
+&lt;a href=&#34;https://de.wikipedia.org/wiki/Quick_UDP_Internet_Connections&#34;&gt;QUIC&lt;/a&gt;?
+UDP-Datenverkehr und das auch noch auf Port 443 (https), welchen Sinn
+hat das denn?&lt;/p&gt;
+&lt;p&gt;QUIC ist ein auf UDP basierendes Protokoll, von Google ins Leben
+gerufen, als Testfeld für neue Managementalgorithmen für die
+Datenverbindung, unter anderem weil sich mit den normalen
+Standardisierungsprozessen z.B. auf TCP zu wenig/langsam Einfluss
+nehmen ließe. QUIC selbst ist schon einige Jahre alt (ich werde auch
+alt, das Protokoll kannte ich noch nicht) und findet zunehmend Einsatz in
+Google-Produkten. Und in der Tat zeigt ein Reverse-Lookup für die
+IP-Adresse auf Google-Server. Das muss allerdings noch nicht auf ein
+Google-Produkt als Quelle hinweisen, da unter Umständen auch die
+Nutzung von Google-APIs durch Drittentwickler QUIC nutzen könnte,
+allerdings waren diverse Google-Dienste und insbesondere die Foto-App
+in der Summe des Datenvolumens immer vorne mit dabei.&lt;/p&gt;
+&lt;p&gt;Ein Durchsatztest für QUIC scheint noch nicht zu existieren, das
+Protokoll ist auch noch im Standardisierungsprozess, also fix selbst einen
+Loadtest auf Basis einer freien Implementierung
+entworfen:
+&lt;a href=&#34;https://github.com/stmichaelis/quic-loadtest&#34;&gt;QUIC-Loadtest&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Server&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;quic-loadtest -s &amp;lt;publicip&amp;gt;:4242 -q -p &lt;span class=&#34;m&#34;&gt;1300&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Client&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;quic-loadtest -c &amp;lt;publicip&amp;gt;:4242 -d &lt;span class=&#34;m&#34;&gt;600&lt;/span&gt; -q -p &lt;span class=&#34;m&#34;&gt;1300&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Aber auch dieser Test zeigt wunderbaren Durchsatz im Bereich der
+zugesicherten Geschwindigkeit. Als einziger offensichtlicher
+Unterschied zum Trace bleibt nur noch der Port 443. Also das
+Experiment noch einmal wiederholt, in diesem Durchlauf dann mit
+privilegiertem Port für den Server (entsprechend als Root, schön öffentlich
+erreichbar im gesamten Internet, also bloß schnell mit dem Test sein).&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/netzwerkverlauf.png&#34; alt=&#34;Netzwerkverlauf&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Netzwerkverlauf/Durchsatz bis zum Verbindungsabbruch&lt;/div&gt;
+
+&lt;p&gt;Und jetzt - endlich - bricht die WAN-Verbindung ab. Wiederholungen
+zeigen immer das gleiche Bild: Perfekter Durchsatz auf Port 4242
+(ebenso auf 30, ebenfalls im Bereich der privilegierten Ports, aber
+keinem Protokoll zugeordnet), auf Port 443 dagegen nach 2 Minuten, spätestens
+nach knapp 10 Minuten Zwangstrennung. Ob durch den Router oder von
+außerhalb durch den Provider ist aus dem Log nicht zu entnehmen. Aber
+spätestens ab hier sieht es nach Absicht aus.&lt;/p&gt;
+&lt;p&gt;Warum nur wird die Verbindung nur bei UDP-Verkehr auf dem HTTPS-Port
+und nur unter Volllast beendet? Soll das eine Denial-of-Service-Abwehr
+sein, da UPD-Verkehr auf diesem Port eher ungewöhnlich ist (aber mit
+Google als Hauptnutzer dann doch wieder nicht so ungewöhnlich). Liegt
+einfach ein Fehlkonfiguration vor? Sind die Experimente nicht korrekt
+und das Problem liegt doch irgendwo anders? Um sicher zu gehen wären
+weitere und unabhängige Tests notwendig. Und warum sollte das
+keinem vorher aufgefallen sein? Ein dumme Kombination aus Anschluss,
+Router und Endgeräten?&lt;/p&gt;
+&lt;p&gt;Der First-Level-Support des Providers zeigte sich zwar noch
+interessiert und wollte das Vorgehen zur Reproduktion des Ausfalls an
+die Technik weitergeben, ein Techniker würde sich direkt zeitnah
+melden, passiert ist aber nichts.&lt;/p&gt;
+&lt;p&gt;Eine endgültige Auflösung wird es wohl nicht geben: Der Anschluss beim
+Provider ist sicherheitshalber gekündigt und das P10 hat Kontakt mit
+der Badewanne gehabt&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Remote KDE Desktop mit KRFB - Verbindung und Ports absichern</title>
+      <link>https://blog.stefan-michaelis.name/blog/iota/remote-kde-desktop-mit-krfb/</link>
+      <pubDate>Wed, 25 Apr 2018 19:45:31 +0200</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/blog/iota/remote-kde-desktop-mit-krfb/</guid>
+      <description>&lt;p&gt;Hin und wieder ist es nötig auf den Desktop eines entfernten, offen im
+Internet zu erreichenden, Rechner zuzugreifen. Ein Standardmethode ist
+dabei VNC, zu dem es eine Vielzahl an Implementierungen gibt. Soll der
+normale, bereits laufende, KDE-Desktop frei gegeben werden kann dies
+über die Anwendung &lt;code&gt;krfb&lt;/code&gt; anstelle einer eigenen, neuen VNC-Sitzung
+erfolgen.&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+     &lt;div class=&#34;col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1&#34;&gt;
+     	  &lt;img src=&#34;https://blog.stefan-michaelis.name/images/krfb.png&#34; class=&#34;img-responsive&#34; /&gt;
+     &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Um den Zugriff, insbesondere den unbeaufsichtigten Zugriff,
+abzusichern gibt es dazu ein paar einfache Möglichkeiten:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Sicheres Passwort wählen. Zufällig und lang.&lt;/li&gt;
+&lt;li&gt;Standardport von 5900 auf einen anderen Port ändern. Diese Maßnahme
+alleine bringt nur wenig Sicherheit, sondern hilft nur den Scan auf
+offene VNC-Ports durch Standardskripte zu verhindern.&lt;/li&gt;
+&lt;li&gt;Externen Zugriff auf den VNC-Port verhindern.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Letzteres erzwingt dann den Zugriff auf die Desktopfreigabe durch eine
+sichere Umleitung wie einen ssh-Tunnel.&lt;/p&gt;
+&lt;p&gt;Der Zugriff auf den Port kann per &lt;code&gt;iptables&lt;/code&gt; gesperrt werden:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;iptables -A INPUT -p tcp -i &amp;lt;eth0&amp;gt; --dport &amp;lt;5912&amp;gt; -j DROP
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Werte in spitzen Klammern müssen an das eigene System angepasst
+werden, d.h. der Name des Netzwerkinterfaces und der Port unter dem
+&lt;code&gt;krfb&lt;/code&gt; auf Anfragen horcht. Diese Regel ist nur bis zu einem Neustart
+des Systems gültig.&lt;/p&gt;
+&lt;p&gt;Ein ssh-Tunnel wird dann auf dem Rechner, von dem aus auf die Freigabe
+zugegriffen werden soll, auf der Kommandozeile aufgebaut:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ssh -N -L 5900:&amp;lt;remotehost&amp;gt;:5912 &amp;lt;remotehost&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;&amp;lt;remotehost&amp;gt;&lt;/code&gt; ist die IP-Adresse des entfernten Rechners. Der Zugriff
+auf den Desktop, z.B. mit &lt;code&gt;krdc&lt;/code&gt; als Client erfolgt dann über die
+Angabe von &lt;code&gt;localhost:5900&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Bei Nutzung mit den Standardeinstellungen von &lt;code&gt;krfb&lt;/code&gt; für das
+Framebuffermodul zur Bilderstellung (xcb) und einem
+Multimonitorbetrieb war dabei das Bild des entfernten Rechners
+eingefroren. Abhilfe gebracht hat eine Umstellung auf &lt;code&gt;qt&lt;/code&gt; für das
+Framebuffermodul.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Homeserver - Die Hardware</title>
+      <link>https://blog.stefan-michaelis.name/blog/iota/homeserver1/</link>
+      <pubDate>Wed, 04 Apr 2018 19:53:18 +0100</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/blog/iota/homeserver1/</guid>
+      <description>&lt;p&gt;Das schöne an der Verkabelung mit KNX ist der dezentrale Ansatz und
+die Eigenintelligenz der Komponenten. Fällt eine Komponente aus läuft
+der Rest weiter. Je nach Komponente kann dies zwar unterschiedlich
+fatal sein (bei der Heizungssteuerung fällt direkt eine ganze Etage
+aus. Bei der Spannungsversorgung dann doch das gesamte System&amp;hellip;),
+aber wie oft das vorkommt muss sich im Laufe der Jahre zeigen.&lt;/p&gt;
+&lt;p&gt;Damit ist aber auch schon einmal sichergestellt, dass die
+Grundfunktionen zuverlässig da sind. Nur so richtig &lt;em&gt;intelligent&lt;/em&gt; sind die
+Komponenten dann wieder nicht. Also muss ein eigener Homeserver her,
+der später als Spielwiese (hoffentlich) für die spannenden Experimente
+dient.&lt;/p&gt;
+&lt;p&gt;Im Wohnzimmer sind dazu an einer Stelle Stromanschluss, Ethernetkabel
+und KNX-Leitung vorhanden. Hier wird der Server als zentrale
+Steuereinheit auf Basis des bekannte Raspberry Pi später montiert werden.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_Gehaeuse_Vorderseite.jpg&#34; alt=&#34;Homeserver Vorderseite&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Vorderseite des Homeserver-Gehäuses&lt;/div&gt;
+
+&lt;p&gt;Das Gehäuse wird dazu aus einfachem Sperrholz gefertigt und bekommt
+einen passenden Ausschnitt um das Touchdisplay zur Bedienung
+aufzunehmen.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_Gehaeuse_Rueckseite.jpg&#34; alt=&#34;Homeserver Rückseite&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Homeserver Rückseite&lt;/div&gt;
+
+&lt;p&gt;In der Rückseitenansicht sind die Viertelrundhölzer in den Ecken zu
+sehen die dem Gehäuse einen etwas &amp;ldquo;weicheren&amp;rdquo; Charme verleihen. Das
+Ganze wird verleimt, ggf. verspachtelt und geschliffen, und
+abschließend lackiert&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. Falls sich jemand wundert: Das Gehäuse ist
+recht dick (knapp 6 cm) geworden und der Ausschnitt für das Display
+asymmetrisch im Gehäuse. Optisch ließe sich durch eine kompaktere
+Anordnung der Komponenten sicher eine flachere Bauweise erreichen, so
+ist aber sichergestellt, dass alles später bequem in das Gehäuse
+passt. Insbesondere das Netzteil verschwindet letztendlich im Bereich
+rechts vom Display. Die Dicke erschließt sich beim Blick auf die gestackte
+Anordnung aller Komponenten.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_Display_Rueckseite.jpg&#34; alt=&#34;Homeserver Display&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Display mit Raspberry Pi und KNX-Ankopplung&lt;/div&gt;
+
+&lt;p&gt;Die Hardware besteht aus:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/hardware/raspberrypi/README.md&#34;&gt;Raspberry
+Pi&lt;/a&gt;
+(hier noch in der Version 2, die aktuelle Version 3 sollte aber
+mindestens genauso gut/besser funktionieren), ca. 35 €&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/hardware/display/README.md&#34;&gt;7-Zoll
+Touchdisplay&lt;/a&gt;,
+offizielles Display, ca. 70 €&lt;/li&gt;
+&lt;li&gt;Micro-USB-Netzteil 2,5A, ca. 10 €&lt;/li&gt;
+&lt;li&gt;Micro-SD-Karte 16 GB, ca. 10 €&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://busware.de/tiki-index.php?page=PIG_OW&#34;&gt;PIGATOR-HAT&lt;/a&gt; von
+Busware, ca. 45 € inkl. Befestigungsset. Hierbei handelt es sich um
+das Modul mit Echtzeituhr (RTC) und 1-Wire-Busanschluss. Für 10 € weniger
+gibt es das auch als Aufsteckmodul ohne weitere Funktion. Eine RTC
+ist hilfreich, ließe sich aber auch separat nachrüsten.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://shop.busware.de/product_info.php/cPath/1_32_33/products_id/105&#34;&gt;KNX-Pigator&lt;/a&gt;
+für die Busanbindung, ca. 40 €.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Die letzten beiden Komponenten dienen für den Zugriff auf den KNX-Bus
+und lassen sich über die passende Software auf dem Raspberry Pi auch
+als Router zur Programmierung der Komponenten einsetzen. Schön an
+dieser Lösung ist alle Komponenten passend zueinander und an einem
+Platz zu haben.&lt;/p&gt;
+&lt;p&gt;Da diese Komponenten alle rund um den Raspberry Pi herum entworfen
+sind passen sie übereinander, ergeben aber auch einen entsprechend
+dicken Aufbau. Die Stromversorgung wird am Display eingesteckt und
+über die roten/schwarzen Kabel der Raspberry Pi von dort aus
+betrieben.&lt;/p&gt;
+&lt;p&gt;Alternativ kann auch ein professioneller Router für die
+Elektroverteilung oder eine herkömmliche KNX-USB-Schnittstelle
+eingesetzt werden, was die Programmierung des KNX-Busses auch ohne
+verfügbaren Raspberry Pi ermöglicht.&lt;/p&gt;
+&lt;p&gt;Statt der Kombination Raspberry Pi + Display ist auch eine Variante
+mit Tablet denkbar, welches wiederum zur Steuerung auf eine
+Weboberfläche auf dem Raspberry zugreift.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_Montiert.jpg&#34; alt=&#34;Homeserver montiert&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;div class=&#34;caption&#34;&gt;Fertig an der Wand montierter Homeserver mit Raspbian-Linux&lt;/div&gt;
+
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/Homeserver_MontiertTotale.jpg&#34; alt=&#34;/images/Homeserver_MontiertTotale.jpg&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;p&gt;An der Wand montiert wirkt das gesamte Gehäuse allerdings bei weitem
+nicht so dick und klobig wie noch während der Anfertigung. Als Basis
+für die weitere Software dient ein herkömmliches Raspbian-Linux.&lt;/p&gt;
+&lt;p&gt;Das Grundsystem als Plattform läuft damit, im nächsten Schritt geht es darum
+den Zugriff auf den KNX-Bus zu ermöglichen und auch eine Steuerung zu
+implementieren.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;Notiz an mich: Lackieren ist gar nicht einfach und kein Selbstläufer. Tropfen, Nasen, Flecken, alles dabei. Für das nächste mal besser überlegen und testen wie das Ergebnis professioneller wird.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kalibrierung und Grundeinstellung - Damit alles auf demselben Stand ist</title>
+      <link>https://blog.stefan-michaelis.name/blog/iota/kalibrierung/</link>
+      <pubDate>Wed, 28 Mar 2018 19:29:21 +0100</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/blog/iota/kalibrierung/</guid>
+      <description>&lt;p&gt;Alle Komponenten sind installiert, beschriftet und warten auf die
+Inbetriebnahme. Das Schöne am KNX-Bus ist der dezentrale
+Aufbau. Grundsätzlich bringen alle Komponenten ihre eigene rudimentäre
+Intelligenz mit und funktionieren auch ohne zentrale
+Steuereinheit. Insbesondere für Grundfunktionen wie Licht und Heizung
+ist dies essenziell da diese somit nicht von der Funktion einer
+zentralen Komponente abhängig sind. Für komplexere Regelungen, die
+aber wieder den Alltag nur netter machen, ist der Homeserver dann das
+nette Addon.&lt;/p&gt;
+&lt;h2 id=&#34;raumtemperatur&#34;&gt;Raumtemperatur&lt;/h2&gt;
+&lt;p&gt;Spätestens zum Winter muss die Heizung betriebsbereit sein. Zur
+Überwachung der Raumtemperaturen sind verschiedene Sensoren verfügbar:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Über die &lt;a href=&#34;https://www.jung.de/1987/produkte/technik/knx-system/knx-tastsensoren-f-50/&#34;&gt;Jung Tastsensoren der Serie F50
+Universal&lt;/a&gt;
+steht in jedem Raum ein Sensor am Lichtschalter zur Verfügung&lt;/li&gt;
+&lt;li&gt;Die Jung CO&lt;sub&gt;2&lt;/sub&gt;-Sensoren (Wohn- und Schlafzimmer) stellen ebenfalls die Temperatur
+bereit&lt;/li&gt;
+&lt;li&gt;In den Bädern sind kombiniert Feuchte-/Temperatursensoren der Elsner
+vom Typ TH-UP verbaut&lt;/li&gt;
+&lt;li&gt;Letztendlich noch ein einzelner Raumtemperatursensor MDT
+SCN-TS1UP.01 im Keller&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;hellip;und alle Sensoren zeigen (natürlich) etwas anderes an. Die
+absolut korrekte Temperaturerfassung ist dabei gar nicht entscheidend,
+sondern zur Einstellung der persönlichen Behaglichkeit müssen nur die
+Level zwischen den Sensoren vergleichbar sein.&lt;/p&gt;
+&lt;p&gt;Dementsprechend den Außenfühler der Wetterstation hereingeholt, neben
+jedem einzelnen Sensor platziert und nach einiger Wartezeit den Wert
+dieses Sensors mit den KNX-Sensoren verglichen.&lt;/p&gt;
+&lt;p&gt;Am weitesten entfernt waren dabei die Jung-Sensoren (bis zu ~1,5 K),
+gefolgt von den Elsner-Sensoren, während der MDT-Fühler identisch zur
+(nicht zwangsweise richtigen) Temperatur der Wetterstation war.&lt;/p&gt;
+&lt;p&gt;Auffällig war dabei aber, dass die gemessene Temperatur der Sensoren
+in den Jung-Tastern vom Betriebsmodus abhängig war. Dies bieten ein
+beleuchtetes Mittelfeld neben den eigentlichen Tastflächen. Und die
+Wärmeentwicklung scheint die Sensoren deutlich zu beeinflussen. Das
+lässt sich natürlich in den Einstellungen kompensieren, macht aber
+andere Einstellungen wie einen dunkleren Nachtmodus oder die
+Abschaltung am Tag nicht wirklich praktikabel.&lt;/p&gt;
+&lt;p&gt;Die Elsner-Sensoren weisen im Handbuch darauf hin, dass es durch die
+Wärmeentwicklung der Elektronik zur Beeinflussung der Messung kommt,
+dies aber intern kompensiert wird, die Messwerte allerdings
+dementsprechend erst nach einigen Minuten Laufzeit nach dem
+Einschalten gültig sind.&lt;/p&gt;
+&lt;p&gt;Hier müsste Jung noch einmal nachbessern. Die Unterschiede ließen sich
+zwar extern kompensieren, was aber ziemlich aufwändig ist.&lt;/p&gt;
+&lt;h2 id=&#34;rollläden&#34;&gt;Rollläden&lt;/h2&gt;
+&lt;p&gt;Einmal installiert funktionieren die Rollläden auch direkt auf
+Tastendruck. Um aber später nette Funktionen wie einen automatischen
+Sonnenschutz (nach dem Winter kommt der Sommer) nutzen zu können ist
+es hilfreich absolute Positionen anfahren zu können. Dazu müssen aber
+die Auf- und Abfahrzeiten dem Aktor bekannt gegeben werden. Also
+Stoppuhr herausgeholt und alle Rollläden einmal hoch und wieder
+herunter gefahren. In der Praxis waren die Verfahrzeiten nur gut 50 %
+der voreingestellten Zeiten, was auch Sinn ergibt, denn wer möchte
+schon vorher, dass der Rollläden schon in der Mitte stoppt weil er
+meint er wäre in der Endposition angekommen.&lt;/p&gt;
+&lt;p&gt;In der Anleitung des MDT-Aktors steht dabei noch die Randbemerkung:
+&amp;ldquo;Bei nicht so hochwertigen Motoren können sich die Auf- und
+Abfahrzeiten unterscheiden&amp;rdquo;. Bei uns liegt die Differenz bei immerhin
+2s. Dankeschön.&lt;/p&gt;
+&lt;h2 id=&#34;dimmer&#34;&gt;Dimmer&lt;/h2&gt;
+&lt;p&gt;Bei den Dimmern (zentrale Dimmer in klassischer
+Phasenan-/abschnittstechnik) gibt (sollte) es nicht viel
+einzustellen. Der Lasttyp gehört zumindest dazu.  Auffällig war aber
+immerhin auch bei den von uns installierten Lampen, dass ein Wechsel
+der Kennlinie vom Standard notwendig war. Erst die &amp;ldquo;Logarithmische
+Kennlinie&amp;rdquo; hat ein zufriedenstellendes optisch scheinbares lineares
+Dimmverhalten ergeben.&lt;/p&gt;
+&lt;p&gt;Die Grundeinstellung für den Einschaltwert liegt dabei noch im Bereich
+90 %-70 %. Nur so ist den heutigen LED-Flutlichtern (Warum müssen die
+immer so hell sein? Weil&amp;rsquo;s geht?) auf ein angenehmes Maß beizukommen.&lt;/p&gt;
+&lt;h2 id=&#34;schaltschwelle-präsenzmelder&#34;&gt;Schaltschwelle Präsenzmelder&lt;/h2&gt;
+&lt;p&gt;Letztendlich muss auch die Einschaltschwelle für die Präsenzmelder,
+die üblicherweise in den Fluren als Durchgangsbereichen installiert
+sind, eingestellt werden. Letztendlich ist es hier Geschmackssache ab
+wann dunkel zu dunkel ist. Sollten die Einstellbereiche nicht
+ausreichend lässt sich noch weiterhin über den Reflexionsfaktor der
+Umgebung eine weitere Abstimmungsmöglichkeit konfigurieren (MDT
+Präsenzmelder).&lt;/p&gt;
+&lt;p&gt;Sind alle diese Grundeinstellungen erfolgt steht der weiteren
+Automatisierung im Heim eigentlich nichts weiter im Wege.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Und es wird Licht - Aber wo? - Tastfeldbeschriftung Jung F50 Schalterserie</title>
+      <link>https://blog.stefan-michaelis.name/blog/iota/tastfeldbeschriftung/</link>
+      <pubDate>Wed, 07 Mar 2018 19:36:29 +0100</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/blog/iota/tastfeldbeschriftung/</guid>
+      <description>&lt;p&gt;Die Auswahl der Schalterserie im Haus ist eine Frage des persönlichen
+Geschmacks. Unabhängig von der Auswahl der konkreten Serie müssen aber
+gerade in komplizierten Installationen die Schalter auch entsprechend
+ihrer Funktion beschriftet werden. Bei den KNX-Tastern der Serie F50
+der Firma Jung kann dies bis zu acht verschiedene Funktionen in einem
+Schalter bedeuten.&lt;/p&gt;
+&lt;p&gt;Die Serie F50 besitzt zwischen den eigentlichen Tastern eine
+transparente Fläche aus Kunststoff hinter der die Symbole für die
+Funktionen angebracht werden können. Für die Erstellung der
+Beschriftung bietet der Hersteller eine eigene Webanwendung an:
+&lt;a href=&#34;http://lt.jung.de&#34;&gt;lt.jung.de&lt;/a&gt;. Bis auf kleinere Bugs funktioniert
+diese recht gut und bietet eine ordentliche Auswahl an Symbolen. Die
+fertige Beschriftung lässt sich als PDF für den Ausdruck
+herunterladen. Leider hat sich dann gezeigt, dass die Symbole nicht
+als Vektorgrafik im PDF integriert sind und daher deutlich sichtbare
+Pixel zeigen. Bei genügend großem Abstand zum Schalter fällt dies im
+Alltag vermutlich gar nicht auf, aber trotzdem:&lt;/p&gt;
+&lt;p&gt;Zurück ans Reißbrett und in Inkscape selbst gezeichnet. Neben
+Vektorgrafik hat dies auch erlaubt auf einfache Weise passende Symbole
+selbst zu erstellen. Ein Ausschnitt ist hier zu sehen:&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+     &lt;div class=&#34;col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1&#34;&gt;
+     	  &lt;img src=&#34;https://blog.stefan-michaelis.name/images/Tastfelder_Beispiel.png&#34; class=&#34;img-responsive&#34; /&gt;
+     &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Wer Interesse daran hat findet hier die Vorlage zur eigenen Verfügung:
+&lt;a href=&#34;https://blog.stefan-michaelis.name/images/Tastfeldbeschriftung.svg&#34;&gt;Tastfeldbeschriftung&lt;/a&gt;. Die Datei beinhaltet zwei Layer, einen mit der fertigen
+Beschriftung (die Symbole dürften nicht für jeden Anwendungsfall geeignet sein,
+bzw. ausreichen) und den unteren Layer mit leeren Vorlagen für die
+zwei- und vierfach Tastfelder. Beim Druck ist zu beachten, dass in
+manchen Fällen der Treiber die Seite etwas skaliert. Ein Testausdruck
+auf Papier bevor es z.B. auf Folie geht wird empfohlen.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Wo kommen die Daten her? - Verfügbare Sensorik im Haus</title>
+      <link>https://blog.stefan-michaelis.name/blog/iota/verfuegbare-sensoren/</link>
+      <pubDate>Wed, 21 Feb 2018 21:43:53 +0100</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/blog/iota/verfuegbare-sensoren/</guid>
+      <description>&lt;p&gt;Um ein Haus intelligent werden zu lassen müssen auch passende Daten
+vorliegen. Die Sensorik ist damit die Grundlage um überhaupt etwas
+lernen zu können. Die grundlegende Installation in unserem Haus
+basiert auf KNX. Dieses System vereint dezentral Komponenten aus
+Aktorik und Sensorik auf einem Bus. Grundlagen dazu sind
+bei &lt;a href=&#34;https://de.wikipedia.org/wiki/KNX-Standard&#34;&gt;Wikipedia&lt;/a&gt; zu finden,
+prinzipiell spielt der genaue Standard aber keine Rolle solange
+Sensordaten in verarbeitbarer Form verfügbar sind. Vorteile des
+Systems sind die Offenheit des Standards, der auch eine langfristige
+Verfügbarkeit garantiert, und die Robustheit der Gesamtinstallation
+durch den Verzicht auf einen zentralen Server. Als verbreiteten
+Industriestandard ist es kein Problem sowohl Installateure als auch
+neue Hardware dafür zu finden.&lt;/p&gt;
+&lt;p&gt;Die Installation in unserem Haus ist verhältnismäßig klein gehalten
+und bietet die grundlegenden Funktionen für die Schaltung von Licht
+und Regelung von Heizung und kontrollierter Wohnraumlüftung.&lt;/p&gt;
+&lt;p&gt;Die verfügbare Sensorik besteht aus:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;18 x Temperatursensoren (einer davon Außentemperatur)&lt;/li&gt;
+&lt;li&gt;4 x Feuchtesensoren&lt;/li&gt;
+&lt;li&gt;2 x CO²-Sensoren&lt;/li&gt;
+&lt;li&gt;3 x Helligkeitssensoren außen für die Himmelsrichtungen Ost/Süd/West&lt;/li&gt;
+&lt;li&gt;2 x Leistungsaufnahme für Waschmaschine und Trockner&lt;/li&gt;
+&lt;li&gt;6 x Präsenzdetektion&lt;/li&gt;
+&lt;li&gt;1 x Windgeschwindigkeit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Grundsätzlich ist keiner dieser Sensoren notwendig. Die
+Fußbodenheizung ist über den hydraulischen Abgleich fest eingestellt
+und könnte über die Vorlauftemperatur regeln, die Lüftungsanlage läuft
+nach Zeitprogramm und die Lichtschalter schalten das Licht.&lt;/p&gt;
+&lt;p&gt;Die erste simple Automatisierung betreffen dann die Einzelraumregelung
+über die Temperatursensoren in jedem Raum und die automatische
+Schaltung von Licht in den Durchgangsbereichen und den Fluren und
+damit das Hello-World der Hausautomatisierung.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Internet of Things Automation und das lernende Smart Home - </title>
+      <link>https://blog.stefan-michaelis.name/blog/iota/internet-of-things-automation/</link>
+      <pubDate>Wed, 07 Feb 2018 20:56:11 +0100</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/blog/iota/internet-of-things-automation/</guid>
+      <description>&lt;div class=&#34;row&#34;&gt;
+     &lt;div class=&#34;col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1&#34;&gt;
+     	  &lt;img src=&#34;https://blog.stefan-michaelis.name/images/IntelligentHousePlain.png&#34; class=&#34;img-responsive&#34; /&gt;
+     &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Das Internet der Dinge ist überall, vor allem auch in der öffentlichen
+Wahrnehmung. Gartner stuft IoT in seinem Hype-Cycle vom August 2016
+kurz vor dem &lt;em&gt;Peak of inflated expectations&lt;/em&gt; ein. Die Ankunft im
+Mainstream wäre danach noch 5 bis 10 Jahre entfernt.  Aber was ist das
+Internet der Dinge wirklich? Im einfachsten Fall ist dies einfach ein
+Gerät mit Internetanschluss. Der Kühlschrank, die Kaffeemaschine?
+Wozu?  Sinn macht das Internet der Dinge eigentlich erst dann, wenn
+die Geräte intelligenter und Aktionen automatisiert werden. Eine
+gewisse Lernfähigkeit gehört dazu.  Eine Spielwiese für Ideen bietet
+dabei das Smart Home. Steckdosen und Licht per App schalten? Kein
+Problem. Das selbstlernende Haus? Sehen wir doch einmal.&lt;/p&gt;
+&lt;p&gt;Ziele für intelligente Systeme im Haus sind dabei:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Einsparung von Energie&lt;/li&gt;
+&lt;li&gt;Einsparung von Kosten&lt;/li&gt;
+&lt;li&gt;Erhöhung des Komforts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Die folgenden Beiträge beschreiben Schritt für Schritt Experimente und
+Konzepte, wie kleine Geräte ihren Nutzen durch Automatisierung und
+maschinelles Lernen erhöhen können.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Der Feind in meinem Haus - Wenn die eigenen Geräte eine DoS-Attacke ausführen</title>
+      <link>https://blog.stefan-michaelis.name/blog/iota/der-feind-in-meinem-haus/</link>
+      <pubDate>Mon, 22 Jan 2018 19:07:55 +0100</pubDate>
+      
+      <guid>https://blog.stefan-michaelis.name/blog/iota/der-feind-in-meinem-haus/</guid>
+      <description>&lt;p&gt;Über seinen Internet-Provider zu schimpfen ist immer en vogue. Zu
+langsam, bringt nicht die vereinbarte Geschwindigkeit und
+überhaupt. Auch wenn schnelles Internet für uns ein Traum ist,
+zumindest stabil sollte es sein. Und das ist es nicht. Seit gefühlt
+schon ewig ist der DSL-Anschluss vom Verlust genau eben dieser
+Außenanbindung geprägt. Nicht immer, aber so oft, dass es nervt. Und
+ebenso scheinen die Störungen mehr zu werden, so dass teilweise
+minutenlang keine Internetverbindung zustande kommt. Das Eventlog
+zeigt keine Auffälligkeiten, nur Ping-Pong aus Aufbau und Verlust der
+WAN-Verbindung.&lt;/p&gt;
+&lt;p&gt;Schnell ist das auf Provider und/oder den billigen Standardrouter
+geschoben. In diesem Fall Vodafone mit einer Easybox 804 (die in der
+Bedienung gar keinen so schlechten Eindruck macht, das Wichtigste ist da).&lt;/p&gt;
+&lt;p&gt;Bevor man allerdings direkt ein Ticket beim Provider aufmacht erst
+einmal ausschließen, dass der Nutzer zu dumm ist. Also:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Kabel in eine andere Buchse der TAE-Einheit gesteckt. Vielleicht
+sind die Kontakte korrodiert.&lt;/li&gt;
+&lt;li&gt;Nach Routerupdates suchen (keine vorhanden).&lt;/li&gt;
+&lt;li&gt;Router komplett zurücksetzen (natürlich vorher die Einstellungen
+sichern, insbesondere die WLAN-Passwörter).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Dumm nur, wenn man sich beim letzteren für super organisiert hält, den
+Ordner mit den Unterlagen aus dem Schrank zieht und &amp;hellip; &lt;em&gt;nach&lt;/em&gt;
+Zurücksetzen feststellt, dass dort die Zugangsdaten nicht vorhanden
+sind. Also, jetzt gar kein Internet mehr und keine Möglichkeit dieses
+wieder in Betrieb zu nehmen. Sonntag Abend um 22.30 Uhr.&lt;/p&gt;
+&lt;p&gt;Aber der Provider hat eine kostenlose 24/7-Hotline. Die Frage nach dem
+Kundenpasswort löst zwar eher Fragezeichen bei mir im Kopf aus (ist
+bestimmt bei den Zugangsdaten), aber durch Beantwortung diverser
+anderer Fragen ist die Identität letztendlich geklärt. Problem
+geschildert und neue Zugangsdaten per SMS innerhalb der nächsten 15
+Minuten versprochen bekommen. Hat dann doch länger gedauert, aber am
+nächsten Morgen waren sie da. Schnell eingegeben und alles geht
+wieder. Über den Support lässt sich schon einmal nicht meckern. Die
+Zugangsdaten habe ich dann übrigens in einer Email gefunden. Allein
+aus Sicherheitsgründen hätte ich geschworen, die sind damals per
+Briefpost gekommen.&lt;/p&gt;
+&lt;p&gt;Am nächsten Abend die Ernüchterung, alles ist so stabil, oder eben
+nicht, wie vorher. Der Plan: Ein Ticket beim Provider wegen defekten
+Routers oder defekter Anbindung eröffnen lassen.&lt;/p&gt;
+&lt;p&gt;Und dann beim Stöbern einen
+&lt;a href=&#34;http://www.androidpolice.com/2018/01/14/google-home-max-appears-killing-wifi-networks/&#34;&gt;Bericht&lt;/a&gt;
+gefunden in dem über den &lt;em&gt;Google Home Max&lt;/em&gt; und das massive Aussenden
+von Multicastpaketen berichtet wird, die den Router zum Absturz
+bringen können. Und anscheinend sind auch andere Cast-fähige Geräte
+(Chromecast, Android-Smartphones) davon betroffen. Aus dem Gedächtnis
+hätten sich die Probleme auch ungefähr zu dem Zeitpunkt verschlimmert
+als der neueste Smartphone-Zuwachs ins Netz gekommen ist.&lt;/p&gt;
+&lt;p&gt;Also nachschauen. Wireshark anwerfen und tatsächlich, da sind sie, die
+gefürchteten mDNS-Pakete. Ca. 60% des gesamten Datenverkehrs. Und
+gemessen lediglich kabelgebunden an einem normalen PC.&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/pakettrace.png&#34; alt=&#34;/images/pakettrace.png&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;p&gt;Im zeitlichen Verlauf gut zu erkennen ist die Spitze direkt nach dem
+Einschalten des Smartphones für nur einige wenige Sekunden. Wer weiß, was
+noch alles über die Luftschnittstelle gegangen ist und schon gar nicht
+mehr weiter geleitet wurde. Eine Erklärung wäre dies auch, warum sich
+das Smartphone direkt nach dem Aufwecken sehr zäh in der Bedienung
+anfühlt. Wenn es doch erst einmal tausende Pakete versenden muss&amp;hellip;&lt;/p&gt;
+&lt;img src=&#34;https://blog.stefan-michaelis.name/images/paketgraph.png&#34; alt=&#34;/images/paketgraph.png&#34; class=&#34;img-responsive center-block&#34;&gt;
+
+&lt;p&gt;Verursacher ist hier ein relativ altes Nexus 5 mit Android 6,
+Marshmallow. Die meisten Berichte konzentrieren sich auf Geräte mit
+Oreo, aber mindestens Nougat.&lt;/p&gt;
+&lt;p&gt;Als erste Gegenmaßnahme die Chromecast vom Netz getrennt und die
+Google Home-App, die für die Inbetriebnahme und Ansteuerung der
+Chromecast zuständig ist, auf allen Smartphones
+deinstalliert. Geholfen hat es nichts, die Pakete kommen trotzdem
+weiter angeflogen. Entweder die Funktion ist tief im System verankert
+oder die anderen Cast-fähigen Apps (Youtube&amp;hellip;) lösen das Problem auch
+aus.&lt;/p&gt;
+&lt;p&gt;Abhilfe schaffen soll ein &lt;a href=&#34;https://www.heise.de/newsticker/meldung/Bugfix-Google-behebt-Patzer-in-Chromecast-und-Google-Home-3946037.html&#34;&gt;Update der Google Play
+Dienste&lt;/a&gt;. Mal
+schauen, wann dieses überall eingetroffen ist. Den Fehler beheben soll
+Version
+&lt;a href=&#34;https://www.xda-developers.com/google-home-chromecast-connectivity-issues/&#34;&gt;11.9.74&lt;/a&gt;,
+aktuell ist auf den Telefonen aber noch 11.9.51.&lt;/p&gt;
+&lt;p&gt;Ob dies dann die Wurzel allen Übels war und sich die Situation bessert
+bleibt abzuwarten. Auf ein Routerupdate zu hoffen, das besser mit
+dieser ungewollten Denial-of-Service-Attacke im eigenen Netz umgeht,
+dürfte länger dauern.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update 04.02.2018&lt;/strong&gt;: Das war schon einmal nichts. Alle Updates sind
+eingespielt (Version 11.9.75), die mDNS-Pakete auf ein Normalmaß
+zurückgegangen und es gibt immer noch Verbindungsabbrüche. Also zurück
+von vorne&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

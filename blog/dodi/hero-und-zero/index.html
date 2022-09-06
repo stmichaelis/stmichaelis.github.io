@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Herrscher über die Emailflut. Wir alle bekommen zu viele Emails. Email wird auch gerne einmal totgesagt. Trotzdem ist dies (und vermutlich nicht nur für mich) immer noch eines der wichtigsten Kommunikationsmedien: Asynchron, zuverlässig und weiterhin breit verfügbar.
+Schnell wird der Posteingang dann zur fremdbestimmten ToDo-Liste und wichtige Dinge gehen unter. Die Benachrichtigungen über neue Emails im Emailprogramm per Ton und Popup auszuschalten, um zumindest Störungen klein zu halten, ist dabei noch der erste Schritt.">
+    
+    <meta name="author" content="Stefan Michaelis">
+
+    <meta name="twitter:site" content="@stmichaelis">
+<meta name="twitter:creator" content="@stmichaelis">
+
+<meta property="og:description" content="Herrscher über die Emailflut. Wir alle bekommen zu viele Emails. Email wird auch gerne einmal totgesagt. Trotzdem ist dies (und vermutlich nicht nur für mich) immer noch eines der wichtigsten Kommunikationsmedien: Asynchron, zuverlässig und weiterhin breit verfügbar.
+Schnell wird der Posteingang dann zur fremdbestimmten ToDo-Liste und wichtige Dinge gehen unter. Die Benachrichtigungen über neue Emails im Emailprogramm per Ton und Popup auszuschalten, um zumindest Störungen klein zu halten, ist dabei noch der erste Schritt." />
+<meta property="og:title" content="Hero und trotzdem Zero" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:image" content="https://blog.stefan-michaelis.name" />
+<meta property="og:url" content="https://blog.stefan-michaelis.name/blog/dodi/hero-und-zero/" />
+
+
+    
+    <title> Hero und trotzdem Zero - Stefan Michaelis </title>
+
+    
+
+    
+    <link href="https://blog.stefan-michaelis.name/css/bootstrap.min.css" rel="stylesheet">
+    
+
+    
+    <link href="https://blog.stefan-michaelis.name/css/clean-blog.min.css" rel="stylesheet">
+    <link href="https://blog.stefan-michaelis.name/css/shariff.min.css" rel="stylesheet">
+    <link href="https://blog.stefan-michaelis.name/css/clean-blog-custom.css" rel="stylesheet">
+    <link href="https://blog.stefan-michaelis.name/css/syntax.css" rel="stylesheet">
+
+    
+    
+    <link href="https://blog.stefan-michaelis.name/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://blog.stefan-michaelis.name/css/fonts.css" rel="stylesheet">
+    
+
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+		<a class="navbar-brand" href="//www.stefan-michaelis.name" style="font-family: 'Reenie Beanie';font-size:1.6em;">Stefan Michaelis</a>
+            </div>
+
+            
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <ul class="nav navbar-nav navbar-right">
+    <li>
+      <a href="/blog/">Blog</a>
+    </li>
+    <li>
+      <a href="/projects/">Projekte</a>
+    </li>
+    <li>
+      <a href="/background/">Hintergrund</a>
+    </li>
+    <li>
+      <a href="/contact/" rel="nofollow">Kontakt</a>
+    </li>
+  </ul>
+</div>
+
+
+        </div>
+        
+    </nav>
+
+
+    
+    <header id="pageheader" class="intro-header">
+     <div class="container" style="width: 100%; background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) )">
+       <div class="row">
+         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+           <div class="site-heading">
+             <h1>Hero und trotzdem Zero</h1>
+             <hr class="small">
+             <span class="subheading">Herrscher über die Emailflut</span>
+           </div>
+         </div>
+       </div>
+     </div>
+    </header>
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+	      
+<p>Wir alle bekommen zu viele Emails. Email wird auch gerne einmal
+totgesagt. Trotzdem ist dies (und vermutlich nicht nur für mich) immer
+noch eines der wichtigsten Kommunikationsmedien: Asynchron,
+zuverlässig und weiterhin breit verfügbar.</p>
+<p>Schnell wird der Posteingang dann zur fremdbestimmten ToDo-Liste und
+wichtige Dinge gehen unter. Die Benachrichtigungen über neue Emails im
+Emailprogramm per Ton und Popup auszuschalten, um zumindest Störungen
+klein zu halten, ist dabei noch der erste Schritt.</p>
+<p>Die Emailflut selbst wird dann per Filtern und Markieren beherrscht
+mit dem Ziel den Posteingang so klein wie möglich (ab zur Zero für den
+Hero<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>) zu bekommen. Dieser Blogpost beschreibt meine Strategien, die
+sich über die Jahre entwickelt haben, um das Wichtige vom Unwichtigen
+zu trennen.</p>
+<p>Alle folgenden Beispiele sind per Mozilla Thunderbird umgesetzt,
+sollten sich aber mit den meisten Emailprogrammen ähnlich realisieren lassen.</p>
+<h2 id="mehr-durchblick">Mehr Durchblick</h2>
+<p>Da eine Email häufig nicht allein kommt, bietet es sich an, die
+<em>Thread-View</em> einzuschalten. In der Emailübersichtsliste ist dies das erste
+Symbol noch vor dem Stern zum Markieren von Emails. Einmal aktiviert
+werden Emaildialoge in einer Baumansicht zusammen dargestellt. Die
+chronologische Reihenfolge des gesamten Posteingangs gilt dabei aber
+nicht mehr, was gerade zu Beginn ein wenig verwirrend sein kann.</p>
+<p>Es fehlen aber dann noch die eigenen Emails, wenn man sich selbst mit
+am Dialog beteiligt. Einige gehen dazu über sich selbst in CC zu
+setzen, noch nützlicher finde ich die Einstellung eigene Antworten
+direkt im Ordner der beantworteten Email abzulegen. So bleiben die
+Dialoge direkt beisammen, was insbesondere beim Filtern wie im
+nächsten Abschnitt beschrieben nützlich ist. Die passende Einstellung
+dafür befindet sich im Abschnitt <em>Copies &amp; Folders</em> in den
+Einstellungen des jeweiligen Emailaccounts.</p>
+<h2 id="von-wichtigem-und-weniger-wichtigem">Von Wichtigem und weniger Wichtigem</h2>
+<p>Meine Filterliste besteht inzwischen aus über 30 verschiedenen Filtern,
+wobei sich die Konzepte überschneiden, Filterkriterien und Ziel aber
+jeweils anders sind:</p>
+<p><strong>Jedem sein eigenes Töpfchen:</strong> Der einfachste Fall sind noch
+Emails von Newslettern (wenn erwünscht), Rundmails an
+Verteilerlisten usw. In der Regel können diese über Absender- oder
+Empfängeradresse direkt in spezielle Ordner verschoben werden und
+verschwinden aus dem Posteingang bis man sich explizit die Zeit
+dafür nimmt.</p>
+<p><strong>Du weißt nicht worum es geht?</strong>: Ich auch nicht. Recht radikal,
+aber wirksam; Empfehlung auf einer Schulung durch das DLR: Emails
+mit leerem Betreff direkt in den Papierkorb werfen.</p>
+<p><strong>Bin ich gemeint?</strong>: Email kennt nicht nur das <em>An-Feld</em>. CC als
+Kopie gibt es schließlich auch noch. Meist betrifft dies Emails, die mehr
+zur Information gedacht sind als direkte Antworten erfordern. Also
+weg damit aus dem Posteingang und in seinen speziellen Ordner.</p>
+<p>Auch Anfragen unbekannter (Kriterium: nicht im Adressbuch, inkl. der
+automatisch durch Beantworten von Emails gesammelten Adressen) oder
+externer (fremde Domain) Absender erfordern häufig keine sofortige
+Reaktion. Und Emails, bei denen die eigene Adresse gar nicht
+vorkommt (Rundmails), für die aber kein eigener Ordner eingerichtet
+wurde, bilden die letzte Kategorie.</p>
+<p>Jeder dieser drei Arten bekommt einen eigenen Ordner, in den diese
+Emails einsortiert werden: <em>1_CC, 2_Extern, 3_Indirekt</em>.</p>
+<div class="row">
+     <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+     	  <img src="/images/email/ordner.png" class="img-responsive" />
+     </div>
+</div>
+
+<p>Die Zahlen davor sorgen lediglich für die Reihenfolge der Ordner im
+Thunderbird, da dieser die Ordner alphabetisch sortiert. Der vierte
+Ordner <em>4_CFP</em> ist noch ein Sonderfall, hier landen alle Emails mit
+<em>Call for Paper</em> im Betreff, da es sich hier um den Aufruf zur
+Einreichung von Konferenzbeiträgen handelt; oft auf der Grenze
+zwischen sinnvoll und Spam.</p>
+<p>Die Erfahrung hat dann aber leider gezeigt, dass die Versuchung
+(mangelnde Selbstbeherrschung) doch nur einmal kurz die Emails zu
+lesen massiv steigt, wenn sich die Anzahl der ungelesenen Emails
+auch in diesen Ordnern erhöht. Abhilfe geschaffen hat lediglich die
+Emails nicht nur zu verschieben, sondern auch gleich als <em>Gelesen</em>
+zu markieren. Um dann doch wieder die neuen von den alten Emails
+unterscheiden zu können helfen virtuelle Ordner im Thunderbird mit
+gespeicherten Suchen:</p>
+<p><strong>Sammelordner:</strong> Im Thunderbird lassen sich ordnerübergreifende
+Suchen speichern und damit als eigene Ordner in der Hierarchie
+anlegen. Die Ordner <em>0_ToDo</em> und <em>0_Ungelesen</em> sind zwei solche
+Ordner.</p>
+<p>In Thunderbird können Nachrichten auf verschiedene Art markiert
+(getagged) werden. Für ausgewählte Emails geht dies auch einfach als Shortcut
+über die Zahlen 0 (Tags entfernen) bis 5.</p>
+<img src="/images/email/todo-folder.png" alt="Kriterien für den ToDo-Ordner" class="img-responsive center-block">
+
+<p>Über die Tags <em>To Do</em> und <em>Important</em> sowie die Markierung per Stern
+landen alle Emails, die eine Beantwortung erfordern oder Aufgaben
+beinhalten, unabhängig vom Ablageort auch im Ordner <em>0_ToDo</em>.</p>
+<p>Der virtuelle Ordner <em>0_Ungelesen</em> sammelt dagegen alle Emails die
+noch nicht bearbeitet wurden. Da beim Filtern von CC- und ähnlichen
+Emails diese als gelesen markiert werden um nicht in der
+Ordnerübersicht aufzufallen, bekommen diese einfach das Tag
+<em>Ungelesen</em> und sind damit gesammelt doch wieder an einer Stelle zu
+finden. Und da wird dann erst nachgeschaut, wenn Zeit dafür ist.</p>
+<p><strong>Verwirrung über alle Ordner hinweg:</strong> Diese ganze Sortierei in
+unzählige Ordner schafft zwar schön Platz in der Inbox und erlaubt
+die Konzentration auf das Wesentliche. Schnell gehen aber auch
+Zusammenhänge verloren. Mal ist man in CC, dann wieder nicht, und
+schon sind die Konversationen auseinander gerissen.</p>
+<img src="/images/email/threadvis.png" alt="ThreadVis Addon" class="img-responsive center-block">
+
+<p>Über das Addon <a href="https://threadvis.github.io/">ThreadVis</a> werden
+Emails einer Konversation wieder im Kontext sichtbar, egal wo sie
+gelandet sind. Das Addon blendet zusammenhängende Emails als Graph
+der Abhängigkeiten in der Ansicht jeder Email ein. Die aktuell
+ausgewählte Email wird in der Grafik leicht größer dargestellt,
+eigene Emails sind nicht ausgefüllte Kreise. Über die Abstände
+zwischen den Punkten lässt sich grob der zeitliche Abstand zwischen
+Emails abschätzen. Per Klick kann dann jede Email aufgerufen werden.</p>
+<h2 id="spam">Spam</h2>
+<p><strong>Manuelle Spamlisten von Absendern:</strong> Wer kennt sie nicht?
+Unaufgeforderte Werbeemails, entweder von Absendern und Firmen von
+denen man noch nie etwas gehört hat oder von Firmen, mit denen ein
+winziger Kontakt bestanden hat und die das für die Legitimation
+halten direkt einen Newsletter versenden zu dürfen. Die DSGVO hat
+daran auch nur wenig geändert. Bei letzteren Firmen besteht noch
+die geringe Chance, dass der <em>Abmelden</em>-Link berücksichtigt wird,
+aber bei den völlig unbekannten Absendern&hellip; Wenn diese schon die
+Anmeldung nicht korrekt durchführen, warum dann noch über das
+Abmelden die Bestätigung geben, dass die verwendete Emailadresse
+wirklich genutzt wird? Diese Emailabsender landen dann in der
+manuell geführten Spamliste und werden wegsortiert, gerne einmal
+auch für alle Emails der betreffenden Domain.</p>
+<p><strong>Bildspam:</strong> Spammails, die fast ausschließlich aus Bildern bestehen,
+sind wieder ein zunehmendes Problem geworden. Textbasierte
+Spamfilter funktionieren nicht und so geht einiges durch das
+Raster. Ein Filter, der auf den typischen Merkmalen dieser Emails
+basiert, schafft größtenteils Abhilfe, birgt aber je nach Art der
+üblicherweise erwünschten Emails auch ein größeres Risiko von
+Falsch-Positiven.</p>
+<div class="row">
+     <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+     	  <img src="/images/email/imagespam.png" class="img-responsive" />
+     </div>
+</div>
+
+<p>Diesen Spammails gemeinsam zu sein scheint, dass der Content-Type
+<em>multi-part/related</em> beinhaltet. Im Thunderbird lässt sich für
+dieses Headerfeld ein eigenes Filterkriterium anlegen. Ebenso
+sollte der Absender nicht in den eigenen Adressbüchern stehen,
+d.h. es hat noch keine Interaktion mit diesem gegeben. Und
+letztendlich ist häufig im eigentlichen <em>An-Feld</em> nicht die
+wirkliche Zieladresse lesbar. Bei großen Firmen/Institutionen
+bietet es sich auch an für Absender aus der eigenen Domain eine
+Ausnahme zu definieren, siehe letztes Filterkriterium im Beispiel.</p>
+<h2 id="fazit">Fazit</h2>
+<p>Die alles liest sich recht kompliziert und auch wenn das Anlegen
+und Pflegen der Filter Zeit gekostet hat, diese hat sich
+letztendlich schon wieder einige Male rentiert. Sowohl real als
+auch für das gute Gefühl Herr der Lage zu sein.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Kalauer? Vielleicht. Und wer schafft schon wirklich 0 Emails in der Inbox?&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+
+   
+    <footer>
+      <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <ul class="list-inline text-center">
+		
+		<li>
+                  <script language="Javascript" type="text/javascript">
+		    <!--
+			document.write('<a href="mai');
+			document.write('lto');
+			document.write(':&#105;&#110;&#102;&#111;');
+			document.write('@');
+			document.write('&#115;&#116;&#101;&#102;&#97;&#110;&#45;&#109;&#105;&#99;&#104;&#97;&#101;&#108;&#105;&#115;&#46;&#110;&#97;&#109;&#101;">');
+			
+</script>
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <script language="Javascript" type="text/javascript">
+		    <!--
+			document.write('<\/a>');
+			
+		    </script>		
+		</li>
+		<li>
+                  <a href="https://www.xing.com/profile/Stefan_Michaelis5">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-xing fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+		</li>
+		<li>
+                  <a href="https://de.linkedin.com/in/stefanmichaelis">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+		</li>
+		<li>
+                  <a href="https://twitter.com/stmichaelis">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+		</li>
+		<li>
+                  <a href="https://github.com/stmichaelis">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+		</li>
+              </ul>
+	      <p class="copyright text-muted"><a href="/contact/" rel="nofollow">Impressum</a>
+		<a href="/contact/#datenschutz" rel="nofollow">Datenschutz</a>
+	      </p>
+            </div>
+          </div>
+	</div>
+    </footer>
+
+    
+    
+    
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/clean-blog.js"></script>
+    <script src="/js/shariff.min.js"></script>
+
+    
+
+    <script language="javascript">
+      $(document).ready(function() {
+	  var backgroundImage = [
+	      "Amrum_Duenen.jpg",
+	      "Amrum_Leuchtturm.jpg",
+	      "Amrum_Sonnenuntergang.jpg",
+	      "Australien_Bogen.jpg",
+	      "Australien_Felsen.jpg",
+	      "Australien_Kaenguruhs.jpg",
+	      "Australien_Kueste.jpg",
+	      "Australien_Landschaft.jpg",
+	      "Australien_Landschaft2.jpg",
+	      "Australien_Melbourne.jpg",
+	      "Australien_Muschel.jpg",
+	      "Australien_Sonnenuntergang2.jpg",
+	      "Australien_Wasserfall.jpg",
+	      "Australien_Wineglass.jpg",
+	      "Australien_Wineglass2.jpg",
+	      "Bayern_Nebel.jpg",
+	      "Bayern_Sonnenaufgang.jpg",
+	      "Bayern_Sonnenaufgang2.jpg",
+	      "Dortmund_Westfalenpark.jpg",
+	      "Dortmund_Zechenrad.jpg",
+	      "Fuerteventura_Autowrack.jpg",
+	      "Fuerteventura_Landschaft.jpg",
+	      "Fuerteventura_Landschaft2.jpg",
+	      "Fuerteventura_Landschaft3.jpg",
+	      "Fuerteventura_Papageienblume.jpg",
+	      "Hamburg.jpg",
+	      "Holland_Segeln.jpg",
+	      "Holland_Segeln2.jpg",
+	      "Koeln_Dom.jpg",
+	      "Malediven_Dhoni.jpg",
+	      "Malediven_Insel.jpg",
+	      "Malediven_Insel2.jpg",
+	      "Malediven_Koralle.jpg",
+	      "Malediven_Sonnenuntergang.jpg",
+	      "Malediven_Unterwasser.jpg",
+	      "Malediven_Wasserflugzeug.jpg",
+	      "Malediven_Wolken.jpg",
+	      "Mallorca_Kueste.jpg",
+	      "Mallorca_Palma.jpg",
+	      "Mallorca_Pfau.jpg",
+	      "Mallorca_Pflanze.jpg",
+	      "Mallorca_Tropfsteinhoehle.jpg",
+	      "Moselschleife.jpg",
+	      "Tuerkei_Festung.jpg",
+	      "Tuerkei_Hoehle.jpg",
+	      "Tuerkei_Theater.jpg",
+	      "Tuerkei_Wasserfall.jpg",
+	  ]
+	  var urlParams = new URLSearchParams(window.location.search);
+	  var backgroundId = urlParams.get('b');
+	  if (!urlParams.has('b')) {
+	      backgroundId = Math.floor(Math.random() * backgroundImage.length);
+	  }
+	  
+	  $('.navbar-nav li a').each(function() {
+	      $(this).attr("href", $(this).attr("href")+"?b="+backgroundId);
+	  })
+	  
+	  var backgroundImageURL = "/images/background/"+backgroundImage[backgroundId]
+	  $("#pageheader").css("background-image", "url("+backgroundImageURL+")");
+	  
+	  var backgroundText = $(".backgroundtext");
+	  if (backgroundText.length > 0) {
+	      $(".backgroundtext").eq(backgroundId).css("display", "");
+	  }
+      })
+    </script>
+</body>
+
+</html>
+
