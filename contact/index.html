@@ -9,11 +9,16 @@
     
     <meta name="description" content=". Diese Homepage dient rein privaten Zwecken und entstand einfach aus Spaß am Experimentieren.
 Kontaktaufnahme bitte vorzugsweise über diese Emailadresse:
-&#39;);document.write(&#39;&amp;#105;&amp;#110;&amp;#102;&amp;#111;&#39;);document.write(&#39;@&#39;);document.write(&#39;&amp;#115;&amp;#116;&amp;#101;&amp;#102;&amp;#97;&amp;#110;&amp;#45;&amp;#109;&amp;#105;&amp;#99;&amp;#104;&amp;#97;&amp;#101;&amp;#108;&amp;#105;&amp;#115;&amp;#46;&amp;#110;&amp;#97;&amp;#109;&amp;#101;&#39;);// --&amp;#105;&amp;#110;&amp;#102;&amp;#111; at stefan-michaelis punkt name
+&#39;);
+document.write(&#39;&amp;#105;&amp;#110;&amp;#102;&amp;#111;&#39;);
+document.write(&#39;@&#39;);
+document.write(&#39;&amp;#115;&amp;#116;&amp;#101;&amp;#102;&amp;#97;&amp;#110;&amp;#45;&amp;#109;&amp;#105;&amp;#99;&amp;#104;&amp;#97;&amp;#101;&amp;#108;&amp;#105;&amp;#115;&amp;#46;&amp;#110;&amp;#97;&amp;#109;&amp;#101;&#39;);
+// --
+&amp;#105;&amp;#110;&amp;#102;&amp;#111; at stefan-michaelis punkt name
 Stefan Michaelis
 Nikolaus-Kopernikus-Weg 7
 45701 Herten
-Tel.: 015678 591473
+Tel.: <span id="phone"></span>
 Datenschutz Diese Datenschutzerklärung klärt Nutzer über die Art, den Umfang und Zweck der Erhebung und Verwendung personenbezogener Daten für die Seiten unter der Domain stefan-michaelis.name auf.
 Serverlogs Bei jedem Zugriff auf diese Webseite überträgt der Browser des Nutzers Daten an den Webserver des Dienstleisters.">
     
@@ -24,7 +29,12 @@ Serverlogs Bei jedem Zugriff auf diese Webseite überträgt der Browser des Nutz
 
 <meta property="og:description" content=". Diese Homepage dient rein privaten Zwecken und entstand einfach aus Spaß am Experimentieren.
 Kontaktaufnahme bitte vorzugsweise über diese Emailadresse:
-&#39;);document.write(&#39;&#105;&#110;&#102;&#111;&#39;);document.write(&#39;@&#39;);document.write(&#39;&#115;&#116;&#101;&#102;&#97;&#110;&#45;&#109;&#105;&#99;&#104;&#97;&#101;&#108;&#105;&#115;&#46;&#110;&#97;&#109;&#101;&#39;);// --&#105;&#110;&#102;&#111; at stefan-michaelis punkt name
+&#39;);
+document.write(&#39;&#105;&#110;&#102;&#111;&#39;);
+document.write(&#39;@&#39;);
+document.write(&#39;&#115;&#116;&#101;&#102;&#97;&#110;&#45;&#109;&#105;&#99;&#104;&#97;&#101;&#108;&#105;&#115;&#46;&#110;&#97;&#109;&#101;&#39;);
+// --
+&#105;&#110;&#102;&#111; at stefan-michaelis punkt name
 Stefan Michaelis
 Nikolaus-Kopernikus-Weg 7
 45701 Herten
@@ -192,6 +202,7 @@ unter OpenSource-Lizenzen:</p>
 </ul>
 
 
+
         </div>
       </div>
     </div>
@@ -351,6 +362,10 @@ unter OpenSource-Lizenzen:</p>
 	  }
       })
     </script>
+	<script>  		
+		const p = [0x30,0x31,0x35,0x36,0x37,0x38,0x20,0x35,0x39,0x31,0x34,0x37,0x33];  		
+		document.getElementById('phone').textContent = String.fromCharCode(...p);	
+	</script>
 </body>
 
 </html>
